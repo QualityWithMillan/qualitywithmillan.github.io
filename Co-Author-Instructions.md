@@ -21,7 +21,8 @@ You can follow these simple instructions to share a post for review:
     1. Once its reviewed, I will add a date in front of it like this `2021-09-09-my-first-blog.md` and it will be publised right away.
 3.  Adding a category
   1. Make sure to pick one of the categories (you can add a your own/new category if none of thsese suits your work) `blog, post, tutorial, adventure, travel` etc.. 
-  2. You can also add tags, these can be as many as you like, ideally 3-5 is best
+  2. You can also add tags, these can be as many as you like, ideally 3-5 is best.
+4. Once done raise a PR to `prod` that's where all I have set GitHub actions to pick the changes to be published. 
 
 
 I will imporve this document as I get feedback from you.
