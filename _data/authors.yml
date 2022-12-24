@@ -1,0 +1,43 @@
+Millan Kaul:
+    name: "Millan Kaul"
+    display_name     : "Millan Kaul"
+    avatar           : "/assets/images/bio-photo.jpg"
+    bio              : ""
+    location         : "Australia"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto:your.name@email.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        url: "https://twitter.com/MillanKaul"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/eaccmk"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://au.linkedin.com/in/millankaul"
+        
+        
+Furure Author:
+    name: "ToDo"
+    name: "ToDo"
+    display_name     : "ToDo"
+    avatar           : "/assets/images/ToDo-bio-photo.jpg"
+    bio              : "ToDo"
+    location         : "ToDo"
+    email            : "ToDo"
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto:your.name@email.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        #url: "https://twitter.com/ToDo"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        #url: "https://github.com/ToDo"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        #url: "https://au.linkedin.com/in/ToDo"
