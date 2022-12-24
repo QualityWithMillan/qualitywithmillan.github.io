@@ -7,7 +7,7 @@ First of all **I thank you** ❤️ very much for taking time to contribute ( au
 
 You can follow these simple instructions to publish a post for review:
 
-> If you have no clue how to write post here are all that I have [published](https://github.com/QualityWithMillan/qualitywithmillan.github.io/tree/prod/_posts){:target="_blank" rel="noopener"} in markdowns format `.md` files.
+> If you have no clue how to write post here are all that I have [published](https://github.com/QualityWithMillan/qualitywithmillan.github.io/tree/prod/_posts) in markdowns format `.md` files.
 > This has got some example on how you can add hero/baner image etc at top of your post like [this welcome post](https://qualitywithmillan.github.io/welcome.html)..
 
 
