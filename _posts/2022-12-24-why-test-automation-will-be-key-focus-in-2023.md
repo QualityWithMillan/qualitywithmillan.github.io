@@ -1,7 +1,11 @@
 ---
 title: "Why test automation will be key focus in 2023 ?"
 permalink: "/post/why-test-automation-will-be-key-focus-in-2023.html"
-date: 2022-12-22T00:10:00-00:00
+header:
+  image: /assets/images/2023.png
+  teaser: /assets/images/2023.png
+  caption: "Photo credit: [**rawpixel.com on Freepik**](https://www.freepik.com/free-vector/ai-technology-brain-background-vector-digital-transformation-concept_16396129.htm#query=ai%20technolog%20brain%20background%20digital&position=5&from_view=search&track=ais)"
+date: 2022-12-24T22:04:00-00:00
 authors:
 - Millan Kaul
 categories:
