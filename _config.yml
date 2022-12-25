@@ -93,8 +93,10 @@ og_image                 : # Open Graph/Twitter default site image
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  name                   : "Millan Kaul" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://twitter.com/millankaul"
+    - "https://www.linkedin.com/in/millankaul"
 
 # Analytics
 analytics:
@@ -109,7 +111,7 @@ author:
   name             : "Millan Kaul"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : ""
-  location         : "Australia"
+  location         : "Somewhere, Australia"
   email            :
   links:
     - label: "Email"
@@ -133,6 +135,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "#QualityWithMillan"
+      icon: "fab fa-fw fa-solid fa-hashtag"
+      url: "https://qualitywithmillan.github.io/"
 
 # Site Footer
 footer:
@@ -158,6 +163,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "#QualityWithMillan"
+      icon: "fab fa-fw fa-solid fa-hashtag"
+      url: "https://qualitywithmillan.github.io/"
 
 
 # Reading Files
