@@ -8,6 +8,7 @@ header:
   teaser:/assets/image/QualityWithMillan.png
   
 ---
+<hr>
 
 Welcome to **#QualityWithMillan** ( to be read as: hash tag quality with millan)! My name is **{{site.author.name}}** and I am the writer and creator of this space.
 
