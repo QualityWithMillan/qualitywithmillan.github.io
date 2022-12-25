@@ -135,12 +135,10 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-    - label: "#QualityWithMillan"
-      icon: "fab fa-fw fa-hashtag"
+    - label: "QualityWithMillan"
+      icon: "fa fa-hashtag"
       url: "https://qualitywithmillan.github.io/"
-    - label: "#QualityWithMillan2"
-      icon: "fa-fw fa-hashtag"
-      url: "https://qualitywithmillan.github.io/"
+      
 
 # Site Footer
 footer:
@@ -166,7 +164,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-    - label: "#QualityWithMillan"
+    - label: "QualityWithMillan"
       icon: "fa fa-hashtag"
       url: "https://qualitywithmillan.github.io/"
 
