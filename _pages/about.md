@@ -1,8 +1,12 @@
 ---
 permalink: /about/
-title: "About"
+title: "About #QualityWithMillan"
+read_time: true
+share: true
+show_date: true
 header:
   teaser:/assets/image/QualityWithMillan.png
+  
 ---
 
 Welcome to **#QualityWithMillan** ( to be read as: hash tag quality with millan)! My name is **{{site.author.name}}** and I am the writer and creator of this space.
