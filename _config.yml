@@ -136,7 +136,7 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
     - label: "#QualityWithMillan"
-      icon: "fab fa-fw fa-solid fa-hashtag"
+      icon: "fab fa-fw fa-hashtag"
       url: "https://qualitywithmillan.github.io/"
 
 # Site Footer
@@ -164,7 +164,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
     - label: "#QualityWithMillan"
-      icon: "fab fa-fw fa-solid fa-hashtag"
+      icon: "fab fa-fw fa-hashtag"
       url: "https://qualitywithmillan.github.io/"
 
 
