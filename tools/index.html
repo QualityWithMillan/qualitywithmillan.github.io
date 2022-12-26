@@ -7,7 +7,7 @@ layout: single
 
 <head>
 	<meta charset="utf-8">
-	<title>Text Editor</title>
+	<title>Text Format  Editor</title>
 	<!--Bootstrap Cdn -->
 	<link rel="stylesheet"
 		href=
@@ -61,14 +61,14 @@ layout: single
 		}
 		
 		textarea {
-			padding: 3%;
+			padding: 2%;
 			border-color: #957dad;
 			border-width: thick;
 		}
 		
 		.flex-box {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-start;
 		}
 	</style>
 	<!--Internal CSS End-->
@@ -86,63 +86,51 @@ layout: single
 					<!--onclick attribute is added to give
 						button a work to do when it is clicked-->
 					<button type="button"
-							onclick="f1()"
+							onclick="boldMe()"
 							class=" shadow-sm btn btn-outline-secondary"
 							data-toggle="tooltip"
 							data-placement="top"
 							title="Bold Text">
-			Bold</button>
+			<b>Bold</b></button>
 					<button type="button"
-							onclick="f2()"
+							onclick="italicMe()"
 							class="shadow-sm btn btn-outline-success"
 							data-toggle="tooltip"
 							data-placement="top"
 							title="Italic Text">
-			Italic</button>
+			<i>Italic</i></button>
 					<button type="button"
-							onclick="f3()"
+							onclick="strikeMe()"
 							class=" shadow-sm btn btn-outline-primary"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Left Align">
+							title="Strike Through">
 			<i class="fas fa-align-left"></i></button>
-					<button type="button"
-							onclick="f4()"
-							class="btn shadow-sm btn-outline-secondary"
-							data-toggle="tooltip"
-							data-placement="top"
-							title="Center Align">
-			<i class="fas fa-align-center"></i></button>
-					<button type="button"
-							onclick="f5()"
-							class="btn shadow-sm btn-outline-primary"
-							data-toggle="tooltip"
-							data-placement="top"
-							title="Right Align">
+					
 			<i class="fas fa-align-right"></i></button>
 					<button type="button"
-							onclick="f6()"
+							onclick="upperMe()"
 							class="btn shadow-sm btn-outline-secondary"
 							data-toggle="tooltip"
 							data-placement="top"
 							title="Uppercase Text">
-			Upper Case</button>
+			UPPER CASE</button>
 					<button type="button"
-							onclick="f7()"
+							onclick="lowerMe()"
 							class="btn shadow-sm btn-outline-primary"
 							data-toggle="tooltip"
 							data-placement="top"
 							title="Lowercase Text">
-			Lower Case</button>
+			lower case</button>
 					<button type="button"
-							onclick="f8()"
+							onclick="camelMe()"
 							class="btn shadow-sm btn-outline-primary"
 							data-toggle="tooltip"
 							data-placement="top"
-							title="Capitalize Text">
-			Capitalize</button>
+							title="CamelCase">
+			CamelCase</button>
 					<button type="button"
-							onclick="f9()"
+							onclick="clearMe()"
 							class="btn shadow-sm btn-outline-primary side"
 							data-toggle="tooltip"
 							data-placement="top"
@@ -162,7 +150,7 @@ layout: single
 							name="name"
 							rows="15"
 							cols="100"
-							placeholder="Your text here ">
+							placeholder="Typr here and then click from an option above.. ">
 					</textarea>
 				</div>
 			</div>
