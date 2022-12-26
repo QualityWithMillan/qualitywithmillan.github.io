@@ -10,10 +10,10 @@ function italicMe() {
 
 function strikeMe() { //todo
 	//function to make the text strike through using DOM method
-// 	document.getElementById("textarea1").style.textDecoration ="line-through";
+// 	let text = document.getElementById("textarea1")'
 	
-	document.getElementById("textarea1").insertAdjacentHTML("beforebegin",'<s>html data</s>');
-	document.getElementById("textarea1").insertAdjacentHTML("afterend",'<s>html data</s>');
+	document.getElementById("textarea1").insertAdjacentHTML("beforebegin",'<s>');
+	document.getElementById("textarea1").insertAdjacentHTML("afterend",'</s>');
 
 }
 
