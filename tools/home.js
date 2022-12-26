@@ -9,10 +9,8 @@ function italicMe() {
 }
 
 function strikeMe() { //todo
-	//function to make the text italic using DOM method
-	let text = document.getElementById("textarea1");
-	//.'text-decoration' ="line-through";
-	text.value= "\u0336" + text +"\u0336";
+	//function to make the text strike through using DOM method
+	document.getElementById("textarea1").style.textDecoration ="line-through";
 }
 
 // function f3() {
