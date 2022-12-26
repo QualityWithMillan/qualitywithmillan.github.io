@@ -11,9 +11,9 @@ function italicMe() {
 function strikeMe() { //todo
 	//function to make the text strike through using DOM method
 // 	let text = document.getElementById("textarea1")'
-	
-	document.getElementById("textarea1").insertAdjacentHTML("beforebegin",'<s>');
-	document.getElementById("textarea1").insertAdjacentHTML("afterend",'</s>');
+//ref https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+	document.getElementById("textarea1").insertAdjacentHTML("afterbegin",'<s>');
+	document.getElementById("textarea1").insertAdjacentHTML("beforeend",'</s>');
 
 }
 
