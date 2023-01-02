@@ -44,7 +44,9 @@ tags:
 
 If you follow fintech news, banking news or similar streams you most probably have come across these buzzwords `#API`  `#OpenBanking`  `#CDR`  `#dataSharing` …
 
-![Gooogle search trends Openbanking vs API in 2021](/assets/image/ob.png)
+..../assets/image/ob.png
+
+![Gooogle search trends Openbanking vs API in 2021](/assets/images/ob_hero.png)
 <figcaption align = "center">Openbanking vs API ( search Trends - Google ) as of 2021</figcaption> 
 
 Before we try to understand **"Is Open Banking just another API ?"** , It is really important that we understand the difference and relation between both.
