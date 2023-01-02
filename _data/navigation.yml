@@ -12,7 +12,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "Terms & Privacy"
+    url: /terms/
   # - title: "Sitemap"
   #   url: /sitemap/
