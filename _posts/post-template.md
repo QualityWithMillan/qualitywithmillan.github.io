@@ -1,9 +1,5 @@
 ---
-search :false
-
----
-
-
+search : "false"
 title: "ToDo"
 header:
   image: /assets/images/ToDo.png
