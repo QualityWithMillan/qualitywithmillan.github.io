@@ -1,5 +1,4 @@
 ---
-search : "false"
 title: "Is Open Banking just another API❓"
 header:
   image: /assets/images/ob_hero.png
