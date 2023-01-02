@@ -1,7 +1,7 @@
 ---
 title: "Is Open Banking just another API❓"
 header:
-  image: /assets/images/ob_hero.png
+  image: /assets/images/ob_graph_criteria.png
   teaser: /assets/images/ob_hero.png
   caption: "Openbanking vs API ( search Trends — Google )"
 permalink: "/post/Open-banking-just-another-api.html"
@@ -45,10 +45,12 @@ tags:
 If you follow fintech news, banking news or similar streams you most probably have come across these buzzwords `#API`  `#OpenBanking`  `#CDR`  `#dataSharing` …
 
 
-![Gooogle search trends Openbanking vs API in 2021](/assets/images/ob_hero.png)
+![Gooogle search trends Openbanking vs API in 2021](/assets/images/ob_graph_criteria.png)
 <figcaption align = "center">Openbanking vs API ( search Trends - Google ) as of 2021</figcaption> 
 
-Before we try to understand **"Is Open Banking just another API ?"** , It is really important that we understand the difference and relation between both.
+Before we try to understand **"Is Open Banking just another API ?"** . 
+
+It is really important that we understand the difference and relation between both.
 Here is my attempt to explain it in the easiest possible way that I could…
 
 <br>
@@ -71,6 +73,7 @@ _As per investopedia.com …_
 > Open banking also known as "open bank data." Open banking is a banking practice that provides third-party financial service providers open access to consumer banking, transaction, and other financial data from banks and non-bank finincial institutions through the use of APIs
 
 Let's take an example of **Australia**, a legislation was passed on <ins>26 November 2017</ins> to implement Open banking which has been generalised and rather called as [Consumer data right (CDR)](https://www.accc.gov.au/focus-areas/the-consumer-data-right).
+
 The reason being, in future the data rights of consumer will apply to sectors other than banking such as energy, telecommunications…
 So with that background , let me ask this question again:
 
@@ -86,17 +89,10 @@ So with that background , let me ask this question again:
 Answer is **Yes** and **No** both !
 
 **No** : Because API is a very vast team and open banking is just one of its several use case.
-
 <br>
 
 **Yes** : Open Banking is a collection of new APIs.
 As per [data from Google Trends](https://trends.google.com/trends/explore?cat=37&q=open%20banking,api) this is how the web search has surged in Banking for last 12 months worldwide
-
-
-
-![Fig: Search criteria for comparison](/assets/images/ob_graph_man.png)
-<figcaption align = "center">Fig: Search criteria for comparison</figcaption> 
-
 
 
 ![Fig: Result as per search criteria with filters](/assets/images/ob_graph_criteria.png)
@@ -115,9 +111,12 @@ As per [data from Google Trends](https://trends.google.com/trends/explore?cat=37
 <figcaption align = "center">Fig: Global search trends</figcaption> 
 
 The Interesting thing in this complete new game of banks getting to expose data using APIs. Banks sharing the data on request of customers ( after taking their consent) is going to revolutionise the market as it's just not banks obliged to share data "only with other banks" but to any third party or fintech if they have user consent.
+
+<br>
+
 There are new players in the market specially new fintech lead by banking industry leaders who are taking this perfect opportunity to innovate and work with either banks or users to make most use of the Data Sharing a.k.a OpenBanking.
 
-There are may use cases for that, for example:
+**There are may use cases for that, for example:**
 
 - Banks with limited infrastructure capability are reaching out to fintechs and startups to help them build their developer portal, expose banking APIs and more..
 
@@ -128,10 +127,14 @@ There are may use cases for that, for example:
 - There are more such innovative ideas which are yet to unfold.
 
 
-I personally ended up building a fitbit app. **yes a fitbit watch app** ! that displays the following banking products offered by selected Australian banks. Which means while you walk you can see product name and description/offering within seconds.
-💰 Transaction and Savings Accounts
-💳 Cards
-🏠 Mortgage (residential)
+I personally ended up building a fitbit app. **yes a fitbit watch app** ! 
+
+A app that displays the following banking products offered by selected Australian banks. 
+Which means while you walk you can see product name and description/offering within seconds.
+
+- 💰 Transaction and Savings Accounts
+- 💳 Cards
+- 🏠 Mortgage (residential)
 
 <br>
 
