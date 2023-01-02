@@ -44,7 +44,6 @@ tags:
 
 If you follow fintech news, banking news or similar streams you most probably have come across these buzzwords `#API`  `#OpenBanking`  `#CDR`  `#dataSharing` …
 
-..../assets/image/ob.png
 
 ![Gooogle search trends Openbanking vs API in 2021](/assets/images/ob_hero.png)
 <figcaption align = "center">Openbanking vs API ( search Trends - Google ) as of 2021</figcaption> 
@@ -80,7 +79,7 @@ So with that background , let me ask this question again:
 ### Is Open Banking just another API ?
 
 
-![Data analysis form Google trends](/assets/image/ob_graph_man.png)
+![Data analysis form Google trends](/assets/images/ob_graph_man.png)
 <figcaption align = "center">Data analysis form Google trends (pic: unDraw)</figcaption> 
 
 
@@ -95,17 +94,16 @@ As per [data from Google Trends](https://trends.google.com/trends/explore?cat=37
 
 
 
-![Fig: Search criteria for comparison](/assets/image/ob_criteria_for_comparison.png)
+![Fig: Search criteria for comparison](/assets/images/ob_graph_man.png)
 <figcaption align = "center">Fig: Search criteria for comparison</figcaption> 
 
 
 
-![Fig: Result as per search criteria with filters](/assets/image/ob_graph_criteria.png)
+![Fig: Result as per search criteria with filters](/assets/images/ob_graph_criteria.png)
 <figcaption align = "center">Fig: Result as per search criteria with filters</figcaption> 
 
 
-
-![Description on how the interest over the time has changed in searches](/assets/image/ob_desc_time_changed.png)
+![Description on how the interest over the time has changed in searches](/assets/images/ob_desc_time_changed.png)
 <figcaption align = "center">Description on how the interest over the time has changed in searches</figcaption> 
 
 
@@ -113,7 +111,7 @@ As per [data from Google Trends](https://trends.google.com/trends/explore?cat=37
 
 
 
-![Fig: Global search trends](/assets/image/ob_global_trends.png)
+![Fig: Global search trends](/assets/images/ob_global_trends.png)
 <figcaption align = "center">Fig: Global search trends</figcaption> 
 
 The Interesting thing in this complete new game of banks getting to expose data using APIs. Banks sharing the data on request of customers ( after taking their consent) is going to revolutionise the market as it's just not banks obliged to share data "only with other banks" but to any third party or fintech if they have user consent.
@@ -140,7 +138,7 @@ I personally ended up building a fitbit app. **yes a fitbit watch app** ! that 
 ### my Bank-AU - fitbit app
 
 
-![Fitbit app my Bank-AU](/assets/image/ob_fitbit_my-bank-au.png)
+![Fitbit app my Bank-AU](/assets/images/ob_fitbit_my-bank-au.png)
 <figcaption align = "center">Image : Fitbit app my Bank-AU</figcaption> 
 
  
@@ -148,7 +146,7 @@ I personally ended up building a fitbit app. **yes a fitbit watch app** ! that 
 
 <hr>
 
-![Fitbit my Bank-AU app display sample](/assets/image/ob_image_gif.png)
+![Fitbit my Bank-AU app display sample](/assets/images/ob_image_gif.png)
 <figcaption align = "center">Fitbit my Bank-AU app display sample - GIF</figcaption> 
 
 
