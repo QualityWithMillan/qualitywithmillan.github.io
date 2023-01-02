@@ -147,6 +147,12 @@ I personally ended up building a fitbit app. **yes a fitbit watch app** ! that 
 
 <hr>
 
+![Fitbit my Bank-AU app display sample](/assets/image/ob_image_gif.png)
+<figcaption align = "center">Fitbit my Bank-AU app display sample - GIF</figcaption> 
+
+
+<hr>
+
 Hope you enjoyed my attempt to clarify that API and Open Banking are not same but related terms. 👍️
 
 > Originally published at my LinkedIn account on Jun 11, 2021.
