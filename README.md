@@ -1,11 +1,12 @@
-## 💻 Vist https://qualitywithmillan.github.io/ to see this blog post live
+### 💻 Vist https://qualitywithmillan.github.io/ to see this blog post live
 
 
 
+| **Desktop**  :desktop_computer: | **Mobile** :iphone: |
+|:--:|:--:|
+|<img src="wiki/qualityWithMillan_screen_Desktop.png" alt="Screen showing Desktop view of the webiste quality with millan">|<img src="wiki/qualityWithMillan_screen_mobile_ip_12_plus.png" alt="Screen showing mobile view of the webiste quality with millan">|
 
 
-<br>
-<br>
 <br>
 
 
