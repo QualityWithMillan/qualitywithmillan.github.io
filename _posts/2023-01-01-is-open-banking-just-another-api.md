@@ -1,7 +1,6 @@
 ---
 title: "Is Open Banking just another API❓"
 header:
-  image: /assets/images/ob_graph_criteria.png
   teaser: /assets/images/ob_hero.png
   caption: "Openbanking vs API ( search Trends — Google )"
 permalink: "/post/Open-banking-just-another-api.html"
