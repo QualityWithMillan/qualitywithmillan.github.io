@@ -49,7 +49,7 @@ But its less of a fact that we read this on the same website
 
 Warning: JWTs are credentials, which can grant access to resources. Be careful where you paste them! We do not record tokens, all validation and debugging is done on the client side.
 
-![jwt.io screenshot](/assets/image/jwt_io_ui.png)
+![jwt.io screenshot](/assets/images/jwt_io_ui.png)
 <figcaption align = "center">screenshot of decoding JWT token from jwt.io</figcaption> 
 
 
@@ -77,5 +77,5 @@ pm.test('three ---> ' + three, function () {});
 
 > Test Result tab showing decoded values of jwt token 
 
-![Test results of decoded jwt token](/assets/image/jwt_test_result.png)
+![Test results of decoded jwt token](/assets/images/jwt_test_result.png)
 <figcaption align = "center">Image with values of decoded JWT token</figcaption> 
