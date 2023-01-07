@@ -13,7 +13,7 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "Tools"   
-    url: /tools/
+    url: /tools/format/
   - title: "Terms & Privacy"
     url: /terms/
   # - title: "Sitemap"
