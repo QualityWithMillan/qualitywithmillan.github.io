@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/jwt_hero.png
   caption: "Explained - 3 parts of JWT token"
 permalink: "/post/How-to-decode-jwt-token-offline.html"
-date: 2023-01-09T18:00:00-00:00
+date: 2023-01-06T18:00:00-00:00
 authors:
 - Millan Kaul
 categories:
