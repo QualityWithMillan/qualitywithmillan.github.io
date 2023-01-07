@@ -292,7 +292,9 @@ compress_html:
   ignore:
     envs: development
 
-
+after_footer_scripts:
+  - /assets/js/custom/format.js
+  
 # Defaults
 defaults:
   # _posts
