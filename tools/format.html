@@ -8,84 +8,93 @@ search : false
 
 <head>
 	<meta charset="utf-8">
-  <head>
-    <title>Text Formatter</title>
+<head>
     <style>
 
-    body {
-    font-family: Arial, sans-serif;
-    }
-  textarea {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  border: 1px solid #957dad;
-  margin-bottom: 10px;
-  border-color: #957dad;
-	border-width: thick;
-}
+/*     	body {
+    		font-family: Arial, sans-serif;
+    	}
+	     */
+  	textarea {
+		font-size: 16px;
+		font-family: Arial, sans-serif;
+		border: 1px solid #4CAF51;
+		margin-bottom: 10px;
+		border-color: #4CAF51;
+	}
 
-button {
-			margin: 10px;
-			border-color: #957dad !important;
-			color: #888888 !important;
-			margin-bottom: 25px;
-		}
+	button {
+		margin: 5px;
+		border-color: #4CAF51; !important;
+	 	color: #000000 !important;
+		margin-bottom: 15px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+   		font-size: 16px;
+	}
 		
-		button:hover {
-			background-color: #fec8d8 !important;
-		}
-
-#output-text {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  border: 1px solid gray;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+	button:hover {
+		background-color: #4CAF51 !important; 
+		border-color: #888888 !important;
+		color: white !important;
+	}
 
 
-@keyframes click-animation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  #copy-button:active {
-    animation: click-animation 0.3s;
-  }
 
+	@keyframes click-animation {
+	    0% {
+	      transform: scale(1);
+	    }
+	    50% {
+	      transform: scale(1.2);
+	    }
+	    100% {
+	      transform: scale(1);
+	    }
+	  }
+	    
+/* 	    #copy-button:active { */
+	  button:active {
+		    animation: click-animation 0.3s;
+	  }
+
+/* 	    click copy button */
+	.center {
+		  margin: 0;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+	}
 
     </style>
   </head>
   <body>
-    <h1>Text Formatter</h1>
+    <center><h1>Text Formatter</h1></center>
         <h3>Enter text then click one of the buttons below ⬇️</h3>
     <div>
       <textarea id="input-text" rows="4" cols="50"></textarea>
       <br>
-      <button id="bold-button">𝗕𝗼𝗹𝗱</button>
-      <button id="italic-button">𝐼𝑡𝑎𝑙𝑖𝑐</button>
-      <button id="bold-italic-button">𝑩𝒐𝒍𝒅 𝑰𝒕𝒂𝒍𝒊𝒄</button>
-      <button id="underline-button">𝚄̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
+      <button role="button" id="bold-button">𝗕</button>
+      <button role="button" id="italic-button">𝑖</button>
+      <button role="button"  id="bold-italic-button">𝑩𝒊</button>
+      <button role="button"  id="underline-button">𝚄̲</button>
+      <button role="button"  id="strikethrough-button">𝑆̶</button>
+      <button role="button"  id="bold-strikethrough-button">𝐁̶𝐒̶</button>
+      <button role="button"  id="italic-strikethrough-button">𝐼̶𝑆̶</button>
       <br>
-      <button id="strikethrough-button">𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶𝑡̶ℎ̶𝑟̶𝑜̶𝑢̶𝑔̶ℎ̶</button>
-      <button id="bold-strikethrough-button">𝐁̶𝐨̶𝐥̶𝐝̶ ̶𝐒̶𝐭̶𝐫̶𝐢̶𝐤̶𝐞̶</button>
-      <button id="italic-strikethrough-button">𝐼̶𝑡̶𝑎̶𝑙̶𝑖̶𝑐̶ ̶𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶</button>
-      <br>
-      <button id="bold-italic-strikethrough-button">𝘽̶𝙤̶𝙡̶𝙙̶ ̶𝙄̶𝙩̶𝙖̶𝙡̶𝙞̶𝙘̶</button>
-      <button id="monospace-button">𝚖𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</button>
+      <button role="button"  id="bold-italic-strikethrough-button">𝘽̶𝙄̶</button>
+      <button role="button"  id="monospace-button">𝚖 𝚜𝚙𝚊𝚌𝚎</button>
       
     </div>
-    <h2>Output 👇</h2>
-    <br>
+     <center><h2>Output 👇</h2> </center>
     <textarea id="output-text" rows="4" cols="50"></textarea>
     <br>
-    <button id="copy-button">Click to Copy 📑</button>
 
+  	  <div class="center">
+    		<button role="button"  id="copy-button">Click to Copy 📑</button>
+	</div>
   </body>
 </html>
