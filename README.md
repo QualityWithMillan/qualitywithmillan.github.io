@@ -1,11 +1,20 @@
-### 💻 Vist https://qualitywithmillan.github.io/ to see this blog post live
-
+<pre>
 <p align="center">
-  Become a <a href="https://github.com/sponsors/eaccmk" target="_blank">sponsor</a> support me :heart: in creating more OSS stuff <br> 
+  Become a <a href="https://github.com/sponsors/eaccmk" target="_blank">sponsor</a> support me 🤝❤️❤️‍🩹 in creating more OSS stuff
+                               
   <a href="https://github.com/sponsors/eaccmk" target="_blank" >
     <img src="wiki/github_sponsor_btn.svg" alt="sponsor icon with link">
   </a>
 </p>
+</pre>
+
+<p align="center">
+  <b>
+    💻 Vist https://qualitywithmillan.github.io/ to see this blog post live
+  </b>
+</p>
+
+<br>
 
 
 | **Desktop**  :desktop_computer: | **Mobile** :iphone: |
