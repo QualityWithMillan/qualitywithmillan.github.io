@@ -1,3 +1,93 @@
+//logic to handle button click, output display and copy button
+
+
+let copyButton = document.getElementById("copy-button");
+copyButton.addEventListener("click", copyToClipboard);
+
+function copyToClipboard() {
+  let outputText = document.getElementById("output-text").innerHTML;
+
+  let tempInput = document.createElement("textarea");
+  tempInput.value = outputText;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
+
+      function applyFormat(format) {
+      let inputText = document.getElementById("input-text").value;
+      // console.log(toUnicodeVariant(inputText, 'b'));
+      let outputText = '';
+      // = toUnicodeVariant(inputText, 'b');
+
+  switch (format) {
+    case "bold":
+      outputText = toUnicodeVariant(inputText, 'bs');
+      break;
+    case "italic":
+      outputText = toUnicodeVariant(inputText, 'i');
+      break;
+    case "strikethrough":
+      outputText = toUnicodeVariant(inputText, 'i','strike');
+      break;
+    case "underline":
+      outputText = toUnicodeVariant(inputText,'' ,'underline');
+      break;
+    case "bold-strikethrough":
+      outputText = toUnicodeVariant(inputText, 'b' ,'strike');
+      break;
+    case "bold-italic":
+      outputText = toUnicodeVariant(inputText, 'bi');
+      break;
+    case "italic-strikethrough":
+      outputText = toUnicodeVariant(inputText, 'i','strike');
+      break;
+    case "bold-italic-strikethrough":
+      outputText = toUnicodeVariant(inputText, 'bis','strike');
+      break; 
+    case "monospace":
+      outputText = toUnicodeVariant(inputText, 'm');
+    break;
+
+    } 
+
+  document.getElementById("output-text").innerHTML = outputText;
+}
+
+
+let boldButton = document.getElementById("bold-button");
+boldButton.addEventListener("click", () => applyFormat("bold"));
+
+let italicButton = document.getElementById("italic-button");
+italicButton.addEventListener("click", () => applyFormat("italic"));
+
+let strikethroughButton = document.getElementById("strikethrough-button");
+strikethroughButton.addEventListener("click", () => applyFormat("strikethrough"));
+
+let underlineButton = document.getElementById("underline-button");
+underlineButton.addEventListener("click", () => applyFormat("underline"));
+
+//next line
+let boldstrikethroughButton = document.getElementById("bold-strikethrough-button");
+boldstrikethroughButton.addEventListener("click", () => applyFormat("bold-strikethrough"));
+
+let boldItalicButton = document.getElementById("bold-italic-button");
+boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
+
+let italicstrikethroughButton = document.getElementById("italic-strikethrough-button");
+italicstrikethroughButton.addEventListener("click", () => applyFormat("italic-strikethrough"));
+
+let boldItalicstrikethroughButton = document.getElementById("bold-italic-strikethrough-button");
+boldItalicstrikethroughButton.addEventListener("click", () => applyFormat("bold-italic-strikethrough"));
+
+
+let monospaceButton = document.getElementById("monospace-button");
+monospaceButton.addEventListener("click", () => applyFormat("monospace"));
+
+
+//logic to actually convert the format
 // credits :  https://github.com/davidkonrad/toUnicodeVariant
 /**
  * (c) David Konrad 2018-
