@@ -14,7 +14,7 @@ categories:
 tags:
   - node
   - api
-  - JavaScript
+  - javascript
   
 ---
 
@@ -389,5 +389,7 @@ Response from fetch()and in general provides multiple promise-based methods to a
       
 additionally, `response.body` is a ReadableStream object, it allows you to read the body chunk-by-chunk.
 
-<br><hr>
+<br>
+
+
 You can read more in detail on MDN's [official page on Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
