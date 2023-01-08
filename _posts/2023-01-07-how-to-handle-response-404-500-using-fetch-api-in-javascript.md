@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/fetch_hero.png
   caption: "Handle 404 API respinse using fetch in JavaScript"
 permalink: "/post/how-to-handle-response-404-500-using-fetch-api-in-javascript.html"
-date: 2023-01-02T18:00:00-00:00
+date: 2023-01-07T08:00:00-00:00
 authors:
 - Millan Kaul
 categories:
@@ -14,7 +14,7 @@ categories:
 tags:
   - node
   - api
-  - 
+  - JavaScript
   
 ---
 
@@ -192,7 +192,7 @@ FetchError: request to https://google.com/ failed, reason: getaddrinfo ENOTFOUND
 }
 ```  
 
-![fetch_error_internet_off](/assets/image/fetch_error_internet_off.png)
+![fetch_error_internet_off](/assets/images/fetch_error_internet_off.png)
 <figcaption align = "center">Fetch Error screen ( when Internet is OFF)</figcaption> 
   
 <hr>  
@@ -353,7 +353,7 @@ ReferenceError: fetch is not defined
 ```
  
 
-![Missing npm package : node-fetch](/assets/image/fetch_missing_npm_package.png)
+![Missing npm package : node-fetch](/assets/images/fetch_missing_npm_package.png)
 <figcaption align = "center">Missing npm package : node-fetch</figcaption> 
       
 
@@ -369,7 +369,7 @@ npm install node-fetch
 ```
       
       
-![node-fetch (v 2.6.1) installation complete](/assets/image/node-fetch_v_2_6_1_installation_complete.png)
+![node-fetch (v 2.6.1) installation complete](/assets/images/node-fetch_v_2_6_1_installation_complete.png)
 <figcaption align = "center">node-fetch (v 2.6.1) installation complete</figcaption> 
       
       
