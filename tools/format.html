@@ -56,7 +56,7 @@ button:hover {
   }
 }
 
-button:active {
+.copy-icon:active button:active {
   animation: click-animation 0.3s;
 }
 
@@ -75,6 +75,7 @@ button:active {
   top: 0;
   right: 0;
   font-size:30px;
+  color:#1A7EEA;
 }
 
 /* 	    end of style */
@@ -102,12 +103,7 @@ button:active {
 
     <div class="copy-container">
       <textarea id="output-text" rows="4" cols="50"></textarea>
-<!--       <button class="copy-button" onclick="copyText()"> -->
-<!-- Copy Image credit : <a href="https://www.flaticon.com/free-icons/content-copy" title="content copy icons">Content copy icons created by Royyan Wijaya - Flaticon</a> -->
-	      <i class="fa fa-copy copy-icon" onclick="copyText()"></i>
-<!-- 		><img src="../assets/images/copy-icon.png" alt="Copy icon"> -->
-<!--       </button> -->
-
+	<i class="fa fa-copy copy-icon" id="copy-icon"></i>
       <button role="button" id="copy-button">Copy text 📑</button>
     </div>
   </center>
