@@ -69,6 +69,13 @@ button:active {
   top: 0;
   right: 0;
 }
+	    
+.copy-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size:30px;
+}
 
 /* 	    end of style */
     </style>
@@ -95,12 +102,11 @@ button:active {
 
     <div class="copy-container">
       <textarea id="output-text" rows="4" cols="50"></textarea>
-      <button class="copy-button" onclick="copyText()">
-<!--         <i class="fa-solid fa-copy"></i> -->
+<!--       <button class="copy-button" onclick="copyText()"> -->
 <!-- Copy Image credit : <a href="https://www.flaticon.com/free-icons/content-copy" title="content copy icons">Content copy icons created by Royyan Wijaya - Flaticon</a> -->
-        <i class="fa fa-copy" onclick="copyText()"></i
+	      <i class="fa fa-copy copy-icon" onclick="copyText()"></i>
 <!-- 		><img src="../assets/images/copy-icon.png" alt="Copy icon"> -->
-      </button>
+<!--       </button> -->
 
       <button role="button" id="copy-button">Copy text 📑</button>
     </div>
