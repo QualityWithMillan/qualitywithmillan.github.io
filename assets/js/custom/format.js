@@ -72,18 +72,17 @@ let underlineButton = document.getElementById("underline-button");
 underlineButton.addEventListener("click", () => applyFormat("underline"));
 
 //next line
-let boldstrikethroughButton = document.getElementById("bold-strikethrough-button");
-boldstrikethroughButton.addEventListener("click", () => applyFormat("bold-strikethrough"));
+// let boldstrikethroughButton = document.getElementById("bold-strikethrough-button");
+// boldstrikethroughButton.addEventListener("click", () => applyFormat("bold-strikethrough"));
 
 let boldItalicButton = document.getElementById("bold-italic-button");
 boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
 
-let italicstrikethroughButton = document.getElementById("italic-strikethrough-button");
-italicstrikethroughButton.addEventListener("click", () => applyFormat("italic-strikethrough"));
+// let italicstrikethroughButton = document.getElementById("italic-strikethrough-button");
+// italicstrikethroughButton.addEventListener("click", () => applyFormat("italic-strikethrough"));
 
-let boldItalicstrikethroughButton = document.getElementById("bold-italic-strikethrough-button");
-boldItalicstrikethroughButton.addEventListener("click", () => applyFormat("bold-italic-strikethrough"));
-
+// let boldItalicstrikethroughButton = document.getElementById("bold-italic-strikethrough-button");
+// boldItalicstrikethroughButton.addEventListener("click", () => applyFormat("bold-italic-strikethrough"));
 
 let monospaceButton = document.getElementById("monospace-button");
 monospaceButton.addEventListener("click", () => applyFormat("monospace"));
