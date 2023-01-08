@@ -56,7 +56,11 @@ button:hover {
   }
 }
 
-.copy-icon:active button:active {
+button:active {
+  animation: click-animation 0.3s;
+}
+	    
+.copy-icon:active {
   animation: click-animation 0.3s;
 }
 
@@ -68,6 +72,14 @@ button:hover {
   position: absolute;
   top: 0;
   right: 0;
+  background-image: linear-gradient(135deg, pink 40%, blue);
+    width: 10em;
+    height: 5ex;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
 	    
 .copy-icon {
