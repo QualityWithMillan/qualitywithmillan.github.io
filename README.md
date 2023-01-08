@@ -1,17 +1,14 @@
 <pre>
 <p align="center">
-  Become a <a href="https://github.com/sponsors/eaccmk" target="_blank">sponsor</a> support me 🤝❤️❤️‍🩹 
-  And I will continue creating more OSS stuff. 🤗                      
+        Become a <a href="https://github.com/sponsors/eaccmk" target="_blank">sponsor</a> support me 🤝❤️❤️‍🩹 
+  And I will continue creating more OSS stuff. 🤗
   <a href="https://github.com/sponsors/eaccmk" target="_blank" >
-    <img src="wiki/github_sponsor_btn.svg" alt="sponsor icon with link">
-  </a>
-</p>
-</pre>
-
+    <img src="wiki/github_sponsor_btn.svg" alt="sponsor icon with link"></a></p></pre>
 <p align="center">
-  <b> To see this Live ➡️ Vist https://qualitywithmillan.github.io/ ↗️ </b>
+<br>
+  <b> To see 👀 this Live ➡️ , please vist https://qualitywithmillan.github.io ↗️ </b>
 </p>
-
+<br
 
 
 | **Desktop**  :desktop_computer: | **Mobile** :iphone: |
