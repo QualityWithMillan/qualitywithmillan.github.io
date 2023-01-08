@@ -1,5 +1,7 @@
 //logic to handle button click, output display and copy button
 
+let copyIcon = document.getElementById("copy-icon");
+copyIcon.addEventListener("click", copyToClipboard);
 
 let copyButton = document.getElementById("copy-button");
 copyButton.addEventListener("click", copyToClipboard);
