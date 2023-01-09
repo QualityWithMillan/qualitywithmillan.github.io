@@ -40,7 +40,7 @@ tags:
 
 `Automation testing` is an essential part of the software development process, and Selenium is one of the most popular tools for this purpose. 
 It allows testers to write scripts that automate the execution of web applications in a variety of browsers and platforms. 
-*Selenium* has a large and active community of users and developers, and it offers a range of tools and libraries to extend its functionality.
+**Selenium** has a large and active community of users and developers, and it offers a range of tools and libraries to extend its functionality.
 
 However, using `Selenium` also comes with its share of challenges. 
 It requires a deep understanding of web technologies and languages such as HTML, CSS, and programming languages such as java and JavaScript. 
@@ -50,12 +50,12 @@ And tests written with Selenium can be <ins>prone to flakiness and unreliability
 In recent years, a number of alternative automation tools have emerged, promising to address some of the pain points of Selenium. 
 Cypress and Playwright are two examples of these newer tools that have gained popularity among testers. 
 They offer a simpler and more intuitive syntax, as well as improved reliability and performance. 
-Some testers and organizations have chosen to migrate from Selenium to these newer tools, seeing them as a *more efficient and effective solution*.
+Some testers and organizations have chosen to migrate from Selenium to these newer tools, seeing them as a **more efficient and effective solution**.
 
 But despite the appeal of these alternatives, Selenium remains a widely used and influential tool in the industry 🙌. 
 Many organizations have invested significant time and resources in building up their Selenium infrastructure and expertise. 
 Selenium is also widely supported and has a high degree of backward compatibility. 
-And it continues to evolve and improve, with *new versions and features being released regularly*.
+And it continues to evolve and improve, with **new versions and features being released regularly**.
 
 For these reasons, the **relationship with Selenium automation is often a love-hate one** . 
 
