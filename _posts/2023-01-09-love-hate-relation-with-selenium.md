@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/love-hate-selenium.png
   caption: "icon - Selenium.dev"
 permalink: "/post/love-hate-selenium.html"
-date: 2023-01-10T08:00:00-00:00
+date: 2023-01-09T08:00:00-00:00
 authors:
 - Millan Kaul
 categories:
