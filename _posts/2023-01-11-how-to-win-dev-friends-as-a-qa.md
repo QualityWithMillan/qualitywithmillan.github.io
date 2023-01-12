@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/dev-qa-friends.png
   caption: "Dev QA Friends"
 permalink: "/post/how-to-win-dev-friends-as-a-QA.html"
-date: 2023-01-12T08:00:00-00:00
+date: 2023-01-11T08:00:00-00:00
 authors:
 - Millan Kaul
 categories:
