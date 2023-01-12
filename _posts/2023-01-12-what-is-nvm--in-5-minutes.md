@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/nvm_hero.png
   caption: "nvm with multiple versions"
 permalink: "/post/what-is-nvm--in-5-minutes.html"
-date: 2023-01-02T18:00:00-00:00
+date: 2023-01-12T18:00:00-00:00
 authors:
 - Millan Kaul
 categories:
