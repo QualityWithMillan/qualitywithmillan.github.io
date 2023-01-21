@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/base64.png
   caption: "Decoding Base64 string - with postman"
 permalink: "/post/base-64-decoding-using-postman.html"
-date: 2023-01-02T18:00:00-00:00
+date: 2023-02-21T18:00:00-00:00
 authors:
 - Millan Kaul
 categories:
@@ -14,7 +14,6 @@ categories:
 tags:
   - security
   - tools
-  - 
   
 ---
 
@@ -51,7 +50,7 @@ Having said that , we have a lot of use cases where you may have to implement B
 Question here is how often we do it offline ( not copy pasting data on some websites which are not hosted in your company's network) .
 It is so easy to use free online resources.
 
-![base64 matrix image](/assets/image/base64_matrix.png)
+![base64 matrix image](/assets/images/base64_matrix.png)
 <figcaption align = "center">Photo by Markus Spiske on Unsplash</figcaption> 
 
 
@@ -101,7 +100,7 @@ const base64EncodedString =  "YWJjZDEyMzQ=" ;
 > Now Make sure you click on Test Results tab as in below screen shot to see Decoded String also you can click Console bottom left 2nd link to see more details.
 
  
-![base64 Postman ui decoding screenshot](/assets/image/base64_postman_ui.png)
+![base64 Postman ui decoding screenshot](/assets/images/base64_postman_ui.png)
 <figcaption align = "center">Screen : Compete Experience of Base64 Decoding using postman</figcaption> 
 
 
@@ -166,14 +165,14 @@ console.log("OUTPUT >> ",decodedString," <<");
 ## -- Results --
 
 
-![Test Results with Base64 Decoded result.](/assets/image/base64_pm_result_tab.png)
+![Test Results with Base64 Decoded result.](/assets/images/base64_pm_result_tab.png)
 <figcaption align = "center">Test Results with Base64 Decoded result.</figcaption> 
 
 
 <hr>
 
 
-![Console logs with Base64 Decoded result.](/assets/image/base64_pm_console_tab.png)
+![Console logs with Base64 Decoded result.](/assets/images/base64_pm_console_tab.png)
 <figcaption align = "center">Console logs with Base64 Decoded result.</figcaption> 
 
 
