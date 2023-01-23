@@ -20,11 +20,10 @@ Millan Kaul:
         url: "https://au.linkedin.com/in/millankaul"
         
         
-Furure Author:
-    name: "ToDo"
-    name: "ToDo"
-    display_name     : "ToDo"
-    avatar           : "/assets/images/ToDo-bio-photo.jpg"
+Paul Maxwell-Walters:
+    name: "Paul Maxwell-Walters"
+    display_name     : "Paul Maxwell-Walters"
+#     avatar           : "/assets/images/ToDo-bio-photo.jpg"
     bio              : "ToDo"
     location         : "ToDo"
     email            : "ToDo"
