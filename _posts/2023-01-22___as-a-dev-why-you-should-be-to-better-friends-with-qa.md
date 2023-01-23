@@ -49,38 +49,41 @@ Developers and testers often work closely together to ensure that a software app
 
 I will try my best with code examples and situations.
 
-1. **Testers can save developers from crises** by identifying and reporting bugs early on in the development process. 
+**Testers can save developers from crises** by identifying and reporting bugs early on in the development process. 
 This allows developers to fix the issues before they become major problems that impact the user experience.
 
 
 <br><br>
 
-Testers can help developers gain a deeper understanding of the product by providing feedback on how it is being used in the real world. This can help developers make informed decisions about future enhancements and improvements.
+### When working with QA (no coding involved)
 
-Testers often have a strong understanding of <ins>end-to-end testing</ins>, which can help developers ensure that their code is functioning properly across all parts of the application.
+🙌. Testers can help developers gain a deeper understanding of the product by providing feedback on how it is being used in the real world. This can help developers make informed decisions about future enhancements and improvements.
 
-Testers can help developers **improve the quality** of their `code` by providing feedback on test automation strategies and helping to implement automated testing processes.
+🙌. Testers often have a strong understanding of <ins>end-to-end testing</ins>, which can help developers ensure that their code is functioning properly across all parts of the application.
 
-Testers can also help developers with code snippets and positive examples, by providing sample code that demonstrates how to handle specific scenarios or edge cases.
+🙌. Testers can help developers **improve the quality** of their `code` by providing feedback on test automation strategies and helping to implement automated testing processes.
+
+🙌. Testers can also help developers with code snippets and positive examples, by providing sample code that demonstrates how to handle specific scenarios or edge cases.
 
 **Let me explain with an example:**
 
-A developer is working on a new feature that allows users to upload files to the application. 
+👨‍💻 A developer is working on a new feature that allows users to upload files to the application. 
 The developer has written the code and tested it locally, but it's not working as expected when it goes to live. 
-A tester found out that the issue is with the file size validation, where the code is allowing to upload files more than the required size limit. 
+
+🤝 A tester found out that the issue is with the file size validation, where the code is allowing to upload files more than the required size limit. 
 This issue is then fixed by the developer and it's not causing any negative impact on the user experience.
 
-### Another scenario as a automation tester with developers.
+### When working with automation tester
 
-Test automation can help developers save time by automating repetitive and time-consuming tasks, such as running regression tests. This allows developers to focus on more important tasks, such as writing new code or fixing bugs.
+⚙️.  Test automation can help developers save time by automating repetitive and time-consuming tasks, such as running regression tests. This allows developers to focus on more important tasks, such as writing new code or fixing bugs.
 
-Test automation can help developers improve the reliability of their code by running automated tests on a regular basis. This can help to catch bugs and other issues early on, before they have a chance to cause problems for users.
+⚙️.  Test automation can help developers improve the reliability of their code by running automated tests on a regular basis. This can help to catch bugs and other issues early on, before they have a chance to cause problems for users.
 
-Test automation can help developers improve the maintainability of their code by providing a clear and consistent testing strategy. This can make it easier for developers to understand how the code is supposed to work and make changes as needed.
+⚙️.  Test automation can help developers improve the maintainability of their code by providing a clear and consistent testing strategy. This can make it easier for developers to understand how the code is supposed to work and make changes as needed.
 
-Test automation can help developers improve the efficiency of their code by identifying areas that are taking longer than expected to execute, and providing data that can be used to optimize performance.
+⚙️.  Test automation can help developers improve the efficiency of their code by identifying areas that are taking longer than expected to execute, and providing data that can be used to optimize performance.
 
-Here's an example of a Java code snippet that demonstrates how to use JUnit, a popular testing framework for Java, to create an automated test:
+Here's an example of a `Java` code snippet that demonstrates how to use `JUnit`, a popular testing framework for `Java`, to create an `automated test`:
 
 ```java
 import org.junit.Test;
