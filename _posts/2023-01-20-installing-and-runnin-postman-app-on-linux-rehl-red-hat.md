@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/rehl_postman_hero.png
   caption: "Screenshot of REHL ( redhat OS with postman)"
 permalink: "/post/installing-and-runnin-postman-app-on-linux-rehl-red-hat.html"
-date: 2023-01-02T18:00:00-00:00
+date: 2023-01-20T18:00:00-00:00
 authors:
 - Millan Kaul
 categories:
@@ -52,7 +52,7 @@ Let us set up postman for you in less than 5 minutes; yes 🖐️ five !
 > For simplification I will use the term `"terminal"` ⬛ in this article
 
 
-![Screen shot of rehat desktop with postman app on left sidebar](/assets/image/rehl_postman_hero.png)
+![Screen shot of rehat desktop with postman app on left sidebar](/assets/images/rehl_postman_hero.png)
 <figcaption align = "center">Rehat desktop with postman app on left sidebar</figcaption> 
 
 
@@ -241,12 +241,12 @@ snap run postman
 
 
 
-![postman app launching on linux system](/assets/image/rehl_postman_launch.png)
+![postman app launching on linux system](/assets/images/rehl_postman_launch.png)
 <figcaption align = "center">Postman app launching on linux system</figcaption> 
 
 
 
-![postman app runnning on linux system](/assets/image/rehl_postman_runnning.png)
+![postman app runnning on linux system](/assets/images/rehl_postman_runnning.png)
 <figcaption align = "center">Postman app running on linux system</figcaption> 
 
 
@@ -254,7 +254,7 @@ snap run postman
 
 
 
-![postman app shortcut on rehl](/assets/image/rehl_postman_shortcut.png)
+![postman app shortcut on rehl](/assets/images/rehl_postman_shortcut.png)
 <figcaption align = "center">Postman app shortcut on rehl</figcaption> 
 
 
