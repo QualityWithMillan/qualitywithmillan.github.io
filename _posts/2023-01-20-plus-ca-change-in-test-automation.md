@@ -1,6 +1,7 @@
 ---
 title: "Plus Ca Change in Test Automation"
 header:
+
 permalink: "/post/co-author/paul/plus-ca-change-in-test-automation.html"
 date: 2023-01-20T18:00:00-00:00
 authors:
@@ -103,8 +104,7 @@ Similarly, _**record-and-playback**_ tools for generating tests, deemed an antip
 
 Of course there is a place for them in the market however this experiment <ins>was tried more than ten years ago</ins> with tools that promised smart UI object recognition and an IDE to _create tests without the need to code_, such as TestComplete and HP UFT - yet the industry moved away from them to newer, more basic `open source frameworks` like `Selenium`. 
 It seems that having to learn to code to implement our own `test automation` **for free** (although it was never for free and failures were costly) wasn’t such a burden for us after all. 
-Fixating on these also mask the genuine innovations that have arrived in more recent automation, such as visual UI comparison tools.
-
+Fixating on these also mask the genuine innovations that have arrived in more recent automation, such as visual UI comparison tools and tools for data creation and automating API and security checks.
 
 <br><br>
 
