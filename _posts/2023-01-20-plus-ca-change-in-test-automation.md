@@ -1,7 +1,8 @@
 ---
 title: "Plus Ca Change in Test Automation"
 header:
-
+  image: /assets/images/co-author/paul-maxwell-walters.png
+  teaser: /assets/images/co-author/paul-maxwell-walters.png
 permalink: "/post/co-author/paul/plus-ca-change-in-test-automation.html"
 date: 2023-01-20T18:00:00-00:00
 authors:
