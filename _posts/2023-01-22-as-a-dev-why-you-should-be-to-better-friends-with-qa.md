@@ -4,7 +4,7 @@ header:
   image: /assets/images/dev-qa-friends.png
   teaser: /assets/images/dev-qa-friends.png
   caption: "Dev QA Friends"
-permalink: "/post/how-to-win-dev-friends-as-a-QA.html"
+permalink: "/post/as-a-dev-why-you-should-be-to-better-friends-with-qa.html"
 date: 2023-01-22T08:00:00-00:00
 authors:
 - Millan Kaul
