@@ -190,8 +190,8 @@ fetch(endpoint, {
 ```
 
 
-In conclusion, testers play a vital role in the software development process by helping developers to identify and fix bugs, improve the overall quality of the code, and ensure that the application is functioning as expected. 
+In conclusion, testers play a vital role ⭐ in the software development process by helping developers to identify and fix bugs, improve the overall quality of the code, and ensure that the application is functioning as expected. 
 
-Developers should value the contributions of testers and work closely with them to create high-quality software that meets the needs of users.
+🤝 Developers should value the contributions of testers and work closely with them to create high-quality software that meets the needs of users.
 
 
