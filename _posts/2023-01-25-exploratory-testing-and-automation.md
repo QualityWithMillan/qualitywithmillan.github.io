@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/exploratory_testing.png
   caption: "Photo credit: unDraw"
 permalink: "/post/exploratory-testing-with-test-automation.html"
-date: 2023-01-27T18:00:00-00:00
+date: 2023-01-25T18:00:00-00:00
 authors:
 - Millan Kaul
 categories:
