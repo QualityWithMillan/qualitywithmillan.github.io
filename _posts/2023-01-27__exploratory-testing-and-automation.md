@@ -1,10 +1,10 @@
 ---
 title: "Exploratory Testing + Automation"
 header:
-  image: /assets/images/ToDo.png
-  teaser: /assets/images/ToDo.png
-  caption: "Photo credit: [**ToDo**](https://ToDo)"
-permalink: "/post/ToDo.html"
+  image: /assets/images/exploratory_testing.png
+  teaser: /assets/images/exploratory_testing.png
+  caption: "Photo credit: unDraw"
+permalink: "/post/exploratory-testing-with-test-automation.html"
 date: 2023-01-27T18:00:00-00:00
 authors:
 - Millan Kaul
