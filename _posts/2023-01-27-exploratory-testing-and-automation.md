@@ -1,7 +1,7 @@
 ---
 title: "Exploratory Testing 🔎 ➕ Automation ⚙️"
 header:
-  image: /assets/images/exploratory_testing.png
+  #image: /assets/images/exploratory_testing.png
   teaser: /assets/images/exploratory_testing.png
   caption: "Photo by: vijay verma"
 permalink: "/post/exploratory-testing-with-test-automation.html"
@@ -42,6 +42,8 @@ tags:
 ### Exploratory testing is a type of testing where the tester actively explores the application while testing it. 
 
 🎯 The goal of exploratory testing is to find as many defects as possible in the shortest amount of time. When combined with a test automation tool, exploratory testing can become a great win for organizations by providing a more comprehensive and efficient testing process..
+
+![image showing science laboratory equipments to depict the concept of exploratory testing]({{site.url}}{{site.baseurl}}/assets/images/exploratory_testing.png)
 
 🙌 Some tips and tricks for effective exploratory testing include:
 
