@@ -1,0 +1,138 @@
+---
+layout: single
+search : false
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+<head>
+<!-- 	start of style -->
+    <style>
+ sub {
+  color: #4CAF51 !important;
+  font-weight: bold;
+}
+
+textarea {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #4CAF51;
+  margin-bottom: 10px;
+  border-color: #4CAF51;
+}
+	    
+/* button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(135deg, pink 40%, blue);
+    width: 10em;
+    height: 5ex;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}  */
+
+button {
+  margin: 5px;
+  border-color: #4CAF51;
+   !important;
+  color: #000000 !important;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+} 
+
+button:hover {
+  background-color: #4CAF51 !important;
+  border-color: #888888 !important;
+  color: white !important;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:active {
+  animation: click-animation 0.3s;
+}
+	    
+.copy-icon:active {
+  animation: click-animation 0.3s;
+}
+
+.copy-container {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(135deg, pink 40%, blue);
+    width: 10em;
+    height: 5ex;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+	    
+.copy-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size:30px;
+  color:#1A7EEA;
+}
+
+/* 	    end of style */
+    </style>
+  </head>
+  <body>
+  <center>
+    <h2>Text Formatter <sub> ~ By Millan</sub></h2>
+    <b> Enter your text ⬇️</b>
+    <br>
+    <textarea id="input-text" rows="4" cols="50"></textarea>
+    <br>
+
+    <button role="button" id="bold-button">𝗕</button>
+    <button role="button" id="italic-button">𝑖</button>
+    <button role="button" id="bold-italic-button">𝑩𝒊</button>
+    <button role="button" id="underline-button">𝚄̲</button>
+    <button role="button" id="strikethrough-button">𝑆̶</button>
+    <button role="button" id="monospace-button">𝚖 o n o</button>
+    <!-- <button role="button"  id="bold-strikethrough-button">𝐁̶𝐒̶</button> -->
+    <!-- <button role="button"  id="italic-strikethrough-button">𝐼̶𝑆̶</button> -->
+    <!-- <button role="button"  id="bold-italic-strikethrough-button">𝘽̶𝙄̶</button> -->
+
+    <h4> 👇 ------ Output ------ 👇</h4>
+
+    <div class="copy-container">
+      <textarea id="output-text" rows="4" cols="50"></textarea>
+	<i class="fa fa-copy copy-icon" id="copy-icon"></i>
+      <button role="button" id="copy-button">Copy text 📑</button>
+    </div>
+  </center>
+</body>
+
+</html>

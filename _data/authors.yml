@@ -1,0 +1,42 @@
+Millan Kaul:
+    name: "Millan Kaul"
+    display_name     : "Millan Kaul"
+    avatar           : "/assets/images/bio-photo.jpg"
+    bio              : ""
+    location         : "Australia"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto:your.name@email.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        url: "https://twitter.com/MillanKaul"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/eaccmk"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://au.linkedin.com/in/millankaul"
+
+
+Paul Maxwell-Walters:
+    name: "Paul Maxwell-Walters"
+    display_name     : "Paul Maxwell-Walters"
+    avatar           : "/assets/images/co-author/paul-maxwell-walters.png"
+    bio              : "A British-Australian software tester and test lead based in Sydney, Australia with about 12 years of experience testing in agriculture, education, financial services, digital media and energy consultancy. Paul is acting chair and a committee member of Sydney Testers Meetup Group, along with having spoken at several conferences in Australia."
+    location         : "Sydney, Australia"
+ #   email            : "ToDo"
+    links:
+      #- label: "Email"
+      #  icon: "fas fa-fw fa-envelope-square"
+        #url: "mailto:your.name@email.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        url: "https://twitter.com/TestingRants"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/PaulWaltersDev"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/paulwaltersuk/"
