@@ -9,13 +9,14 @@ permalink: "/post/the-paradigm-of-quality.html"
 date: 2023-02-01T00:00:00-00:00
 authors:
 - Alejandro Sanchez Giraldo
+- ChatGPT
 categories:
   - blog
 tags:
   - Roadmap
   - Quality Engineering
   - Strategy
-  
+  - Maturity Assessment 
 ---
 
 <hr>
@@ -41,6 +42,22 @@ tags:
 
 ## The paradigm of Quality
 
+The paradigm of quality refers to the overall concept, philosophy, or approach to quality in a particular field or industry. It encompasses the beliefs, values, and practices related to quality, and it is shaped by the context in which it operates.
+
+In general, the paradigm of quality can be characterized by the following principles:
+
+- Customer focus: Quality is defined by the customer and their needs and expectations. The customer is the ultimate judge of quality, and quality efforts should be focused on meeting or exceeding customer requirements.
+
+- Continuous improvement: Quality is an ongoing process, and continuous improvement is an essential aspect of the paradigm of quality. Organizations should strive to improve their quality processes and systems continuously to meet changing customer needs and to stay ahead of the competition.
+
+- Total quality management: Quality is a company-wide responsibility, and everyone in the organization should be involved in quality efforts. This means that quality should be integrated into all aspects of the organization, from product design to customer service.
+
+- Data-driven decision making: The paradigm of quality is based on data-driven decision making. Quality processes should be based on data and facts, and decisions about quality should be made based on data and analysis, rather than intuition or experience.
+
+- Collaboration: Quality is a collaborative effort, and it requires the involvement and cooperation of all stakeholders, including customers, suppliers, employees, and management.
+
+Overall, the paradigm of quality is an essential part of any organization's success, as it helps to ensure that the organization is delivering high-quality products and services that meet customer needs and expectations. By adopting a strong quality paradigm, organizations can improve their competitiveness, enhance customer satisfaction, and increase profitability.
+
 <hr>
 
 - What is quality?
@@ -54,15 +71,11 @@ tags:
 
 <hr>
 
-These are just a few questions you need to address as you try to implement quality with in your organisation. But I ask you first, What is your definition of quality?
+These are just a few questions you need to address as you try to implement quality within your organisation. But I ask you first, What is your definition of quality?
 
-<hr>
+>The word quality either as an adjective or a noun is driven by the opinion of the observant.
 
->The word quality either as an adjective or a noun is  driven by the opinion of the observant.
-
-<hr>
-
-For example, your software might be described quality software due to the code coverage it possesses, others might think is based on how easy is it to maintain and is well documented, others might even describe quality code as code that can be used by consumers quickly.
+For example, your software might be described as quality software due to the code coverage it possesses, others might think is based on how easy is it to maintain and is well documented, and others might even describe quality code as code that can be used by consumers quickly.
 
 <hr> 
 
@@ -71,13 +84,19 @@ For example, your software might be described quality software due to the code c
 
 
 <hr>
-There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality base on the definition of success of your business. I have worked in many industries, some of which success is defined by speed to market, and other are base on meeting certain industry standards, so how can you create a process or strategy to implement quality in your organisation?
+There are many standards and objective metrics that There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality based on the definition of the success of your business.
 
 <br>
 
-First you need to understand you organisation definition of success, and the appetite to risk. These two pillars will drive the right implementation of quality and what steps are required to achieve such quality.
+I have worked in many industries, some of which success is defined by speed to market, and others are based on meeting certain industry standards, so how can you create a process or strategy to implement quality in your organisation?
 
-Something I have been working over the last few years is a set of maturity steps were you can understand the desired quality and how you can get there.
+<br>
+
+First, you need to understand your organisation's definition of success, and the appetite to risk. These two pillars will drive the right implementation of quality and what steps are required to achieve such quality.
+
+<br> 
+
+Something I have been working on over the last few years is a set of maturity steps where you can understand the desired quality and how you can get there.
 
 <hr>
 
@@ -91,21 +110,24 @@ Something I have been working over the last few years is a set of maturity steps
 
 <hr>
 
-I find the above describe the current ways teams are delivering quality, but I have a few questions for you:
+I find the above describes the current ways teams are delivering quality, but I have a few questions for you:
 
->- Where is your current team at?
+>- Where is your current team?
 >- Is my team at the right step?
 >- How can I get to the right step?
 
-There are several methods you can assess your stage of quality, Joel Test has been a popular assessment since 2000 and more recent DORA state of DevOps are great ways to understand your software and code quality, but how can this encapsulate other areas that can drive quality, like Agile practices, team structures and operational quality?
+<br>
 
-In this series we will explore together each of this steps, how I think we could assess our teams and what are some of the technical and cultural changes need to get your team to a desired step.
+There are several methods you can assess your stage 
+of quality, [Joel Test](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/) has been a popular assessment since 2000 and more recent [DORA state of DevOps](https://cloud.google.com/blog/products/devops-sre/dora-2022-accelerate-state-of-devops-report-now-out) are great ways to understand your software and code quality, but how can this encapsulate other areas that can drive quality, like Agile practices, team structures and operational quality?
+
+In this series, we will explore together each of these steps, how I think we could assess our teams and what some of the technical and cultural changes need to get your team to a desired step.
 
 <hr>
 
 ## Independent
 
-Independent teams validate changes with either manual or automated test, automation is primitive and based on E2E journeys on flaky and expensive environments.
+<br>
 
 Here's how independent software verification works:
 
@@ -119,4 +141,37 @@ Here's how independent software verification works:
 
 - Final assessment: Based on the results of the testing process, the verification team provides a final assessment of the software's quality and functionality. If any issues were identified during the testing process, the verification team works with the software development team to address them before the software is released to the market.
 
-This process 
+### How to assess
+
+Is your team doing the above? You would be surprised how many organisations continue to operate like this. Due to the agile and DevOps revolutions, many consider this is old fashion and has no place in the software industry.
+
+The first part of any assessment is to be truthful on how you deliver quality in your organisation. If you are following a process, there is a reason for this, and it is important to understand why. Might be due to risk to an organisation or its customers.
+
+Spend some time with your teams and check the below:
+
+1. Are tests automated?
+  - [ ] Yes
+  - [ ] No
+
+2. Are tests self-verifying?
+  - [ ] Yes
+  - [ ] No
+
+3. Do you have a dedicated quality/test engineering team?
+  - [ ] Yes
+  - [ ] No
+
+4. Do you need to wait for someone else to make decisions about the quality the team is shipping?
+  - [ ] Yes
+  - [ ] No
+
+5. Does the team need to use multiple tools to track the delivery and quality of software?
+  - [ ] Yes
+  - [ ] No
+
+These are just a few questions that can indicate where your team and organisation sit. Some open-source tools can help you in this journey, I find [devopsmaturity](https://devopsmaturity.atos.net/) by atos a great way to asses individual teams. 
+
+If you're searching for an assessment that covers the entire organization, it's advisable to bring in an external team to assist. I've observed that many organizations that attempt to self-assess tend to encounter issues and never get a good results. These assessments are only valuable if they are conducted regularly to determine improvement progress.
+
+
+This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat)
