@@ -9,7 +9,7 @@ main:
   - title: "Tags 🏷️"
     url: /tags/
   - title: "Tools ⚒️"   
-    url: /tools/format/
+    url: /tools/
   - title: "Terms & Privacy"
     url: /terms/
   # - title: "Sitemap"

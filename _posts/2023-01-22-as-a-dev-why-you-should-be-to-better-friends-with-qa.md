@@ -1,11 +1,11 @@
 ---
 title: "As a Dev 👨‍💻, why you should be better friends with QA ❤️"
 header:
-  image: /assets/images/dev-qa-friends.png
-  teaser: /assets/images/dev-qa-friends.png
+  image: /assets/images/friends_group.png
+  teaser: /assets/images/friends_group.png
   caption: "Dev QA Friends"
-permalink: "/post/as-a-dev-why-you-should-be-to-better-friends-with-qa.html"
-date: 2023-01-22T08:00:00-00:00
+permalink: "/post/as-a-dev-why-you-should-be-better-friends-with-qa.html"
+date: 2023-01-22
 authors:
 - Millan Kaul
 categories:
@@ -52,8 +52,7 @@ I will try my best with code examples and situations.
 **Testers can save developers from crises** by identifying and reporting bugs early on in the development process. 
 This allows developers to fix the issues before they become major problems that impact the user experience.
 
-
-<br><br>
+<br>
 
 ### When working with QA (no coding involved)
 

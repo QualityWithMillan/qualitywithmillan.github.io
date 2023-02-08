@@ -294,6 +294,7 @@ compress_html:
 
 after_footer_scripts:
   - /assets/js/custom/format.js
+  - /assets/js/custom/main.js
   
 # Defaults
 defaults:
