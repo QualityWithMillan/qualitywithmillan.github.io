@@ -86,7 +86,6 @@ monospaceButton.addEventListener("click", () => applyFormat("monospace"));
 // let boldstrikethroughButton = document.getElementById("bold-strikethrough-button");
 // boldstrikethroughButton.addEventListener("click", () => applyFormat("bold-strikethrough"));
 
-
 // let italicstrikethroughButton = document.getElementById("italic-strikethrough-button");
 // italicstrikethroughButton.addEventListener("click", () => applyFormat("italic-strikethrough"));
 

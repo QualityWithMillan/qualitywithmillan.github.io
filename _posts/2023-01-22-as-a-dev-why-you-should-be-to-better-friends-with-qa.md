@@ -52,7 +52,6 @@ I will try my best with code examples and situations.
 **Testers can save developers from crises** by identifying and reporting bugs early on in the development process. 
 This allows developers to fix the issues before they become major problems that impact the user experience.
 
-
 <br>
 
 ### When working with QA (no coding involved)
