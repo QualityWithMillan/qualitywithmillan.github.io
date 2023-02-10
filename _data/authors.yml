@@ -40,3 +40,22 @@ Paul Maxwell-Walters:
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
         url: "https://www.linkedin.com/in/paulwaltersuk/"
+
+# Alejandro Sanchez Giraldo Author details
+Alejandro Sanchez Giraldo:
+    name: "Alejandro Sanchez Giraldo"
+    display_name     : "Alejandro Sanchez Giraldo"
+    avatar           : "/assets/images/co-author/alejandro-sanchez-giraldo.jpeg"
+    bio              : "the Product Owner for Quality and the person that will collaborate with teams to ensure we build capabilities to uplift an organization's quality. A strong believer in building community and enjoy working with internal and external teams to drive quality as a common goal while expanding individuals' capabilities."
+    location         : "Sydney, Australia"
+    email            : "alejandrosanchezau@yahoo.com.au"
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        url: "mailto:alejandrosanchezau@yahoo.com.au"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/ale-sanchez-g"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/alejandrosanchezgiraldo"
