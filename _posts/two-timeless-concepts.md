@@ -2,11 +2,11 @@
 search : "false"
 title: "Two Timeless Concepts"
 header:
-  image: /assets/images/thinking-by-unsplash.jpg
-  teaser: /assets/images/thinking-by-unsplash.jpg
+  image: /assets/images/steffen-gundermann-PtGvu2P-Gco-unsplash.jpg
+  teaser: /assets/images/steffen-gundermann-PtGvu2P-Gco-unsplash.jpg
   caption: "Photo credit: Unplash"
-permalink: "/post/the-paradigm-of-quality.html"
-date: 2023-02-01T00:00:00-00:00
+permalink: "/post/two-timeless-concepts.html"
+date: 2023-02-14
 authors:
 - Alejandro Sanchez Giraldo
 - ChatGPT
