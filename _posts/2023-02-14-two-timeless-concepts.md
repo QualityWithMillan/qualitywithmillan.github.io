@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/steffen-gundermann-PtGvu2P-Gco-unsplash.jpg
   caption: "Photo credit: Unplash"
 permalink: "/post/2023-02-14-two-timeless-concepts.html"
-date: 2023-02-01T00:00:00-00:00
+date: 2023-02-14
 authors:
 - Alejandro Sanchez Giraldo
 - ChatGPT
