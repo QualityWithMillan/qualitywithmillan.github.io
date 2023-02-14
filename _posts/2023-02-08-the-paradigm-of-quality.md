@@ -5,7 +5,6 @@ header:
   teaser: /assets/images/thinking-by-unsplash.jpg
   caption: "Photo credit: Unplash"
 permalink: "/post/the-paradigm-of-quality.html"
-date: 2023-02-08
 authors:
 - Alejandro Sanchez Giraldo
 - ChatGPT
@@ -83,7 +82,8 @@ For example, your software might be described as quality software due to the cod
 
 
 <hr>
-There are many standards and objective metrics that There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality based on the definition of the success of your business.
+
+There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality based on the definition of the success of your business.
 
 <br>
 
@@ -174,3 +174,4 @@ If you're searching for an assessment that covers the entire organization, it's 
 
 
 This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat)
+
