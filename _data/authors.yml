@@ -48,7 +48,6 @@ Alejandro Sanchez Giraldo:
     avatar           : "/assets/images/co-author/alejandro-sanchez-giraldo.jpeg"
     bio              : "the Product Owner for Quality and the person that will collaborate with teams to ensure we build capabilities to uplift an organization's quality. A strong believer in building community and enjoy working with internal and external teams to drive quality as a common goal while expanding individuals' capabilities."
     location         : "Sydney, Australia"
-    email            : "alejandrosanchezau@yahoo.com.au"
     links:
       - label: "Email"
         icon: "fas fa-fw fa-envelope-square"
