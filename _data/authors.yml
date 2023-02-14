@@ -3,7 +3,7 @@ Millan Kaul:
     display_name     : "Millan Kaul"
     avatar           : "/assets/images/bio-photo.jpg"
     bio              : ""
-    location         : "Australia"
+    location         : "Australia 🇦🇺"
     email            :
     links:
       - label: "Email"
@@ -25,7 +25,7 @@ Paul Maxwell-Walters:
     display_name     : "Paul Maxwell-Walters"
     avatar           : "/assets/images/co-author/paul-maxwell-walters.png"
     bio              : "A British-Australian software tester and test lead based in Sydney, Australia with about 12 years of experience testing in agriculture, education, financial services, digital media and energy consultancy. Paul is acting chair and a committee member of Sydney Testers Meetup Group, along with having spoken at several conferences in Australia."
-    location         : "Sydney, Australia"
+    location         : "Sydney, Australia 🇦🇺"
  #   email            : "ToDo"
     links:
       #- label: "Email"
@@ -47,7 +47,7 @@ Alejandro Sanchez Giraldo:
     display_name     : "Alejandro Sanchez Giraldo"
     avatar           : "/assets/images/co-author/alejandro-sanchez-giraldo.jpeg"
     bio              : "the Product Owner for Quality and the person that will collaborate with teams to ensure we build capabilities to uplift an organization's quality. A strong believer in building community and enjoy working with internal and external teams to drive quality as a common goal while expanding individuals' capabilities."
-    location         : "Sydney, Australia"
+    location         : "Sydney, Australia 🇦🇺"
     links:
       - label: "Email"
         icon: "fas fa-fw fa-envelope-square"
@@ -58,3 +58,22 @@ Alejandro Sanchez Giraldo:
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
         url: "https://www.linkedin.com/in/alejandrosanchezgiraldo"
+
+
+Karthik Hariharan:
+    name: "Karthik Hariharan"
+    display_name     : "Karthik Hariharan"
+    avatar           : "/assets/images/co-author/karthik-hariharan.jpg"
+    bio              : "Entrepreneur & Sales Leader Passionate About Delivering A Great Experience, Digitally Or On A Plate"
+    location         : "India 🇮🇳"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        url: "mailto: karthik.hariharan@applitools.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        url: "https://twitter.com/_peregrine_"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://in.linkedin.com/in/0karthik0"
