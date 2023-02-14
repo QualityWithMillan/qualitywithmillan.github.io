@@ -84,7 +84,7 @@ For example, your software might be described as quality software due to the cod
 
 
 <hr>
-There are many standards and objective metrics that There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality based on the definition of the success of your business.
+There are many standards and objective metrics that will help you measure the state of your code, but ultimately you can only achieve quality based on the definition of the success of your business.
 
 <br>
 
