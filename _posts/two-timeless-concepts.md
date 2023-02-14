@@ -5,7 +5,7 @@ header:
   image: /assets/images/steffen-gundermann-PtGvu2P-Gco-unsplash.jpg
   teaser: /assets/images/steffen-gundermann-PtGvu2P-Gco-unsplash.jpg
   caption: "Photo credit: Unplash"
-permalink: "/post/2023-02-14-two-timeless-concepts.html"
+permalink: "/post/two-timeless-concepts.html"
 date: 2023-02-14
 authors:
 - Alejandro Sanchez Giraldo
