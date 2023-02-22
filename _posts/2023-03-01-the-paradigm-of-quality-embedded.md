@@ -60,7 +60,7 @@ In 2001, we saw a significant leap in technology that changed the way we work an
 
 It was also a turning point in the technology industry, with several groundbreaking advancements that changed the way we interact with digital devices. The introduction of the iPod revolutionized the way we listen to music, with its intuitive interface and massive storage capacity. We also saw the debut of Mac OS X, a powerful and versatile operating system that laid the foundation for many of the innovations that we enjoy today. And of course, we cannot forget the launch of the first-ever Apple retail store, which created a whole new way for customers to experience and purchase technology products. These developments marked a significant step forward in the evolution of technology and helped to shape the digital world we know today.
 
-In the space of software delivery, the Agile Manifesto was published in 2001, which laid the foundation for the Agile software development methodology. The manifesto was written by a group of software developers who wanted to create a more efficient and effective way of developing software. The manifesto outlined four core values that would guide the development of software: 
+In the space of software delivery, the [Agile Manifesto](https://agilemanifesto.org/) was published in 2001, which laid the foundation for the Agile software development methodology. The manifesto was written by a group of software developers who wanted to create a more efficient and effective way of developing software. The manifesto outlined four core values that would guide the development of software: 
 
 - individuals and interactions over processes and tools
 - working software over comprehensive documentation
@@ -96,6 +96,50 @@ Let's look closer at just some of the skills required by an Agile Tester in 2001
 
 These are just some examples of the skills that an Agile Tester in 2001 might have needed. As Agile methodologies have evolved over the years, the specific skills and tools required by Agile Testers have also evolved, with a greater focus on areas such as DevOps, security testing, and more advanced automation and testing techniques.
 
+## Maturing from independent to Embedded
+
+<hr>
+
+![Maturing](/assets/images/suzanne-d-williams-VMKBFR6r_jg-unsplash.jpg)
+
+Photo by <a href="https://unsplash.com/de/@scw1217?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Suzanne D. Williams</a> on <a href="https://unsplash.com/photos/VMKBFR6r_jg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+<hr>
+
+Throughout my career, I have been fortunate to have been given opportunities to grow and evolve with the software testing industry, thanks to supportive leads. However, not everyone has the same fortune, which is why I believe it's important to share some key takeaways that have helped me mature in an embedded model of quality. These takeaways include:
+
+- Attend Agile ceremonies, even when not on the team:
+
+  - By attending Agile ceremonies such as daily stand-ups, sprint reviews, and retrospectives, you can gain a deeper understanding of how Agile processes work and the challenges faced by teams.
+  - Attending Agile ceremonies also allows you to build relationships with team members and demonstrate your interest in and commitment to the team's success.
+  - This can lead to opportunities to collaborate with Agile teams, providing valuable experience and exposure to Agile methodologies and practices.
+
+- Take risks and learn new tools, even if you did not use them afterward:
+
+  - Trying out new tools and technologies, even if they are not ultimately used, can help you stay current with the latest trends and advancements in the industry.
+  - Experimenting with new tools can also lead to insights and solutions that can be applied to other projects.
+  - This mindset of continual learning and growth is highly valued in the software testing industry and can set you apart as a valuable asset to any team.
+
+- Experiment with processes:
+
+  - By taking the initiative to experiment with new processes, you can uncover more efficient and effective ways of working and identify areas for improvement.
+  - This approach can also demonstrate your leadership and problem-solving skills, as you take ownership of your work and seek out opportunities to make positive changes.
+  - Of course, it's important to communicate your plans and progress with your team and seek feedback and support along the way to ensure the best possible outcome.
+
+
+## Conclusion
+
+In this article, we have explored the evolution of software testing and the role of the Agile Tester. We have also looked at some key takeaways that can help you grow and evolve as a software tester. I hope you have found this article useful and that it has provided you with some valuable insights and inspiration for your own career.
+
+To gain further insights on how you can progress and enhance your abilities as a software tester, consider the following resources and individuals that I have personally found valuable in expanding my skillset. Here are some of the resources that I have found most helpful:
+
+### Resources
+
+- [Anne-Marie Charrett](https://www.linkedin.com/in/testingtimes/): Anne-Marie  is a prominent figure in the field of Quality Coaching in Australia. Her online subscription service is a great resource for anyone looking to enhance their understanding of quality coaching methodologies. You can find more information on her subscription servic [here](https://www.annemariecharrett.com/tag/book/).
+
+- [TAU](https://testautomationu.applitools.com/) also know as Testing automaiton University. Is a great resource for anyone looking to learn more about test automation.
+
+- [Software Testing for Serious People](https://www.satisfice.com/): This is a great resource for anyone looking to challenge their current understanding of software testing.
 
 
 This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat) and [Github Copilot](https://copilot.github.com/).
