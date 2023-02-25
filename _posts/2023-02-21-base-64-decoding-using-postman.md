@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/base64.png
   caption: "Decoding Base64 string - with postman"
 permalink: "/post/base-64-decoding-using-postman.html"
-date: 2023-02-21T18:00:00-00:00
+date: 2023-02-21
 authors:
 - Millan Kaul
 categories:
@@ -78,6 +78,18 @@ And follow the instructions below.
 <br>
 
 ### GitHub gist ( easy to copy)
+
+
+One
+
+
+{% gist 501177b2834a20caa995626849f32ebd %}
+
+Or 2
+
+{"gitdown": "gist", "id": "501177b2834a20caa995626849f32ebd"}
+
+Or old
 
 
 <script src="https://gist.githubusercontent.com/eaccmk/501177b2834a20caa995626849f32ebd"></script>
