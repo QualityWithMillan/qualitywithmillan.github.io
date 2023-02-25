@@ -1,12 +1,12 @@
 ---
 title: "Evolution of Reliability Tester and AI testing"
 header:
-  image: /assets/images/co-author/.png
-  teaser: /assets/images/co-author/paul-maxwell-walters.png
-permalink: "/post/co-author/paul/plus-ca-change-in-test-automation.html"
-date: 2023-02-08T18:00:00-00:00
+  #image: /assets/images/co-author/Karthik Hariharan.png
+  teaser: /assets/images/evolution-of-eliability.png
+permalink: "/post/co-author/Karthik/evolution-of-eliability-ester-and-ai-testing.html"
+date: 2023-02-24
 authors:
-- 
+- Karthik Hariharan
 categories:
   - blog
 tags:
@@ -80,6 +80,6 @@ In conclusion, the **evolution of reliability testers and AI testing** has chang
 way software is tested. With Visual AI, companies can ensure that their software 
 is reliable, consistent, and dependable. With its many benefits, it is a tool that 
 every company should consider for their reliability testing needs. Here is a link to 
-some case studies on Visual AI - https://applitools.com/case-studies/
+some [case studies on Visual AI](https://applitools.com/case-studies/)
 
 
