@@ -183,5 +183,6 @@ console.log("OUTPUT >> ",decodedString," <<");
 ### Complete Postman Collection is here ( includes encoding)
 
 
-{% gist 0c361cb53ba869a3dbde4d86a8d501bb" %}
+{% gist 0c361cb53ba869a3dbde4d86a8d501bb %}
+
 
