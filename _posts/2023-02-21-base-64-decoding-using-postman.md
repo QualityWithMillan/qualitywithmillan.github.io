@@ -79,21 +79,7 @@ And follow the instructions below.
 
 ### GitHub gist ( easy to copy)
 
-
-One
-
-
 {% gist 501177b2834a20caa995626849f32ebd %}
-
-Or 2
-
-{"gitdown": "gist", "id": "501177b2834a20caa995626849f32ebd"}
-
-Or old
-
-
-<script src="https://gist.githubusercontent.com/eaccmk/501177b2834a20caa995626849f32ebd"></script>
-
 
 
 - Copy the code in Tests tab of your request
@@ -191,10 +177,11 @@ console.log("OUTPUT >> ",decodedString," <<");
 <hr>
 
 
-<br>
+
+
 
 ### Complete Postman Collection is here ( includes encoding)
 
-<script src="https://gist.github.com/eaccmk/0c361cb53ba869a3dbde4d86a8d501bb"></script>
 
-<br><hr>
+{% gist 0c361cb53ba869a3dbde4d86a8d501bb" %}
+
