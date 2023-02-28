@@ -112,9 +112,21 @@ Unfortunately, from my experience, many people misused the tool, turning it into
 
 One of my absolute favorite articles is [Specification by Example: A Love Story](https://alisterbscott.com/wp-content/uploads/2021/08/Specification-by-Example-a-love-story.pdf); this article provides a vivid illustration of the four stages in which their tests evolved from scripts into living documentation. It resonates with many people and businesses, and effectively highlights the consequential differences between each stage.
 
-## significance of continuous integration and delivery. 
+## CI/CD
 
-TODO //
+The importance of automating repetitive tasks to support Agile has become one of the biggest catalysts for continuous integration and delivery. The concept behind continuous integration is to automate the build and test process so that the team can receive feedback on both the build status and test results as soon as possible. By doing this, it allows the team to quickly detect and rectify any issues, and incorporate customer feedback and input from other stakeholders into the development process. Automating the build and test process also enables the team to guarantee that the software is of high quality, remains in line with corporate objectives, and provides users with value.
+
+Here are some ways CI/CD affects Agile delivery and Quality Engineering:
+
+- Faster feedback: CI/CD enables faster feedback on code changes, allowing developers to catch and fix issues earlier in the development cycle. This leads to a better product and a faster delivery process.
+
+- Continuous testing: CI/CD encourages continuous testing, which allows Quality Engineers to catch and fix defects earlier in the development process. This results in a higher quality product.
+
+- Improved collaboration: CI/CD requires close collaboration between developers, Quality Engineers, and other stakeholders. This promotes a culture of shared responsibility and ownership, leading to better communication and more effective collaboration.
+
+- Greater efficiency: CI/CD automates many manual tasks, reducing the amount of time and effort required to deploy changes. This enables teams to deliver software faster and more efficiently.
+
+Overall, CI/CD enables Agile teams to deliver software faster, with higher quality, and with greater efficiency. Quality Engineering plays a crucial role in this process, as it ensures that the product meets the desired quality standards and delivers value to the end-users.
 
 ## Maturing from independent to Embedded
 
