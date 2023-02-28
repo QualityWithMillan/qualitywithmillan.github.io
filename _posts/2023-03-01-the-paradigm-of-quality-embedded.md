@@ -58,7 +58,7 @@ Join us in the next section as we delve deeper into the world of embedded Qualit
 
 In 2001, we saw a significant leap in technology that changed the way we work and communicate. The introduction of Windows XP was a major milestone, offering improved stability, security, and multimedia capabilities for personal computers. It made computing more accessible to a wider audience and provided a platform for the next generation of software applications. Additionally, the rise of the internet and the advent of broadband connectivity enabled people to access information and services from anywhere in the world, revolutionizing the way we learn, communicate, and conduct business.
 
-It was also a turning point in the technology industry, with several groundbreaking advancements that changed the way we interact with digital devices. The introduction of the iPod revolutionized the way we listen to music, with its intuitive interface and massive storage capacity. We also saw the debut of Mac OS X, a powerful and versatile operating system that laid the foundation for many of the innovations that we enjoy today. And of course, we cannot forget the launch of the first-ever Apple retail store, which created a whole new way for customers to experience and purchase technology products. These developments marked a significant step forward in the evolution of technology and helped to shape the digital world we know today.
+It was also a turning point in the personal gadgets industry, with several groundbreaking advancements that changed the way we interact with digital devices. The introduction of the iPod revolutionized the way we listen to music, with its intuitive interface and massive storage capacity. We also saw the debut of Mac OS X, a powerful and versatile operating system that laid the foundation for many of the innovations that we enjoy today. And of course, we cannot forget the launch of the first-ever Apple retail store, which created a whole new way for customers to experience and purchase technology products. These developments marked a significant step forward in the evolution of technology and helped to shape the digital world we know today.
 
 In the space of software delivery, the [Agile Manifesto](https://agilemanifesto.org/) was published in 2001, which laid the foundation for the Agile software development methodology. The manifesto was written by a group of software developers who wanted to create a more efficient and effective way of developing software. The manifesto outlined four core values that would guide the development of software: 
 
@@ -67,7 +67,7 @@ In the space of software delivery, the [Agile Manifesto](https://agilemanifesto.
 - customer collaboration over contract negotiation
 - responding to change over following a plan.
 
-## People over process - Embbed the QA
+##  Role of the Quality Engineering team
 
 <hr>
 
@@ -95,6 +95,26 @@ Let's look closer at just some of the skills required by an Agile Tester in 2001
 - Analytical and problem-solving skills: The Agile Tester would need to have strong analytical and problem-solving skills to identify and resolve issues in a fast-paced, iterative environment.
 
 These are just some examples of the skills that an Agile Tester in 2001 might have needed. As Agile methodologies have evolved over the years, the specific skills and tools required by Agile Testers have also evolved, with a greater focus on areas such as DevOps, security testing, and more advanced automation and testing techniques.
+
+
+##  Evolution of executable documentation - integrating documentation and test automation
+
+Agile development emphasizes the importance of delivering working software to customers as early as possible, with the aim of getting feedback and incorporating it into the development process. This approach is known as the "build-measure-learn" cycle, which involves building a working version of the software, measuring its performance, and learning from the feedback to improve the software.
+
+The challenge with this approach is that it requires a high level of collaboration between team members, as well as a high degree of transparency and communication. This is because the team needs to be able to quickly identify and resolve issues, and to incorporate feedback from customers and other stakeholders into the development process. In order to achieve this, the team needs to be able to share information and insights with each other, and to work together to resolve issues and deliver high-quality software.
+
+Working software was a critical outcome of agile development. Executable documentation, such as Behavior Driven Development (BDD), emerged as a way to ensure that software met business requirements. BDD was a collaborative approach that involved developers, quality engineers, and stakeholders in the creation of a shared understanding of the expected behavior of the software. By using a common language, such as Gherkin, teams created executable specifications that could be automated and used as tests. BDD also helped teams to identify and prioritize the most critical scenarios and to avoid scope creep. As a result, BDD improved software quality, reduced rework, and increased stakeholder satisfaction. BDD also helped with the evolution of the software by making it easier to maintain and update the tests as the software changed. By combining BDD with continuous testing and delivery, teams ensured that the software remained aligned with business needs and delivered value to users.
+
+Cucumber was a tool that emerged to tackle the challenge of creating executable documentation, particularly in the context of Behavior Driven Development (BDD). Cucumber allows teams to write executable specifications in plain language, using a Gherkin syntax that is easily understandable by all stakeholders. These specifications can be used as tests and automated using various testing frameworks. Cucumber also provides a framework for generating reports that show the results of tests and highlight any discrepancies between the expected and actual behavior of the software. By using Cucumber, teams can ensure that the software meets the business requirements and is aligned with the expectations of all stakeholders. Cucumber also helps teams to identify and prioritize the most critical scenarios, collaborate effectively, and reduce the risk of defects. By using Cucumber in conjunction with other agile practices such as continuous testing and delivery, teams can ensure that the software is of high quality, remains aligned with business needs, and delivers value to users.
+
+Unfortunately, from my experience, many people misused the tool, turning it into a burden for teams. Instead of using the tool to create executable documentation, it was often used to write scripts. As a result, the tool lost its effectiveness and became a source of confusion for the team. To avoid this, it is important to ensure that all team members are properly trained in what BDD is and the benefits of executable documentation. 
+
+
+One of my absolute favorite articles is [Specification by Example: A Love Story](https://alisterbscott.com/wp-content/uploads/2021/08/Specification-by-Example-a-love-story.pdf); this article provides a vivid illustration of the four stages in which their tests evolved from scripts into living documentation. It resonates with many people and businesses, and effectively highlights the consequential differences between each stage.
+
+## significance of continuous integration and delivery. 
+
+TODO //
 
 ## Maturing from independent to Embedded
 
