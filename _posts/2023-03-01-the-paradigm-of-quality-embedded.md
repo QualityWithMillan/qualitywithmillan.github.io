@@ -52,7 +52,8 @@ In this article, we will discuss the different aspects of an embedded Quality En
 Join us in the next section as we delve deeper into the world of embedded Quality Engineering and learn how to build a successful Quality Engineering practice that delivers high-quality software products.
 
 ![Agile](/assets/images/eden-constantino-agile-unsplash.jpg)
-
+Photo by <a href="https://unsplash.com/pt-br/@edenconstantin0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eden Constantino</a> on <a href="https://unsplash.com/photos/iJg1YzsEfqo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 
 ## History
 
@@ -72,7 +73,8 @@ In the space of software delivery, the [Agile Manifesto](https://agilemanifesto.
 <hr>
 
 ![People](/assets/images/sylvain-mauroux-WI8phMvAEMI-unsplash.jpg)
-
+Photo by <a href="https://unsplash.com/@alpifree?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sylvain Mauroux</a> on <a href="https://unsplash.com/photos/WI8phMvAEMI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 <hr>
 
 
@@ -114,7 +116,15 @@ One of my absolute favorite articles is [Specification by Example: A Love Story]
 
 ## CI/CD
 
-The importance of automating repetitive tasks to support Agile has become one of the biggest catalysts for continuous integration and delivery. The concept behind continuous integration is to automate the build and test process so that the team can receive feedback on both the build status and test results as soon as possible. By doing this, it allows the team to quickly detect and rectify any issues, and incorporate customer feedback and input from other stakeholders into the development process. Automating the build and test process also enables the team to guarantee that the software is of high quality, remains in line with corporate objectives, and provides users with value.
+<hr>
+
+![CICD](/assets/images/DALL·E-Infinity-symbol.png)
+
+Photo by <a href="https://openai.com/product/dall-e-2">DALL-E</a>
+  
+<hr>
+
+The importance of automating repetitive tasks to support Agile became one of the biggest catalysts for continuous integration and delivery. The concept behind continuous integration is to automate the build and test process so that the team can receive feedback on both the build status and test results as soon as possible. By doing this, it allows the team to quickly detect and rectify any issues, and incorporate customer feedback and input from other stakeholders into the development process. Automating the build and test process also enables the team to guarantee that the software is of high quality, remains in line with corporate objectives, and provides users with value.
 
 Here are some ways CI/CD affects Agile delivery and Quality Engineering:
 
