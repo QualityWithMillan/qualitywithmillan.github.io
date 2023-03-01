@@ -13,8 +13,29 @@ tags:
   - testing
   - ai
 
-
 ---
+
+
+<hr>
+<p>
+ Written by -
+{% assign authorCount = page.authors | size %}
+{% if authorCount == 0 %}
+   {{ page.author}}
+{% elsif authorCount == 1 %}
+    {{ page.authors | first }}         
+{% else %}
+    {% for author in page.authors %}
+        {% if forloop.first %}
+            {{ author }}
+        {% elsif forloop.last %}
+            and {{ author }}
+        {% else %}
+            , {{ author }}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+</p>
 
 
 In today's fast-paced digital world, testing has become a critical aspect of 
