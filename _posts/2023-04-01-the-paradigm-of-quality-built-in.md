@@ -3,7 +3,7 @@ title: "The paradigm of Quality - Built-In"
 header:
   image: /assets/images/DALL·E-Infinity-symbol.jpg
   teaser: /assets/images/DALL·E-Infinity-symbol.jpg
-  caption: "Photo credit: Unplash"
+  caption: "Photo credit: DALL·E"
 permalink: "/post/the-paradigm-of-quality-built-in.html"
 authors:
 - Alejandro Sanchez Giraldo
