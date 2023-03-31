@@ -71,10 +71,46 @@ That's just my take on DevOps, but I hope it helps you understand this exciting 
 
 ## Difference from Testing and Quality Engineering in a DevOps Culture
 
+The [DORA (DevOps Research and Assessment)](https://cloud.google.com/blog/products/devops-sre/dora-2022-accelerate-state-of-devops-report-now-out) report from Google identifies several key differences between testing and quality engineering in a DevOps culture. Here are a few of the key differences:
+
+Scope: Testing typically focuses on the functional correctness of individual features or components, while quality engineering focuses on end-to-end system quality, including non-functional aspects such as performance, security, and scalability.
+
+Timing: Testing typically occurs towards the end of the development cycle, while quality engineering is integrated throughout the entire development process, from design to deployment.
+
+Automation: Testing is often highly automated, with a focus on creating and executing tests that can quickly identify defects. Quality engineering also involves automation, but with a focus on automating processes and workflows to improve efficiency and reduce errors.
+
+Collaboration: Testing is often a separate function from development, while quality engineering is integrated into the development process and requires collaboration between development, testing, and operations teams.
+
+Metrics: Testing often focuses on measuring defects found and fixed, while quality engineering focuses on measuring system quality and operational metrics such as uptime, mean time to recover, and customer satisfaction.
+
+Overall, the key difference between testing and quality engineering in a DevOps culture is that testing focuses on ensuring individual features are functionally correct, while quality engineering focuses on ensuring the entire system is of high quality, reliable, and meets customer needs. Both are important in a DevOps culture, but quality engineering is becoming increasingly important as organizations look to improve their overall software development processes and outcomes.
 
 
+## How to build-in Quality Engineering in a DevOps Culture
 
-### preface 2
+Quality Engineering is a set of practices that help organizations ensure that software products meet predefined quality standards throughout the development process. It takes a proactive approach to identify potential issues early in the software development lifecycle, making it an essential part of the DevOps culture.
+
+During my career I was able to work in different organizations and I have seen how Quality Engineering can be built-in in a DevOps culture. Some of the practices that I have seen are:
+
+- Product Owner for Quality: The Product Owner for Quality  is responsible for collaborating with teams to ensure that capabilities are built to uplift an organization's quality. This has been a successful practice in organizations that have a strong focus on quality and build ownership early in the SDLC process.
+
+- Community Building: Building community with internal and external teams to drive quality as a common goal, this helps for people to understand each other pains and work on them together.
+
+- Metrics: Metrics to drive data-driven decisions, build scorecards for each team, and measure the success of their quality initiatives. Having a clear metric allows teams to understand where the best value can be delivered.
+
+- Tooling: Building tools to enable self-service for quality capabilities, this helps teams to be more autonomous and reduce the dependency on other teams.
+
+Overall, these capabilities demonstrate a strong focus on building quality into the SDLC process, including both technical and non-technical aspects such as community building, metrics, transparency, and accountability.
+
+## Conclusion
+
+![Community](/assets/images/DALL-E-community.png)
+
+Photo by <a href="https://openai.com/product/dall-e-2">DALL-E</a>
+
+In this article, we discussed the importance of Quality Engineering in a DevOps culture and how it can help organizations achieve their goals efficiently. We also explored the difference between testing and quality engineering in a DevOps culture and how they can be built-in in a DevOps culture.
+
+But most important we hihglighted the importance of the mindset shift required and how it changes our approach at Quality. Building quality into the SDLC process is a journey and it requires a strong focus on building capabilities into the SDLC process, including both technical and non-technical aspects.
 
 
 This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat) and [Github Copilot](https://copilot.github.com/).
