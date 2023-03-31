@@ -83,7 +83,7 @@ Collaboration: Testing is often a separate function from development, while qual
 
 Metrics: Testing often focuses on measuring defects found and fixed, while quality engineering focuses on measuring system quality and operational metrics such as uptime, mean time to recover, and customer satisfaction.
 
-Overall, the key difference between testing and quality engineering in a DevOps culture is that testing focuses on ensuring individual features are functionally correct, while quality engineering focuses on ensuring the entire system is of high quality, reliable, and meets customer needs. Both are important in a DevOps culture, but quality engineering is becoming increasingly important as organizations look to improve their overall software development processes and outcomes.
+The difference between testing and quality engineering in a DevOps culture is that testing focuses on ensuring individual features are functionally correct, while quality engineering focuses on ensuring the entire system is of high quality, reliable, and meets customer needs. Both are important in a DevOps culture, but quality engineering is becoming increasingly important as organizations look to improve their overall software development processes and outcomes.
 
 
 ## How to build-in Quality Engineering in a DevOps Culture
@@ -100,7 +100,7 @@ During my career I was able to work in different organizations and I have seen h
 
 - Tooling: Building tools to enable self-service for quality capabilities, this helps teams to be more autonomous and reduce the dependency on other teams.
 
-Overall, these capabilities demonstrate a strong focus on building quality into the SDLC process, including both technical and non-technical aspects such as community building, metrics, transparency, and accountability.
+These capabilities demonstrate a strong focus on building quality into the SDLC process, including both technical and non-technical aspects such as community building, metrics, transparency, and accountability.
 
 ## Conclusion
 
