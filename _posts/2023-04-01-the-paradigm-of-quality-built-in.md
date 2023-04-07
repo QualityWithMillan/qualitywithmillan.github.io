@@ -53,7 +53,7 @@ By the end of this article, you’ll have a better understanding of Quality Engi
 
 ## What is DevOps?
 
-![DEVOPS](/assets/images/DALL·E-Infinity-symbol.png)
+![DEVOPS](/assets/images/DALL-E-Infinity-symbol.png)
 
 Photo by <a href="https://openai.com/product/dall-e-2">DALL-E</a>
 
