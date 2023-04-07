@@ -1,8 +1,8 @@
 ---
 title: "The paradigm of Quality - Built-In"
 header:
-  image: /assets/images/DALL·E-Infinity-symbol.jpg
-  teaser: /assets/images/DALL·E-Infinity-symbol.jpg
+  image: /assets/images/DALL-E-Infinity-symbol.png
+  teaser: /assets/images/DALL-E-Infinity-symbol.png
   caption: "Photo credit: DALL·E"
 permalink: "/post/the-paradigm-of-quality-built-in.html"
 authors:
