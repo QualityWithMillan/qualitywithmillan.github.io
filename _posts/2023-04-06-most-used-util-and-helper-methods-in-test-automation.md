@@ -47,14 +47,16 @@ This blog is not a theory chapter, direct **code** so go ahead and `copy - paste
 
 ... **let's get started.**
 
-<figure class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2023_04_06_automation_utils.png" alt="image depecting some household utils to relate with test automation util and helper methods">
- <a href="https://www.linkedin.com/in/realvjy">
-  <figcaption>Image credits: Vijay Verma</figcaption>
-</figure> 
+
+![Image depecting household tool to depict similarity between test automtion utils methods and helper fucntions](/assets/images/2023_04_06_automation_utils.png)
+Image credits: [Vijay Verma](https://www.linkedin.com/in/realvjy/)
+
+ 
 
 <br>
+
 ------
+
 <br>
 
 ## 1. Function to Assert Response Status Code:
