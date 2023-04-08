@@ -39,9 +39,7 @@ tags:
 </p>
 
 
-
-# 7 most commonly used tools and utils in test automation project
-
+Why another blog with code snippet for test automation ?
 
 **TL;DR**
 
@@ -49,13 +47,19 @@ This blog is not a theory chapter, direct **code** so go ahead and `copy - paste
 
 ... **let's get started.**
 
+<figure class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/2023_04_06_automation_utils.png" alt="image depecting some household utils to relate with test automation util and helper methods">
+ <a href="https://www.linkedin.com/in/realvjy">
+  <figcaption>Image credits: Vijay Verma</figcaption>
+</figure> 
+
 <br>
 ------
 <br>
 
 ## 1. Function to Assert Response Status Code:
 
-simple : Check Expected vs actual status code in your API response.
+Check **Expected** vs **Actual** `status code` in your `API` response.
 
 > Make sure you set up [axios](https://www.npmjs.com/package/axios) or simply run `npm i axios`
 
@@ -110,19 +114,20 @@ const responseData = await sendPostRequest(apiUrl, postData, requestHeaders);
 console.log(responseData); // Print the response data
 ```
 
-**Bonus tip** - For `PUT Request` change above code to have `axios.put()` instead `axios.post()` of and perhaps rename `sendPostRequest` to `sendPutRequest`. So something like this :
+💡 **Bonus tip** - For `PUT Request` change above code to have `axios.put()` instead `axios.post()` of and perhaps rename `sendPostRequest` to `sendPutRequest`. So something like this :
+
+<br>
 
 ```javascript
 async function sendPutRequest(url, data, headers = {}) {
-...
 ..
-
 await axios.put(url, data, { headers });
-...
 ..
 ```
 
 some more util specific : ↘️
+
+<br>
 
 ## 4. Function to Compare Three 3️⃣  Strings:
 
@@ -147,6 +152,8 @@ const result = compareStrings(string1, string2, string3);
 console.log(result); // Prints false, since string2 and string3 are not equal to string1
 
 ```
+
+<br>
 
 
 ## 5. Function to Convert ISO Time to Local Time Zone:
@@ -175,6 +182,9 @@ const localTimeAustralia = convertIsoToLocaleTime(isoTime, timeZoneAustralia);
 console.log(`Local time in Australia: ${localTimeAustralia}`);
 ```
 
+<br>
+
+
 ## 6. Check if a string contains another string (substring):
 
 ```javascript
@@ -193,8 +203,10 @@ console.log(stringContainsSubstring(originalString, substring1)); // Prints true
 console.log(stringContainsSubstring(originalString, substring2)); // Prints false
 ```
 
+<br>
 
-7. Function to Assert Response JSON Schema:
+
+## 7. Function to Assert Response JSON Schema:
 
 **This function can be used to assert that the response data matches a given JSON schema, and throw an error if the validation fails.**
 
@@ -216,8 +228,10 @@ function assertJsonSchema(response, schema) {
 }
 ```
 
+<br>
+
 Copy paste > save time and have fun with test automation !! 🙌
 
 
-### Follow this hash tag [#QUalityWithMillan](https://www.linkedin.com/feed/hashtag/qualitywithmillan/)
+### Follow this hash tag [#QualityWithMillan](https://www.linkedin.com/feed/hashtag/qualitywithmillan/)
 
