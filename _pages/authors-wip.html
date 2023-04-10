@@ -1,0 +1,23 @@
+---
+layout: archive
+search: false
+---
+
+{{ content }}
+
+{% assign authorCount = page.authors | size %}
+{% if authorCount == 0 %}
+   {{ page.author}}
+{% elsif authorCount == 1 %}
+    {{ page.authors | first }}         
+{% else %}
+    {% for author in page.authors %}
+        {% if forloop.first %}
+            {{ author }}
+        {% elsif forloop.last %}
+            and {{ author }}
+        {% else %}
+            , {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
+        {% endif %}
+    {% endfor %}
+{% endif %}
