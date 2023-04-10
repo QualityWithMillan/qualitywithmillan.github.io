@@ -4,6 +4,7 @@ search : false
 authors:
 - Alejandro Sanchez Giraldo
 - Millan Kaul
+- GPT
 ---
 
 <!DOCTYPE html>
@@ -23,11 +24,11 @@ authors:
     {% else %}
         {% for author in site.authors %}
             {% if forloop.first %}
-                {{ author }}
+                {{ author }}, first {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
             {% elsif forloop.last %}
-                and {{ author }}
+                and {{ author }}, game {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
             {% else %}
-                , {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
+                , name {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
             {% endif %}
         {% endfor %}
     {% endif %}
