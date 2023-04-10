@@ -1,28 +1,20 @@
 ---
-layout: single
 search : false
 authors:
-- Alejandro Sanchez Giraldo
-- Millan Kaul
-- GPT
+ - Alejandro Sanchez Giraldo
+ - Millan Kaul
+ - GPT
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
     
 
-    {% assign authorCount = site.authors | size %}
+    {% assign authorCount = page.authors | size %}
     {% if authorCount == 0 %}
-       {{ site.author}}
+       {{ page.author}}
     {% elsif authorCount == 1 %}
-        {{ site.authors | first }}         
+        {{ page.authors | first }}         
     {% else %}
-        {% for author in site.authors %}
+        {% for author in page.authors %}
             {% if forloop.first %}
                 {{ author }}, first {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
             {% elsif forloop.last %}
@@ -33,5 +25,5 @@ authors:
         {% endfor %}
     {% endif %}
 
-  </body>
-</html>
+  ---
+{{content}}
