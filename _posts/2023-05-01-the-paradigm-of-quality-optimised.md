@@ -39,7 +39,7 @@ tags:
 {% endif %}
 </p>
 
-## The paradigm of Quality - Optimised
+# The paradigm of Quality - Optimised
 
 As we come to the last series of the paradigm of quality, we will be looking at the last maturity stage of the quality maturity model. This maturity stage is called Optimised, and it is the highest level of maturity in the quality maturity model. The Optimised maturity stage is characterized by a culture of quality that is deeply ingrained in their operations. They are committed to continuous improvement, customer satisfaction, data-driven decision-making, employee empowerment, and strong leadership.
 
@@ -53,7 +53,7 @@ There are several frameworks of Optimised Quality maturity and the 2 main charac
 
 - Enabling and coaching services to help teams improve their quality. This trait highlight the importance of coaching and training to help teams improve their quality.
 
-### History on optimised quality
+## History on optimised quality
 
 Throughout my journey to grasp the paradigm of quality, I delved into various resources, such as attending conferences and Meetups, and reading articles. These resources provided me with valuable insights into the concept of Optimised Quality, which is the highest level of maturity in the quality maturity model. By exploring different ideas and concepts, I was able to develop a better understanding of how quality has evolved over time and the key characteristics of organisations that have achieved Optimised Quality.
 
@@ -94,7 +94,11 @@ These models placed a strong emphasis on building a culture of quality and conti
 
 It is Optimised Quality because this maturity stage in the quality maturity model represents the highest level of quality excellence an organization can achieve. At this stage, the organization has optimized its quality practices and processes to ensure that quality is embedded in every aspect of its operations.
 
-Empowering
+### Empowering
+
+![The Empowering](/assets/images/empowering.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
 
 The focus on employee empowerment and continuous improvement is a key characteristic of the Optimised Quality maturity stage in the quality maturity model. This approach is founded on the belief that the employees closest to the work are in the best position to identify opportunities for improvement and take action to achieve it.
 
@@ -104,7 +108,11 @@ In such an environment, teams are encouraged to experiment with new ideas and ap
 
 By fostering a culture of continuous improvement and employee empowerment, organizations can achieve a sustained improvement in their quality outcomes, ultimately leading to greater customer satisfaction and organizational success.
 
-Coach and support
+### Coaching and enable
+
+![The Coach](/assets/images/coach.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
 
 Enabling and coaching services to help teams improve their quality is another critical characteristic of the Optimised Quality maturity stage in the quality maturity model. This approach recognizes that quality improvement is an ongoing process that requires continuous learning and development.
 
@@ -114,7 +122,11 @@ Coaching and training services may take various forms, such as classroom trainin
 
 By providing coaching and training services to their teams, organizations can empower their employees to take ownership of quality improvement and drive continuous improvement throughout the organization. This approach also helps to build a culture of quality within the organization, where everyone is committed to delivering high-quality products and services to customers.
 
-### Section 3 - how to be optimised
+## How to optimise quality
+
+- Process
+- Tools
+- People and Culture
 
 ## Conclusion
 
