@@ -24,8 +24,8 @@ description              : ""
 url                      : "https://qualitywithmillan.github.io"
 baseurl                  : # "/blog"
 repository               : "QualityWithMillan/QualityWithMillan"
-teaser                   : "/assets/images/QualityWithMillan.png"
-logo                     :  /assets/images/_brand_M.png # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : # "/assets/images/QualityWithMillan.png"
+logo                     : "/assets/images/_brand_M.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -88,7 +88,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/_brand_M.png
+og_image                 : "/assets/images/QualityWithMillan.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
