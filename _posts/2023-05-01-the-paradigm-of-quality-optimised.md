@@ -128,6 +128,19 @@ By providing coaching and training services to their teams, organizations can em
 - Tools
 - People and Culture
 
+How to optimize quality requires a focus on three key strategy pillars: process, tools, and people and culture. It's important to recognize that implementing one of these pillars without the others is not only useless, but also creates more problems than it solves.
+
+In this section, I will share my experience on how to effectively implement these three pillars in an organization.
+
+To ensure that these pillars are properly aligned, it's necessary to establish a quality engineering organizational vision that aligns with the company's risk appetite. It's important that everyone involved understands the purpose and direction of this vision. A successful vision should be a continuous journey that adapts to the company's needs and culture, without setting a specific time frame for achieving it.
+
+While setting up your Quality Engineering Vision, I found tools like [DORA DevOps Quickcheck](https://dora.dev/quickcheck/) fantasting starting point to understand an organisation maturity state, and discuss what an organisation Gold standar of quality should look like
+
+Once this vision is agreed, setting OKRs was the next natural step, and [Atlassian Team Playbook - OKRs play](https://www.atlassian.com/team-playbook/plays/okrs) was a great resource that help me with this. Quality is no different to any other product or service, and applying this principles allow the team to understand and focus on the tasks that help the organisation achieve its vision.
+
+
+
+
 ## Conclusion
 
 
