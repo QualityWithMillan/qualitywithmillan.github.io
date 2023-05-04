@@ -9,6 +9,7 @@ authors:
 - Alejandro Sanchez Giraldo
 - ChatGPT
 - Github Copilot
+- Bard from Google
 categories:
   - blog
 tags:
@@ -128,21 +129,67 @@ By providing coaching and training services to their teams, organizations can em
 - Tools
 - People and Culture
 
-How to optimize quality requires a focus on three key strategy pillars: process, tools, and people and culture. It's important to recognize that implementing one of these pillars without the others is not only useless, but also creates more problems than it solves.
+Optimizing quality requires a holistic approach that focuses on three key strategic pillars: process, tools, and culture.
+
+Process refers to the steps and procedures that are used to create a product or service. By optimizing the process, organizations can improve efficiency and reduce errors.
+Tools refer to the technologies and resources that are used to support the process. By investing in the right tools, organizations can improve quality and productivity.
+Culture refers to the values and beliefs that are shared by an organization's employees. A strong quality culture is one in which employees are empowered to take ownership of quality and are committed to continuous improvement.
+It is important to recognize that changing one of these pillars without the others is not only inefficient, but also problematic.
+
+For example, if an organization invests in new tools without also optimizing the process, the new tools may not be used effectively and may even lead to new errors. Similarly, if an organization tries to improve quality by changing the culture without also investing in new tools or optimizing the process, the changes may be met with resistance from employees and may not be sustainable in the long term.
+
+By focusing on all three pillars, organizations can create a sustainable and effective quality management system that will improve the quality of their products and services.
 
 In this section, I will share my experience on how to effectively implement these three pillars in an organization.
 
-To ensure that these pillars are properly aligned, it's necessary to establish a quality engineering organizational vision that aligns with the company's risk appetite. It's important that everyone involved understands the purpose and direction of this vision. A successful vision should be a continuous journey that adapts to the company's needs and culture, without setting a specific time frame for achieving it.
+To ensure that the pillars of quality are properly aligned, organizations must establish a quality engineering organizational vision that aligns with the company's risk appetite.
+
+The vision should be clear, concise, and achievable. It should also be aligned with the company's overall strategic goals. The vision should be communicated to all employees and should be used to guide decision-making throughout the organization.
+
+It is important that everyone involved understands the purpose and direction of the vision.
+
+The journey towards a high-quality organization is never-ending. Organizations must be willing to continuously improve their quality management systems in order to meet the ever-changing needs of their customers.
 
 While setting up your Quality Engineering Vision, I found tools like [DORA DevOps Quickcheck](https://dora.dev/quickcheck/) fantasting starting point to understand an organisation maturity state, and discuss what an organisation Gold standar of quality should look like
 
 Once this vision is agreed, setting OKRs was the next natural step, and [Atlassian Team Playbook - OKRs play](https://www.atlassian.com/team-playbook/plays/okrs) was a great resource that help me with this. Quality is no different to any other product or service, and applying this principles allow the team to understand and focus on the tasks that help the organisation achieve its vision.
 
+I foudn these two areas helped me to align the organisation and the team to the vision, and set the direction for the team. Follow up process improvements, started to emerge out of these changes the help me then tackle the challenge of organisational Culture.
 
+The next step was to conduct a qualitative and quantitative assessment of the organization and the team, in order to identify the key motivators for people at different levels.
 
+This assessment would involve collecting data from a variety of sources, including interviews with employees, surveys, and focus groups. The data would be analyzed to identify the key drivers of motivation for employees at different levels. This information would then be used to develop strategies to improve motivation and engagement among employees.
+
+Qualitative data is non-numerical data that is collected through interviews, focus groups, and observations. This type of data can be used to understand the why behind people's behaviors.
+Quantitative data is numerical data that is collected through surveys and other forms of measurement. This type of data can be used to understand the how much of something.
+
+By collecting both qualitative and quantitative data, organizations can get a more complete picture of what motivates their employees. This information can then be used to develop more effective strategies to improve motivation and engagement.
+
+I found the best way to collect data and understand the organisation culture was to set up Chapter, Guilds, MeetUps or [Communities of Practice](https://www.communityofpractice.ca/). These are groups of people with a common interest or goal who meet regularly to share knowledge and experiences. They can be used to share best practices, discuss challenges, and learn from each other.
+
+Establishing a culture of knowledge sharing takes time and effort, but the hardest part is to sustain it. This is because knowledge sharing is often voluntary, and people need to be motivated to share their knowledge.
+
+Senior leadership can play a key role in motivating people to share their knowledge. They can do this by setting a clear vision for knowledge sharing, providing resources and support, and recognizing and rewarding people who share their knowledge.
+
+Company rewards programs can also help to motivate people to share their knowledge. However, it is important to note that financial rewards are not the only motivator. People are also motivated by recognition, opportunities for growth and development, and a sense of belonging.
+
+Unfortunately, culture change is often difficult to achieve. It is important to be patient and persistent, and to focus on the long-term rewards.
+
+Here are some additional tips for changing culture:
+
+Start with a small group of people who are committed to change.
+Create a vision for the desired culture and communicate it to everyone.
+Provide training and support to help people understand the new culture and how to adopt it.
+Recognize and reward people who demonstrate the desired behaviors.
+Be patient and persistent.
+
+Changing culture is a journey, not a destination. It takes time, effort, and commitment. But the rewards are worth it.
 
 ## Conclusion
 
+I found that this series show a bit of the journey I have so far in my professional career, and how I have been able to apply the knowledge I have gained along the way to help organisations improve their quality as I moved into more senior roles.
 
-This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat) and [Github Copilot](https://copilot.github.com/).
+I hope this series has been useful to you, and that you have been able to take away some ideas that you can apply in your own work.
+
+This article was written in collaboration with [ChatGPT](https://chat.openai.com/chat), [Github Copilot](https://copilot.github.com/), and [Bard from Google](https://bard.google.com/)
 
