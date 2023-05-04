@@ -126,8 +126,15 @@ By providing coaching and training services to their teams, organizations can em
 ## How to optimise quality
 
 - Process
+- Culture
 - Tools
-- People and Culture
+
+
+### Process
+
+![Process](/assets/images/alejandro-process.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
 
 Optimizing quality requires a holistic approach that focuses on three key strategic pillars: process, tools, and culture.
 
@@ -155,6 +162,13 @@ While setting up your Quality Engineering Vision, I found tools like [DORA DevOp
 Once this vision is agreed, setting OKRs was the next natural step, and [Atlassian Team Playbook - OKRs play](https://www.atlassian.com/team-playbook/plays/okrs) was a great resource that help me with this. Quality is no different to any other product or service, and applying this principles allow the team to understand and focus on the tasks that help the organisation achieve its vision.
 
 I foudn these two areas helped me to align the organisation and the team to the vision, and set the direction for the team. Follow up process improvements, started to emerge out of these changes the help me then tackle the challenge of organisational Culture.
+
+
+### Culture 
+
+![Culture](/assets/images/alejandro-cop.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
 
 The next step was to conduct a qualitative and quantitative assessment of the organization and the team, in order to identify the key motivators for people at different levels.
 
@@ -185,7 +199,33 @@ Be patient and persistent.
 
 Changing culture is a journey, not a destination. It takes time, effort, and commitment. But the rewards are worth it.
 
+
+### Tools
+
+![Tools](/assets/images/alejandro-tools.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
+
+The final step should be to select the right tools. Optimizing quality is not just an exercise in trying new tools and hoping for the best.
+
+One of the most misused tools in the industry is Cucumber and BDD. I have seen many teams try to implement BDD and Cucumber, but they fail to understand the purpose of the tools. Without understanding what and how to optimize, teams tend to use tools to improve their current quality process and not challenge if this process is correct. This is a massive mindset and culture change.
+
+Here are some tips for selecting the right tools:
+
+- Start by understanding your needs. What are you trying to achieve with the tool?
+- Do your research. There are many different tools available, so it is important to choose one that is right for you.
+- Get buy-in from your team. It is important that everyone is on board with the tool before you implement it.
+- Provide training. Make sure that everyone who will be using the tool knows how to use it effectively.
+- Monitor your results. Once you have implemented the tool, track your results to see if it is meeting your needs.
+
+Selecting the right tools is an important part of optimizing quality. However, it is just one part of the equation.
+
+
 ## Conclusion
+
+![Conclusion](/assets/images/conclusion-monkey.png)
+
+Photo by <a href="https://huggingface.co/dreamlike-art/dreamlike-diffusion-1.0">Dreamlike Diffusion</a>
 
 I found that this series show a bit of the journey I have so far in my professional career, and how I have been able to apply the knowledge I have gained along the way to help organisations improve their quality as I moved into more senior roles.
 
