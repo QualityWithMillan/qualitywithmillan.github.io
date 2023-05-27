@@ -4,30 +4,29 @@ author_profile: false
 search : false
 authors:
  - Alejandro Sanchez Giraldo
+ - Karthik Hariharan
  - Millan Kaul
  - Paul Maxwell-Walters
- - Karthik Hariharan
- - 
 ---
 
     
 
     {% assign authorCount = page.authors | size %}
     {% if authorCount == 0 %}
-       -00- {{ page.display_name}}
+       -00-
     {% elsif authorCount == 1 %}
-        -0- {{ page.name }}         
+        -0- {{ author.name }}         
     {% else %}
         {% for author in page.authors %}
             {% if forloop.first %}
-                -1-avatar- {{author.avatar}} 
+                -1-bio- {{author.bio}}
             {% elsif forloop.last %}
                 -2-name- {{author.name}} 
             {% else %}
-               -3-bio- {{author.bio}} --end-
+               -3-avatar- {{author.avatar}}  --end-
             {% endif %}
         {% endfor %}
     {% endif %}
 
-  ---
 
+{{content}}
