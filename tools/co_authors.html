@@ -11,22 +11,10 @@ authors:
 
     
 
-    {% assign authorCount = page.authors | size %}
-    {% if authorCount == 0 %}
-       -00-
-    {% elsif authorCount == 1 %}
-        -0- {{ author.name }}         
-    {% else %}
+    {% assign authorCount = page.authors | size %}        
         {% for author in page.authors %}
-            {% if forloop.first %}
-                -1-bio- {{author.bio}}
-            {% elsif forloop.last %}
-                -2-name- {{author.name}} 
-            {% else %}
-               -3-avatar- {{author.avatar}}  --end-
-            {% endif %}
+               -3-avatar- {{page.authors.avatar}}  --end-
         {% endfor %}
-    {% endif %}
-
+---
 
 {{content}}
