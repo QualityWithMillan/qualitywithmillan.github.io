@@ -13,8 +13,5 @@ authors:
 
     {% assign authorCount = page.authors | size %}        
         {% for author in page.authors %}
-               -3-avatar- {{page.authors.avatar}}  --end-
+               -{{page.authors.name}}  --- {{authors.name}} --- {{author.name}}
         {% endfor %}
----
-
-{{content}}
