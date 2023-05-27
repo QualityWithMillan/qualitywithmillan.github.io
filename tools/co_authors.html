@@ -33,6 +33,24 @@ https://cssgradient.io/gradient-backgrounds/
   text-align: center;
 }
 
+      .figure {
+    position: relative;
+    width: 360px; /* can be omitted for a regular non-lazy image */
+    max-width: 100%;
+  }
+  .figure img.Sirv.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .figure:hover img.Sirv.image-hover {
+    opacity: 1;
+  }
 
 .box1 {
   background-color: #FA8BFF;
@@ -97,6 +115,13 @@ https://cssgradient.io/gradient-backgrounds/
   </head>
   <body>
   <div class="container">
+    
+    <div class="figure">
+  <img class="Sirv image-main" src="./assets/images/co-author/alejandro-sanchez-giraldo.jpeg" data-src="./assets/images/co-author/alejandro-sanchez-giraldo.jpeg">
+  <img class="Sirv image-hover" data-src="./assets/images/co-author/karthik-hariharan.jpg">
+</div>
+    
+    
     <div class="box1" id="author_Alejandro">
       <h1 class="title">Alejandro Sanchez Giraldo</h1>
       <img class="box1 image-hover" data-src="./assets/images/co-author/alejandro-sanchez-giraldo.jpeg">
