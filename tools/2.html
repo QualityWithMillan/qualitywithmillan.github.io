@@ -1,0 +1,116 @@
+---
+layout: collection
+entries_layout: grid
+search : false
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<!-- 	start of style -->
+    <style>
+ .flex-container {
+  display: flex;
+}
+
+.flex-container>div {
+  background-color: #d6e9f0;
+  /* f1f1f1 */
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+textarea {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #4CAF51;
+  margin-bottom: 10px;
+  border-color: #4CAF51;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  margin: 5px;
+  border-color: #4CAF51;!important;
+  border-radius: 12px;
+  color: #000000 !important;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4CAF51 !important;
+  border-color: #888888 !important;
+  color: white !important;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:active {
+  animation: click-animation 0.3s;
+}
+
+/* .copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(135deg, pink 40%, blue);
+  width: 10em;
+  height: 5ex;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+} */
+
+
+/* 	    end of style */
+    </style>
+  </head>
+  <body>
+    <center>
+      <h2>Text Formatter</h2>
+      <div class="flex-container">
+        <div>
+          <button role="button" id="bold-button">𝗕𝗼𝗹𝗱</button>
+          <button role="button" id="italic-button">𝐼𝑡𝑎𝑙𝑖𝑐</button>
+          <button role="button" id="bold-italic-button">𝗕𝗼𝗹𝗱 𝐼𝑡𝑎𝑙𝑖𝑐</button>
+          <button role="button" id="underline-button"> ̲𝚄̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
+          <button role="button" id="strikethrough-button"> ̶𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶</button>
+          <button role="button" id="monospace-button">𝚖 o n o space</button>
+          <textarea id="input-text" rows="4" cols="50"></textarea>
+          <button role="button" id="clear-button">Clear text 🧹</button>
+        </div>
+      </div>
+      <br>
+    </center>
+    <center>
+      <h4> Result 👇</h4>
+      <div class="flex-container">
+        <div>
+          <textarea id="output-text" rows="4" cols="50"></textarea>
+          <button role="button" id="copy-button">Copy text 📑</button>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
