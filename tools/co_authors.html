@@ -1,17 +1,102 @@
 ---
-layout: collection
+layout: single
 author_profile: false
 search : false
-authors:
- - Alejandro Sanchez Giraldo
- - Karthik Hariharan
- - Millan Kaul
- - Paul Maxwell-Walters
 ---
 
-    
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-    {% assign authorCount = page.authors | size %}        
-        {% for author in page.authors %}
-               -{{page.authors.name}}  --- {{authors.name}} --- {{author.name}}
-        {% endfor %}
+  <head>
+    <meta charset="utf-8">
+
+   
+   <!-- 	start of style -->
+    <style>
+
+ body {
+    background-color: powderblue;
+    cursor: url('../assets/images/brand/_brand_M.png'), auto;
+}
+ .container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  grid-template-rows: repeat(2, 200px);
+}
+
+/* 
+https://cssgradient.io/gradient-backgrounds/
+ */
+
+.title {
+  padding: 50px 0;
+  text-align: center;
+}
+
+
+.box1 {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  border-radius: 25px;
+  border: 2px solid #23D5AC;
+}
+
+.box2 {
+  background-color: #eb85ff;
+  background-image: linear-gradient(45deg, #eb85ff 0%, #FFFB7D 100%);
+  border-radius: 25px;
+  border: 2px solid #23D5AC;
+}
+
+
+.box3 {
+  background-color: #A9C9FF;
+  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+  border-radius: 25px;
+  border: 2px solid #23D5AC;
+}
+
+.box4 {
+  background-color: #FAD961;
+  background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+  border-radius: 25px;
+  border: 2px solid #23D5AC;
+}
+
+.box5 {
+  background-color: #ebebeb;
+  background-image: linear-gradient(225deg, #ebebeb 0%, #e1dbe7 50%, #fafdff 100%);
+  border-radius: 25px;
+  border: 2px solid #23D5AC;
+}
+
+/*      coming soon box */
+.box-x {
+  background-color: #ebebeb;
+  background-image: linear-gradient(225deg, #ebebeb 0%, #e1dbe7 50%, #fafdff 100%);
+  border-radius: 25px;
+  border: 2px solid #CECABE;
+}
+/* 	    end of style */
+  </style>
+   
+  </head>
+  <body>
+  <div class="container">
+    <div class="box1" id="tool-box1">
+      <h1 class="title">Alejandro Sanchez Giraldo</h1>
+    </div>
+    <div class="box-x">
+      <h1 class="title">Karthik Hariharan</h1>
+    </div>
+    <div class="box-x">
+      <h1 class="title">Paul Maxwell-Walters</h1>
+    </div>
+    <div class="box-x">
+      <h1 class="title">coming soon...</h1>
+    </div>
+  </div>
+
+</body>
+</html>
