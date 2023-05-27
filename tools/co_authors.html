@@ -5,27 +5,29 @@ search : false
 authors:
  - Alejandro Sanchez Giraldo
  - Millan Kaul
- - GPT
+ - Paul Maxwell-Walters
+ - Karthik Hariharan
+ - 
 ---
 
     
 
     {% assign authorCount = page.authors | size %}
     {% if authorCount == 0 %}
-       {{ page.author}}
+       -00- {{ page.display_name}}
     {% elsif authorCount == 1 %}
-        {{ page.authors | first }}         
+        -0- {{ page.name }}         
     {% else %}
         {% for author in page.authors %}
             {% if forloop.first %}
-                {{ author }}, first {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
+                -1-avatar- {{author.avatar}} 
             {% elsif forloop.last %}
-                and {{ author }}, game {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
+                -2-name- {{author.name}} 
             {% else %}
-                , name {{ author }},  {{author.name}}, {{author.avatar}}, {{avatar}}
+               -3-bio- {{author.bio}} --end-
             {% endif %}
         {% endfor %}
     {% endif %}
 
   ---
-{{content}}
+
