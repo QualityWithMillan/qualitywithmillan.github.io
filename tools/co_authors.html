@@ -40,7 +40,7 @@ https://cssgradient.io/gradient-backgrounds/
   border-radius: 25px;
   border: 2px solid #23D5AC; 
 }
-    .box1 img.box1.image-hover {
+ .box1 img.box1.image-hover {
     position: absolute;
     top: 0;
     right: 0;
@@ -49,6 +49,10 @@ https://cssgradient.io/gradient-backgrounds/
     object-fit: contain;
     opacity: 0;
     transition: opacity .2s;
+  }
+      
+  .box1:hover img.box1.image-hover {
+    opacity: 1;
   }
 
 .box2 {
@@ -95,7 +99,7 @@ https://cssgradient.io/gradient-backgrounds/
   <div class="container">
     <div class="box1" id="author_Alejandro">
       <h1 class="title">Alejandro Sanchez Giraldo</h1>
-      <img class="box1 image-hover" data-src="assets/images/co-author/alejandro-sanchez-giraldo.jpeg">
+      <img class="box1 image-hover" data-src="./assets/images/co-author/alejandro-sanchez-giraldo.jpeg">
     </div>
     <div class="box-x" id="author_Karthik">
       <h1 class="title">Karthik Hariharan</h1>
