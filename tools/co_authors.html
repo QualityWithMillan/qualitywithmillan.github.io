@@ -15,7 +15,6 @@ search : false
     <style>
 
  body {
-    background-color: powderblue;
     cursor: url('../assets/images/brand/_brand_M.png'), auto;
 }
  .container {
@@ -39,8 +38,18 @@ https://cssgradient.io/gradient-backgrounds/
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
   border-radius: 25px;
-  border: 2px solid #23D5AC;
+  border: 2px solid #23D5AC; 
 }
+    .box1 img.box1.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+  }
 
 .box2 {
   background-color: #eb85ff;
@@ -84,13 +93,14 @@ https://cssgradient.io/gradient-backgrounds/
   </head>
   <body>
   <div class="container">
-    <div class="box1" id="tool-box1">
+    <div class="box1" id="author_Alejandro">
       <h1 class="title">Alejandro Sanchez Giraldo</h1>
+      <img class="box1 image-hover" data-src="assets/images/co-author/alejandro-sanchez-giraldo.jpeg">
     </div>
-    <div class="box-x">
+    <div class="box-x" id="author_Karthik">
       <h1 class="title">Karthik Hariharan</h1>
     </div>
-    <div class="box-x">
+    <div class="box-x" id="author_Paul_Maxwell">
       <h1 class="title">Paul Maxwell-Walters</h1>
     </div>
     <div class="box-x">
