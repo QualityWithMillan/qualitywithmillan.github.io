@@ -66,13 +66,13 @@ In this article, I will share four _simple techniques_ that will allow you to ex
 
 <br>
 
-- [Collaborating with Designers](/post/how-to-shift-left-without-writing-code.html#collaborating-with-uiux-designers)
+- [Collaborating with Designers](#collaborating-with-uiux-designers)
  
-- [Managing Multi-Vendor Expectations](/how-to-shift-left-without-writing-code.html#managing-and-setting-multi-vendor-expectations-and-delivery-plan)
+- [Managing Multi-Vendor Expectations](#managing-and-setting-multi-vendor-expectations-and-delivery-plan)
 
 - [Contributing to Architecture Design Decisions](#involvement-in-platform-and-architecture-design-decisions)
  
-- [Early Feedback & Culture Change](https://qualitywithmillan.github.io/post/how-to-shift-left-without-writing-code.html#early-feedback-through-cultural-and-mindset-changes)
+- [Early Feedback & Culture Change](#early-feedback-through-cultural-and-mindset-changes)
 
 
 <br><br>
@@ -181,6 +181,6 @@ Make a note of these **keywords** to remember this post :
 <br><br>
 I'm sure you have something new and even better than my top _**How to Shift-Left without Writing Code 👩‍💻**_  techniques. 
 
-I invite you to share your ideas and experiences in thread under this post: [On LinkedIn : How to Shift-Left without Writing Code]()
+I invite you to share your ideas and experiences in thread under this post: [On LinkedIn : How to Shift-Left without Writing Code](https://www.linkedin.com/posts/millankaul_how-to-shift-left-without-writing-code-activity-7071208899739070464--fIw)
 
 Follow my hash tag [#QualityWithMillan](https://www.linkedin.com/feed/hashtag/?keywords=qualitywithmillan) for more posts and Quality updates.
