@@ -86,7 +86,7 @@ I will explain step by step how to achieve that, as well as share the complete s
 
 1. [What is this project](#what-is-this-project)
 2. [Project setup](#project-setup-)
-3. [Running docker](#running-docker-)
+3. [Running project using docker](#running-the-project-using-docker-)
    * [Verify docker Image](#verify-docker-image)
 4. [Running docker Image](#running-docker-image-)
 5. [Testing (is it working)](#testing-is-it-working--)
@@ -260,7 +260,7 @@ Go back to [top](#table-of-contents)
 
 # That's it !
 
-Bookmark this blog : https://qualitywithmillan.github.io or follow me using [#QualityWithMillan](https://www.linkedin.com/feed/hashtag/?keywords=qualitywithmillan)
+Bookmark this blog : [https://qualitywithmillan.github.io](https://qualitywithmillan.github.io) or follow me using [#QualityWithMillan](https://www.linkedin.com/feed/hashtag/?keywords=qualitywithmillan)
 
 
 > This post was re-published on  `2023-06-25` (Initiallly written on/before`2022-01-01`)
