@@ -135,8 +135,10 @@ back to [top](#table-of-contents)
      > if you are using it first time you will see this
 
     ```
-    CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+    CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+
     ```
+    
 <br>
 
 ![Image-docker desktop started](/assets/images/docker_desktop_started.png)|
@@ -170,8 +172,8 @@ After `docker build` is completed, verify if a docker image is created and liste
 
 ```shell
 docker images
-REPOSITORY             TAG       IMAGE ID       CREATED         SIZE
-node-app-http-docker   latest    ea23b8f98141   2 minutes ago   1.09GB
+REPOSITORY           TAG    IMAGE ID     CREATED       SIZE
+node-app-http-docker latest ea23b8f98141 2 minutes ago 1.09GB
 ```
  > You may have more than one row in result, but make sure you have the one with  **REPOSITORY** `node-app-http-docker`
 
@@ -235,14 +237,14 @@ back to [top](#table-of-contents)
 
 First lets find the running one `docker ps` and then stop it using `docker stop`
 
-```ruby
+```
 CONTAINER ID  IMAGE        ....  .. . NAMES
 06b6693e2e4a  ea23b8f98141 ....  .. . hardcore_black
 ```
 
 ```ruby
 # stop using CONTAINER ID
-docker stop a5a149a5346
+docker stop 06b6693e2e4a
 
 # stop using image name
 docker stop hardcore_black
@@ -252,7 +254,7 @@ docker stop hardcore_black
 
 ```
 docker ps
-CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 
 ```
 
