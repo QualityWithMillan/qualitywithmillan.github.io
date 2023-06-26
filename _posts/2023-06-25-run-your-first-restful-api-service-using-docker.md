@@ -1,7 +1,8 @@
 ---
 title: "Run your first RESTful API service using docker"
-teaser: /assets/images/docker_rstful.png
-image: /assets/images/docker_rstful.png
+header:
+    teaser: /assets/images/docker_rstful.png
+    image: /assets/images/docker_rstful.png
 permalink: "/tutorial/run-your-first-restful-api-service-using-docker.html"
 date: 2023-06-25
 authors:
@@ -138,7 +139,7 @@ back to [top](#table-of-contents)
     CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 
     ```
-    
+
 <br>
 
 ![Image-docker desktop started](/assets/images/docker_desktop_started.png)|
