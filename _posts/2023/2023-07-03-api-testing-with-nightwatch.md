@@ -18,6 +18,8 @@ tags:
   - e2e
   - api-testing
 
+{% include toc.html %}
+
 ---
 
 <hr>
@@ -43,7 +45,6 @@ tags:
 
 <hr>
 
-{% include toc.html %}
 
 ## Introduction
 
@@ -225,7 +226,8 @@ nightwatch-api-automation/tests_output/nightwatch-html-report/index.html
 
 Right click & open `index.html` using any browser, for example see my html run result, report on chrome. 
 
-![HTML report results for nightwatch API testing](/assets/images/nightwatch-js-api-03_html_report.png)
+![HTML report results for nightwatch API testing](/assets/images/2023/nightwatch-js-api-03_html_report.png)
+
 
 And that's it! 🙌🏼
 
