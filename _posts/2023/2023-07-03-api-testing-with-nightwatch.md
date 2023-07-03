@@ -1,7 +1,8 @@
 ---
 title: "API testing with nightwatch in 15 mins"
 header:
-    teaser: /assets/images/2023/nightwatch-js-api-00.png.png
+    feature: /assets/images/2023/nightwatch-js-api-00.png
+    teaser: /assets/images/2023/nightwatch-js-api-00.png
 permalink: "/tutorial/2023/api-testing-with-nightwatch-v3-in-15-mins.html"
 date: 2023-07-03
 authors:
@@ -42,6 +43,8 @@ tags:
 
 <hr>
 
+{% include toc.html %}
+
 ## Introduction
 
 The official [Nightwatch](https://nightwatchjs.org/) website states that "it's one framework for all platforms"
@@ -73,7 +76,7 @@ Open your terminal and start following the steps AS-IS please.
 
 -----
 
-**1. Create a directory named `nightwatch-api-automation` or anything you like, this is where you will setup your project + nightwatch**
+1. Create a directory named `nightwatch-api-automation` or anything you like, this is where you will setup your project + nightwatch
 
 ```
 mkdir nightwatch-api-automation
@@ -81,7 +84,7 @@ mkdir nightwatch-api-automation
 
 -----
 
-**2. Install using below command or follow steps to [install nightwatchJS](https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html)**
+2. Install using below command or follow steps to [install nightwatchJS](https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html)
 
 ```
 npm init nightwatch nightwatch-api-automation
@@ -89,8 +92,7 @@ npm init nightwatch nightwatch-api-automation
 
 > Choose the config options as per below screen shot [ I kept my choice simple ]
 
-
-![set up nightwatch config steps screenshot](./images/nightwatch-js-api-01_setup_nightwatch.png)
+![set up nightwatch config steps screenshot](/assets/images/2023/nightwatch-js-api-01_setup_nightwatch.png)
 
 Now let's go inside the `nightwatch-api-automation` directory.
 
@@ -113,16 +115,17 @@ Let the project config know that you want to run **API test's only**, so :
 
 Go to `nightwatch.conf.js` file and add `apitesting` as a plugin.
 
-```js filename=nightwatch.conf.js
-Replace `plugins: [],`
-with    `plugins: ['@nightwatch/apitesting'],`
+```javascript
+Replace >> `plugins: [],`
+
+with    >> `plugins: ['@nightwatch/apitesting'],`
 ```
 
 In same config file (`nightwatch.conf.js`) add details about `api_testing{}` object like this ( 📝 copy paste is fun)
 
 So  this  ⬇️
 
-```js filename=nightwatch.conf.js
+```javascript
     webdriver: {
         start_process: true,
         server_path: ''
@@ -136,7 +139,7 @@ So  this  ⬇️
 
 Becomes ⬇️
 
-```js filename=nightwatch.conf.js
+```javascript
     webdriver: {
         start_process: true,
         server_path: ''
@@ -173,8 +176,8 @@ touch ./test/API/api-test.js
 
 Copy this code in the newly crerated file `api-test.js` ( 📝 copy paste is fun again !). Reference from [nightwatch](https://github.com/nightwatchjs/nightwatch-docs/blob/versions/3.0/guide/writing-tests/api-testing.md#test-api-headers--responses)
 
-```js filename=api-test.js
-
+```javascript
+//api-test.js
 describe('api testing', function () {
   it('get api test', async function({supertest}) {
     await supertest
@@ -205,20 +208,24 @@ npx nightwatch test/API/api-test.js --env api_testing
 
 You should see run result like this.
 
-![CLI run for nightwatch API tests](./images/nightwatch-js-api-02_cli_run.png)
+![CLI run for nightwatch API tests](/assets/images/2023/nightwatch-js-api-02_cli_run.png)
 
 **Note:** Here `api_testing` is to run API test as per our config we did above during set up. This way `nightwatch` does not mix API test's with UI tests run.
 
 
 ### Bonus automated HTML report 📊
 
-Not to worry, automated reports are already generated and waiting for you to open.
+Not to worry, **automated reports are already generated** and waiting for you to open.
 
-Go ahead and look for `index.html` file here `nightwatch-api-automation/tests_output/nightwatch-html-report/index.html`. 
+> Go ahead and look for `index.html` file here
+
+```
+nightwatch-api-automation/tests_output/nightwatch-html-report/index.html
+```
 
 Right click & open `index.html` using any browser, for example see my html run result, report on chrome. 
 
-![HTML report results for nightwatch API testing](./images/nightwatch-js-api-03_html_report.png)
+![HTML report results for nightwatch API testing](/assets/images/nightwatch-js-api-03_html_report.png)
 
 And that's it! 🙌🏼
 
@@ -227,4 +234,4 @@ And that's it! 🙌🏼
 
 Have fun with 🚀 API testing and HTML reports 🟢 🌕 🔴
 
-This post was first posted at [Kablamo Engineering Blog](https://engineering.kablamo.com.au/posts/2023/api-testing-with-nightwatch-in-15-mins/)
+This post was first posted on `27.6.2023` at [Kablamo Engineering Blog](https://engineering.kablamo.com.au/posts/2023/api-testing-with-nightwatch-in-15-mins/)
