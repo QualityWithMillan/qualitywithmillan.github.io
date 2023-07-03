@@ -2,7 +2,6 @@
 title: "Run your first RESTful API service using docker"
 header:
     teaser: /assets/images/docker_rstful.png
-    image: /assets/images/docker_rstful.png
 permalink: "/tutorial/run-your-first-restful-api-service-using-docker.html"
 date: 2023-06-25
 authors:
@@ -51,7 +50,10 @@ Run your own micro-service or REST API's
 `DELETE`\
 i.e all **CRUD** operations.
 
-<br>
+
+![shift-left](/assets/images/docker_rstful.png)
+
+
 ❓❓ You always ran them locally, and wanted to run them inside a `docker` / dockrized with `docker` images 
 
 <br>
