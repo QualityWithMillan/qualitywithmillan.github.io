@@ -18,8 +18,6 @@ tags:
   - e2e
   - api-testing
 
-{% include toc.html %}
-
 ---
 
 <hr>
@@ -45,6 +43,7 @@ tags:
 
 <hr>
 
+{% include toc.html %}
 
 ## Introduction
 
