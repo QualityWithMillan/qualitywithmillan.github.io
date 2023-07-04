@@ -30,6 +30,7 @@ You can follow these simple instructions to publish a post for review:
     1. You can add a new category if none of thsese suits your work:  `blog` , `post`, `tutorial`, `adventure`, `travel` etc.. 
 1.  You can put multiple `tags`to your post, ideally limit them from 3 to 5 for better reader experience.
     1. You can have a look at [all published tags here](https://qualitywithmillan.github.io/tags/)
+1. if you want to run locally follow instructions [here](https://mmistakes.github.io/minimal-mistakes/docs/docs-2-2/) or run `bundle install` followed by `bundle exec jekyll serve`.
 1. Once done raise a PR to `prod` branch, or send me the document(s).
 
 I will ( or you can ) add **Author** details about yourself in [authors.yml file](https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/_data/authors.yml)
