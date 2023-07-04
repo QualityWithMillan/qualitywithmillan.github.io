@@ -43,7 +43,14 @@ tags:
 
 <hr>
 
-{% include toc.html %}
+# Here is `API testing` using 🦉 nightwatch ↘️
+
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Set up ⚙️](#1-set-up-%EF%B8%8F)
+   * [Update config for api testing](#11-update-config-for-api-test)
+4. [Run 🏃🏻‍♂️ API test's](#2-run-%EF%B8%8F)
+5. [HTML result report 📊](#bonus-automated-html-report-)
 
 ## Introduction
 
@@ -58,13 +65,15 @@ The official [Nightwatch](https://nightwatchjs.org/) website states that "it's o
 
 > But what caught my attention was its lightweight, quick and easy setup. For API testing in as little as 15 minutes (including setup!)
 
+![shift-left](/assets/images/2023/nightwatch-js-api-00.png){: .align-center}
 
-Without a wait, let me show you how easy it is set up and run your first API test withing minutes in just **2 steps**.
+
+Without a wait, let me show you how easy it is set up and run your first API test withing minutes in just **2 steps** ✌️.
 
 `set up` & `run`  _++ `HTML report` no complex configuration required.._
 
 
-## Prerequisites:
+## Prerequisites
 
 Latest LTS version of NodeJS, you may download it from [here](https://nodejs.org/en/download)
 
@@ -76,7 +85,7 @@ Open your terminal and start following the steps AS-IS please.
 
 -----
 
-1. Create a directory named `nightwatch-api-automation` or anything you like, this is where you will setup your project + nightwatch
+ A. Create a directory named `nightwatch-api-automation` or anything you like, this is where you will setup your project + nightwatch
 
 ```
 mkdir nightwatch-api-automation
@@ -84,7 +93,7 @@ mkdir nightwatch-api-automation
 
 -----
 
-2. Install using below command or follow steps to [install nightwatchJS](https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html)
+B. Install using below command or follow steps to [install nightwatchJS](https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html)
 
 ```
 npm init nightwatch nightwatch-api-automation
@@ -108,7 +117,7 @@ npm i @nightwatch/apitesting --save-dev
 
 -----
 
-**3. Update config for api test**
+### 1.1. Update config for api test
 
 
 Let the project config know that you want to run **API test's only**, so :
@@ -225,14 +234,19 @@ nightwatch-api-automation/tests_output/nightwatch-html-report/index.html
 
 Right click & open `index.html` using any browser, for example see my html run result, report on chrome. 
 
-![HTML report results for nightwatch API testing](/assets/images/2023/nightwatch-js-api-03_html_report.png)
+---
 
+|HTML result report 📊|
+|:--:|
+|![HTML report results for nightwatch API testing](/assets/images/2023/nightwatch-js-api-03_html_report.png)|
 
-And that's it! 🙌🏼
+---
+# And that's it! 🙌🏼
+
 
 <br /> 
 
 
 Have fun with 🚀 API testing and HTML reports 🟢 🌕 🔴
 
-This post was first posted on `27.6.2023` at [Kablamo Engineering Blog](https://engineering.kablamo.com.au/posts/2023/api-testing-with-nightwatch-in-15-mins/)
+This post was first posted by same author on `27.6.2023` at [Kablamo Engineering Blog](https://engineering.kablamo.com.au/posts/2023/api-testing-with-nightwatch-in-15-mins/)
