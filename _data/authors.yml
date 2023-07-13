@@ -77,3 +77,21 @@ Karthik Hariharan:
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
         url: "https://in.linkedin.com/in/0karthik0"
+
+Jing Deng:
+    name: "Jing Deng"
+    display_name     : "Jing Deng"
+    avatar           : "/assets/images/co-author/jing-deng.jpg"
+    bio              : "QA at .."
+    location         : "Australia 🇦🇺"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto: jing.deng.....com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/..."
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/jing-deng-357554206/"
