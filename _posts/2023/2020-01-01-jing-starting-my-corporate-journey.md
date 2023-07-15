@@ -1,7 +1,7 @@
 ---
 title: "Starting My Corporate Journey: working as an intern/graduate"
 header:
-    teaser: /assets/images/2023/nightwatch-js-api-00.png
+    teaser: /assets/images/2023/jing-grad/03_jing_comp_cat.png
 permalink: "/blog/2023/starting-my-corporate-journey-by-jing.html"
 date: 2020-01-01
 authors:
