@@ -42,6 +42,8 @@ tags:
 Around seven months ago, I officially farewelled [University of New South Wales, Australia 🇦🇺](https://www.unsw.edu.au/homepage/)  (`UNSW`) and concluded my chapter as an _undergraduate university student_. 
   Despite being a relatively fresh graduate, I actually started **my corporate journey two years ago**, and I have to admit, I genuinely have not missed a single day of learning experiences at University. 
   
+![Jing celebrating graduation ceremoney at UNSW campus](/assets/images/2023/jing-grad/01_jing_unsw_1.png){: .align-center}
+
   And in this blog, I would like to share some of my __personal experiences__ on how I found my way to the corporate working world. 🙌🏼 in simple 3 sections :
 
 
@@ -72,13 +74,7 @@ While the changes did not bring me overnight differences, I was confident that I
 
 Generally speaking, I believe **it’s the mind set of not giving up and study from mistake helped me in placing the first few footstep in my career journey**. And it is crucial to to acknowlege that luck was also a key factor during your recruitment processes, sometimes you’ll find recruiters that had similar experiences with you and are able to see the potential in you, sometimes you’ll find companies that have certain values out-weighting your personal skills, drawing meaningful conclusion out of the these interviews regardless of their outcome should always be the priority.
 
-
-<!--
-IMAGE TODO
- ![shift-left](){: .align-center} 
--->
-
-
+ ![Jing looking at UNSW building during graduation ceremoney day](/assets/images/2023/jing-grad/02_jing_unsw_2.png){: .align-center}
 
 ## Looking back on my internship
 
@@ -108,6 +104,8 @@ Generally speak, working in these companies are both incredibtly beneficial to p
     - Make use of the opportunity to learn as much as you can (use the environment, take advantage of the experienced surrounding devs)
     - Don’t hesitate to seek help, no question is stupid, people have low expectations anyways(idk)?
     - Make connections 
+
+![Jing and his cat near his home office monitor](/assets/images/2023/jing-grad/03_jing_comp_cat.png){: .align-center}
 
 ## What’s next
 
