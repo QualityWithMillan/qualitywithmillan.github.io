@@ -3,7 +3,7 @@ title: "Starting My Corporate Journey: working as an intern/graduate"
 header:
     teaser: /assets/images/2023/jing-grad/02_jing_unsw_2.png
 permalink: "/blog/2023/starting-my-corporate-journey-by-jing.html"
-date: 2020-01-01
+date: 2023-07-16
 authors:
 - Jing Deng
 categories:
