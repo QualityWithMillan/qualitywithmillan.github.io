@@ -82,7 +82,7 @@ Jing Deng:
     name: "Jing Deng"
     display_name     : "Jing Deng"
     avatar           : "/assets/images/co-author/jing-deng.jpg"
-    bio              : "QA at .."
+    bio              : ""
     location         : "Australia 🇦🇺"
     email            :
     links:
@@ -95,3 +95,6 @@ Jing Deng:
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
         url: "https://www.linkedin.com/in/jing-deng-357554206/"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/jing968"
