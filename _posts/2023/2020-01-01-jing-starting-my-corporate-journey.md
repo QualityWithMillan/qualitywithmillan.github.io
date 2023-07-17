@@ -44,6 +44,7 @@ tags:
 Around seven months ago, I officially farewelled [University of New South Wales, Australia 🇦🇺](https://www.unsw.edu.au/homepage/) **UNSW** and concluded my chapter as an undergraduate university student. Despite being a relatively fresh graduate, I actually started **my corporate journey two years ago**, and I have to admit, I genuinely have not missed a single day of learning experiences at University. And in this blog, I would like to share some of my personal experiences on how I found my way into the corporate world.
   
 ![Jing celebrating graduation ceremoney at UNSW campus](/assets/images/2023/jing-grad/01_jing_unsw_1.png){: .align-center}
+
 <p align="center">🎉Jing celebrating graduation ceremoney 🎓 at UNSW campus</p>
 
 ---
@@ -95,7 +96,6 @@ Generally speaking, I believe **it’s the mindset of not giving up and studying
 ---
 ---
 
-
 ## Looking back on my internship
 
 **Looking back on my internship/graduate experiences**
@@ -136,6 +136,8 @@ _Generally speaking_, I found working as an intern in these companies incredibly
 > It may sound cliche to say “No question is stupid”, but I can give you countless examples of my own experiences to justify the saying, regardless of what role or what company that I was working on/with.
 
 I was able to consistently find myself progressing most rapidly when I was willing to ask questions, make mistakes, connections and ultimately draw learning outcomes from them.
+
+![Jing and his cat near his home office monitor](/assets/images/2023/jing-grad/03_jing_comp_cat.png){: .align-center}
 
 ## What’s next
 
