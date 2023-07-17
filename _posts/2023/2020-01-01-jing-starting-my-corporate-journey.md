@@ -118,6 +118,7 @@ While these were not the sort of learning I initially anticipated, I was able to
  ![A cat standing on Jings desk with monotors](/assets/images/2023/jing-grad/03_jing_comp_cat.png){: .align-center}
 <p align="center">Jings cat 🐈‍⬛ next to his monotors </p>
 
+
 ---
 
 On the other hand, organisations with decent sizes are much more structured. I felt like I was well taken care of from the very first minute of joining. 
