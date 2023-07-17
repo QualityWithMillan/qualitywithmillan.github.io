@@ -1,7 +1,7 @@
 ---
 title: "Starting My Corporate Journey: working as an intern/graduate"
 header:
-    teaser: /assets/images/2023/jing-grad/03_jing_comp_cat.png
+    teaser: /assets/images/2023/jing-grad/02_jing_unsw_2.png
 permalink: "/blog/2023/starting-my-corporate-journey-by-jing.html"
 date: 2020-01-01
 authors:
@@ -136,8 +136,6 @@ _Generally speaking_, I found working as an intern in these companies incredibly
 > It may sound cliche to say “No question is stupid”, but I can give you countless examples of my own experiences to justify the saying, regardless of what role or what company that I was working on/with.
 
 I was able to consistently find myself progressing most rapidly when I was willing to ask questions, make mistakes, connections and ultimately draw learning outcomes from them.
-
-![Jing and his cat near his home office monitor](/assets/images/2023/jing-grad/03_jing_comp_cat.png){: .align-center}
 
 ## What’s next
 
