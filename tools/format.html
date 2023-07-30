@@ -1,116 +1,125 @@
 ---
 layout: single
-search : false
+author_profile: false
 ---
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="utf-8">
-<!-- 	start of style -->
-    <style>
- .flex-container {
-  display: flex;
-}
+<head>
+  <meta charset="utf-8">
+  <title>Text Formatter 2</title>
+  <!-- Start of style -->
+  <style>
+    /* Reset default margin and padding for the body element */
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-.flex-container>div {
-  background-color: #d6e9f0;
-  /* f1f1f1 */
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
+    /* Center the content horizontally and vertically */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-textarea {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  border: 1px solid #4CAF51;
-  margin-bottom: 10px;
-  border-color: #4CAF51;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
 
-button {
-  margin: 5px;
-  border-color: #4CAF51;!important;
-  border-radius: 12px;
-  color: #000000 !important;
-  margin-bottom: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+    .flex-container>div {
+      background-color: #d6e9f0;
+      /* f1f1f1 */
+      margin: 10px;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      /* Center the text inside the flex items */
+    }
 
-button:hover {
-  background-color: #4CAF51 !important;
-  border-color: #888888 !important;
-  color: white !important;
-}
+    textarea {
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      border: 1px solid #4CAF51;
+      margin-bottom: 10px;
+      border-color: #4CAF51;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      /* Make the textarea full width of its container */
+      resize: vertical;
+      /* Allow vertical resizing of textarea */
+    }
 
-@keyframes click-animation {
-  0% {
-    transform: scale(1);
-  }
+    button {
+      margin: 5px;
+      border-color: #4CAF51;
+      border-radius: 12px;
+      color: #000000;
+      margin-bottom: 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      /* Show pointer cursor on hover */
+    }
 
-  50% {
-    transform: scale(1.2);
-  }
+    button:hover {
+      background-color: #4CAF51;
+      border-color: #888888;
+      color: white;
+    }
 
-  100% {
-    transform: scale(1);
-  }
-}
+    @keyframes click-animation {
+      0% {
+        transform: scale(1);
+      }
 
-button:active {
-  animation: click-animation 0.3s;
-}
+      50% {
+        transform: scale(1.2);
+      }
 
-/* .copy-button {
+      100% {
+        transform: scale(1);
+      }
+    }
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-image: linear-gradient(135deg, pink 40%, blue);
-  width: 10em;
-  height: 5ex;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-} */
+    button:active {
+      animation: click-animation 0.3s;
+    }
+  </style>
+</head>
 
+<body>
+  <h2>Text Formatter 2</h2>
+  <div class="flex-container">
+    <div>
+      <button role="button" id="bold-button">𝗕𝗼𝗹𝗱</button>
+      <button role="button" id="italic-button">𝐼𝑡𝑎𝑙𝑖𝑐</button>
+      <button role="button" id="bold-italic-button">𝗕𝗼𝗹𝗱 𝐼𝑡𝑎𝑙𝑖𝑐</button>
+      <button role="button" id="underline-button"> ̲𝚄̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
+      <button role="button" id="strikethrough-button"> ̶𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶</button>
+      <button role="button" id="monospace-button">𝚖 o n o space</button>
+      <textarea id="input-text" rows="4" cols="50"></textarea>
+      <button role="button" id="clear-button">Clear text 🧹</button>
+    </div>
 
-/* 	    end of style */
-    </style>
-  </head>
-  <body>
-    <center>
-      <h2>Text Formatter</h2>
-      <div class="flex-container">
-        <div>
-          <button role="button" id="bold-button">𝗕𝗼𝗹𝗱</button>
-          <button role="button" id="italic-button">𝐼𝑡𝑎𝑙𝑖𝑐</button>
-          <button role="button" id="bold-italic-button">𝗕𝗼𝗹𝗱 𝐼𝑡𝑎𝑙𝑖𝑐</button>
-          <button role="button" id="underline-button"> ̲𝚄̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
-          <button role="button" id="strikethrough-button"> ̶𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶</button>
-          <button role="button" id="monospace-button">𝚖 o n o space</button>
-          <textarea id="input-text" rows="4" cols="50"></textarea>
-          <button role="button" id="clear-button">Clear text 🧹</button>
-        </div>
-      </div>
-      <br>
-    </center>
-    <center>
+    <div>
       <h4> Result 👇</h4>
-      <div class="flex-container">
-        <div>
-          <textarea id="output-text" rows="4" cols="50"></textarea>
-          <button role="button" id="copy-button">Copy text 📑</button>
-        </div>
+      <div>
+        <textarea id="output-text" rows="4" cols="50"></textarea>
+        <button role="button" id="copy-button">Copy text 📑</button>
       </div>
-    </center>
-  </body>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,143 @@
+---
+layout: single
+author_profile: false
+search : false
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      gap: 20px;
+      /* Add a gap of 20px between flex items */
+    }
+
+    .flex-item {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      /* background-color: #ff000000; */
+      transition: background-color 0.3s ease;
+    }
+
+    /* CSS styles for circular image */
+    .flex-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* Make the image circular */
+    }
+
+    .flex-item .default-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flex-item:hover {
+      /* background-color: #ededed; */
+    }
+
+    /* .flex-item img {
+      display: block;
+    } */
+
+    /* Add text at the bottom center */
+    .flex-item::before {
+      content: attr(data-text); /* Use the data-text attribute value as the content */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px;
+      text-align: center;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 50%; /* Make the text container circular with smooth edges */
+    }
+
+    /* CSS styles for hiding placeholder text on hover */
+    .flex-item:hover::before {
+      content: ""; /* Set content to an empty string on hover */
+    }
+
+    .flex-item .text-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 8px;
+      text-align: center;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      /* color: #fff;
+      background-color: rgba(0, 0, 0, 0.7); */
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      /*border-radius: 60%; /* Make the text container circular with smooth edges */
+      */
+    }
+
+    .flex-item .text-container {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-item" data-placeholder-text="Alejandro"
+        onclick="navigateToLink('https://www.linkedin.com/in/alejandrosanchezgiraldo')">
+        <img src="/assets/images/co-author/alejandro-sanchez-giraldo.jpeg" alt="alejandro">
+        <div class="text-container">Alejandro <span class="link-icon">&#8599;</span></div>
+      </div>
+      <div class="flex-item" data-placeholder-text="Karthik"
+        onclick="navigateToLink('https://in.linkedin.com/in/0karthik0')">
+        <img src="/assets/images/co-author/karthik-hariharan.jpg" alt="karthik">
+        <div class="text-container">Karthik <span class="link-icon">&#8599;</span></div>
+      </div>
+      <div class="flex-item" data-placeholder-text="Paul"
+        onclick="navigateToLink('https://www.linkedin.com/in/paulwaltersuk')">
+        <img src="/assets/images/co-author/paul-maxwell-walters.png" alt="paul">
+        <div class="text-container">Paul <span class="link-icon">&#8599;</span></div>
+      </div>
+      <div class="flex-item" data-placeholder-text="Jing"
+        onclick="navigateToLink('https://www.linkedin.com/in/jing-deng-357554206')">
+        <img src="/assets/images/co-author/jing-deng.jpg" alt="jing">
+        <div class="text-container">Jing <span class="link-icon">&#8599;</span></div>
+      </div>
+    </div>
+
+</body>
+
+<script>
+  function navigateToLink(linkUrl) {
+    window.open(linkUrl, '_blank');
+  }
+</script>
+
+</html>
