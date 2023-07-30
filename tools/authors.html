@@ -13,8 +13,10 @@ search : false
     .flex-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
+      justify-content: center;
+      /* Center items horizontally */
+      align-items: center;
+      /* Center items vertically */
       gap: 20px;
       /* Add a gap of 20px between flex items */
     }
@@ -36,7 +38,8 @@ search : false
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 50%; /* Make the image circular */
+      border-radius: 50%;
+      /* Make the image circular */
     }
 
     .flex-item .default-image {
@@ -58,7 +61,8 @@ search : false
 
     /* Add text at the bottom center */
     .flex-item::before {
-      content: attr(data-text); /* Use the data-text attribute value as the content */
+      content: attr(data-text);
+      /* Use the data-text attribute value as the content */
       position: absolute;
       bottom: 0;
       left: 0;
@@ -72,12 +76,14 @@ search : false
       z-index: 1;
       opacity: 0;
       transition: opacity 0.3s ease;
-      border-radius: 50%; /* Make the text container circular with smooth edges */
+      border-radius: 50%;
+      /* Make the text container circular with smooth edges */
     }
 
     /* CSS styles for hiding placeholder text on hover */
     .flex-item:hover::before {
-      content: ""; /* Set content to an empty string on hover */
+      content: "";
+      /* Set content to an empty string on hover */
     }
 
     .flex-item .text-container {

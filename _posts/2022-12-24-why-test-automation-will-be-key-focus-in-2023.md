@@ -9,7 +9,7 @@ date: 2022-12-24T22:04:00-00:00
 authors:
 - Millan Kaul
 categories:
-  - post
+  - article
 tags:
   - testing
   - automation

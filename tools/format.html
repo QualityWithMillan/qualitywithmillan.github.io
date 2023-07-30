@@ -8,17 +8,13 @@ author_profile: false
 
 <head>
   <meta charset="utf-8">
-  <title>Text Formatter 2</title>
+  <title>Plain Text Formatter</title>
   <!-- Start of style -->
   <style>
     /* Reset default margin and padding for the body element */
     body {
       margin: 0;
       padding: 0;
-    }
-
-    /* Center the content horizontally and vertically */
-    body {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,13 +30,11 @@ author_profile: false
     }
 
     .flex-container>div {
-      background-color: #d6e9f0;
-      /* f1f1f1 */
+      background-color: #A9F1E4;
       margin: 10px;
       padding: 20px;
       font-size: 30px;
       text-align: center;
-      /* Center the text inside the flex items */
     }
 
     textarea {
@@ -48,14 +42,16 @@ author_profile: false
       font-family: Arial, sans-serif;
       border: 1px solid #4CAF51;
       margin-bottom: 10px;
-      border-color: #4CAF51;
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      /* Make the textarea full width of its container */
       resize: vertical;
-      /* Allow vertical resizing of textarea */
+    }
+
+    .input-area {
+      position: relative;
+      width: 100%;
     }
 
     button {
@@ -69,7 +65,6 @@ author_profile: false
       display: inline-block;
       font-size: 16px;
       cursor: pointer;
-      /* Show pointer cursor on hover */
     }
 
     button:hover {
@@ -95,25 +90,48 @@ author_profile: false
     button:active {
       animation: click-animation 0.3s;
     }
+
+    #clear-button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 0;
+      margin: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    #clear-button:before {
+      position: absolute;
+      transition: padding 0.2s ease, opacity 0.2s ease;
+    }
+
+    #clear-button:hover:before {
+      /* content: "Clear 🔄"; */
+      padding: 0 5px;
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body>
-  <h2>Text Formatter 2</h2>
   <div class="flex-container">
+    <h2>Simple text Formatter</h2>
     <div>
-      <button role="button" id="bold-button">𝗕𝗼𝗹𝗱</button>
-      <button role="button" id="italic-button">𝐼𝑡𝑎𝑙𝑖𝑐</button>
-      <button role="button" id="bold-italic-button">𝗕𝗼𝗹𝗱 𝐼𝑡𝑎𝑙𝑖𝑐</button>
-      <button role="button" id="underline-button"> ̲𝚄̲𝚗̲𝚍̲𝚎̲𝚛̲𝚕̲𝚒̲𝚗̲𝚎̲</button>
-      <button role="button" id="strikethrough-button"> ̶𝑆̶𝑡̶𝑟̶𝑖̶𝑘̶𝑒̶</button>
-      <button role="button" id="monospace-button">𝚖 o n o space</button>
-      <textarea id="input-text" rows="4" cols="50"></textarea>
-      <button role="button" id="clear-button">Clear text 🧹</button>
-    </div>
-
-    <div>
-      <h4> Result 👇</h4>
+      <div class="input-area">
+        <textarea id="input-text" rows="4" cols="50"></textarea> <button role="button" id="clear-button">🔄</button>
+      </div>
+      <button role="button" id="bold-button">𝗕</button>
+      <button role="button" id="italic-button">𝐼</button>
+      <button role="button" id="bold-italic-button">𝗕𝐼</button>
+      <button role="button" id="underline-button">𝚄̲</button>
+      <button role="button" id="strikethrough-button">𝑆̶</button>
+      <button role="button" id="monospace-button">𝚖</button>
       <div>
         <textarea id="output-text" rows="4" cols="50"></textarea>
         <button role="button" id="copy-button">Copy text 📑</button>
