@@ -1,8 +1,8 @@
 ---
 title: "Evolution of Reliability Tester and AI testing"
 header:
-  #image: /assets/images/co-author/Karthik Hariharan.png
-  teaser: /assets/images/evolution-of-eliability.png
+  feature: /assets/images/2023/02/evol-of-reliability/evolution-of-reliability.png
+  teaser: /assets/images/2023/02/evol-of-reliability/evolution-of-reliability.png
 permalink: "/post/co-author/Karthik/evolution-of-eliability-ester-and-ai-testing.html"
 date: 2023-02-24
 authors:
@@ -43,6 +43,9 @@ software development. Companies are shifting from manual testing to automation
 testing, and now, artificial intelligence (AI) aided testing is on the rise. With AI 
 aided testing, the process of software testing has become more efficient, 
 accurate, and fast-paced.
+
+
+![a set of books leaning towards each other](/assets/images/2023/02/evol-of-reliability/evolution-of-reliability.png)
 
 
 ## The Present State of Testing

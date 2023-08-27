@@ -1,7 +1,7 @@
 ---
 title: "Starting My Corporate Journey: working as an intern/graduate"
 header:
-    teaser: /assets/images/2023/jing-grad/02_jing_unsw_2.png
+    teaser: /assets/images/2023/07/jing-grad/02_jing_unsw_2.png
 permalink: "/blog/2023/starting-my-corporate-journey-by-jing.html"
 date: 2023-07-16
 authors:
@@ -43,7 +43,7 @@ tags:
 
 Around seven months ago, I officially farewelled [University of New South Wales, Australia 🇦🇺](https://www.unsw.edu.au/homepage/) **UNSW** and concluded my chapter as an undergraduate university student. Despite being a relatively fresh graduate, I actually started **my corporate journey two years ago**, and I have to admit, I genuinely have not missed a single day of learning experiences at University. And in this blog, I would like to share some of my personal experiences on how I found my way into the corporate world.
   
-![Jing celebrating graduation ceremoney at UNSW campus](/assets/images/2023/jing-grad/01_jing_unsw_1.png){: .align-center}
+![Jing celebrating graduation ceremoney at UNSW campus](/assets/images/2023/07/jing-grad/01_jing_unsw_1.png){: .align-center}
 
 <p align="center">🎉Jing celebrating graduation ceremoney 🎓 at UNSW campus</p>
 
@@ -90,7 +90,7 @@ After booming a few invites due to my lack of interviewing experiences, I was ab
 
 Generally speaking, I believe **it’s the mindset of not giving up and studying from mistakes that helped me in placing the first few footsteps in my career journey**. And it is crucial to acknowledge that luck was also a key factor during your recruitment processes, sometimes you’ll find recruiters that had similar experiences with you and are able to see the potential in you, and sometimes you’ll find companies that have `certain values out-weighting your personal skills, drawing meaningful conclusion out of these interviews regardless of their outcome` should always be the priority.
 
- ![Jing looking at UNSW building during graduation ceremoney day](/assets/images/2023/jing-grad/02_jing_unsw_2.png){: .align-center}
+ ![Jing looking at UNSW building during graduation ceremoney day](/assets/images/2023/07/jing-grad/02_jing_unsw_2.png){: .align-center}
 <p align="center">Jing looking at UNSW building 🏫 </p>
 
 ---
@@ -115,7 +115,7 @@ Apart from gaining rich development experiences, the start-up internship also of
 While these were not the sort of learning I initially anticipated, I was able to pack on a lot of necessary skills for corporate working.
 
 
- ![A cat standing on Jings desk with monotors](/assets/images/2023/jing-grad/03_jing_comp_cat.png){: .align-center}
+ ![A cat standing on Jings desk with monotors](/assets/images/2023/07/jing-grad/03_jing_comp_cat.png){: .align-center}
 <p align="center">Jings cat 🐈‍⬛ next to his monotors </p>
 
 
@@ -127,7 +127,7 @@ On the other hand, organisations with decent sizes are much more structured. I f
 
 While I was not learning about as many areas as the first internship, I was able to dive a lot deeper into each area, and with the constant feedback cycle that I was receiving from my team, it was a very pleasant learning experience. **And not to mention that, in the ever-evolving technology world, a sizeable organisation with more resources is simply a better platform to get in touch with the latest technologies and software** which I found extremely valuable as a tech-rookie.
 
- ![A cat next to Jings desk with monotors](/assets/images/2023/jing-grad/04_jing_comp_cat_sitting.png){: .align-center}
+ ![A cat next to Jings desk with monotors](/assets/images/2023/07/jing-grad/04_jing_comp_cat_sitting.png){: .align-center}
 <p align="center">Jings cat 🐈‍⬛ next to his monotors again 😻 </p>
 
 ---

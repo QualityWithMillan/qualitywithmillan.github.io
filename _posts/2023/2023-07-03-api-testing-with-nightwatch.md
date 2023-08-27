@@ -1,8 +1,8 @@
 ---
 title: "API testing with nightwatch in 15 mins"
 header:
-    feature: /assets/images/2023/nightwatch-js-api-00.png
-    teaser: /assets/images/2023/nightwatch-js-api-00.png
+    feature: /assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-00.png
+    teaser: /assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-00.png
 permalink: "/tutorial/2023/api-testing-with-nightwatch-v3-in-15-mins.html"
 date: 2023-07-03
 authors:
@@ -65,7 +65,7 @@ The official [Nightwatch](https://nightwatchjs.org/) website states that "it's o
 
 > But what caught my attention was its lightweight, quick and easy setup. For API testing in as little as 15 minutes (including setup!)
 
-![shift-left](/assets/images/2023/nightwatch-js-api-00.png){: .align-center}
+![shift-left](/assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-00.png){: .align-center}
 
 
 Without a wait, let me show you how easy it is set up and run your first API test withing minutes in just **2 steps** ✌️.
@@ -101,7 +101,7 @@ npm init nightwatch nightwatch-api-automation
 
 > Choose the config options as per below screen shot [ I kept my choice simple ]
 
-![set up nightwatch config steps screenshot](/assets/images/2023/nightwatch-js-api-01_setup_nightwatch.png)
+![set up nightwatch config steps screenshot](/assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-01_setup_nightwatch.png)
 
 Now let's go inside the `nightwatch-api-automation` directory.
 
@@ -217,7 +217,7 @@ npx nightwatch test/API/api-test.js --env api_testing
 
 You should see run result like this.
 
-![CLI run for nightwatch API tests](/assets/images/2023/nightwatch-js-api-02_cli_run.png)
+![CLI run for nightwatch API tests](/assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-02_cli_run.png)
 
 **Note:** Here `api_testing` is to run API test as per our config we did above during set up. This way `nightwatch` does not mix API test's with UI tests run.
 
@@ -238,7 +238,7 @@ Right click & open `index.html` using any browser, for example see my html run r
 
 |HTML result report 📊|
 |:--:|
-|![HTML report results for nightwatch API testing](/assets/images/2023/nightwatch-js-api-03_html_report.png)|
+|![HTML report results for nightwatch API testing](/assets/images/2023/07/nightwatch-js-api/nightwatch-js-api-03_html_report.png)|
 
 ---
 # And that's it! 🙌🏼
