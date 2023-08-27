@@ -1,8 +1,7 @@
 ---
 title: "5 misconceptions regarding Test Automation"
 header:
-  image: /assets/images/5-misconceptions.png
-  teaser: /assets/images/5-misconceptions.png
+  teaser: /assets/images/2021/09/five-misc/5-misconceptions.png
   caption: "Photo credit: [**Zan**](https://unsplash.com/@zanilic)"
 permalink: "/post/5-misconceptions-regarding-test-automation.html"
 date: 2021-09-09T18:00:00-00:00
@@ -67,6 +66,11 @@ I used to think that **_test automation_** is a some magical capability and 100%
 ##### No more manual Testing !!!
 
 > Very soon did I realised, not only that I was mistaken but also wrong to a larger extent….
+
+![a man showing his hand with five fingers to camera ](/assets/images/2021/09/five-misc/5-misconceptions.png)
+
+<br/>
+
 
 ### Why ?
 
@@ -151,14 +155,14 @@ Over the time test first approach such as #TDD ( Test driven development) approa
 
 *   You decide on a test ( business scenario)
 *   Write a test first , which fails right away
-*   Then you write development code to achieve it and mark as PASS
+*   Then you write development code to achieve it and mark as PASS ✅
 *   Again you pick another test and develop..
 
 Another great example is #accessibility testing of web and mobile apps.
 
 Successful teams maintain the balance of trusted manual testers and automation testers. But remember manual testing has its own charm and why not , its a critical thinking skill.
 
-_\# Manual testing is a dead skill, Test automation holds the future ?_ **_NO_**
+_\# Manual testing is a dead skill, Test automation holds the future ?_ **_NO_** ❌
 
 **Key takeaway :**
 
@@ -166,4 +170,4 @@ _\# Manual testing is a dead skill, Test automation holds the future ?_ **_NO_*
 
 
 <hr>
-Originally posted by author on [medium](https://millankaul.medium.com/5-misconceptions-on-test-automation-2fa2c26385ec) in Sep 2021 
+I originally posted this via my [medium](https://millankaul.medium.com/5-misconceptions-on-test-automation-2fa2c26385ec) account in Sep 2021 

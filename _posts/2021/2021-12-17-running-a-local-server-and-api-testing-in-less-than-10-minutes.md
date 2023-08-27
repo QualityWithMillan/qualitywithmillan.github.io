@@ -1,9 +1,9 @@
 ---
-title: "Running a local server and API testing in less than10 Minutes"
+title: "Running a local server and API testing in less than 10 minutes"
 header:
-  teaser: /assets/images/run-api-server-in-10-mins.jpg
+  teaser: /assets/images/2021/12/local-serv/run-api-server-in-10-mins.jpg
   caption: "Image by : Millan Kaul"
-permalink: "/tutorial/running-api-server-in-less-than-10-minutes.html"
+permalink: "/tutorial/running-api-server-in-10-minutes.html"
 date: 2021-09-20T18:00:00-00:00
 authors:
 - Millan Kaul
@@ -57,7 +57,8 @@ tags:
 ```diff
 +                      Time starts now ⏱️
 ```
-![ten minutes timer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6bukvd3w3y29dap7unw3.png)
+
+![ten minutes timer](/assets/images/2021/12/local-serv/10-minutes-timer.png)
 <figcaption align = "center">Fig.1 - 10 minute timer</figcaption> 
 <br/>
 
@@ -197,12 +198,12 @@ node server.js
 
 If you see this message, it means your API Server is all set !
 
-![server](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/49hb1h2nqbzcnwu7jqix.png)
+![server](/assets/images/2021/12/local-serv/start-node-server.png)
 <figcaption align = "center">Fig.2 - server started on http://localhost:8020</figcaption>
 
 You can even check it on your browser:
 
-![server verified on browser](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jfs7e0w3l060x1x31v5a.png)
+![server verified on browser](/assets/images/2021/12/local-serv/server-start-on-browser.png)
 <figcaption align = "center">Fig2.1 - server ( http://localhost:8020) accessible on browser</figcaption> 
 
 
@@ -296,7 +297,9 @@ AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
   operator: '=='
 }
 ```
-  
+
+<hr>  
+
 # WHAT ❗ ❗ 
 
 What just happened ❓ , why all these logs are printed.
@@ -353,13 +356,13 @@ node test.js
 
 # Done !
 
-![successful test run](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xcd8ff0fl7myrehgiqne.png)
+![successful test run](/assets/images/2021/12/local-serv/response-test.png)
 <figcaption align = "center"><b>Fig.3 - Successful Test run ✔️ </b></figcaption> 
 
 > Time over :) 
 
-![1 second left on timer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9un85kwfpbh7tl6wpmqq.png)
+![1 second left on timer](/assets/images/2021/12/local-serv/01-sec-timer.png)
 <figcaption align = "center"><b>Fig.3.1 - Time over</b></figcaption> 
 
       
-> Credits: <a target="_blank" href="https://icons8.com/icon/b3uCTpcS-NiY/api">API iocn</a> 
+> Credits for <a target="_blank" href="https://icons8.com/icon/b3uCTpcS-NiY/api">API icon</a> 

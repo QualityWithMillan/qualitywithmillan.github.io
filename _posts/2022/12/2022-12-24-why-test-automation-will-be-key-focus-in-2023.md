@@ -2,9 +2,8 @@
 title: "Why test automation will be key focus in 2023 ?"
 permalink: "/post/why-test-automation-will-be-key-focus-in-2023.html"
 header:
-  image: /assets/images/2023.png
-  teaser: /assets/images/2023.png
-  caption: "Photo credit: [**rawpixel.com on Freepik**](https://www.freepik.com/free-vector/ai-technology-brain-background-vector-digital-transformation-concept_16396129.htm#query=ai%20technolog%20brain%20background%20digital&position=5&from_view=search&track=ais)"
+  feature: /assets/images/2022/12/test-automation-in-2023/2023.png
+  teaser: /assets/images/2022/12/test-automation-in-2023/2023.png
 date: 2022-12-24T22:04:00-00:00
 authors:
 - Millan Kaul
@@ -46,9 +45,13 @@ Before that let me share a simple definition of **Test automation**.
 
 `Test automation` is the process of using software to control the execution of tests and the comparison of actual outcomes to predicted outcomes. 
 
+
+![ai-technology-brain-background](/assets/images/2022/12/test-automation-in-2023/2023.png){: .align-center}
+<figcaption align = "center">Background image by rawpixel on <a href="https://www.freepik.com/free-vector/ai-technology-brain-background-vector-digital-transformation-concept_16396129.htm"> Freepik</a></figcaption>  
+
 There are several reasons <ins>why test automation will be a key focus for companies in 2023 and beyond</ins>, few of them are list below :
   
-  
+
 - **Enhanced collaboration** : Test automation tools can be integrated with other tools and platforms, such as continuous integration and continuous delivery systems, which can help to facilitate collaboration between different teams and improve the overall testing process.
 
 

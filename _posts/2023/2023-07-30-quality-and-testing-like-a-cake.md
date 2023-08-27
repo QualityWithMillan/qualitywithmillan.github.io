@@ -1,8 +1,8 @@
 ---
 title: "A tasty analogy: Quality and testing explained like a piece of cake 🍰"
 header:
-  feature: /assets/images/2023/piece_of_cake/cake.jpg
-  teaser: /assets/images/2023/piece_of_cake/cake.jpg
+  feature: /assets/images/2023/07/piece_of_cake/cake.jpg
+  teaser: /assets/images/2023/07/piece_of_cake/cake.jpg
 permalink: "/post/quality-and-testing-like-a-cake.html"
 date: 2023-07-30
 authors:
@@ -42,7 +42,7 @@ Today in less than 2 minutes, like a piece of cake 🍰.
 
 I will explain to you **quality and testing** and you can explain the same to anyone, even an expert developer, without much effort.
 
-!["Image showing a cut piece of cake"](/assets/images/2023/piece_of_cake/cake.jpg){: .align-center}
+!["Image showing a cut piece of cake"](/assets/images/2023/07/piece_of_cake/cake.jpg){: .align-center}
 <a href="https://www.freepik.com/free-vector/isometric-cake-cake-slice_13187642.htm#query=cake%20piece%20illustration&position=22&from_view=search&track=ais">Image by macrovector</a> on Freepik
 
 <hr>
