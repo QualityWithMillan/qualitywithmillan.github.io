@@ -42,11 +42,13 @@ tags:
 
 ### Simplist way to explain how Appium works ?
 
+
 Think about a simple login scenario via mobile test automatio. You want to demo that to your team or client, before you do so, you have many things to do such as: choose language, decide and design basic automation framework, set up and connect automation to mobile via Appium.
 
 There are so many things to discuss and describe. And before you reach to a point of demonstration of a straightforward login scenario in mobile test automation demo, it's essential to recognize the intricate blend of science, mathematics, and engineering that forms the backbone of this process.
 
 In this blog, I'll break down the simplify and shed light on the most crucial element - APPIUM, explaining it in the simplest way possible.
+
 
 # APPIUM
 
