@@ -43,16 +43,19 @@ tags:
 ### Simplist way to explain how Appium works ?
 
 
-Before you reach to a point of demonstration of a straightforward login scenario in mobile test automation demo, it's essential to recognize the intricate blend of science, mathematics, and engineering that forms the backbone of this process.
+Think about a simple login scenario via mobile test automatio. You want to demo that to your team or client, before you do so, you have many things to do such as: choose language, decide and design basic automation framework, set up and connect automation to mobile via Appium.
 
-In this blog, I'll break down the intricacies and shed light on the most crucial element, explaining it in the simplest way possible.
+There are so many things to discuss and describe. And before you reach to a point of demonstration of a straightforward login scenario in mobile test automation demo, it's essential to recognize the intricate blend of science, mathematics, and engineering that forms the backbone of this process.
+
+In this blog, I'll break down the simplify and shed light on the most crucial element - APPIUM, explaining it in the simplest way possible.
+
 
 # APPIUM
 
  > In case you don't know : `Appium` is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more!
  ref - [appium.io](https://appium.io)
 
-You can get a deeper understanding of "How Appium works?" form [Appium in a Nutshell](https://appium.io/docs/en/2.4/intro/), for now let me presnet a easy and simple steps to provide you with a clearer understanding of the role of Appium in test automation.
+You can get a deeper understanding of "How Appium works?" form [Appium in a Nutshell](https://appium.io/docs/en/2.4/intro/), for now let me present a easy and simple steps to provide you with a clearer understanding of the role of Appium in test automation.
  
 
  !["Image showing 4 steps of how appium works in mobile app automation"](/assets/images/2024/01/how-appium-works-01.png){: .align-center}
