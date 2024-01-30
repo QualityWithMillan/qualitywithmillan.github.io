@@ -1,10 +1,10 @@
 ---
-title: "k6 - With real time web dashboards 📊 for performance monitoring + HTML report"
+title: "k6 - web dashboards + HTML report 📊"
 header:
   feature: /assets/images/2024/01/01_overview.png
   teaser: /assets/images/2024/01/00_k6.png
 permalink: "/post/2024/01/k6-with-real-time-performance-monitoring-with-web-dashboards.html"
-date: 2023-01-29
+date: 2024-01-29
 authors:
 - Millan Kaul
 categories:
@@ -45,11 +45,22 @@ tags:
 
 ### K6
 
-`k6` is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more! ref - [appium.io](https://appium.io)
+`k6' is an open-source load testing tool that makes performance testing easy and productive for engineering teams. k6 is free, developer-centric, and extensible. Read more at [what is k6](https://k6.io/docs/#what-is-k6)?
+
+**Use cases of K6**
+k6 users are typically Developers, QA Engineers, SDETs, and SREs. They use k6 for testing the performance and reliability of APIs, microservices, and websites. Common k6 use cases are:
+
+- Load testing
+- Browser testing
+- Chaos and resilience testing
+- Performance and synthetic monitoring
+
+But this blog post is not related to that. **It is dedicated to the latest cool k6 feature** in release [v0.49.0](https://github.com/grafana/k6/releases/tag/v0.49.0). 
+
+# ❤️ Free - real time web dashboards 📊 for performance monitoring with an option to save results as HTML report.
 
 
-
-### What's New!
+### What's New! in release `v0.49.0`
 
 `k6` continues to stand out with its latest feature – a built-in web dashboard that takes real-time monitoring to a whole new level.
 
