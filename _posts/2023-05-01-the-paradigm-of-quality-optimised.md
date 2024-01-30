@@ -2,7 +2,7 @@
 title: "The paradigm of Quality - Optimised"
 header:
   image: /assets/images/optimised-quality.png
-  teaser: /assets/images/optimised-quality.jpg
+  teaser: /assets/images/optimised-quality.png
   caption: "Photo credit: Dreamlike Diffusion"
 permalink: "/post/the-paradigm-of-quality-optimised.html"
 authors:

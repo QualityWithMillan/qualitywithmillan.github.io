@@ -253,7 +253,8 @@ function toUnicodeVariant(str, variant, flags) {
     } else {
       result += c 
     }
-    if (underline) result += '\u0332' // add combining underline
+    // if (underline) result += '\u0332' // add combining underline
+    if (underline) result += '&#x0332;'
     if (strike) result += '\u0336' // add combining strike
   }
 	return result
