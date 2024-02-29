@@ -90,12 +90,12 @@ CMD ["jekyll", "serve", "--host", "0.0.0.0"]
 version: '3'
 services:
   jekyll:
-    build:
-      context: .
+    image: qwm
     ports:
       - "4000:4000"
     volumes:
-      - .:/srv/jekyll
+      - "./:/srv/jekyll"
+    command: ["bundle", "exec", "jekyll", "serve",  "--force_polling" , "--host", "0.0.0.0"]
 
 ```
 
@@ -105,7 +105,7 @@ services:
 
 ### Running Locally:
 
-With the Dockerfiles and docker-compose.yaml in place, running the Jekyll blog locally becomes a breeze. 
+With the `Dockerfiles` and `docker-compose.yaml` in place, running the Jekyll blog locally becomes a breeze. 
 Execute the following commands:
 
 ```bash
