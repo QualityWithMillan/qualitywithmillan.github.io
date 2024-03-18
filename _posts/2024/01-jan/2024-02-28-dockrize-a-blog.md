@@ -1,8 +1,8 @@
 ---
 title: "How I turned my blog into a Docker based development paradise 🐳 - Try It Yourself!"
 header:
-  feature: /assets/images/2024/02/01_docker_jeklly.png
-  teaser: /assets/images/2024/02/01_docker_jeklly.png
+  feature: /assets/images/2024/02/docker_jeklly/01_docker_jeklly.png
+  teaser: /assets/images/2024/02/docker_jeklly/01_docker_jeklly.png
 permalink: "/post/2024/02/run-your-blog-as-a-docker-container-locally.html"
 date: 2024-02-28
 authors:
@@ -44,7 +44,7 @@ tags:
 
 <br>
 
-!["Banner image with Jeklly and docker icons for the blog on using docker by Millan Kaul on his blog Quality With Millan"](/assets/images/2024/02/01_docker_jeklly.png){: .align-center}
+!["Banner image with Jeklly and docker icons for the blog on using docker by Millan Kaul on his blog Quality With Millan"](/assets/images/2024/02/docker_jeklly/01_docker_jeklly.png){: .align-center}
 
 <hr>
 
@@ -160,7 +160,7 @@ It's my way of extending an invitation to the community to explore and collabora
 
 ### "Image showing running blog on local
 
-!["Image showing running blog on local"](/assets/images/2024/02/02_docker_blog.png){: .align-center}
+!["Image showing running blog on local"](/assets/images/2024/02/docker_jeklly/02_docker_blog.png){: .align-center}
 
 
 <hr>
