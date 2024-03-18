@@ -1,8 +1,8 @@
 ---
 title: "k6 - web dashboards + HTML report 📊"
 header:
-  feature: /assets/images/2024/01/01_overview.png
-  teaser: /assets/images/2024/01/00_k6.png
+  feature: /assets/images/2024/01/k6_dash/01_overview.png
+  teaser: /assets/images/2024/01/k6_dash/00_k6.png
 permalink: "/post/2024/01/k6-with-real-time-performance-monitoring-with-web-dashboards.html"
 date: 2024-01-29
 authors:
@@ -70,7 +70,7 @@ Let's jump straight to it.
 
 **Usual run results on command line**
 
-!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/tile.png){: .align-center}
+!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/k6_dash/tile.png){: .align-center}
 
 -----
 
@@ -80,20 +80,20 @@ There are mainly 3 tabs:
 
 **1. Overview**
 
-!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/04_overview.png){: .align-center}
+!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/k6_dash/04_overview.png){: .align-center}
 
 -----
 
 **2. Timings**
 
-!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/04_Timings.png){: .align-center}
+!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/k6_dash/04_Timings.png){: .align-center}
 
 -----
 **3. Summary**
 
 This one is very close to what the `json` report result would usually look like
 
-!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/04_summary.png){: .align-center}
+!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/k6_dash/04_summary.png){: .align-center}
 
 -----
 
@@ -103,7 +103,7 @@ This one is very close to what the `json` report result would usually look like
 
 By default, the web dashboard is accessible on localhost port `5665`. 
 
-!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/01_port.png){: .align-center}
+!["Image showing port 5665 used as default for k6 web dashboards"](/assets/images/2024/01/k6_dash/01_port.png){: .align-center}
 
 However, k6 is flexible, and you can customize the host and port according to your preferences. 
 using `K6_WEB_DASHBOARD_PORT`	you can use your choice of port number to bind the web dashboard to.

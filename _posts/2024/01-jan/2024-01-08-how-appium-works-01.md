@@ -1,8 +1,8 @@
 ---
 title: "Easiest way to understand `How Appium works`"
 header:
-  feature: /assets/images/2024/01/how-appium-works-01.png
-  teaser: /assets/images/2024/01/appium.png
+  feature: /assets/images/2024/01/appium_24/how-appium-works-01.png
+  teaser: /assets/images/2024/01/appium_24/appium.png
 permalink: "/post/2024/01/how-appium-works-01.html"
 date: 2024-01-08
 authors:
@@ -58,7 +58,7 @@ You can get a deeper understanding of "How Appium works?" form [Appium in a Nuts
 <br /> 
 <br /> 
 
-!["Image showing 4 steps of how appium works in mobile app automation"](/assets/images/2024/01/how-appium-works-01.png){: .align-center}
+!["Image showing 4 steps of how appium works in mobile app automation"](/assets/images/2024/01/appium_24/how-appium-works-01.png){: .align-center}
 
 -----
 
