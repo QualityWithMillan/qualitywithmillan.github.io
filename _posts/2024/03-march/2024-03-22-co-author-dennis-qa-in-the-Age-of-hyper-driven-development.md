@@ -17,9 +17,6 @@ tags:
   - Agile Testing
 ---
 
-
-<hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
-
 <p>
  Written by -
 {% if page.authors == nil or page.authors.size == 0 %}
