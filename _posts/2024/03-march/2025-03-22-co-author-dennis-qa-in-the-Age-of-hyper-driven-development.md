@@ -5,6 +5,7 @@ header:
   teaser: /assets/images/co-author/Dennis_Nyawiara.jpeg
   # caption: "Photo credit: Unplash"
 permalink: "/post/qa-in-the-age-of-hyper-driven-development.html"
+search : false
 date: 2025-03-22
 authors: 
   - Dennis Nyawira
