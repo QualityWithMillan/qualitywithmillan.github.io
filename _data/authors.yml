@@ -98,3 +98,25 @@ Jing Deng:
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
         url: "https://github.com/jing968"
+
+# Added 22nd Mar 2024
+Dennis Nyawira:
+    name: "Dennis Nyawira"
+    display_name     : "Dennis Nyawira"
+    avatar           : "/assets/images/co-author/Dennis_Nyawiara.jpeg"
+    bio              : ""
+    location         :
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto: Dennis_Nyawiara.....com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/..."
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/gituto"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        # url: "https://github.com/<UserName>"
