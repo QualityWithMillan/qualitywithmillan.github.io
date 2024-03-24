@@ -42,6 +42,12 @@ if you see some errors :
 - run `bundle`
 and again `bundle exec jekyll serve`.
 
+## Some tips to format your Blog and images
+
+- [Link to useful utility-classes](https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/)
+- [Cheat-sheet for using jmoji pluging for emojis on blog](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+- [Liquid Cheat Sheet](https://www.fabriziomusacchio.com/blog/2021-08-12-Liquid_Cheat_Sheet/#jekylls-link-tag)
+
 1. Once done raise a PR to `prod` branch, or send me the document(s).
 
 I will ( or you can ) add **Author** details about yourself in [authors.yml file](https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/_data/authors.yml)
