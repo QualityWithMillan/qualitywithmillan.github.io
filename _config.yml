@@ -303,9 +303,6 @@ defaults:
   - scope:
       path: ""
       type: posts
-      values:
-        author: "Millan Kaul"
-        add_script: true
     values:
       layout: single
       author_profile: true
@@ -314,6 +311,7 @@ defaults:
       share: true
       related: true
       show_date: true
+      add_script: true
   # _pages
   - scope:
       path: ""
