@@ -377,5 +377,3 @@ Want to learn more❓
 Follow [Quality With Millan](https://www.linkedin.com/company/quality-with-millan) or <a href="https://www.linkedin.com/shareArticle?url=https://qualitywithmillan.github.io{{ page.url }}&title=I+came+through+this+awesome+blogs+on+%0A%23QualityWithMillan" title="I came through this awesome blogs on #QualityWithMillan" target="_blank">Share it on LinkedIn</a>
 
 <hr style="border: none; height:1px; background-color: #0F4CCC; position: relative;">
-
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="millankaul" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting, now you can buy me a coffee 😉" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
