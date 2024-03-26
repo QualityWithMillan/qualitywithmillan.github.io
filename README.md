@@ -1,3 +1,6 @@
+[![Website Publish - Deployment status](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=prod)](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/pages/pages-build-deployment)
+
+
 <pre>
 <p align="center">
         Become a <a href="https://github.com/sponsors/eaccmk" target="_blank">sponsor</a> support me 🤝❤️❤️‍🩹 
