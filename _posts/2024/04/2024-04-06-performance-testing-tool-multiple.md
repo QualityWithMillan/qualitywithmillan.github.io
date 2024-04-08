@@ -65,7 +65,7 @@ _...from [multiple.dev](https://docs.multiple.dev/introduction)_
 
 3. [What's the selling point? 🧐](#whats-the-selling-point)
 
-4. [Usage - What to expect](#usage-what-to-expect)
+4. [Usage - What to expect](#usage---what-to-expect)
 
 5. [Show me the code!👨‍💻](#show-me-the-code)
 
