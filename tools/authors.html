@@ -37,6 +37,7 @@ search : true
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
+      filter: grayscale(100%);
       /* Make the image circular */
     }
 
@@ -53,9 +54,10 @@ search : true
       /* background-color: #ededed; */
     }
 
-    /* .flex-item img {
-      display: block;
-    } */
+    .flex-item img:hover{
+      /* display: block; */
+      filter: grayscale(0%);
+    }
 
     /* Add text at the bottom center */
     .flex-item::before {
