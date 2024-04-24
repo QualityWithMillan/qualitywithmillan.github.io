@@ -120,3 +120,25 @@ Dennis Nyawira:
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
         # url: "https://github.com/<UserName>"
+
+# Added 24th April 2024
+Neelam Pal:
+    name: "Neelam Pal"
+    display_name     : "Neelam Pal"
+    avatar           : "/assets/images/co-author/neelam-pal.jpeg"
+    bio              : "I am a Software Test Automation architect with 17 years of experience. I am passionate about explore test automation tools and implementing them effectively. Also, I love to coach any non-programmer to the test automation techniques."
+    location         : "India 🇮🇳"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto: test@test.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/xxx"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/palneelam"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        # url: "https://github.com/xxx"
