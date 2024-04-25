@@ -4,7 +4,7 @@ header:
   # image: /assets/images/2024/04/webdriver/
   teaser: /assets/images/2024/04/webdriver/webdriver-saga.jpg
 permalink: "/post/web-driver-saga.html"
-search : false
+search : true
 date: 2024-03-22
 authors: 
   - Neelam Pal
