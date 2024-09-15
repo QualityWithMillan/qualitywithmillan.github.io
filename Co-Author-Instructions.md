@@ -24,7 +24,7 @@ You can follow these simple instructions to publish a post for review:
     1. Use one of the online readme editor or [search one on google search](https://www.google.com/search?q=online+readme+editor) to preview your content before sending.
 1.  Make sure your post is submitted <ins>**without a date**</ins> in your file name.
     1. So that it looks something like this `my-first-blog-on-christmas.md` (all words in small case, separated by hiphens `-` . No `space` or special characters please)
-    1. Once it's reviewed, I will add a date in front of it like this `2022-12-25-my-first-blog-on-christmas.md` ( YYYY-MM-DD) + `your-file-name.md`.
+    1. Once it's reviewed, I will add a date in front of it, something like this:  `YYYY-MM-DD-your-file-name.md` ( e.g. `2022-12-25-my-first-blog-on-christmas.md` )
 1.  You can associate your blog with a category 
     1. Make sure to pick **only one** categorie, looking at the published [Categories page](https://qualitywithmillan.github.io/categories/)
     1. You can add a new category if none of thsese suits your work:  `blog` , `post`, `tutorial`, `adventure`, `travel` etc.. 
