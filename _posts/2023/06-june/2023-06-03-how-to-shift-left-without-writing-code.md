@@ -42,7 +42,7 @@ tags:
 
 From one of my connection [Dennis Nyawira](https://www.linkedin.com/in/gituto/) on this [LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7068990608341635072)
 
-> I'm talking about "Shift Left Testing" - not just a phrase, but a mindset. This is us, saying "**Hapana**" to last-minute testing hassles and "**Karibu**" to integrating QA right from the start of our development process.
+> I'm talking about "Shift-Left Testing" - not just a phrase, but a mindset. This is us, saying "**Hapana**" to last-minute testing hassles and "**Karibu**" to integrating QA right from the start of our development process.
  
 <br><br>
 For this post, I will keep the definition of `shift-left` or `Karibu` as:

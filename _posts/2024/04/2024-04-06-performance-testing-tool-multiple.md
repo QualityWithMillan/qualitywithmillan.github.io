@@ -12,7 +12,7 @@ categories:
   - tools
 tags:
   - performance testing
-  - Shift Left
+  - Shift-Left
   - Test automation
 ---
 

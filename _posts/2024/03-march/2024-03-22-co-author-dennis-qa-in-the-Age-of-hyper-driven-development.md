@@ -13,7 +13,7 @@ categories:
   - blog
 tags:
   - qa
-  - Shift Left & Right
+  - Shift-Left & Right
   - Agile Testing
 ---
 
