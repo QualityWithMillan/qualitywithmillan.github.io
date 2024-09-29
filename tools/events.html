@@ -1,0 +1,301 @@
+---
+layout: single
+author_profile: true
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>My Speaking Events</title>
+
+  <!-- Buy Me a Coffee -->
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+    data-id="millankaul" data-description="Support me on Buy me a coffee!"
+    data-message="Support this blog - click here to Donate! ❤️" data-color="#40DCA5" data-position="Right"
+    data-x_margin="18" data-y_margin="18"></script>
+
+  <!-- Style for events -->
+  <!-- <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .events-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+    }
+
+    .event-card {
+      background-color: #A9F1E4;
+      width: 300px;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    .event-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .event-image.lazy-loaded {
+      opacity: 1;
+    }
+
+    .event-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .event-info {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  </style> -->
+  <!-- Style for events -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      /* background-color: #f4f4f4; */
+    }
+
+    /* Container for all event cards */
+    .events-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: flex-start;
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      /* Center the container */
+    }
+
+    /* Individual event card */
+    .event-card {
+      background-color: #A9F1E4;
+      width: 350px;
+      margin: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      transition: transform 0.2s ease;
+      /* position: relative;  Required for z-index */
+    }
+
+    /* Ensure the anchor covers the entire card */
+    .event-card a {
+      display: block;
+      text-decoration: none;
+      /* No underline */
+      color: inherit;
+      /* Inherit the text color */
+    }
+
+    /* Event card hover effect */
+    .event-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Prevent image or content being obscured */
+    .event-card>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Image within each card */
+    .event-image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      /* display: block;*/
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Lazy-loaded images will fade in */
+    .event-image.lazy-loaded {
+      opacity: 1;
+    }
+
+    /* Title of the event */
+    .event-title {
+      font-size: 22px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Info under the title (date, location, etc.) */
+    .event-info {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 1024px) {
+      .events-container {
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .event-card {
+        width: 100%;
+        max-width: 450px;
+        margin: 10px auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .event-title {
+        font-size: 20px;
+      }
+
+      .event-info {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .events-container {
+        padding: 10px;
+      }
+
+      .event-card {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+      }
+
+      .event-title {
+        font-size: 18px;
+      }
+
+      .event-info {
+        font-size: 13px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="events-container">
+    <!-- Event 1 -->
+    <div class="event-card">
+      <a href="https://www.linkedin.com/posts/millankaul_meetup-qualitywithmillan-techmeetup-activity-7220193623097716736-Sg0J"
+        target="_blank" rel="noopener noreferrer">
+        <img class="event-image lazy" data-src="/assets/images/events/2024_July_microsoft_US.png"
+          alt="Millan Speaking at Microsoft HQ at Redmond Washington United States of America" />
+      </a>
+      <div class="event-title">Raising the bar with pragmatic testing of microservices</div>
+      <div class="event-info">Innovate QA Event | July 2024 | Microsoft HQ - Redmond, US 🇺🇸 </div>
+    </div>
+
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <a href="https://www.linkedin.com/posts/millankaul_yvrtesting-qualitywithmillan-activity-7186839923990134784-VK2m"
+        target="_blank" rel="noopener noreferrer">
+        <img class="event-image lazy" data-src="/assets/images/events/2024_April_YVRTesting_Vancouver_Canada.png"
+          alt="Millan speaking at YVR Testing meetup at Vancouver Canada" />
+      </a>
+      <div class="event-title">The power of Behavioral 𝗧𝗲𝘀𝘁𝗶𝗻𝗴 in Microservice</div>
+      <div class="event-info">YVR Testing meetup | April 2024 | Vancouver, Canada 🇨🇦</div>
+    </div>
+
+    <!-- Event 3 -->
+    <!-- <div class="event-card">
+      <img class="event-image lazy" data-src="/assets/images/events/2024_July_microsoft_US.png"
+        alt="Millan speaking at YVR Testing meetup at Vancouver Canada">
+      <div class="event-title">YVR Testing meetup</div>
+      <div class="event-info">April 2024 | Vancouver Canada</div>
+      <a href="https://www.linkedin.com/posts/millankaul_yvrtesting-qualitywithmillan-activity-7186839923990134784-VK2m"
+        target="_blank" rel="noopener noreferrer"></a>
+    </div> -->
+
+    <!-- Event 4 -->
+    <div class="event-card">
+      <a href="https://www.linkedin.com/events/doublebillfeaturingmillankaul-l7033057355953053696" target="_blank"
+        rel="noopener noreferrer"><img class="event-image lazy"
+          data-src="/assets/images/events/2023_March_Syendy_Testers.png"
+          alt="Millan speaking at Sydney Testers - Sydney Australia">
+      </a>
+      <div class="event-title">Using Exploratory Testing Plus Automation</div>
+      <div class="event-info">Sydney Testers | March 2023 | Sydney Australia 🇦🇺</div>
+
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card">
+      <a href="https://www.linkedin.com/posts/millankaul_when-to-shift-left-move-to-centre-and-go-activity-6981023187853611008-lQJr"
+        target="_blank" rel="noopener noreferrer">
+        <img class="event-image lazy" data-src="/assets/images/events/2023_Oct_Applitools.jpg"
+          alt="Millan speaking at Sydney Testers - Sydney Australia">
+      </a>
+      <div class="event-title">When to Shift Left, Move to Centre, and Go Right in Testing</div>
+      <div class="event-info">Webinar - Applitools | Oct 2023 | Sydney Australia 🇦🇺</div>
+
+    </div>
+
+    <!-- Vancouver Kablamo QE meetup  - https://www.linkedin.com/feed/update/urn:li:activity:7082199303972159488/ -->
+
+
+    <!-- Add more events here -->
+
+  </div>
+
+  <script>
+    // Lazy load images
+    document.addEventListener("DOMContentLoaded", function () {
+      const lazyImages = document.querySelectorAll(".lazy");
+
+      const imageObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.add('lazy-loaded');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      lazyImages.forEach(function (image) {
+        imageObserver.observe(image);
+      });
+    });
+  </script>
+</body>
+
+</html>
