@@ -78,6 +78,59 @@ https://cssgradient.io/gradient-backgrounds/
       border: 2px solid #CECABE;
     }
 
+
+    
+.shine:nth-child(1) { background: cornflowerblue; }
+
+/*---
+  shine animation
+---*/
+
+.shine:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/*---
+  hover trigger
+---*/
+
+.shine:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+/*---
+  active state
+---*/
+
+.shine:active:after {
+  opacity: 1;
+}
+
+/*--------------------------------
+				END ICON SHINE
+---------------------------------*/
+
     /* 	    end of style */
   </style>
 
@@ -85,16 +138,16 @@ https://cssgradient.io/gradient-backgrounds/
 
 <body>
   <div class="container">
-    <div class="box1" id="text-format">
+    <div class="box1 shine" id="text-format">
       <h1 class="title">Text Formatter</h1>
     </div>
-    <div class="box2" id="coin-flip">
+    <div class="box2 shine" id="coin-flip">
       <h1 class="title">Coin Flip 🪙</h1>
     </div>
-    <div class="box3" id="events-speaking">
+    <div class="box3 shine" id="events-speaking">
       <h1 class="title">Events | Speaking 🎤</h1>
     </div>
-    <div class="box-x">
+    <div class="box-x shine">
       <h1 class="title">coming soon...</h1>
     </div>
   </div>
