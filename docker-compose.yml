@@ -10,5 +10,5 @@ services:
     volumes:
       - "$PWD:/srv/jekyll"
       - ./vendor/bundle/:/usr/local/bundle
-    command: bundle exec jekyll serve --force_polling --drafts
+    command: bundle exec jekyll serve --force_polling --drafts --host 0.0.0.0
     # command: ["bundle", "exec", "jekyll", "serve",  "--force_polling" , "--host", "0.0.0.0"]
