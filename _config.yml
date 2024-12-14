@@ -175,7 +175,12 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - docker-compose.yml
   - vendor
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -187,6 +192,7 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
