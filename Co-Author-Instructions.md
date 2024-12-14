@@ -30,7 +30,7 @@ You can follow these simple instructions to publish a post for review:
     1. You can add a new category if none of thsese suits your work:  `blog` , `post`, `tutorial`, `adventure`, `travel` etc.. 
 1.  You can put multiple `tags`to your post, ideally limit them from 3 to 5 for better reader experience.
     1. You can have a look at [all published tags here](https://qualitywithmillan.github.io/tags/)
-1. if you want to run locally follow instructions [here](https://mmistakes.github.io/minimal-mistakes/docs/docs-2-2/) or run `bundle install` followed by `bundle exec jekyll serve`.
+1. if you want to run locally follow instructions [here](https://mmistakes.github.io/minimal-mistakes/docs/docs-2-2/) or run `bundle install` followed by `bundle exec jekyll serve`. Some helpful troubleshooting below.
 1. Or simply run using docker
     1. Create a docker image names **qwm** : `docker build -t qwm .`
     1. run the local server `docker-compose up` or `docker run -p 4000:4000 -v "$PWD:/srv/jekyll" qwm jekyll serve --force_polling`
@@ -41,6 +41,14 @@ if you see some errors :
 - run `bundle add webrick` [ It seems that in the latest version of ruby that is installed with homebrew webrick is not included by default. ]
 - run `bundle`
 and again `bundle exec jekyll serve`.
+
+- error     
+`Your user account isn't allowed to install to the system RubyGems.`
+  You can cancel this installation and run:
+
+  ```
+    bundle install --path vendor/bundle
+  ```
 
 ## Some tips to format your Blog and images
 
