@@ -1,10 +1,14 @@
 version: '3'
 services:
   jekyll:
-    image: qwm
+    build:
+      context: . # Use the current directory for the build context
+      dockerfile: Dockerfile
+    image: qwm # Default image name
     ports:
       - "4000:4000"
     volumes:
-      - "./:/srv/jekyll"
-    command: ["bundle", "exec", "jekyll", "serve",  "--force_polling" , "--host", "0.0.0.0"]
-    # command: ["jekyll", "serve",  "--watch", "--incremental" , "--host", "0.0.0.0"]
+      - "$PWD:/srv/jekyll"
+      - ./vendor/bundle/:/usr/local/bundle
+    command: bundle exec jekyll serve --force_polling --drafts
+    # command: ["bundle", "exec", "jekyll", "serve",  "--force_polling" , "--host", "0.0.0.0"]

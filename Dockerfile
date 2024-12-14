@@ -1,11 +1,26 @@
-# Use the official Jekyll image ( default is latest)
-FROM jekyll/jekyll
+FROM ruby:3.2.0
+
+# Install required dependencies for Jekyll
+RUN apt-get update && apt-get install -y build-essential libffi-dev nodejs
 
 # Set the working directory to the Jekyll site directory
 WORKDIR /srv/jekyll
 
-# Copy the Gemfile and Gemfile.lock into the image
-COPY Gemfile Gemfile.lock ./
+# Install Jekyll and Bundler
+RUN gem install jekyll bundler
+
+# Add user
+RUN adduser --disabled-password dockeruser
+RUN chown -R dockeruser:dockeruser /usr/local/bundle
+
+#switch to your user
+USER dockeruser
+
+# Copy your Gemfile and Gemfile.lock
+COPY --chown=dockeruser Gemfile Gemfile.lock ./
+
+# Install dependencies
+RUN bundle install
 
 # Install Jekyll and other dependencies
 RUN bundle install
