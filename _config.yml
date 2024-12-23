@@ -172,6 +172,8 @@ footer:
 include:
   - .htaccess
   - _pages
+  - API
+  - API/data.json
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
