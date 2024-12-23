@@ -1,5 +1,3 @@
-[![Website Publish - Deployment status](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=prod)](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/pages/pages-build-deployment)
-
 [![Quality With Millan - Jekyll site CI on GitHub Actions](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/GitHubActions.yml/badge.svg?branch=prod)](https://github.com/QualityWithMillan/qualitywithmillan.github.io/actions/workflows/GitHubActions.yml)
 
 <pre>
