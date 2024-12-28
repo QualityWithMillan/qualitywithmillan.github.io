@@ -24,10 +24,12 @@ jobs:
           ref: prod
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.2.2'
           bundler-cache: true
       - name: Install dependencies
-        run: bundle install
+        run: |
+          gem install bundler
+          bundle install
       - name: Build site
         run: bundle exec jekyll build
       - name: Upload artifact
@@ -41,7 +43,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        id: deployment
+        uses: actions/deploy-pages@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          branch: prod
