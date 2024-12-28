@@ -3,7 +3,7 @@ title: "Evolution of Reliability Tester and AI testing"
 header:
   feature: /assets/images/2023/02/evol-of-reliability/evolution-of-reliability.png
   teaser: /assets/images/2023/02/evol-of-reliability/evolution-of-reliability.png
-permalink: "/post/co-author/Karthik/evolution-of-eliability-ester-and-ai-testing.html"
+permalink: "/post/co-author/Karthik/evolution-of-reliability-tester-and-ai-testing.html"
 date: 2023-02-24
 authors:
 - Karthik Hariharan
