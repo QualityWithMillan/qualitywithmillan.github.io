@@ -59,7 +59,7 @@ Let’s explore the different combinations, why balancing all three is nearly im
 <hr>
 
 ![Image showing a moving triangle of choice between - Speed, Quality and Cost](/assets/images/2024/11/triangle/speed-quality-cost.gif)
-<figcaption align = "center">Image showing a moving triangle of choice between - Speed, Quality and Cost</figcaption> 
+<figcaption align = "center">Animated image showing a moving triangle of choice between - Speed, Quality and Cost</figcaption> 
 
 <br>
 
