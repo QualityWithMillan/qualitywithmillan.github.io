@@ -3,7 +3,7 @@ title: "2024 in Review: QA, AI and Quality Engineering in Reflection at #QWM"
 header:
   teaser: /assets/images/2024/12/qwm-wrap-up-2024.gif
   og_image: /assets/images/2024/12/qwm-wrap-up-2024.gif
-permalink: "/post/2024-wrap-up.html"
+permalink: "/post/2024-wrap-up-blog.html"
 search : true
 date: 2024-12-25
 authors: 
