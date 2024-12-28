@@ -3,7 +3,7 @@ Millan Kaul:
     display_name     : "Millan Kaul"
     avatar           : "/assets/images/bio-photo.jpg"
     bio              : ""
-    location         : "AU 🇦🇺 | CA 🇨🇦"
+    location         : "AU 🇦🇺 | CA 🇨🇦 | US 🇺🇸"
     email            :
     links:
       - label: "Email"
@@ -14,10 +14,10 @@ Millan Kaul:
         url: "https://twitter.com/MillanKaul"
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
-        url: "https://github.com/eaccmk"
+        url: "https://github.com/QualityWithMillan"
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
-        url: "https://au.linkedin.com/in/millankaul"
+        url: "https://www.linkedin.com/company/quality-with-millan/"
 
 
 Paul Maxwell-Walters:
