@@ -1,23 +1,33 @@
 ---
 layout: single
-search : true
+search: true
 title: "Tools"
 permalink: "/tools"
 ---
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
-  
-<!-- ToDo QualityWithMillan -->
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="qualitywithmillan" data-description="Support me on Buy me a coffee!" data-message="Thank you for your support.#QualityWithMillan" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  <title>Quality With Millan Tools</title>
 
-<script id="site-url" data-site-url="{{site.url}}"></script>
-<script src="/assets/js/_main.js"></script>
+  <!-- Scripts -->
+  <script 
+    data-name="BMC-Widget" 
+    data-cfasync="false" 
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" 
+    data-id="qualitywithmillan" 
+    data-description="Support me on Buy me a coffee!" 
+    data-message="Thank you for your support.#QualityWithMillan" 
+    data-color="#40DCA5" 
+    data-position="Right" 
+    data-x_margin="18" 
+    data-y_margin="18">
+  </script>
+  <script id="site-url" data-site-url="{{site.url}}"></script>
+  <script src="/assets/js/_main.js"></script>
 
-  <!-- 	start of style -->
+  <!-- Styles -->
   <style>
     .container {
       display: grid;
@@ -72,6 +82,21 @@ https://cssgradient.io/gradient-backgrounds/
       border: 2px solid #23D5AC;
     }
 
+    .box6 {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 25%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .box6:hover {
+      transform: scale(0.95);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
     /*      coming soon box */
     .box-x {
       background-color: #ebebeb;
@@ -149,11 +174,12 @@ https://cssgradient.io/gradient-backgrounds/
     <div class="box3 shine" id="events-speaking">
       <h1 class="title">Events | Speaking 🎤</h1>
     </div>
+    <div class="box6 shine" id="co-authors" title="Write with us">
+      <h1 class="title">Co-Authors ✍️</h1>
+    </div>
     <div class="box-x shine">
-      <h1 class="title">coming soon...</h1>
+      <h1 class="title">Coming Soon...</h1>
     </div>
   </div>
-
 </body>
-
 </html>

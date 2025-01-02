@@ -8,29 +8,29 @@ toolBox1.addEventListener("click", launchTextFormatter);
 let coinFlip = document.getElementById("coin-flip");
 coinFlip.addEventListener("click", launchcoinFlip);
 
-
 // events
 let eventsSpeaking = document.getElementById("events-speaking");
 eventsSpeaking.addEventListener("click", launchcoinEvents);
 
+// co-authors
+let coAuthors = document.getElementById("co-authors");
+coAuthors.addEventListener("click", launchCoAuthors);
 
 
 function launchTextFormatter() {
   // window.open("https://qualitywithmillan.github.io/format/")
-  // Get the site URL from the data attribute
-  var siteUrl = document.getElementById('site-url').getAttribute('data-site-url');
-
-  // Now you can use the siteUrl variable in your JavaScript code
   window.open(siteUrl + '/format', '_blank');
 }
 
 function launchcoinFlip() {
-  // Now you can use the siteUrl variable in your JavaScript code
   window.open(siteUrl + '/coin-flip', '_blank');
 }
 
 function launchcoinEvents() {
-  // Now you can use the siteUrl variable in your JavaScript code
   window.open(siteUrl + '/events', '_blank');
+}
+
+function launchCoAuthors() {
+  window.open(siteUrl + '/co-authors', '_blank');
 }
 
