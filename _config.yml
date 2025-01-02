@@ -93,10 +93,11 @@ og_image                 : "/assets/images/site-logo.png"
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : "Millan Kaul" # If the user or organization name differs from the site's name
+  name                   : "QualityWithMillan" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://twitter.com/millankaul"
     - "https://www.linkedin.com/in/millankaul"
+    - "https://www.linkedin.com/company/quality-with-millan"
 
 # Analytics
 analytics:
