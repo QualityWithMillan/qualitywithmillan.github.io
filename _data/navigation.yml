@@ -8,11 +8,11 @@ main:
   #   url: /categories/
   - title: "Tags 🏷️"
     url: /tags/
-  - title: "Tools ⚒️"   
-    url: /tools/
+  # - title: "Tools ⚒️"   
+  #   url: /tools/
   - title: "Support 🙏"   
-    url: /tools/funding
-  - title: "Terms & Privacy"
+    url: /support
+  - title: "Terms 📜"
     url: /terms/
   # - title: "Sitemap"
   #   url: /sitemap/
