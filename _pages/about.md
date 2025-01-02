@@ -17,7 +17,7 @@ Welcome to **#QualityWithMillan** ( to be read as: hash tag quality with millan)
 I started this blog as a way to share my thoughts, experiences, and insights on a variety of topics that interest me. 
 From personal software engineer, quality, testing, growth and more. I aim to cover a range of subjects that I hope will inspire and engage my readers.
 
-With a belief that we all are constantly learning and growing, and that sharing our knowledge and experiences can help us to connect better with each others in order to make a positive impact on the world. I started this blog - to share my stories and insights with you, and to hopefully inspire some meaningful conversations and connections along the way. And here are few [events, where I spoke](https://qualitywithmillan.github.io/tools/events) in-person and online.
+With a belief that we all are constantly learning and growing, and that sharing our knowledge and experiences can help us to connect better with each others in order to make a positive impact on the world. I started this blog - to share my stories and insights with you, and to hopefully inspire some meaningful conversations and connections along the way. And here are few [events, where I spoke](https://qualitywithmillan.github.io/events) in-person and online.
 
 I also welcome you to join me and share your stories or knowledge with the community, you cab contribute as an author or co-author of a post on a topic of your choice. It's super simple just follow the instructions on [this page](https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/Co-Author-Instructions.md) or reachout to me.
 

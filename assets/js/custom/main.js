@@ -16,21 +16,21 @@ eventsSpeaking.addEventListener("click", launchcoinEvents);
 
 
 function launchTextFormatter() {
-  // window.open("https://qualitywithmillan.github.io/tools/format/")
+  // window.open("https://qualitywithmillan.github.io/format/")
   // Get the site URL from the data attribute
   var siteUrl = document.getElementById('site-url').getAttribute('data-site-url');
 
   // Now you can use the siteUrl variable in your JavaScript code
-  window.open(siteUrl + '/tools/format/', '_blank');
+  window.open(siteUrl + '/format/', '_blank');
 }
 
 function launchcoinFlip() {
   // Now you can use the siteUrl variable in your JavaScript code
-  window.open(siteUrl + '/tools/coinFlip/', '_blank');
+  window.open(siteUrl + '/coin-flip/', '_blank');
 }
 
 function launchcoinEvents() {
   // Now you can use the siteUrl variable in your JavaScript code
-  window.open(siteUrl + '/tools/events/', '_blank');
+  window.open(siteUrl + '/events/', '_blank');
 }
 
