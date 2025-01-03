@@ -89,12 +89,6 @@ While managing a small project with a single goal is straightforward, coordinati
 
 Remember, **`effective collaboration is an iterative process`**. Start with these foundational steps and adapt based on your team's needs and feedback.
 
-## Resources and Tools
-
-- Project Management: Jira, Azure DevOps.
-- Communication: Slack, Microsoft Teams.
-- Documentation: Confluence, SharePoint.
-- Test Management: TestRail, qTest.
 
 ---
 
