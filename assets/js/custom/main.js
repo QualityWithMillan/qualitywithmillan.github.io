@@ -10,7 +10,7 @@ coinFlip.addEventListener("click", launchcoinFlip);
 
 // events
 let eventsSpeaking = document.getElementById("events-speaking");
-eventsSpeaking.addEventListener("click", launchcoinEvents);
+eventsSpeaking.addEventListener("click", launchEvents);
 
 // co-authors
 let coAuthors = document.getElementById("co-authors");
@@ -26,7 +26,7 @@ function launchcoinFlip() {
   window.open(siteUrl + '/coin-flip', '_blank');
 }
 
-function launchcoinEvents() {
+function launchEvents() {
   window.open(siteUrl + '/events', '_blank');
 }
 
