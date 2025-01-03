@@ -10,7 +10,7 @@ header:
   caption: Photo by <a href="https://unsplash.com/@marvelous?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Marvin Meyer</a> on <a href="https://unsplash.com/photos/people-sitting-down-near-table-with-assorted-laptop-computers-SYTO3xs06fU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
 date: 2025-01-01
-permalink: /new.html
+permalink: /collaborate-with-multiple-test-leads-in-a-large-scale-projects.html
 categories:
   - Leadership
 tags:
