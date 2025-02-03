@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Millan using Quality With Millan">
+    <title>Contact Us - Quality With Millan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #9BEFE1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .to-top-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .fusion-top-top-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .fusion-top-top-link:hover {
+            background: #0056b3;
+        }
+
+        .screen-reader-text {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Millan Ⓜ️</h1>
+        <form id="contact-form" method="POST">
+            <form id="contact-form" method="POST" action="CONTACT_G_FORM_URL">
+            <div role="heading" aria-level="3">
+                <span><b>Your Name</b></span>
+                <span aria-label="Required question" style="color: red;"> *</span>
+                <input type="text" name="entry.455181830" placeholder="your name" required aria-required="true">
+            </div>
+            <div role="heading" aria-level="3">
+                <span><b>Your Email</b></span>
+                <span aria-label="Required question" style="color: red;"> *</span>
+                <input type="email" name="entry.1401701613" placeholder="email@email.com" required aria-required="true">
+            </div>
+            <div role="heading" aria-level="3">
+                <span><b>Subject</b></span>
+                <span aria-label="Required question" style="color: red;"> *</span>
+                <textarea name="entry.1628429662" placeholder="Speaking, conference, Coffee " rows="3"
+                    style="resize: vertical; width: 100%;" required aria-required="true"></textarea>
+            </div>
+            <div role="heading" aria-level="3">
+                <span><b>Your Message</b></span>
+                <span aria-label="Required question" style="color: red;"> *</span>
+                <textarea name="entry.752115188" placeholder="Tell me the reason you are contacting me today ?" rows="5"
+                    style="resize: none; width: 100%; overflow: hidden;"
+                    oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'" required
+                    aria-required="true"></textarea>
+            </div>
+            <div role="heading" aria-level="3">
+                <span><b>Your Social profile</b></span>
+                <input type="text" name="entry.1959618784" placeholder="www.linkedin.com/in/your-profile" required
+                    pattern="https?://.*|www\..*" style="width: 100%;">
+            </div>
+            <div role="heading" aria-level="3">
+                <span><b>Event Date</b></span>
+                <span aria-label="Required question" style="color: red;"> *</span>
+                <input type="date" id="event-date-new" required>
+            </div>
+            <input type="hidden" name="entry.1380334691_day" id="event-day">
+            <input type="hidden" name="entry.1380334691_month" id="event-month">
+            <input type="hidden" name="entry.1380334691_year" id="event-year">
+            <button type="submit"> Submit</button>
+            <section class="to-top-container to-top-right" aria-labelledby="awb-to-top-label">
+                <a href="#" id="toTop" class="fusion-top-top-link">
+                    <span id="awb-to-top-label" class="screen-reader-text">Go to Top</span>
+                </a>
+            </section>
+            <script>                    
+                document.getElementById('event-date-new').addEventListener('change', function () {
+                    const date = new Date(this.value);
+                    const day = date.getDate();
+                    const month = date.getMonth() + 1; // Months are zero-based
+                    const year = date.getFullYear();
+
+                    document.getElementById('event-day').value = day;
+                    document.getElementById('event-month').value = month;
+                    document.getElementById('event-year').value = year;
+                    // Submit the form
+                    this.submit();
+                });
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>
