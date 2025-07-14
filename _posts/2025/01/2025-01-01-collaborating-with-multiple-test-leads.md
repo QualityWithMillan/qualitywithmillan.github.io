@@ -27,6 +27,31 @@ toc: true
 toc_sticky: true
 ---
 
+<p>
+ Written by -
+{% if page.authors == nil or page.authors.size == 0 %}
+   {{ page.author }}
+{% else %}
+    {% assign result = "" %}
+    {% for author in page.authors %}
+        {% if author != nil and author != "" %}
+            {% if forloop.first %}
+                {% assign result = author %}
+            {% elsif forloop.last %}
+                {% assign result = result | append: " and " | append: author %}
+            {% else %}
+                {% assign result = result | append: ", " | append: author %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if result != "" %}
+        <strong>{{ result }}</strong>
+    {% endif %}
+{% endif %}
+</p>
+
+<hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
+
 ## The Challenge of Multi-Lead Test Coordination in Enterprise Projects
 
 While managing a small project with a single goal is straightforward, coordinating with multiple QA leads in large-scale enterprise projects presents unique challenges. This comprehensive guide shares battle-tested strategies for successful test leadership collaboration from <u>my own experience of working at multi-million dollar projects</u> a couple of times.
