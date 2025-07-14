@@ -18,8 +18,33 @@ seo:
     title: "Guide to Quality Engineering Leadership at Different Levels | QE Leadership"
     description: "Learn proven strategies for successful quality engineering leadership at various stages of team growth. Includes tips on communication, risk management and team coordination."
     type: article
-
 ---
+
+
+<p>
+ Written by -
+{% if page.authors == nil or page.authors.size == 0 %}
+   {{ page.author }}
+{% else %}
+    {% assign result = "" %}
+    {% for author in page.authors %}
+        {% if author != nil and author != "" %}
+            {% if forloop.first %}
+                {% assign result = author %}
+            {% elsif forloop.last %}
+                {% assign result = result | append: " and " | append: author %}
+            {% else %}
+                {% assign result = result | append: ", " | append: author %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if result != "" %}
+        <strong>{{ result }}</strong>
+    {% endif %}
+{% endif %}
+</p>
+
+<hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
 
 Effective **Quality Engineering (QE) Leadership** requires adapting to the unique challenges that arise as teams mature. It's about more than just enforcing standards; <span style="box-shadow: inset 0 -0.6em 0.1em #FFFF00;"> it's about guiding teams to <e>own</e> quality</span>, ensuring efficiency, performance and alignment with overarching business objectives.
 

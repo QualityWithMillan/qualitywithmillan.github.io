@@ -23,6 +23,32 @@ seo:
     type: article
 ---
 
+
+<p>
+ Written by -
+{% if page.authors == nil or page.authors.size == 0 %}
+   {{ page.author }}
+{% else %}
+    {% assign result = "" %}
+    {% for author in page.authors %}
+        {% if author != nil and author != "" %}
+            {% if forloop.first %}
+                {% assign result = author %}
+            {% elsif forloop.last %}
+                {% assign result = result | append: " and " | append: author %}
+            {% else %}
+                {% assign result = result | append: ", " | append: author %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if result != "" %}
+        <strong>{{ result }}</strong>
+    {% endif %}
+{% endif %}
+</p>
+
+<hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
+
 ### 🚀 Type-Safe API Testing: A Playwright + TypeScript Framework 
 
 
