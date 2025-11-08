@@ -48,7 +48,7 @@ seo:
 <hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
 
 
-# 10 Foundational AI Building Block Concepts for Testers and Developers
+# AI 101
 
 Artificial intelligence (AI) is transforming industries, and understanding its core concepts is critical for testers, developers, and anyone building or validating modern software systems. This post outlines the ten most important AI building blocks you need to know—each explained clearly and linked to practical, authoritative industry resources. Whether you're integrating intelligent features into products or ensuring quality in AI-powered solutions, this guide will help you grasp the essentials and stay relevant in today’s tech landscape.
 
