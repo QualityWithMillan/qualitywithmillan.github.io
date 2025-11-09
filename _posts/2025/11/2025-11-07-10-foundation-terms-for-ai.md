@@ -1,7 +1,7 @@
 ---
 title: "10 Foundational AI Building Block Concepts for Testers and Developers"
 header:
-  teaser: /assets/images/2025/11/ai-blog-word-cloud.png
+  teaser: /assets/images/2025/11/01-ai-blog-word-cloud.png
 permalink: "/post/ai/10-foundation-terms.html"
 search: true
 date: 2025-11-07
