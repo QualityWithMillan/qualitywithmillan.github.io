@@ -1,7 +1,7 @@
 ---
 title: "15 AI terms related or similar to MCP (Model Context Protocol) and Agent"
 header:
-  # teaser: /assets/images/2025/11/03-15-agentic-mcp-terms.png
+  teaser: /assets/images/2025/11/03-15-agentic-mcp-terms.png
 permalink: "/post/ai/15-agentic-mcp-terms.html"
 search: true
 date: 2025-11-09
