@@ -4,6 +4,7 @@ header:
   teaser: /assets/images/2025/11/04-5-well-n-less-known-mcp-use-cases.jpg
 permalink: "/post/ai/5-well-known-5-less-known-mcp-use-cases.html"
 search: true
+toc: true
 date: 2025-11-09
 authors: 
   - Millan Kaul
@@ -47,7 +48,7 @@ seo:
 
 <hr style="border: none; height:2px; background-color: #A9F1E4; position: relative;">
 
-
+Let's dive in!
 
 ## Well-Known MCP Concepts
 
