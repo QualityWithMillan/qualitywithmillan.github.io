@@ -5,7 +5,7 @@ header:
 permalink: "/post/ai/5-well-known-5-less-known-mcp-use-cases.html"
 search: true
 toc: true
-date: 2025-11-09
+date: 2025-11-10
 authors: 
   - Millan Kaul
 categories:
