@@ -1,8 +1,8 @@
 ---
 title: "The hidden cost of QUALITY DEBT: What Leadership Doesn't See"
 header:
-  teaser: /assets/images/2025/11/05-how-agents-collaborate.jpg
-permalink: "/post/ai/how-ai-agents-collaborate.html"
+  # teaser: /assets/images/2025/11/05-how-agents-collaborate.jpg
+permalink: "/post/ai/the-hidden-cost-of-quality-debt.html"
 search: true
 toc: true
 date: 2025-11-21
