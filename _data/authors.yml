@@ -142,3 +142,30 @@ Neelam Pal:
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
         # url: "https://github.com/xxx"
+
+# Added 22nd Nov 2025
+Gavin Cheung:
+    name: "Gavin Cheung"
+    display_name     : "Gavin Cheung"
+    avatar           : "/assets/images/co-author/gavin-cheung.png"
+    bio              : "Snr Test Manager | AI | Retail Energy, Telco, Financial Services & Healthcare | 15+ Years"
+    location         : "Australia 🇦🇺"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto: test@test.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/xxx"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        url: "https://www.linkedin.com/in/gavincheung1"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        # url: "https://github.com/xxx"
+
+
+
+        /assets/images/co-author/
+        <div class="text-container">Gavin <span class="link-icon">&#8599;</span></div>
