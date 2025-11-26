@@ -5,7 +5,35 @@
 
   {% if author.avatar %}
     <div class="author__avatar">
-      <a href="{{ author.home | default: '/' | absolute_url }}">
+      {%- comment -%}
+        Determine the best href for the avatar link:
+        1. Use explicit `author.home` if present.
+        2. Else prefer `author.linkedin` (or a `links` entry with label "LinkedIn").
+        3. Fall back to site root ('/').
+        If the chosen url is external (contains "http") keep it as-is, otherwise use `absolute_url`.
+      {%- endcomment -%}
+      {% assign avatar_url = author.home %}
+
+      {% if avatar_url == nil or avatar_url == "" %}
+        {% if author.linkedin %}
+          {% assign avatar_url = "https://www.linkedin.com/in/" | append: author.linkedin %}
+        {% endif %}
+      {% endif %}
+
+      {% if (avatar_url == nil or avatar_url == "") and author.links %}
+        {% assign linkedin_link = author.links | where: "label", "LinkedIn" | first %}
+        {% if linkedin_link and linkedin_link.url %}
+          {% assign avatar_url = linkedin_link.url %}
+        {% endif %}
+      {% endif %}
+
+      {% if avatar_url and avatar_url != "" and avatar_url contains 'http' %}
+        {% assign avatar_href = avatar_url %}
+      {% else %}
+        {% assign avatar_href = avatar_url | default: '/' | absolute_url %}
+      {% endif %}
+
+      <a href="{{ avatar_href }}">
         <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo">
       </a>
     </div>
