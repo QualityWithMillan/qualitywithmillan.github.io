@@ -425,7 +425,9 @@ I also spoke later in Nov 2024 at the same meetup on a leadership topic: **Takin
 
 ## QA Walk & Talk – Vancouver, Canada 🇨🇦
 
-This specific open to all QA community event was in my wishlist for a while and I made it as my last event of 2025 a easy yet brilliant initiative of QA and non-QA's joining a walk in world famous Stanley park in Vancouver and havuing a genuine open discussion called as "QA Walk & Talk".I particularly liked it because there was no stage or mic — everyone was a speaker and a listener and I really enjoyed listening after delivering multiple talks throughout the year. 
+This specific open to all QA community event was in my wishlist for a while and I made it as my last event of 2025 a easy yet brilliant initiative of QA and non-QA's joining a walk in world famous Stanley park in Vancouver and havuing a genuine open discussion called as "QA Walk & Talk".
+<br>
+I particularly liked it because there was no stage or mic — everyone was a speaker and a listener and I really enjoyed listening after delivering multiple talks throughout the year. 
 *Each conversation I had was full of learnings, perspective and **"oh wow!"** moments for me.*
 
 
@@ -452,9 +454,9 @@ Organized by the amazing [Yaroslav](https://www.linkedin.com/in/yaroslav-y/) her
 
 ## Here is what I will take-away from own my learning and speaking journey of 2025
 
-I am grateful for the opportunities I've had to share my thoughts on **Leadership at Scale**. Through my keynotes and talks at conferences like CAST, PNSQC, and TESTINGMIND, along with a published paper, I've been fortunate to contribute to discussions on quality engineering leadership. It's heartening to see how these conversations can inspire others in our field.
+#1 I am grateful for the opportunities I've had to share my thoughts on **Leadership at Scale**. Through my keynotes and talks at conferences like CAST, PNSQC, and TESTINGMIND, along with a published paper, I've been fortunate to contribute to discussions on quality engineering leadership. It's heartening to see how these conversations can inspire others in our field.
 
-Building a sense of community has been a rewarding journey too. From mentoring on Topmate to launching and hosting meetups in various cities, I've witnessed how these connections can create a ripple effect, and how genuine relationships can amplify as a collective positive impact.
+#2 Building a sense of community has been a rewarding journey too. From mentoring on Topmate to launching and hosting meetups in various cities, I've witnessed how these connections can create a ripple effect, and how genuine relationships can amplify as a collective positive impact.
 
 Reflecting on 2025, I’ve learned the most meaningful insights come from collaboration. Whether on stage or during QA walks, the human connections matter. I look forward to continuing this journey of learning and sharing in 2026."
 
