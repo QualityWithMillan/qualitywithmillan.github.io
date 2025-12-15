@@ -1,7 +1,7 @@
 ---
 title: "How AI Agents Actually Collaborate: Real-World Workflows, Protocols, and Pitfalls"
 header:
-  teaser: /assets/images/2025/11/05-how-agents-collaboration.jpg
+  teaser: /assets/images/2025/11/05-how-agents-collaborate.jpg
 permalink: "/post/ai/how-ai-agents-collaborate.html"
 search: true
 date: 2025-11-11
