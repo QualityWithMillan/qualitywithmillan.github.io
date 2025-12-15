@@ -65,7 +65,8 @@ seo:
 
 ## 2025: A Year of Speaking & Sharing Quality Engineering Ideas
 
-2025 has been an incredible journey for me, From keynotes at major international conferences to QA walk‑and‑talks, meetups, and mentoring.
+2025 has been an incredible journey for me. From keynotes at major international conferences to QA walk‑and‑talks, meetups, and mentoring.
+<br><br>
 Here I am sharing my learnings and memories of my: engagements, publications and community contributions this year.
 
 
@@ -253,6 +254,7 @@ Later, on a weekly post, I was also recognized in **Top 10 Incredible Creators**
   </figcaption>
 </figure>
 
+<br><br>
 
 
 ## Mentors in Tech [MinT]
@@ -302,6 +304,7 @@ loading="lazy"
 title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
 </iframe>
 
+<br><br>
 
 # Innovate QA 2025 – Seattle Conference
 
@@ -320,6 +323,8 @@ loading="lazy"
 title="Offcial Announcement by Innovate QA Events - Millan Kaul is joining the Innovate QA leadership team and will be supporting our 2025 Seattle conference">
 </iframe>
 
+
+<br><br>
 
 ### LinkedIn Video Coverage
 
@@ -357,6 +362,8 @@ Followed by a huge success and demand after full day conference in Seattle, I ex
 </figure>
 
 
+<br><br>
+
 ## 2024 Speaking Engagements (Leading into 2025)
 
 While I missed to post My speaking engagements and meetups that I hosted in Canada - both in Vancouver and Toronto, here are some key event partneships that led to more opportunities. 
@@ -381,6 +388,8 @@ loading="lazy"
 title="Innovate QA July 2024 meetup at Microsoft's Head Quarters">
 </iframe>
 
+<br>
+
 > Here is a post meetup update on LinkedIn
 
 <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
@@ -392,7 +401,7 @@ title="Innovate QA July 2024 meetup at Microsoft's Head Quarters">
   </figcaption>
 </figure>
 
-<hr>
+<br><br>
 
 I also spoke later in Nov 2024 at the same meetup on a leadership topic: **Taking Quality Engineering Leadership to the next level (PART 2)**
 
@@ -405,6 +414,7 @@ I also spoke later in Nov 2024 at the same meetup on a leadership topic: **Takin
   </figcaption>
 </figure>
 
+<br>
 
 > I delivered PART 1 in Toronto Ontario, Canada 🇨🇦 as The Test Tribe's [first-ever meetup in Toronto](https://luma.com/wtkk9mdk) in October 2024.
 
@@ -420,16 +430,14 @@ I also spoke later in Nov 2024 at the same meetup on a leadership topic: **Takin
 
 <!-- https://www.facebook.com/thetesttribe/posts/testers-in-toronto-heres-some-news-%EF%B8%8F-were-absolutely-excited-to-host-our-first-e/600872692264087/ -->
 
-
-
+<br>
 
 ## QA Walk & Talk – Vancouver, Canada 🇨🇦
 
 This specific open to all QA community event was in my wishlist for a while and I made it as my last event of 2025 a easy yet brilliant initiative of QA and non-QA's joining a walk in world famous Stanley park in Vancouver and havuing a genuine open discussion called as "QA Walk & Talk".
-<br>
+<br><br>
 I particularly liked it because there was no stage or mic — everyone was a speaker and a listener and I really enjoyed listening after delivering multiple talks throughout the year. 
 *Each conversation I had was full of learnings, perspective and **"oh wow!"** moments for me.*
-
 
 
 **QA Walk & Talk** in Vancouver, Canada <br>
