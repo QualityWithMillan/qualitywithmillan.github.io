@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      JEKYLL_ENV: production
     steps:
       - uses: actions/checkout@v3
         with:
