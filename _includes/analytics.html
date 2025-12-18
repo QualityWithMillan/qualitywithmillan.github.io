@@ -1,5 +1,4 @@
-{# Temporary test: remove production-only guard so analytics is injected on the live site while we debug. Revert this change after verification. #}
-{% if site.analytics.provider and page.analytics != false %}
+{% if jekyll.environment == 'production' and site.analytics.provider and page.analytics != false %}
 
 {% case site.analytics.provider %}
 {% when "google" %}
