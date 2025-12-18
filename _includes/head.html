@@ -23,3 +23,7 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if site.analytics.provider %}
+  {% include analytics.html %}
+{% endif %}
