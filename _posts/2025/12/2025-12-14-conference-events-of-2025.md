@@ -86,16 +86,16 @@ Here I am sharing my learnings and memories of my: engagements, publications and
 Official [Post](https://www.linkedin.com/posts/testingmind-consulting-pvt-ltd-_chaosengineering-microservices-resiliencetesting-activity-7300575348641910785-bed4) TESTINGMIND Seattle 2025
 {: .small}
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7288908858058514434?collapsed=1"
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7288908858058514434?collapsed=1"
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
+  </iframe>
+</div>
 
 
 ## CAST 2025 – Salt Lake City, Utah 🇺🇸
@@ -112,31 +112,31 @@ title="Millan Kaul speaking at TestingMind Seattle conference on the topic, test
 <br>
 Also check: [My CAST 2025 Post](https://www.linkedin.com/posts/millankaul_cast-cast2025-leadership-activity-7366995848007778305-JZ2D) and [CAST feed with updates](https://www.linkedin.com/feed/update/urn:li:activity:7366995848007778305/)
 {: .small}
- 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7343317062527684609?collapsed=1" 
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-title="CAST 2025 Embedded Post">
-</iframe>
+
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7343317062527684609?collapsed=1" 
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  title="CAST 2025 Embedded Post">
+  </iframe>
+</div>
 
 <br>
 As part of conference discussions, I also joined a Live Stream [The Quality Leadership Crisis"](https://www.linkedin.com/feed/update/urn:li:activity:7355121209681895424/)
 {: .small}
 
-<iframe src="https://www.linkedin.com/video/embed/live/urn:li:ugcPost:7355121207483990016" 
-height="500" 
-width="504" 
-frameborder="0" 
-style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
-loading="lazy"
-allowfullscreen="" 
-title="CAST 2025 Embedded Post">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/video/embed/live/urn:li:ugcPost:7355121207483990016" 
+  frameborder="0" 
+  style="width: 100%; aspect-ratio: 504 / 500; border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
+  loading="lazy"
+  allowfullscreen="" 
+  title="CAST 2025 Embedded Post">
+  </iframe>
+</div>
 
 
 
@@ -156,18 +156,17 @@ title="CAST 2025 Embedded Post">
 *Also do check*: [My topic details and abstract](https://www.pnsqc.org/millan_kaul_2025.php) 
 {: .small}
 
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7379520593026674688?collapsed=1" 
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="PNSQC 2025 Embedded Post">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7379520593026674688?collapsed=1" 
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="PNSQC 2025 Embedded Post">
+  </iframe>
+</div>
 
 
 ### 📑 ✍️ **I am an author now** with the PNSQC proceedings!
@@ -185,14 +184,16 @@ Through PNSQC conference I officially became an author in 2025 as they **Publish
 I was awarded Best Presenter (top 3 of 50+ speakers) at PNSQC 2025. 🏆
 {: .small}
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/08_pnsqc_top_presenter_trophy.png" alt="Photos of winning announcement of Best Presenter 2025 for PNSQC conference in Portland, Oregon, United States of America in October 2024">
-  <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/millankaul_pnsqc-qualitywithmillan-engineeringleadership-activity-7384715555418808320-rtBA"> detailed post and more photos</a>
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/08_pnsqc_top_presenter_trophy.png" alt="Photos of winning announcement of Best Presenter 2025 for PNSQC conference in Portland, Oregon, United States of America in October 2024" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/millankaul_pnsqc-qualitywithmillan-engineeringleadership-activity-7384715555418808320-rtBA"> detailed post and more photos</a>
+    </figcaption>
+  </figure>
+</div>
 
 
 ## ⭐️ My first keynote —🎤 <br> TESTINGMIND Conference, Canada 🇨🇦
@@ -210,17 +211,17 @@ I was awarded Best Presenter (top 3 of 50+ speakers) at PNSQC 2025. 🏆
 *Also check*: [My TESTINGMIND Post](https://www.linkedin.com/posts/millankaul_cstb-istqb-testingmind-activity-7377060929596862464-bYis) and [Natalia Moyseyenko's Post](https://www.linkedin.com/posts/moyseyenkonataly_tasvancouver-testautomation-qualityengineering-activity-7387549333711249408-1Jn4) as well as the [offical post from TESTINGMIND](https://www.linkedin.com/posts/millankaul_testingmind-testautomationsummit-vancouver-activity-7374102368788901888-6Iw2) with interesting insights
 {: .small}
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376800910036885504?collapsed=1" 
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="Canadian Software Testing Board (CSTB) post about Test Automation Summit – Vancouver by TESTINGMIND">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7376800910036885504?collapsed=1" 
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="Canadian Software Testing Board (CSTB) post about Test Automation Summit – Vancouver by TESTINGMIND">
+  </iframe>
+</div>
 
 
 ## Mentoring & Community Leadership
@@ -231,28 +232,31 @@ For those who know me or have worked with me, you know my passion for mentoring.
 
 Consistently received **5 out of 5 stars** for mentoring sessions reflecting positive impact.
 
-
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);" 
-  onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/04_topmate_billboard_pic.png" alt="Millan Kaul featured in Times Square, New York, USA">
- <figcaption align="center">
-  I got featured on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7353808630971842561"> Times Square, New York </a> Billboard
-</figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;" 
+    onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/04_topmate_billboard_pic.png" alt="Millan Kaul featured in Times Square, New York, USA" style="width: 100%; height: auto; display: block;">
+   <figcaption align="center">
+    I got featured on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7353808630971842561"> Times Square, New York </a> Billboard
+  </figcaption>
+  </figure>
+</div>
 
 
 Later, on a weekly post, I was also recognized in **Top 10 Incredible Creators** on [topmate.com](https://topmate.io/millankaul)
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/01_TopMate_top_10.png" alt="I was featured among top 10 incredible creators">
-  <figcaption align="center"> I was featured among <a href="https://www.linkedin.com/posts/topmate-io_top-10-creators-of-the-week-activity-7381644900544679936-qfMx/">top 10 incredible creators</a> who've been making waves,<strong> helping thousands</strong>, and raising the bar for the whole community.
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/01_TopMate_top_10.png" alt="I was featured among top 10 incredible creators" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center"> I was featured among <a href="https://www.linkedin.com/posts/topmate-io_top-10-creators-of-the-week-activity-7381644900544679936-qfMx/">top 10 incredible creators</a> who've been making waves,<strong> helping thousands</strong>, and raising the bar for the whole community.
+    </figcaption>
+  </figure>
+</div>
 
 <br><br>
 
@@ -260,18 +264,17 @@ Later, on a weekly post, I was also recognized in **Top 10 Incredible Creators**
 ## Mentors in Tech [MinT]
 Shared my passion about Quality Engineering to graduates via Innovate QA with [Mentors in Tech (MinT)](https://mentorsintech.com/) —a company dedicated to mentoring people entering the tech industry. 
 
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7303253367043080192?collapsed=1"
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7303253367043080192?collapsed=1"
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
+  </iframe>
+</div>
 
 
 
@@ -291,18 +294,17 @@ I **hosted** my first-ever meetup in India in 2025 with the support of [QA Mento
 I also shared some [pictures](https://www.linkedin.com/posts/millankaul_ruslan-desyatnikov-is-online-for-the-qa-pune-activity-7380556412470566912-qAQg) with community
 {: .small}
 
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7377997100615344128?collapsed=1"
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7377997100615344128?collapsed=1"
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="Millan Kaul speaking at TestingMind Seattle conference on the topic, testing microservices at scale using chaos engineering">
+  </iframe>
+</div>
 
 <br><br>
 
@@ -310,33 +312,32 @@ title="Millan Kaul speaking at TestingMind Seattle conference on the topic, test
 
 **Highlight:** Co-Lead and hosted Seattle's biggest and most successful quality conference in 2025, [announcement](https://www.linkedin.com/posts/millankaul_quality-conferences-activity-7283007559941201920-vsc8) from my account.
 
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7282482796579696640" 
-height="671" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="Offcial Announcement by Innovate QA Events - Millan Kaul is joining the Innovate QA leadership team and will be supporting our 2025 Seattle conference">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7282482796579696640" 
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 671; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="Offcial Announcement by Innovate QA Events - Millan Kaul is joining the Innovate QA leadership team and will be supporting our 2025 Seattle conference">
+  </iframe>
+</div>
 
 
 <br><br>
 
 ### LinkedIn Video Coverage
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7353980003128102913?collapsed=1"
-height="540" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
-loading="lazy"
-title="Millan speaking in front of camera on, why we should do conferences, meetups, webinars and more..">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7353980003128102913?collapsed=1"
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 540; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6); border-radius: 12px; transition: transform 0.3s ease; cursor: pointer;"
+  loading="lazy"
+  title="Millan speaking in front of camera on, why we should do conferences, meetups, webinars and more..">
+  </iframe>
+</div>
 
 
 ### Innovate QA – San Francisco Meetup Launch
@@ -352,14 +353,16 @@ Followed by a huge success and demand after full day conference in Seattle, I ex
 
 <br>
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/05_SF_meetup.png" alt="Millan inaugurated Innovate QA meetup in San Francisco, California in USA in June 2025">
-  <figcaption align="center"> Linkedin <a href="https://www.linkedin.com/posts/millankaul_meetup-sanfrancisco-activity-7338718850705739776-FPDJ">post</a> on the Bay Area meetup update.
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/05_SF_meetup.png" alt="Millan inaugurated Innovate QA meetup in San Francisco, California in USA in June 2025" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center"> Linkedin <a href="https://www.linkedin.com/posts/millankaul_meetup-sanfrancisco-activity-7338718850705739776-FPDJ">post</a> on the Bay Area meetup update.
+    </figcaption>
+  </figure>
+</div>
 
 
 <br><br>
@@ -376,57 +379,62 @@ While I missed to post My speaking engagements and meetups that I hosted in Cana
 
 *Highlights: Despite a demo failure at a critical step (demo gods weren't with me that day!), I left a lasting impact on the audience, many of whom became part of my professional network.*
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7218024335922356224?collapsed=1" 
-height="524" 
-width="504" 
-frameborder="0" 
-allowfullscreen="" 
-style="border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
-onmouseover="this.style.transform='scale(1.2)'" 
-onmouseout="this.style.transform='scale(1)'"
-loading="lazy"
-title="Innovate QA July 2024 meetup at Microsoft's Head Quarters">
-</iframe>
+<div style="max-width: 504px; margin: 0 auto;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7218024335922356224?collapsed=1" 
+  frameborder="0" 
+  allowfullscreen="" 
+  style="width: 100%; aspect-ratio: 504 / 524; border: 10px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 5px rgba(153, 242, 225, 0.6);"
+  onmouseover="this.style.transform='scale(1.05)'" 
+  onmouseout="this.style.transform='scale(1)'"
+  loading="lazy"
+  title="Innovate QA July 2024 meetup at Microsoft's Head Quarters">
+  </iframe>
+</div>
 
 <br>
 
 > Here is a post meetup update on LinkedIn
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/02_2024_innovate_qa_meetup_talk_redmond_microsoft.png" alt="Photos of my talk at Microsoft Head Quarter in Redmond, Wahsington, United States of America in July 2024">
-  <figcaption align="center">Link to <a href="https://www.linkedin.com/feed/update/urn:li:activity:7220193623097716736"> my talk </a>
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/02_2024_innovate_qa_meetup_talk_redmond_microsoft.png" alt="Photos of my talk at Microsoft Head Quarter in Redmond, Wahsington, United States of America in July 2024" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center">Link to <a href="https://www.linkedin.com/feed/update/urn:li:activity:7220193623097716736"> my talk </a>
+    </figcaption>
+  </figure>
+</div>
 
 <br><br>
 
 I also spoke later in Nov 2024 at the same meetup on a leadership topic: **Taking Quality Engineering Leadership to the next level (PART 2)**
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/06_meetup_Nov_2024_speaker.png" alt="Photos of my talk at Microsoft Head Quarter in Redmond, Wahsington, United States of America in November 2024">
-  <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/innovateqa-events_performancetesting-qualityleadership-ai-activity-7262509550396715008-0mCn"> my talk </a>
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/06_meetup_Nov_2024_speaker.png" alt="Photos of my talk at Microsoft Head Quarter in Redmond, Wahsington, United States of America in November 2024" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/innovateqa-events_performancetesting-qualityleadership-ai-activity-7262509550396715008-0mCn"> my talk </a>
+    </figcaption>
+  </figure>
+</div>
 
 <br>
 
 > I delivered PART 1 in Toronto Ontario, Canada 🇨🇦 as The Test Tribe's [first-ever meetup in Toronto](https://luma.com/wtkk9mdk) in October 2024.
 
-
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/07_TTT_Toronto_meetup.png" alt="Update on Millan Kaul speaking at Toronto Ontario, Canada November 2024">
-  <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/innovateqa-events_performancetesting-qualityleadership-ai-activity-7262509550396715008-0mCn"> my talk </a>
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/07_TTT_Toronto_meetup.png" alt="Update on Millan Kaul speaking at Toronto Ontario, Canada November 2024" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center">Link to <a href="https://www.linkedin.com/posts/innovateqa-events_performancetesting-qualityleadership-ai-activity-7262509550396715008-0mCn"> my talk </a>
+    </figcaption>
+  </figure>
+</div>
 
 <!-- https://www.facebook.com/thetesttribe/posts/testers-in-toronto-heres-some-news-%EF%B8%8F-were-absolutely-excited-to-host-our-first-e/600872692264087/ -->
 
@@ -449,14 +457,16 @@ I particularly liked it because there was no stage or mic — everyone was a spe
 
 Organized by the amazing [Yaroslav](https://www.linkedin.com/in/yaroslav-y/) here is [my post](https://www.linkedin.com/posts/millankaul_who-said-networking-has-to-happen-in-conference-activity-7388395913158803456-UQDS) with more pictures.
 
-<figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6);"
- onmouseover="this.style.transform='scale(1.2)'" 
-  onmouseout="this.style.transform='scale(1)'"
->
-  <img src="/assets/images/2025/12/2025_events/09_qa_walk_vancouver_2025.png" alt=" I joined the QA Walk & Talk organized by the amazing Yaroslav in Vancouver Canada October 2025">
-  <figcaption align="center">Post with more <a href="https://www.linkedin.com/posts/millankaul_who-said-networking-has-to-happen-in-conference-activity-7388395913158803456-UQDS"> pictures </a>
-  </figcaption>
-</figure>
+<div style="max-width: 504px; margin: 0 auto;">
+  <figure style="border: 20px solid; border-image: linear-gradient(135deg, #aaece0ff, #9dea9dff) 1; box-shadow: 0 0 20px rgba(153, 242, 225, 0.6); margin: 0;"
+   onmouseover="this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    <img src="/assets/images/2025/12/2025_events/09_qa_walk_vancouver_2025.png" alt=" I joined the QA Walk & Talk organized by the amazing Yaroslav in Vancouver Canada October 2025" style="width: 100%; height: auto; display: block;">
+    <figcaption align="center">Post with more <a href="https://www.linkedin.com/posts/millankaul_who-said-networking-has-to-happen-in-conference-activity-7388395913158803456-UQDS"> pictures </a>
+    </figcaption>
+  </figure>
+</div>
 
 ---
 
