@@ -2,6 +2,7 @@
 layout: post
 title: "Sample title"
 date: 2025-12-29 03:18:58 +0000
+permalink: "/post/speaking/SampleTitle.html"
 tags: []
 source_issue: 28
 source_url: https://github.com/QualityWithMillan/qualitywithmillan.github.io/issues/28
