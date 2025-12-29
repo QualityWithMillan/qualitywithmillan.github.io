@@ -46,8 +46,9 @@ jobs:
           # YAML front matter for blogs from GitHub issues
           {
             echo "---"
+            echo "layout: single"
             echo "title: \"${ISSUE_TITLE//\"/\\\"}\""
-            echo "permalink: \"/posts/external/${TITLE_SLUG}.html\""
+            echo "permalink: \"/post/external/${TITLE_SLUG}.html\""
             echo "search: true"
             echo "date: ${DATE}"
             echo "authors:"
