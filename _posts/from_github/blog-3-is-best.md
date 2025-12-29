@@ -2,7 +2,7 @@
 layout: post
 title: "Blog 3 is best"
 permalink: "/post/external/Blog 3 is best.html"
-date: 2025-12-29 03:47:04 +0000
+date: 2025-12-28 03:47:04 +0000
 tags: []
 source_issue: 30
 source_url: https://github.com/QualityWithMillan/qualitywithmillan.github.io/issues/30
