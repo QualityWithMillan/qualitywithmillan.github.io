@@ -36,13 +36,14 @@ jobs:
           DATE=$(date -u +"%Y-%m-%d")
           DATETIME=$(date -u +"%Y-%m-%d %H:%M:%S +0000")
 
-          FILENAME="_posts/${DATE}-${SLUG}.md"
+          FILENAME="_posts/from_github/${DATE}-${SLUG}.md"
 
           # Basic YAML front matter
           {
             echo "---"
             echo "layout: post"
             echo "title: \"${ISSUE_TITLE//\"/\\\"}\""
+            echo "permalink: \"/post/external/${ISSUE_TITLE//\"/\\\"}.html\""
             echo "date: ${DATETIME}"
             echo "tags: []"
             echo "source_issue: ${ISSUE_NUMBER}"
