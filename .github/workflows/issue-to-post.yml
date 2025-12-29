@@ -1,0 +1,71 @@
+name: Issue to Jekyll Post
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue_to_post:
+    if: >
+      contains(github.event.issue.labels.*.name, 'blog') &&
+      contains(github.event.issue.labels.*.name, 'ready-to-publish')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Prepare post file
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          mkdir -p _posts
+
+          # Generate a simple slug from the title
+          SLUG=$(echo "$ISSUE_TITLE" | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9' '-' | sed 's/^-//;s/-$//')
+
+          # Use today's date for the post filename
+          DATE=$(date -u +"%Y-%m-%d")
+          DATETIME=$(date -u +"%Y-%m-%d %H:%M:%S +0000")
+
+          FILENAME="_posts/${DATE}-${SLUG}.md"
+
+          # Basic YAML front matter
+          {
+            echo "---"
+            echo "layout: post"
+            echo "title: \"${ISSUE_TITLE//\"/\\\"}\""
+            echo "date: ${DATETIME}"
+            echo "tags: []"
+            echo "source_issue: ${ISSUE_NUMBER}"
+            echo "source_url: ${ISSUE_URL}"
+            echo "---"
+            echo
+            echo "$ISSUE_BODY"
+          } > "$FILENAME"
+
+          echo "Generated $FILENAME"
+
+      - name: Commit and push post
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add _posts/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Add post from issue #${{ github.event.issue.number }}"
+          git push
