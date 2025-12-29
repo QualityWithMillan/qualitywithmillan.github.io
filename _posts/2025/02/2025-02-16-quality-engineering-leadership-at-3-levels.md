@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "QE Leadership at 3 stage of org, your blueprint for QE Success "
+title: "QE Leadership at 3 stage of org, your blueprint for QE Success"
 excerpt: "The most successful QE leaders don’t just enforce quality—they cultivate that environment..."
 header:
     teaser: /assets/images/2025/02/3-phases-of-org.png
