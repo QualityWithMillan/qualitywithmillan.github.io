@@ -1,10 +1,10 @@
 ---
-layout: single
+layout: post
 title: "IS four last"
 permalink: "/post/external/is-four-last.html"
 search: true
-date: 2025-12-29
-authors:
+date: 2025-12-29 03:47:06 +0000
+authors: Millan kaulllll
   - 
 categories:
   - github-issues
