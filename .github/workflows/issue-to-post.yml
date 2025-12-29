@@ -27,27 +27,38 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
         run: |
-          mkdir -p _posts
+          # Ensure subfolder exists
+          mkdir -p _posts/from_github
 
-          # Generate a simple slug from the title
-          SLUG=$(echo "$ISSUE_TITLE" | tr '[:upper:]' '[:lower:]' | tr -cs 'a-z0-9' '-' | sed 's/^-//;s/-$//')
+          # Generate a simple slug from the title (lowercase, spaces -> hyphens, strip non-alnum at ends)
+          TITLE_SLUG=$(echo "$ISSUE_TITLE" \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed 's/[^a-z0-9 ]//g' \
+            | sed 's/[ ][ ]*/-/g' \
+            | sed 's/^-//;s/-$//')
 
           # Use today's date for the post filename
           DATE=$(date -u +"%Y-%m-%d")
           DATETIME=$(date -u +"%Y-%m-%d %H:%M:%S +0000")
 
-          FILENAME="_posts/from_github/${DATE}-${SLUG}.md"
+          FILENAME="_posts/from_github/${DATE}-${TITLE_SLUG}.md"
 
-          # Basic YAML front matter
+          # YAML front matter for blogs from GitHub issues
           {
             echo "---"
-            echo "layout: post"
             echo "title: \"${ISSUE_TITLE//\"/\\\"}\""
-            echo "permalink: \"/post/external/${ISSUE_TITLE//\"/\\\"}.html\""
-            echo "date: ${DATETIME}"
-            echo "tags: []"
-            echo "source_issue: ${ISSUE_NUMBER}"
-            echo "source_url: ${ISSUE_URL}"
+            echo "permalink: \"/posts/external/${TITLE_SLUG}.html\""
+            echo "search: true"
+            echo "date: ${DATE}"
+            echo "authors:"
+            echo "  - "    # you can later fill this from the issue form if you want
+            echo "categories:"
+            echo "  - github-issues"
+            echo "tags:"
+            echo "  - AI"
+            echo "  - AI Fundamentals"
+            echo "seo:"
+            echo "  title: \"${ISSUE_TITLE//\"/\\\"}\""
             echo "---"
             echo
             echo "$ISSUE_BODY"
