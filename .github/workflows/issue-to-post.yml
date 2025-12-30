@@ -50,7 +50,7 @@ jobs:
           ISSUE_BODY_RAW="${ISSUE_BODY}"
           
           # Write front matter using printf to avoid heredoc delimiter issues
-          printf '%s\n' '---' "layout: single" "title: \"${ISSUE_TITLE_SAFE}\"" "permalink: \"/post/external/${TITLE_SLUG}.html\"" "search: true" "date: ${DATETIME}" 'authors:' '  - "Github Issues"' 'categories:' '  - github-issues' 'tags:' '  - GitHub-Issue' '  - external' 'seo:' "  title: \"${ISSUE_TITLE_SAFE}\"" '---' > "$FILENAME"
+          printf '%s\n' '---' "layout: single" "title: \"${ISSUE_TITLE_SAFE}\"" "permalink: \"/post/external/${TITLE_SLUG}.html\"" "search: true" "date: ${DATETIME}" 'authors:' '  - "Github Issues"' 'categories:' '  - github-issues' 'tags:' '  - GitHub-Issue' '  - external' 'seo:' "  title: \"${ISSUE_TITLE_SAFE}\"" '---' "" > "$FILENAME"
 
           # Append body, preserving newlines
           printf '%s\n' "$ISSUE_BODY_RAW" >> "$FILENAME"
