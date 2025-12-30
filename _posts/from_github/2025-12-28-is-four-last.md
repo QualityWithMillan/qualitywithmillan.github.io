@@ -3,9 +3,10 @@ layout: post
 title: "IS four last"
 permalink: "/post/external/is-four-last.html"
 search: true
+layout: single
 date: 2025-12-28 03:47:06 +0000
 authors: 
-  - Millan kaul
+  - Github Issues
 categories:
   - blog
 ---
