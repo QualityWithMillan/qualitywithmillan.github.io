@@ -1,14 +1,16 @@
 ---
-layout: post
 title: "IS four last copy"
 permalink: "/post/external/is-four-last-copy.html"
 search: true
-date: 2025-12-28 03:47:06 +0000
+date: 2025-12-14
 authors: 
-- Millan kaul
+  - Millan Kaul
 categories:
-- blog
+  - blog
+tags:
+  - tetsing
 ---
+
 
 
 ### Your name
