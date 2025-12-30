@@ -164,3 +164,25 @@ Gavin Cheung:
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
         # url: "https://github.com/xxx"
+
+# Added 30th Dec 2025
+Github Issues: 
+    name: "Github Issues"
+    display_name     : "Github Issues (external)"
+    avatar           : "/assets/images/co-author/github-icon.svg"
+    bio              : "[External] GitHub Issues"
+    # location         : "GitHub.com"
+    email            :
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        # url: "mailto: test@test.com"
+      - label: "Twitter"
+        icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/xxx"
+      - label: "LinkedIn"
+        icon: "fab fa-fw fa-linkedin-in"
+        # url: "https://www.linkedin.com/in/gavincheung1"
+      - label: "GitHub"
+        icon: "fab fa-fw fa-github"
+        url: "https://github.com/QualityWithMillan/qualitywithmillan.github.io/issues"
