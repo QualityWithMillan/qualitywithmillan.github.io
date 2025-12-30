@@ -43,27 +43,29 @@ jobs:
 
           FILENAME="_posts/from_github/${DATE}-${TITLE_SLUG}.md"
 
-          # YAML front matter for blogs from GitHub issues
-          {
-            echo "---"
-            echo "layout: single"
-            echo "title: \"${ISSUE_TITLE//\"/\\\"}\""
-            echo "permalink: \"/post/external/${TITLE_SLUG}.html\""
-            echo "search: true"
-            echo "date: ${DATE}"
-            echo "authors:"
-            echo "  - "    # you can later fill this from the issue form if you want
-            echo "categories:"
-            echo "  - github-issues"
-            echo "tags:"
-            echo "  - AI"
-            echo "  - AI Fundamentals"
-            echo "seo:"
-            echo "  title: \"${ISSUE_TITLE//\"/\\\"}\""
-            echo "---"
-            echo
-            echo "$ISSUE_BODY"
-          } > "$FILENAME"
+          # YAML front matter for blogs from GitHub issues (use DATETIME, default author, safe heredoc)
+          cat > "$FILENAME" <<EOF
+          ---
+          layout: single
+          title: "${ISSUE_TITLE//"/\"}"
+          permalink: "/post/external/${TITLE_SLUG}.html"
+          search: true
+          date: ${DATETIME}
+          authors:
+            - "Github Issues"
+          categories:
+            - github-issues
+          tags:
+            - GitHub-Issue
+            - external
+          seo:
+            title: "${ISSUE_TITLE//"/\"}"
+          ---
+
+          $ISSUE_BODY
+          EOF
+
+          # end heredoc -> $FILENAME
 
           echo "Generated $FILENAME"
 
