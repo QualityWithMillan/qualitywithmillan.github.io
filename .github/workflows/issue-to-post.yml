@@ -44,30 +44,16 @@ jobs:
           FILENAME="_posts/from_github/${DATE}-${TITLE_SLUG}.md"
 
           # YAML front matter for blogs from GitHub issues (direct substitution, safe)
-          # Escape single quotes in ISSUE_TITLE and ISSUE_BODY for shell safety
-          ISSUE_TITLE_SAFE="${ISSUE_TITLE//\'/\'\\\'\'}"
-          ISSUE_BODY_SAFE="${ISSUE_BODY//\'/\'\\\'\'}"
+          # Escape double quotes in ISSUE_TITLE for use in a double-quoted YAML value
+          ISSUE_TITLE_SAFE="${ISSUE_TITLE//\"/\\\"}"
+          # Use ISSUE_BODY as-is to preserve newlines and formatting
+          ISSUE_BODY_RAW="${ISSUE_BODY}"
           
-          cat > "$FILENAME" <<EOF
----
-layout: single
-title: '${ISSUE_TITLE_SAFE}'
-permalink: "/post/external/${TITLE_SLUG}.html"
-search: true
-date: ${DATETIME}
-authors:
-  - "Github Issues"
-categories:
-  - github-issues
-tags:
-  - GitHub-Issue
-  - external
-seo:
-  title: '${ISSUE_TITLE_SAFE}'
----
+          # Write front matter using printf to avoid heredoc delimiter issues
+          printf '%s\n' '---' "layout: single" "title: \"${ISSUE_TITLE_SAFE}\"" "permalink: \"/post/external/${TITLE_SLUG}.html\"" "search: true" "date: ${DATETIME}" 'authors:' '  - "Github Issues"' 'categories:' '  - github-issues' 'tags:' '  - GitHub-Issue' '  - external' 'seo:' "  title: \"${ISSUE_TITLE_SAFE}\"" '---' > "$FILENAME"
 
-${ISSUE_BODY_SAFE}
-EOF
+          # Append body, preserving newlines
+          printf '%s\n' "$ISSUE_BODY_RAW" >> "$FILENAME"
 
           echo "Generated $FILENAME"
 
