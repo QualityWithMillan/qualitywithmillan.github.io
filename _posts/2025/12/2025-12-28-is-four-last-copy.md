@@ -1,18 +1,19 @@
 ---
 layout: post
-title: "IS four last"
-permalink: "/post/external/is-four-last.html"
+title: "IS four last copy"
+permalink: "/post/external/is-four-last-copy.html"
 search: true
 date: 2025-12-28 03:47:06 +0000
 authors: 
-  - Millan kaul
+- Millan kaul
 categories:
-  - blog
+- blog
 ---
+
 
 ### Your name
 
-copy 1
+copy 
 
 ### Post title
 
