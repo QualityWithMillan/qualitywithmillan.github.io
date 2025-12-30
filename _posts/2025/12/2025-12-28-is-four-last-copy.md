@@ -2,9 +2,10 @@
 title: "IS four last copy"
 permalink: "/post/external/is-four-last-copy.html"
 search: true
-date: 2025-12-14
+date: 2025-12-28
+layout: single
 authors: 
-  - Millan Kaul
+  - Github Issues
 categories:
   - blog
 tags:
