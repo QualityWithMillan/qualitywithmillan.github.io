@@ -43,29 +43,31 @@ jobs:
 
           FILENAME="_posts/from_github/${DATE}-${TITLE_SLUG}.md"
 
-          # YAML front matter for blogs from GitHub issues (use DATETIME, default author, safe heredoc)
+          # YAML front matter for blogs from GitHub issues (direct substitution, safe)
+          # Escape single quotes in ISSUE_TITLE and ISSUE_BODY for shell safety
+          ISSUE_TITLE_SAFE="${ISSUE_TITLE//\'/\'\\\'\'}"
+          ISSUE_BODY_SAFE="${ISSUE_BODY//\'/\'\\\'\'}"
+          
           cat > "$FILENAME" <<EOF
-          ---
-          layout: single
-          title: "${ISSUE_TITLE//"/\"}"
-          permalink: "/post/external/${TITLE_SLUG}.html"
-          search: true
-          date: ${DATETIME}
-          authors:
-            - "Github Issues"
-          categories:
-            - github-issues
-          tags:
-            - GitHub-Issue
-            - external
-          seo:
-            title: "${ISSUE_TITLE//"/\"}"
-          ---
+---
+layout: single
+title: '${ISSUE_TITLE_SAFE}'
+permalink: "/post/external/${TITLE_SLUG}.html"
+search: true
+date: ${DATETIME}
+authors:
+  - "Github Issues"
+categories:
+  - github-issues
+tags:
+  - GitHub-Issue
+  - external
+seo:
+  title: '${ISSUE_TITLE_SAFE}'
+---
 
-          $ISSUE_BODY
-          EOF
-
-          # end heredoc -> $FILENAME
+${ISSUE_BODY_SAFE}
+EOF
 
           echo "Generated $FILENAME"
 
