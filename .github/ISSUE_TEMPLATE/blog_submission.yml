@@ -1,14 +1,15 @@
-name: "Blog submission"
+name: "Blog submission flow"
 description: "Submit a draft blog post"
 labels:
   - blog
+  - external-blog
   - needs-review
 body:
   - type: input
     id: author_name
     attributes:
       label: "Your name"
-      description: "Name to show as the author"
+      description: "Enter your name or link to your social profile"
       placeholder: "Jane Doe"
     validations:
       required: true
@@ -17,7 +18,7 @@ body:
     id: tags
     attributes:
       label: "Tags (comma-separated)"
-      placeholder: "bug, feature, fact"
+      placeholder: "blog, bug, feature, fact"
     validations:
       required: false
 
@@ -25,6 +26,6 @@ body:
     id: body
     attributes:
       label: "Short summary"
-      description: "1–3 sentences summarizing the post"
+      description: "Copy paste or format your content using markdown"
     validations:
       required: true
