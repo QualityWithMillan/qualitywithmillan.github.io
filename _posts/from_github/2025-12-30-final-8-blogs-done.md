@@ -3,7 +3,7 @@ layout: single
 title: "Final 8 blogs done"
 permalink: "/post/external/final-8-blogs-done.html"
 search: true
-date: 2025-12-30 22:27:07 +0000
+date: 2025-12-30
 authors:
   - "Github Issues"
 categories:
