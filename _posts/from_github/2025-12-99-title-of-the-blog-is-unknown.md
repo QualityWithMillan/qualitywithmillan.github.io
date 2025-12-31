@@ -2,8 +2,8 @@
 layout: single
 title: "Title of the blog is unknown"
 permalink: "/post/external/title-of-the-blog-is-unknown.html"
-search: true
-date: 2025-12-30
+search: false
+date: 2025-99-99
 source_issue: 40
 source_url: https://github.com/QualityWithMillan/qualitywithmillan.github.io/issues/40
 authors:
