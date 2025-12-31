@@ -22,10 +22,10 @@ body:
       required: false
 
   - type: textarea
-    id: body
+    id: summary
     attributes:
-      label: "Post body (Markdown)"
-      description: "Write your post in Markdown, including summary and full content. You can drag & drop images into this field."
+      label: "Post Content (Markdown)"
+      description: "Write your full post content in Markdown. You can drag & drop images into this field."
       render: markdown
     validations:
       required: true
