@@ -14,18 +14,10 @@ body:
       required: true
 
   - type: input
-    id: post_title
-    attributes:
-      label: "Post title"
-      placeholder: "Awesome things about that..."
-    validations:
-      required: true
-
-  - type: input
     id: tags
     attributes:
       label: "Tags (comma-separated)"
-      placeholder: "jekyll, github, dev"
+      placeholder: "bug, feature, fact"
     validations:
       required: false
 
