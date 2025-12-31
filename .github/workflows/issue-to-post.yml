@@ -26,6 +26,9 @@ jobs:
           ISSUE_CONTENT: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
+          # Optional: set POST_TIMEZONE to a TZ database name (e.g. 'America/Los_Angeles')
+          # If not set, UTC will be used.
+          POST_TIMEZONE: ${{ env.POST_TIMEZONE }}
         run: |
           # Ensure subfolder exists
           mkdir -p _posts/from_github
@@ -37,9 +40,10 @@ jobs:
             | sed 's/[ ][ ]*/-/g' \
             | sed 's/^-//;s/-$//')
 
-          # Use today's date for the post filename
-          DATE=$(date -u +"%Y-%m-%d")
-          DATETIME=$(date -u +"%Y-%m-%d %H:%M:%S +0000")
+          # Use user's timezone (if provided) for post filename and timestamp
+          # Export TZ inline so it doesn't affect other steps
+          DATE=$(TZ="${POST_TIMEZONE:-UTC}" date +"%Y-%m-%d")
+          DATETIME=$(TZ="${POST_TIMEZONE:-UTC}" date +"%Y-%m-%d %H:%M:%S %z")
 
           FILENAME="_posts/from_github/${DATE}-${TITLE_SLUG}.md"
 
