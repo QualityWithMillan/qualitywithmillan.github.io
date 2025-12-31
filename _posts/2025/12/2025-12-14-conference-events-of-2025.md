@@ -1,5 +1,5 @@
 ---
-title: "My global speaking journy at Tech Conferences & Meetups in 2025"
+title: "My global speaking journey at Tech Conferences & Meetups in 2025"
 header:
   teaser: /assets/images/2025/12/2025_events/08_pnsqc_top_presenter_trophy.png
 permalink: "/post/speaking/conferences-2025.html"
