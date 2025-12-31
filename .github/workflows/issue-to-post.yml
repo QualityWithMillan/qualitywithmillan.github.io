@@ -77,3 +77,14 @@ jobs:
 
           git commit -m "Add post from issue #${{ github.event.issue.number }}"
           git push
+
+          # Predict published URL and print it
+          # Try to read site base URL from _config.yml; fall back to GitHub Pages URL
+          BASE_URL=$(grep -E '^url:' _config.yml 2>/dev/null | head -n1 | sed 's/url:[[:space:]]*//; s/"//g') || true
+          if [ -z "$BASE_URL" ]; then
+            OWNER=${GITHUB_REPOSITORY%%/*}
+            REPO_NAME=${GITHUB_REPOSITORY##*/}
+            BASE_URL="https://${OWNER}.github.io/${REPO_NAME}"
+          fi
+          PERMALINK="/post/external/${TITLE_SLUG}.html"
+          echo "Predicted published URL: ${BASE_URL%/}${PERMALINK}"
