@@ -11,26 +11,13 @@ authors:
 categories:
   - github-issues
 tags:
-  - GitHub-Issue
-  - external
+  - bug
 seo:
   title: "Titel number 9"
 ---
 
-### Your name
-
-Author name
-
-### Tags (comma-separated)
-
-bug
-
-### Post body (Markdown)
-
-```markdown
 **bold**
 or
 *italic*
 
 guess what
-```
