@@ -52,7 +52,8 @@ jobs:
           # Write front matter using printf to avoid heredoc delimiter issues
           printf '%s\n' '---' "layout: single" "title: \"${ISSUE_TITLE_SAFE}\"" "permalink: \"/post/external/${TITLE_SLUG}.html\"" "search: true" "date: ${DATE}" "source_issue: ${ISSUE_NUMBER}" "source_url: ${ISSUE_URL}" 'authors:' '  - "Github Issues"' 'categories:' '  - github-issues' 'tags:' '  - GitHub-Issue' '  - external' 'seo:' "  title: \"${ISSUE_TITLE_SAFE}\"" '---' "" > "$FILENAME"
 
-          # Append content, preserving newlines
+          # Insert source line and append content, preserving newlines
+          printf '%s\n' "Sources: [GitHub issue #${ISSUE_NUMBER}](${ISSUE_URL})" >> "$FILENAME"
           printf '%s\n' "$ISSUE_CONTENT_RAW" >> "$FILENAME"
 
           echo "Generated $FILENAME"
