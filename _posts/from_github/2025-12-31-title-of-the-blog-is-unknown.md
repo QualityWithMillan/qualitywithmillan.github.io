@@ -3,7 +3,7 @@ layout: single
 title: "Title of the blog is unknown"
 permalink: "/post/external/title-of-the-blog-is-unknown.html"
 search: true
-date: 2025-12-31
+date: 2025-12-30
 source_issue: 40
 source_url: https://github.com/QualityWithMillan/qualitywithmillan.github.io/issues/40
 authors:
@@ -72,7 +72,7 @@ blog
 
 Some themes let you style links as buttons with classes:
 
-[Primary button](https://example.com){: .btn .btn-primary }
+[Primary button](https://example.com){: .btn-primary }
 
 [Secondary button](https://example.com){: .btn .btn-secondary }
 
