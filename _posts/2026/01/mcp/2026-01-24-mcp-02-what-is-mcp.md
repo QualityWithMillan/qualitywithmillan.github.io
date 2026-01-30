@@ -1,10 +1,10 @@
 ---
 title: "What is MCP?"
 header:
-  teaser: /assets/images/2026/mcp/02_what_is_mcp.png
+  teaser: /assets/images/2026/01/mcp/02_what_is_mcp.png
 permalink: "/post/mcp/what-is-mcp.html"
 search: true
-date: 2026-01-27
+date: 2026-01-24
 authors: 
   - Millan Kaul
 categories:
@@ -28,7 +28,7 @@ seo:
     - "mcp client server"
     - "llm tool calling"
   author: "Millan Kaul"
-  published_time: "2026-01-27"
+  published_time: "2026-01-24"
 ---
 
 # What is MCP?
@@ -37,7 +37,7 @@ seo:
 
 No more custom integrations. One protocol works everywhere.
 
-![Image 02](/assets/images/2026/mcp/02_what_is_mcp.png)
+![Image 02](/assets/images/2026/01/mcp/02_what_is_mcp.png)
 
 ## MCP = 3 Layers
 
