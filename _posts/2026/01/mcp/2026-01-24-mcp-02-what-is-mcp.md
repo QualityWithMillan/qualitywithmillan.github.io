@@ -31,8 +31,6 @@ seo:
   published_time: "2026-01-24"
 ---
 
-# What is MCP?
-
 **Model Context Protocol (MCP)** = Standardized way for LLMs to discover and call *your* external tools/data.
 
 No more custom integrations. One protocol works everywhere.

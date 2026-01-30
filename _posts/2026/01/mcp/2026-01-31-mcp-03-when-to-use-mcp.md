@@ -31,8 +31,6 @@ seo:
   published_time: "2026-01-31"
 ---
 
-# When to Use MCP?
-
 **MCP = LLM lifeline** when models hallucinate most.
 
 ![Image 03](/assets/images/2026/01/mcp/03_when_mcp.png)
