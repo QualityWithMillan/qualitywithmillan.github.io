@@ -114,7 +114,7 @@ def user_orders(user_id: str) -> list:
 
 ### References
 - [FastMCP Patterns](https://gofastmcp.com/patterns)
-- [MCP Tool Schemas](https://modelcontextprotocol.io/docs/types)
+- [MCP Tool Schemas](https://modelcontextprotocol.io/specification)
 
 
 
