@@ -132,4 +132,4 @@ mcp.tool('get_weather', async (city: string) => {
 References
 - [FastMCP (Python)](https://github.com/jlowin/fastmcp)
 - [MCP Spec - Handshake](https://modelcontextprotocol.io/docs/protocol)
-- [FastMCP Node.js](https://github.com/fastmcp/node-mcp)
+- [FastMCP Node.js](https://github.com/punkpeye/fastmcp)
