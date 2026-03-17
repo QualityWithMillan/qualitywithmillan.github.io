@@ -130,6 +130,6 @@ mcp.tool('get_weather', async (city: string) => {
 "Now you know WHAT MCP is. Next: WHEN do hallucinations happen most?"
 
 References
-- FastMCP (Python) https://github.com/jlowin/fastmcp
-- MCP Spec - Handshake https://modelcontextprotocol.io/docs/protocol
-- FastMCP Node.js https://github.com/fastmcp/node-mcp
+- [FastMCP (Python)](https://github.com/jlowin/fastmcp)
+- [MCP Spec - Handshake](https://modelcontextprotocol.io/docs/protocol)
+- [FastMCP Node.js](https://github.com/fastmcp/node-mcp)
