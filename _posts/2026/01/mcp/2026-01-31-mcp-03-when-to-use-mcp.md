@@ -2,7 +2,7 @@
 title: "When to Use MCP?"
 header:
   teaser: /assets/images/2026/01/mcp/03_when_mcp.png
-permalink: "/post/mcp/when-mcp.html"
+permalink: "/post/mcp/when-to-use-mcp.html"
 search: true
 date: 2026-01-31
 authors: 
