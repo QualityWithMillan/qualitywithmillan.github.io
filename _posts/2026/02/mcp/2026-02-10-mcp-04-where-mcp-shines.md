@@ -125,5 +125,5 @@ def delegate_task(agent_id: str, task: str) -> str:
 
 ### References
 
-- LangGraph + MCP - https://langchain-ai/langgraph-mcp
-- CrewAI Tool Integration - https://crewai.com/mcp-tools
+- [LangGraph + MCP](https://langchain-ai/langgraph-mcp)
+- [CrewAI Tool Integration](https://crewai.com/mcp-tools)

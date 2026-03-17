@@ -150,7 +150,7 @@ Every tool call = your code. Full audit, zero hallucinations.
 
 ### References
 
-- Playwright‑MCP - https://github.com/microsoft/playwright-mcp
-- VS Code MCP Docs - https://code.visualstudio.com/docs/ai/mcp
+- [Playwright‑MCP](https://github.com/microsoft/playwright-mcp)
+- [VS Code MCP Docs](https://code.visualstudio.com/docs/ai/mcp)
 
 

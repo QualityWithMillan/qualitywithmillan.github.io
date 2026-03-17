@@ -113,8 +113,8 @@ def user_orders(user_id: str) -> list:
 "Know WHEN to use MCP. Next: WHERE hallucinations hide worst."
 
 ### References
-- FastMCP Patterns https://gofastmcp.com/patterns
-- MCP Tool Schemas https://modelcontextprotocol.io/docs/types
+- [FastMCP Patterns](https://gofastmcp.com/patterns)
+- [MCP Tool Schemas](https://modelcontextprotocol.io/docs/types)
 
 
 
