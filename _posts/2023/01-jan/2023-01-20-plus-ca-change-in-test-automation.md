@@ -135,15 +135,4 @@ Fears of the <ins>end of writing test automation</ins> are greatly exaggerated.
 
 However chatGPT can churn out some quite convincing generic and bland tech blog articles, so I would suggest that the authors of the above should be more worried about themselves.
 
-<br><br>
-
-
-The tendency for **testing as a profession** to agonisingly navel gaze on the automation issue takes us away from actual challenges we face. 
-<ins>For example</ins>, despite it being a major talking point at industry conferences for the last several years, most of us would struggle to test machine learning and AI algorithms adequately - much less so for blockchain applications and in the growing VR and metaverse spaces. 
-
-Despite adherence to accessibility standards being a legal requirement in countries like the USA, UK, France, India and Australia and a moral imperative everywhere, most of us have poor knowledge of this.
-
 **We need to collectively** decide on what we want from automation in testing and put our efforts towards the future, not the past.
-
-
-Paul
