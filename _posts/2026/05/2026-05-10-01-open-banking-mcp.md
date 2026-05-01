@@ -2,8 +2,8 @@
 title: "Open Banking MCP: Compare Bank Rates in Your AI Assistant"
 header:
   teaser: /assets/images/2026/05/openBanking_explained_visually.png
-  overlay_image: /assets/images/2026/05/openBanking_explained_visually.png
-  overlay_filter: 0.5
+  # overlay_image: /assets/images/2026/05/openBanking_explained_visually.png
+  # overlay_filter: 0.5
 permalink: "/blog/open-banking-mcp.html"
 search: true
 date: 2026-05-01
@@ -231,14 +231,16 @@ Run as a server:
 npx open-banking-mcp --http --port 3001
 ```
 
-Endpoints:
+### Endpoints:
+
 | Endpoint | Purpose |
 |----------|---------|
 | `GET /health` | Health check |
 | `POST /mcp` | MCP requests (SSE) |
 | `GET /` | Server info |
 
-Example: Compare rates
+*Example: Compare rates*
+
 ```bash
 curl -X POST http://localhost:3001/mcp \
   -H "Content-Type: application/json" \
