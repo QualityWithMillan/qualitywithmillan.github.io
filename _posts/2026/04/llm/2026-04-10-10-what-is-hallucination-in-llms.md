@@ -1,7 +1,7 @@
 ---
 title: "LLM Hallucinations: Why Models Invent Facts Confidently"
 header:
-  teaser: /assets/images/2026/llm/chapter_10_hallucination.png
+  teaser: /assets/images/2026/04/llm/chapter_10_hallucination.png
 permalink: "/post/llm/what-is-hallucination-in-llms.html"
 search: true
 date: 2026-04-10
