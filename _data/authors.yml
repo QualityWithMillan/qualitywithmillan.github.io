@@ -3,7 +3,7 @@ Millan Kaul:
     display_name     : "Millan Kaul"
     avatar           : "/assets/images/bio-photo.jpg"
     bio              : ""
-    location         : "AU 🇦🇺 | CA 🇨🇦 | US 🇺🇸"
+    location         : "U.S.A. 🇺🇸"
     email            :
     links:
       - label: "Email"
@@ -14,7 +14,7 @@ Millan Kaul:
         url: "https://twitter.com/MillanKaul"
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
-        url: "https://github.com/QualityWithMillan"
+        url: "https://github.com/eaccmk"
       - label: "LinkedIn"
         icon: "fab fa-fw fa-linkedin-in"
         url: "https://www.linkedin.com/company/quality-with-millan/"
