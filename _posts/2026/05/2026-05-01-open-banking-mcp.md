@@ -2,12 +2,10 @@
 title: "Open Banking MCP: Compare Bank Rates in Your AI Assistant"
 header:
   teaser: /assets/images/2026/05/openBanking_explained_visually.png
-  # overlay_image: /assets/images/2026/05/openBanking_explained_visually.png
-  # overlay_filter: 0.5
 permalink: "/blog/open-banking-mcp.html"
 search: true
 date: 2026-05-01
-last_modified_at: 2026-05-01
+last_modified_at: 2026-05-10
 authors: 
   - Millan Kaul
 categories:
@@ -41,8 +39,8 @@ seo:
     - "compare credit cards australia"
     - "term deposit rates australia"
   author: "Millan Kaul"
-  published_time: "2026-05-01"
-  modified_time: "2026-05-01"
+  published_time: "2026-05-10"
+  modified_time: "2026-05-10"
   site_name: "QualityWithMillan"
 og:
   title: "Open Banking MCP: Compare Australian Bank Rates in Your AI"
@@ -55,6 +53,29 @@ twitter:
   description: "Open Banking MCP brings CDR data to Claude, Cursor. Ask rates, compare instantly."
   image: /assets/images/2026/05/openBanking_explained_visually.png
 ---
+
+<p>
+ Written by -
+{% if page.authors == nil or page.authors.size == 0 %}
+   {{ page.author }}
+{% else %}
+    {% assign result = "" %}
+    {% for author in page.authors %}
+        {% if author != nil and author != "" %}
+            {% if forloop.first %}
+                {% assign result = author %}
+            {% elsif forloop.last %}
+                {% assign result = result | append: " and " | append: author %}
+            {% else %}
+                {% assign result = result | append: ", " | append: author %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if result != "" %}
+        <strong>{{ result }}</strong>
+    {% endif %}
+{% endif %}
+</p>
 
 # Open Banking MCP
 

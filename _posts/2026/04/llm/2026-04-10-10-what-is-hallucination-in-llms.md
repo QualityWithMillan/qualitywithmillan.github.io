@@ -32,6 +32,29 @@ seo:
 ---
 
 
+<p>
+ Written by -
+{% if page.authors == nil or page.authors.size == 0 %}
+   {{ page.author }}
+{% else %}
+    {% assign result = "" %}
+    {% for author in page.authors %}
+        {% if author != nil and author != "" %}
+            {% if forloop.first %}
+                {% assign result = author %}
+            {% elsif forloop.last %}
+                {% assign result = result | append: " and " | append: author %}
+            {% else %}
+                {% assign result = result | append: ", " | append: author %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if result != "" %}
+        <strong>{{ result }}</strong>
+    {% endif %}
+{% endif %}
+</p>
+
 # Title: What is Hallucination in LLMs?
 
 ## Why LLMs confidently invent facts, code, or references—and how testers catch them.
