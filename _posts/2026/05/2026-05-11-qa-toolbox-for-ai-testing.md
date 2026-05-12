@@ -79,8 +79,6 @@ twitter:
 {% endif %}
 </p>
 
-# QA Toolbox: Powering Reliable AI Outputs #1
-
 QA is not disappearing in the AI era. **It is becoming the layer that makes AI outputs reliable, testable and safe.**
 
 ## Why QA still matters
