@@ -8,6 +8,7 @@ date: 2026-05-11
 last_modified_at: 2026-05-11
 authors:
   - Millan Kaul
+series: "QA Toolbox for AI"
 categories:
   - blog
   - quality-engineering
