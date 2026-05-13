@@ -128,6 +128,7 @@ That means:
 NeMo Guardrails supports PII detection and masking in input and output flows through its Private AI integration.
 
 ### `config.yml`
+
 ```yaml
 models:
   - type: main
@@ -160,6 +161,7 @@ rails:
 ```
 
 ### Python
+
 ```python
 from nemoguardrails import RailsConfig, LLMRails
 
