@@ -109,7 +109,7 @@ Start thinking of QA in AI-native products as a simple toolbox:
 
 This is the new QA stack for AI products.
 
-![Image 01](/assets/images/2026/05/qa-ai-toolbox.png)
+![QA toolbox for reliable AI outputs](/assets/images/2026/05/qa-ai-toolbox.png)
 <span style="font-size:0.5em;"></span>
 
 

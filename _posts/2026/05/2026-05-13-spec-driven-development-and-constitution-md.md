@@ -85,7 +85,7 @@ twitter:
 
 `constitution.md` file is the project’s rulebook in Spec-Driven Development. It gives developers, architects, and QA teams a shared set of principles to follow before any feature spec, plan, or implementation begins.
 
-![Image 01](/assets/images/2026/05/sdd_SPECIFY_ASCII.png)
+![Spec-driven development rules behind constitution.md](/assets/images/2026/05/sdd_SPECIFY_ASCII.png)
 <span style="font-size:0.5em;"></span>
 
 If you are using [GitHub Spec Kit](https://github.com/github/spec-kit), `constitution.md` is the document that sets the **rules of the road** for your project. It is not the feature spec itself. It is the project’s guiding policy: the stable principles that shape how every spec, plan, task, and implementation decision should behave.
@@ -105,7 +105,7 @@ That is especially useful when multiple people or `agents` contribute to the sam
 
 If your constitution says “no silent failures,” “test critical paths first,” or “do not leak user data,” then those become expectations that can be checked during review, planning, and implementation.
 
-![Image 01](/assets/images/2026/05/sdd_SPECIFY_constitution_md.png)
+![constitution.md guidance for spec-driven development](/assets/images/2026/05/sdd_SPECIFY_constitution_md.png)
 <span style="font-size:0.5em;"></span>
 
 ## How to use it

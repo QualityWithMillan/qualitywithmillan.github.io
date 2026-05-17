@@ -94,7 +94,7 @@ Take this example and think of it like a 5-year-old with LEGO :
 > It needs the other LEGO parts around it to hold everything together and make it move the right way.
 > That “everything around it” is the harness.
 
-![Image 01](/assets/images/2026/05/test_harness_5yo_LEGO_example.png)
+![LEGO analogy explaining why AI agents need a test harness](/assets/images/2026/05/test_harness_5yo_LEGO_example.png)
 <span style="font-size:0.5em;"></span>
 
 A model can look great in a demo and still fail in production. The moment you add tools, memory, retrieval, permissions, retries, and multiple steps, the real product is no longer just the model. It is the harness around it.
@@ -107,7 +107,7 @@ This problem shows up fast when a model starts simple and then grows into a real
 
 At that point, the team is no longer only improving the model. They are also rebuilding the environment around it. That is where speed becomes the challenge: new agent versions arrive faster than the old harness can keep up.
 
-![Image 01](/assets/images/2026/05/test_harness_why_ai_agents_need_them.png)
+![Diagram showing why AI agents need a test harness](/assets/images/2026/05/test_harness_why_ai_agents_need_them.png)
 <span style="font-size:0.5em;"></span>
 
 ## What a test harness does
