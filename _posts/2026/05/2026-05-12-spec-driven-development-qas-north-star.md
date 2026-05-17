@@ -91,7 +91,7 @@ QA authors/validates `specs as contracts` (inputs, outputs, edges), then verifie
 - Tools like GitHub Spec Kit auto-gen tests from specs, `reducing manual toil by 40%.`
 - QA metrics: Schema compliance, `edge coverage >90%.`
 
-![Image 01](/assets/images/2026/05/sdd_qa_spec.png)
+![QA spec as the north star for spec-driven development](/assets/images/2026/05/sdd_qa_spec.png)
 <span style="font-size:0.5em;"></span>
 
 ### QA-Centric Workflow
