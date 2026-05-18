@@ -83,9 +83,9 @@ twitter:
 
 **Ask your AI to compare bank rates. No websites. No logins. Just real data.**
 
-Open Banking MCP is a [Model Context Protocol](https://modelcontextprotocol.io) server that brings Australian banking data directly into Claude, Cursor, and other AI assistants. Compare home loans, savings rates, credit cards—all through natural conversation.
+Open Banking MCP is a Model Context Protocol server that brings Australian banking data directly into Claude, Cursor, and other AI assistants. Compare home loans, savings rates, credit cards—all through natural conversation.
 
-Powered by Australian [Consumer Data Right (CDR)](https://consumerdatastandardsaustralia.github.io/standards) public APIs. Real data from 120+ banks.
+Powered by Australian **Consumer Data Right** [(CDR)](https://consumerdatastandardsaustralia.github.io/standards) Banking APIs public APIs. Real data from 120+ banks.
 
 ---
 

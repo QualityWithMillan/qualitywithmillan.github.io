@@ -35,7 +35,7 @@ seo:
 **From hype to control. Here are the 5 truths every CTO must know.**
 
 
-![Image 01](/assets/images/2026/02/mcp/06_mcp-leadership.png)
+![Five MCP leadership lessons for CTOs](/assets/images/2026/02/mcp/06_mcp-leadership.png)
 
 ## Truth #1: You Own the Tools
 **Blog #1** showed MCP handshakes. Reality: **Your engineers write every function**. No black box APIs. Database queries? Playwright browsers? YOUR code.

@@ -35,7 +35,7 @@ seo:
 
 No more custom integrations. One protocol works everywhere.
 
-![Image 02](/assets/images/2026/01/mcp/02_what_is_mcp.png)
+![What MCP is and its three layers](/assets/images/2026/01/mcp/02_what_is_mcp.png)
 
 ## MCP = 3 Layers
 

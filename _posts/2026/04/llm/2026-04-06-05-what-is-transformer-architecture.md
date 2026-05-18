@@ -65,7 +65,7 @@ Attention architecture explains the engine behind LLMs: how transformer layers t
 - **Default model architecture**: transformers are the basis for modern LLMs, so understanding their flow helps you reason about behavior, limits, and failure modes.
 - **Debugging scope**: transformers help you tell whether a problem is an architecture limit (context window, positional encoding) or a prompt/data issue.
 
-![Image 01](/assets/images/2026/04/llm/chapter_05_transformers.png)
+![Transformer architecture in large language models](/assets/images/2026/04/llm/chapter_05_transformers.png)
 <span style="font-size:0.5em;"></span>
 
 ## WHAT?

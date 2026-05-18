@@ -68,7 +68,7 @@ For **Developers and SDETs**
 - Pre-training is how LLMs learn **patterns, grammar, and world knowledge** from internet-scale data, giving them the "smarts" to handle diverse test prompts without task-specific training.  
 - Understanding pre-training helps you know **what the model "knows" by default** (syntax, facts, code patterns) vs what it needs to learn later (your domain rules, policies).
 
-![Image 01](/assets/images/2026/04/llm/chapter_06_pre-training.png)
+![Pre-training process for large language models](/assets/images/2026/04/llm/chapter_06_pre-training.png)
 <span style="font-size:0.5em;"></span>
 
 

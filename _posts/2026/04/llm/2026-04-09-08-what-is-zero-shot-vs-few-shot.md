@@ -70,7 +70,7 @@ For **Developers and SDETs**
 - **Few-shot** gives you control by showing 1–5 examples in the prompt, teaching format/style without fine-tuning, ideal for consistent test outputs.
 
 
-![Image 01](/assets/images/2026/04/llm/chapter_08_zero_shot-few_shot.png)
+![Zero-shot versus few-shot prompting in LLMs](/assets/images/2026/04/llm/chapter_08_zero_shot-few_shot.png)
 <span style="font-size:0.5em;"></span>
 
 

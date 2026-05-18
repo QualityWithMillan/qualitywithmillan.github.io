@@ -72,7 +72,7 @@ For **Developers and SDETs**
 
 
 
-![Image 01](/assets/images/2026/04/llm/chapter_10_hallucination.png)
+![LLM hallucination concept overview](/assets/images/2026/04/llm/chapter_10_hallucination.png)
 <span style="font-size:0.5em;"></span>
 
 
