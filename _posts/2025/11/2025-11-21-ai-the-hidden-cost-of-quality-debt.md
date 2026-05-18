@@ -59,7 +59,7 @@ Quality debt sat invisible in the same system: brittle test suites, manual regre
 
 Quality debt is more expensive than technical debt. Leadership just can't see it.
 
-![Image 01](/assets/images/2025/11/06-00-co-author-2025-11-21.png)
+![Hidden cost of quality debt in AI](/assets/images/2025/11/06-00-co-author-2025-11-21.png)
 <span style="font-size:0.5em;"></span>
 
  
@@ -147,7 +147,7 @@ What gets budget:
 The language gap creates the funding gap.
 
 
-![Image 02](/assets/images/2025/11/06-01-co-author-2025-11-21.png)
+![Language gap creating the funding gap for quality debt](/assets/images/2025/11/06-01-co-author-2025-11-21.png)
 <span style="font-size:0.5em;"></span>
 
 

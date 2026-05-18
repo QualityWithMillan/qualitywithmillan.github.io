@@ -66,7 +66,7 @@ For **Developers and SDETs**
 - Word embeddings let AI measure **similarity in meaning**, not just exact text matches, which is crucial for smarter test data, duplicate bug detection, and intent‑based search.  
 - When you test features like “similar bugs”, “related tickets”, or “semantic search”, you’re really testing how good the embeddings are at capturing meaning.  
 
-![Image 01](/assets/images/2026/04/llm/chapter_03_embeddings.png)
+![Embeddings in large language models](/assets/images/2026/04/llm/chapter_03_embeddings.png)
 <span style="font-size:0.5em;"></span>
 
 

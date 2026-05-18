@@ -33,7 +33,7 @@ seo:
 
 **MCP = LLM lifeline** when models hallucinate most.
 
-![Image 03](/assets/images/2026/01/mcp/03_when_mcp.png)
+![When to use MCP for hallucination triggers](/assets/images/2026/01/mcp/03_when_mcp.png)
 
 ## Hallucination Triggers (Use MCP)
 

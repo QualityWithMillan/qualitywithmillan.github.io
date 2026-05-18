@@ -37,7 +37,7 @@ seo:
 
 "Single LLMs hallucinate. Multi‑agent systems multiply the problem."
 
-![Image 01](/assets/images/2026/02/mcp/04_where_mcp.png)
+![Where MCP shines in agentic workflows](/assets/images/2026/02/mcp/04_where_mcp.png)
 
 ## MCP Powers Agentic Workflows
 

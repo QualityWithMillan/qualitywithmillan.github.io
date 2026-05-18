@@ -65,7 +65,7 @@ Tokenization: why "Hello World" becomes 4 tokens, how it affects your prompts, c
 
 - **Context windows**: Every model has a max token limit (GPT-4 has 128K, Claude has 200K). Your prompt + response must fit within it, or the model silently chops off the start of your data—a silent killer for test reliability. 
 
-![Image 01](/assets/images/2026/04/llm/chapter_02_tokenization.png)
+![Tokenization in large language models](/assets/images/2026/04/llm/chapter_02_tokenization.png)
 <span style="font-size:0.5em;"></span>
 
 

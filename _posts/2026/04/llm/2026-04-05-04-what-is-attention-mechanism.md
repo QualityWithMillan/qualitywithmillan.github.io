@@ -65,7 +65,7 @@ Attention explains how an LLM decides which words or tokens matter most when gen
 - **Prompt behavior**: attention tells the model which parts of a prompt matter for each answer, so it is key to understanding why some instructions are followed and others are ignored.
 - **Test design**: when testing long prompts or nested rules, attention affects whether the model treats the right words as important.
 
-![Image 01](/assets/images/2026/04/llm/chapter_04_attention.png)
+![Attention mechanism in large language models](/assets/images/2026/04/llm/chapter_04_attention.png)
 <span style="font-size:0.5em;"></span>
 
 ## WHAT?

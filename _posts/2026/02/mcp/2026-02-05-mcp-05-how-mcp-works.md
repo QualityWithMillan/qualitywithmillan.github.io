@@ -47,7 +47,7 @@ seo:
 5. LLM: "Balance is $1,247.89"
 
 
-![Image 01](/assets/images/2026/02/mcp/05_how_mcp_works.png)
+![How MCP works between an LLM and tools](/assets/images/2026/02/mcp/05_how_mcp_works.png)
 
 
 **Playwright‑MCP Example (Browser Automation)**
