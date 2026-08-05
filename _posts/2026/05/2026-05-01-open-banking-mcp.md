@@ -77,7 +77,6 @@ twitter:
 {% endif %}
 </p>
 
-# Open Banking MCP
 
 <img src="/assets/images/2026/05/open_banking_iocn.png" alt="Open Banking MCP logo" align="right" height="96" width="96"/>
 
