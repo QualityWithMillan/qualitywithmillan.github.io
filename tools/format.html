@@ -7,7 +7,7 @@ permalink: "/format"
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
   .format-wrapper {
     box-sizing: border-box;
@@ -178,6 +178,7 @@ permalink: "/format"
     .format-card {
       padding: 16px;
     }
+
     .format-btn {
       min-width: calc(33.33% - 8px);
     }
@@ -185,33 +186,29 @@ permalink: "/format"
 </style>
 
 <div class="format-wrapper">
-  <div class="format-card">
-    <h2 class="format-title">Simple Text Formatter</h2>
-    
+  <div class="format-card" role="region" aria-label="Text Formatter Tool">
     <div class="field-group">
-      <label for="input-text" class="field-label">Input Text</label>
       <div class="textarea-container">
-        <textarea id="input-text" rows="5" placeholder="Type or paste your text here..."></textarea>
-        <button role="button" id="clear-button" title="Clear text">🔄</button>
+        <textarea id="input-text" rows="5" placeholder="Type or paste your text here..." aria-label="Input Text Area"></textarea>
+        <button role="button" id="clear-button" title="Clear text" aria-label="Clear input and output text">🔄</button>
       </div>
     </div>
 
-    <div class="format-actions">
-      <button role="button" id="bold-button" class="format-btn">𝗕</button>
-      <button role="button" id="italic-button" class="format-btn">𝐼</button>
-      <button role="button" id="bold-italic-button" class="format-btn">𝗕𝐼</button>
-      <button role="button" id="underline-button" class="format-btn">U̲</button>
-      <button role="button" id="strikethrough-button" class="format-btn">S̶</button>
-      <button role="button" id="monospace-button" class="format-btn">𝚖ono</button>
+    <div class="format-actions" role="group" aria-label="Formatting options">
+      <button role="button" id="bold-button" class="format-btn" aria-label="Format text as bold sans-serif">𝗕</button>
+      <button role="button" id="italic-button" class="format-btn" aria-label="Format text as italic">𝐼</button>
+      <button role="button" id="bold-italic-button" class="format-btn" aria-label="Format text as bold italic">𝗕𝐼</button>
+      <button role="button" id="underline-button" class="format-btn" aria-label="Format text with underline">U̲</button>
+      <button role="button" id="strikethrough-button" class="format-btn" aria-label="Format text with strikethrough">S̶</button>
+      <button role="button" id="monospace-button" class="format-btn" aria-label="Format text as monospace">𝚖ono</button>
     </div>
 
     <div class="field-group">
-      <label for="output-text" class="field-label">Formatted Output</label>
-      <textarea id="output-text" rows="5" placeholder="Formatted output will appear here..."></textarea>
+      <textarea id="output-text" rows="5" placeholder="Formatted output will appear here..." aria-label="Formatted Output Area" readonly></textarea>
     </div>
 
     <div class="action-footer">
-      <button role="button" id="copy-button" class="primary-btn">Copy text 📑</button>
+      <button role="button" id="copy-button" class="primary-btn" aria-label="Copy formatted text to clipboard">Copy text 📑</button>
     </div>
   </div>
 </div>
