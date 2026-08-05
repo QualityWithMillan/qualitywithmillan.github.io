@@ -53,18 +53,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: github-pages
-
-  mirror:
-    runs-on: ubuntu-24.04
-    needs: build
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: prod
-          fetch-depth: 0
-      - name: Configure Git and Push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote add upstream https://QualityWithMillan:${{ secrets.UPSTREAM_TOKEN }}@github.com/QualityWithMillan/qualitywithmillan.github.io.git
-          git push upstream prod
