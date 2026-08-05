@@ -1,33 +1,62 @@
 //logic to handle button click, output display and copy button
 
 let copyButton = document.getElementById("copy-button");
-copyButton.addEventListener("click", copyToClipboard);
-
+if (copyButton) {
+  copyButton.addEventListener("click", copyToClipboard);
+}
 
 let clearButton = document.getElementById("clear-button");
-clearButton.addEventListener("click", clearInputText);
+if (clearButton) {
+  clearButton.addEventListener("click", clearInputText);
+}
 
 function clearInputText() {
-  document.getElementById("input-text").value = "";
+  const inputText = document.getElementById("input-text");
+  const outputText = document.getElementById("output-text");
+  if (inputText) inputText.value = "";
+  if (outputText) {
+    outputText.value = "";
+    outputText.innerHTML = "";
+  }
 }
 
 function copyToClipboard() {
-  let outputText = document.getElementById("output-text").innerHTML;
+  const outputTextEl = document.getElementById("output-text");
+  if (!outputTextEl) return;
+  let outputText = outputTextEl.value || outputTextEl.innerHTML;
 
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(outputText).then(() => {
+      let copyButton = document.getElementById("copy-button");
+      if (copyButton) {
+        let originalText = copyButton.innerHTML;
+        copyButton.innerHTML = "Copied! ✅";
+        setTimeout(() => {
+          copyButton.innerHTML = originalText;
+        }, 2000);
+      }
+    }).catch(err => {
+      fallbackCopy(outputText);
+    });
+  } else {
+    fallbackCopy(outputText);
+  }
+}
+
+function fallbackCopy(text) {
   let tempInput = document.createElement("textarea");
-  tempInput.value = outputText;
+  tempInput.value = text;
   document.body.appendChild(tempInput);
   tempInput.select();
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 }
 
-
 function applyFormat(format) {
-  let inputText = document.getElementById("input-text").value;
-  // console.log(toUnicodeVariant(inputText, 'b'));
+  const inputTextEl = document.getElementById("input-text");
+  if (!inputTextEl) return;
+  let inputText = inputTextEl.value;
   let outputText = '';
-  // = toUnicodeVariant(inputText, 'b');
 
   switch (format) {
     case "bold":
@@ -57,40 +86,33 @@ function applyFormat(format) {
     case "monospace":
       outputText = toUnicodeVariant(inputText, 'm');
       break;
-
   }
 
-  document.getElementById("output-text").innerHTML = outputText;
+  const outputTextEl = document.getElementById("output-text");
+  if (outputTextEl) {
+    outputTextEl.value = outputText;
+    outputTextEl.innerHTML = outputText;
+  }
 }
 
-
 let boldButton = document.getElementById("bold-button");
-boldButton.addEventListener("click", () => applyFormat("bold"));
+if (boldButton) boldButton.addEventListener("click", () => applyFormat("bold"));
 
 let italicButton = document.getElementById("italic-button");
-italicButton.addEventListener("click", () => applyFormat("italic"));
+if (italicButton) italicButton.addEventListener("click", () => applyFormat("italic"));
 
 let strikethroughButton = document.getElementById("strikethrough-button");
-strikethroughButton.addEventListener("click", () => applyFormat("strikethrough"));
+if (strikethroughButton) strikethroughButton.addEventListener("click", () => applyFormat("strikethrough"));
 
 let underlineButton = document.getElementById("underline-button");
-underlineButton.addEventListener("click", () => applyFormat("underline"));
+if (underlineButton) underlineButton.addEventListener("click", () => applyFormat("underline"));
 
 let boldItalicButton = document.getElementById("bold-italic-button");
-boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
+if (boldItalicButton) boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
 
 let monospaceButton = document.getElementById("monospace-button");
-monospaceButton.addEventListener("click", () => applyFormat("monospace"));
+if (monospaceButton) monospaceButton.addEventListener("click", () => applyFormat("monospace"));
 
-//next line
-// let boldstrikethroughButton = document.getElementById("bold-strikethrough-button");
-// boldstrikethroughButton.addEventListener("click", () => applyFormat("bold-strikethrough"));
-
-// let italicstrikethroughButton = document.getElementById("italic-strikethrough-button");
-// italicstrikethroughButton.addEventListener("click", () => applyFormat("italic-strikethrough"));
-
-// let boldItalicstrikethroughButton = document.getElementById("bold-italic-strikethrough-button");
-// boldItalicstrikethroughButton.addEventListener("click", () => applyFormat("bold-italic-strikethrough"));
 
 
 //logic to actually convert the format
@@ -253,8 +275,7 @@ function toUnicodeVariant(str, variant, flags) {
     } else {
       result += c 
     }
-    // if (underline) result += '\u0332' // add combining underline
-    if (underline) result += '&#x0332;'
+    if (underline) result += '\u0332' // add combining underline
     if (strike) result += '\u0336' // add combining strike
   }
 	return result

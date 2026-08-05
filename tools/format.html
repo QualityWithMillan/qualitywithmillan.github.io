@@ -6,144 +6,212 @@ search: true
 permalink: "/format"
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 
-<head>
-  <meta charset="utf-8">
-  <title>Plain Text Formatter</title>
-  
-  <!-- Start of style -->
-  <style>
-    /* Reset default margin and padding for the body element */
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+  .format-wrapper {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Noto Sans Math';
+    max-width: 650px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  .format-card {
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e8ed;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .format-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+  }
+
+  .field-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .textarea-container {
+    position: relative;
+  }
+
+  .format-wrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif, 'Noto Sans Math';
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 12px 45px 12px 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    resize: vertical;
+    background: #f8fafc;
+    color: #334155;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    margin: 0;
+  }
+
+  .format-wrapper textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+
+  .format-wrapper textarea[readonly] {
+    padding-right: 12px;
+    background: #f1f5f9;
+    cursor: default;
+  }
+
+  .format-wrapper #clear-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .format-wrapper #clear-button:hover {
+    background: #e2e8f0;
+    transform: rotate(90deg);
+  }
+
+  .format-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .format-btn {
+    flex: 1;
+    min-width: 60px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #000000;
+  }
+
+  .format-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+  }
+
+  .format-btn:active {
+    transform: translateY(1px);
+  }
+
+  .action-footer {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    margin: 0;
+  }
+
+  .primary-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+  }
+
+  .primary-btn:active {
+    transform: translateY(1px);
+  }
+
+  @media (max-width: 480px) {
+    .format-card {
+      padding: 16px;
     }
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+    .format-btn {
+      min-width: calc(33.33% - 8px);
     }
+  }
+</style>
 
-    .flex-container>div {
-      background-color: #A9F1E4;
-      margin: 10px;
-      padding: 20px;
-      font-size: 30px;
-      text-align: center;
-    }
-
-    textarea {
-      font-size: 16px;
-      font-family: Arial, sans-serif;
-      border: 1px solid #4CAF51;
-      margin-bottom: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      resize: vertical;
-    }
-
-    .input-area {
-      position: relative;
-      width: 100%;
-    }
-
-    button {
-      margin: 5px;
-      border-color: #4CAF51;
-      border-radius: 12px;
-      color: #000000;
-      margin-bottom: 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #4CAF51;
-      border-color: #888888;
-      color: white;
-    }
-
-    @keyframes click-animation {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.2);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    button:active {
-      animation: click-animation 0.3s;
-    }
-
-    #clear-button {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding: 0;
-      margin: 5px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
-
-    #clear-button:before {
-      position: absolute;
-      transition: padding 0.2s ease, opacity 0.2s ease;
-    }
-
-    #clear-button:hover:before {
-      /* content: "Clear 🔄"; */
-      padding: 0 5px;
-      opacity: 1;
-    }
-
-  </style>
-</head>
-
-<body>
-  <div class="flex-container">
-    <h2>Simple text Formatter</h2>
-    <div>
-      <div class="input-area">
-        <textarea id="input-text" rows="4" cols="50"></textarea> <button role="button" id="clear-button">🔄</button>
-      </div>
-      <button role="button" id="bold-button">𝗕</button>
-      <button role="button" id="italic-button">𝐼</button>
-      <button role="button" id="bold-italic-button">𝗕𝐼</button>
-      <button role="button" id="underline-button">U&#x0332;</button>
-      <button role="button" id="strikethrough-button">S&#x0336;</button>
-<!--       <button role="button" id="strikethrough-button">𝑆̶</button> -->
-      <button role="button" id="monospace-button">𝚖ono</button>
-      <div>
-        <textarea id="output-text" rows="4" cols="50"></textarea>
-        <button role="button" id="copy-button">Copy text 📑</button>
+<div class="format-wrapper">
+  <div class="format-card">
+    <h2 class="format-title">Simple Text Formatter</h2>
+    
+    <div class="field-group">
+      <label for="input-text" class="field-label">Input Text</label>
+      <div class="textarea-container">
+        <textarea id="input-text" rows="5" placeholder="Type or paste your text here..."></textarea>
+        <button role="button" id="clear-button" title="Clear text">🔄</button>
       </div>
     </div>
-  </div>
-</body>
 
-</html>
+    <div class="format-actions">
+      <button role="button" id="bold-button" class="format-btn">𝗕</button>
+      <button role="button" id="italic-button" class="format-btn">𝐼</button>
+      <button role="button" id="bold-italic-button" class="format-btn">𝗕𝐼</button>
+      <button role="button" id="underline-button" class="format-btn">U̲</button>
+      <button role="button" id="strikethrough-button" class="format-btn">S̶</button>
+      <button role="button" id="monospace-button" class="format-btn">𝚖ono</button>
+    </div>
+
+    <div class="field-group">
+      <label for="output-text" class="field-label">Formatted Output</label>
+      <textarea id="output-text" rows="5" placeholder="Formatted output will appear here..."></textarea>
+    </div>
+
+    <div class="action-footer">
+      <button role="button" id="copy-button" class="primary-btn">Copy text 📑</button>
+    </div>
+  </div>
+</div>
