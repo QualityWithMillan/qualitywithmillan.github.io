@@ -8,6 +8,5 @@ services:
       - "4000:4000"
     volumes:
       - "$PWD:/srv/jekyll"
-      - ./vendor/bundle/:/usr/local/bundle
-    command: bundle exec jekyll serve --force_polling --drafts --host 0.0.0.0
+    command: bash -c "bundle install && bundle exec jekyll serve --force_polling --drafts --host 0.0.0.0"
     # command: ["bundle", "exec", "jekyll", "serve",  "--force_polling" , "--host", "0.0.0.0"]

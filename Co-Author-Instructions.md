@@ -28,9 +28,8 @@ You can follow these simple instructions to publish a post for review:
 1. You can put multiple `tags` to your post, ideally limit them from 3 to 5 for a better reader experience.
     1. You can have a look at [all published tags here](https://qualitywithmillan.github.io/tags/)
 1. If you want to run locally follow instructions [here](https://mmistakes.github.io/minimal-mistakes/docs/docs-2-2/) or run `bundle install` followed by `bundle exec jekyll serve`. Some helpful troubleshooting below.
-1. Or simply run using Docker
-    1. Create a Docker image named **qwm**: `docker build -t qwm .`
-    1. Run the local server `docker-compose up` or `docker run -p 4000:4000 -v "$PWD:/srv/jekyll" qwm jekyll serve --force_polling`
+1. Or simply run using Docker:
+    1. Run `docker compose up` to automatically build and start the local server.
     1. Go to [http://localhost:4000](http://localhost:4000/)
 
 If you see some errors:
