@@ -1,0 +1,131 @@
+/*
+ * Code Tabs CSS Style Sheet
+ * Scopes tab containers, active tabs, layout structures, and language syntax colors.
+ */
+
+.code-example-tabs {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  background-color: #fafafa;
+}
+.code-example-tabs .tabs-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 1rem;
+  margin: 0;
+  list-style: none;
+}
+.code-example-tabs .tabs-buttons-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.code-example-tabs .copy-code-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #718096;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  outline: none;
+  box-shadow: none;
+}
+.code-example-tabs .copy-code-btn:hover {
+  color: #1a202c;
+}
+.code-example-tabs .tab-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+  outline: none;
+}
+.code-example-tabs .tab-button:hover {
+  color: #1a202c;
+}
+.code-example-tabs .tab-button[aria-selected="true"] {
+  color: #1a202c;
+  font-weight: 600;
+}
+.code-example-tabs .tab-button[aria-selected="true"]::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #1a202c;
+}
+.code-example-tabs .tab-panels {
+  background-color: #ffffff;
+}
+.code-example-tabs .tab-panel pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border: none;
+}
+.code-example-tabs .tab-panel code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.875rem;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+.code-example-tabs .tab-panel[hidden] {
+  display: none !important;
+}
+
+/* cURL, Python, JavaScript and Java Light Theme styling */
+.code-example-tabs .panel-dark,
+.code-example-tabs .panel-light {
+  background-color: #ffffff !important;
+}
+.code-example-tabs .panel-dark pre,
+.code-example-tabs .panel-light pre {
+  background-color: #ffffff !important;
+  color: #24292e !important;
+}
+
+/* cURL syntax coloring for light theme */
+.code-example-tabs .panel-dark .token-cmd {
+  color: #005cc5; /* blue command */
+  font-weight: bold;
+}
+.code-example-tabs .panel-dark .token-opt {
+  color: #e36209; /* orange option/arg */
+}
+.code-example-tabs .panel-dark .token-str {
+  color: #032f62; /* blue string */
+}
+.code-example-tabs .panel-dark .token-val {
+  color: #22863a; /* green value */
+}
+
+/* Python, JavaScript and Java syntax coloring */
+.code-example-tabs .token-keyword {
+  color: #d73a49; /* red keywords */
+  font-weight: 600;
+}
+.code-example-tabs .token-string {
+  color: #032f62; /* blue strings */
+}
+.code-example-tabs .token-function {
+  color: #6f42c1; /* purple functions */
+}
+.code-example-tabs .token-property {
+  color: #e36209; /* orange properties */
+}
