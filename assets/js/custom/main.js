@@ -16,6 +16,12 @@ eventsSpeaking.addEventListener("click", launchEvents);
 let coAuthors = document.getElementById("co-authors");
 coAuthors.addEventListener("click", launchCoAuthors);
 
+// teleprompter
+let teleprompter = document.getElementById("mobile-teleprompter");
+if (teleprompter) {
+  teleprompter.addEventListener("click", launchTeleprompter);
+}
+
 
 function launchTextFormatter() {
   // window.open("https://qualitywithmillan.github.io/format/")
@@ -32,5 +38,9 @@ function launchEvents() {
 
 function launchCoAuthors() {
   window.open(siteUrl + '/co-authors', '_blank');
+}
+
+function launchTeleprompter() {
+  window.open(siteUrl + '/prompt', '_blank');
 }
 

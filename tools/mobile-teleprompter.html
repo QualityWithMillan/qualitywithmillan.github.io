@@ -1,0 +1,377 @@
+---
+layout: null
+permalink: "/prompt"
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Mobile Teleprompter</title>
+  <style>
+    :root {
+      --font-size: 32px;
+      --speed: 3.2;
+      --pad: 5vw;
+      --accent: #57e6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #000;
+      color: #f7f7f7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    #stage {
+      height: 100dvh;
+      overflow: hidden;
+      position: relative;
+      touch-action: manipulation;
+    }
+
+    #script {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      padding: 0 var(--pad);
+    }
+
+    #content {
+      width: 100%;
+      padding-top: 100dvh;
+      padding-bottom: 100dvh;
+      font-size: var(--font-size);
+      line-height: 1.45;
+      font-weight: 600;
+      letter-spacing: .01em;
+      transform: translateY(0);
+      will-change: transform;
+    }
+
+    #content h1 {
+      font-size: 1.45em;
+      line-height: 1.15;
+      margin: 0 0 .7em;
+      color: var(--accent);
+    }
+
+    #content h2 {
+      font-size: 1.18em;
+      line-height: 1.2;
+      margin: 1em 0 .55em;
+      color: var(--accent);
+    }
+
+    #content h3 {
+      font-size: 1em;
+      margin: 1em 0 .5em;
+      color: var(--accent);
+    }
+
+    #content p {
+      margin: .55em 0;
+    }
+
+    #content ul,
+    #content ol {
+      margin: .5em 0;
+      padding-left: 1.25em;
+    }
+
+    #content blockquote {
+      border-left: 4px solid var(--accent);
+      margin: .8em 0;
+      padding: .15em .7em;
+      color: #d5d5d5;
+    }
+
+    #content code {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: .82em;
+      color: #b8f6ff;
+    }
+
+    #content pre {
+      white-space: pre-wrap;
+      background: #121212;
+      padding: .7em;
+      border-radius: .35em;
+      overflow-wrap: anywhere;
+    }
+
+    #content a {
+      color: var(--accent);
+    }
+
+    #content table {
+      border-collapse: collapse;
+      font-size: .75em;
+    }
+
+    #content th,
+    #content td {
+      border: 1px solid #555;
+      padding: .35em;
+    }
+
+    #controls {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 12px max(14px, env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+      background: linear-gradient(transparent, rgba(0, 0, 0, .94) 35%);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: .2s;
+    }
+
+    #stage:hover #controls,
+    #stage.show-controls #controls,
+    #controls:focus-within {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    button {
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 999px;
+      background: #181818;
+      min-width: 45px;
+      min-height: 43px;
+      padding: 8px 13px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(.96);
+      background: #333;
+    }
+
+    button.primary {
+      color: #001b20;
+      background: var(--accent);
+      border-color: var(--accent);
+      font-weight: 800;
+    }
+
+    label.control {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ddd;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    input[type=range] {
+      width: 95px;
+      accent-color: var(--accent);
+    }
+
+    #status {
+      font-size: 12px;
+      color: #aaa;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    #editorPanel {
+      position: fixed;
+      z-index: 20;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      background: #080808;
+      padding: max(14px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+      gap: 10px;
+    }
+
+    #editorPanel.open {
+      display: flex;
+    }
+
+    #editor {
+      flex: 1;
+      width: 100%;
+      resize: none;
+      color: #f3f3f3;
+      background: #111;
+      border: 1px solid #555;
+      border-radius: 10px;
+      padding: 14px;
+      line-height: 1.45;
+      font: 16px/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+
+    .editorActions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+    }
+
+    .editorActions div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    #fileInput {
+      display: none;
+    }
+
+    #hint {
+      position: fixed;
+      top: env(safe-area-inset-top);
+      left: 0;
+      right: 0;
+      z-index: 5;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      padding: 8px;
+      opacity: .7;
+      pointer-events: none;
+    }
+
+    @media (orientation:landscape) {
+      :root {
+        --pad: 9vw;
+      }
+
+      #content {
+        line-height: 1.35;
+      }
+
+      #controls {
+        justify-content: flex-end;
+      }
+    }
+
+    @media (max-width:480px) {
+      #controls {
+        gap: 6px;
+      }
+
+      button {
+        min-height: 39px;
+        padding: 7px 10px;
+      }
+
+      input[type=range] {
+        width: 68px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="stage" aria-label="Teleprompter">
+    <div id="hint">Tap once for controls · Double-tap to play/pause</div>
+    <section id="script">
+      <article id="content" aria-live="off"></article>
+    </section>
+    <nav id="controls" aria-label="Teleprompter controls">
+      <button id="play" class="primary" title="Play or pause">▶ Play</button>
+      <button id="restart" title="Restart">↺</button>
+      <label class="control">Speed <input id="speed" type="range" min="0.5" max="12" step="0.1" value="3.2"><output
+          id="speedOut">3.2</output></label>
+      <label class="control">Text <input id="font" type="range" min="18" max="80" step="1" value="32"><output
+          id="fontOut">32</output></label>
+      <button id="mirror" title="Mirror text for a reflective teleprompter rig">⇄ Mirror</button>
+      <button id="edit" title="Edit or load Markdown">✎ Script</button>
+      <span id="status">Ready</span>
+    </nav>
+  </main>
+  <section id="editorPanel" aria-label="Script editor">
+    <div class="editorActions"><strong>Markdown script</strong><button id="closeEditor">✕ Close</button></div>
+    <textarea id="editor" spellcheck="true" placeholder="Paste or write Markdown here…"></textarea>
+    <div class="editorActions">
+      <div><button id="loadFile">Load .md / .txt</button><input id="fileInput" type="file"
+          accept=".md,.markdown,.txt,text/markdown,text/plain"></div>
+      <div><button id="clear">Clear</button><button id="apply" class="primary">Use script</button></div>
+    </div>
+  </section>
+  <script>
+    (() => {
+      const $ = id => document.getElementById(id);
+      const content = $('content'), stage = $('stage'), editor = $('editor'), panel = $('editorPanel');
+      const defaults = `# Your Teleprompter Script\n\nPaste Markdown in **Script**, or load a \`.md\` file from your phone.\n\n- Tap the screen to show or hide controls\n- Double-tap to play or pause\n- Use the Speed slider to control scrolling\n\n> Rotate your phone or tablet — the layout adapts automatically.\n\n## Recording tip\n\nUse short paragraphs and add blank lines for natural pauses.`;
+      let markdown = localStorage.getItem('teleprompter-markdown') || defaults;
+      let y = 0, playing = false, mirrored = false, lastTime = null, raf = null, lastTap = 0;
+
+      function escapeHTML(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+      function inline(s) {
+        s = escapeHTML(s);
+        s = s.replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/__([^_]+)__/g, '<strong>$1</strong>');
+        s = s.replace(/\*([^*]+)\*/g, '<em>$1</em>').replace(/_([^_]+)_/g, '<em>$1</em>');
+        return s.replace(/\[([^\]]+)\]\((https?:\/\/[^ )]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+      }
+      function mdToHTML(md) {
+        const lines = md.replace(/\r/g, '').split('\n'); let out = [], inCode = false, code = [], list = null;
+        const closeList = () => { if (list) { out.push(`</${list}>`); list = null; } };
+        for (let i = 0; i < lines.length; i++) {
+          let l = lines[i];
+          if (l.startsWith('```')) { closeList(); if (inCode) { out.push('<pre><code>' + escapeHTML(code.join('\n')) + '</code></pre>'); code = []; } inCode = !inCode; continue; }
+          if (inCode) { code.push(l); continue; }
+          let m;
+          if ((m = l.match(/^(#{1,3})\s+(.+)$/))) { closeList(); out.push(`<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`); }
+          else if (/^(---|\*\*\*|___)\s*$/.test(l)) { closeList(); out.push('<hr>'); }
+          else if ((m = l.match(/^>\s?(.*)$/))) { closeList(); out.push('<blockquote>' + inline(m[1]) + '</blockquote>'); }
+          else if ((m = l.match(/^[-*+]\s+(.+)$/))) { if (list !== 'ul') { closeList(); list = 'ul'; out.push('<ul>'); } out.push('<li>' + inline(m[1]) + '</li>'); }
+          else if ((m = l.match(/^\d+[.)]\s+(.+)$/))) { if (list !== 'ol') { closeList(); list = 'ol'; out.push('<ol>'); } out.push('<li>' + inline(m[1]) + '</li>'); }
+          else if (l.trim() === '') { closeList(); }
+          else { closeList(); out.push('<p>' + inline(l) + '</p>'); }
+        }
+        closeList(); if (inCode) out.push('<pre><code>' + escapeHTML(code.join('\n')) + '</code></pre>'); return out.join('');
+      }
+      function render() { content.innerHTML = mdToHTML(markdown); editor.value = markdown; reset(); }
+      function reset() { y = 0; content.style.transform = `translateY(${y}px)${mirrored ? ' scaleX(-1)' : ''}`; $('status').textContent = 'Ready'; }
+      function frame(t) { if (!playing) return; if (lastTime !== null) { const dt = (t - lastTime) / 1000; y -= parseFloat($('speed').value) * dt * 18; content.style.transform = `translateY(${y}px)${mirrored ? ' scaleX(-1)' : ''}`; if (Math.abs(y) > content.offsetHeight + innerHeight) { pause(); $('status').textContent = 'Done'; return; } } lastTime = t; raf = requestAnimationFrame(frame); }
+      function play() { if (playing) return; playing = true; lastTime = null; $('play').textContent = '❚❚ Pause'; $('status').textContent = 'Reading'; raf = requestAnimationFrame(frame); }
+      function pause() { playing = false; cancelAnimationFrame(raf); $('play').textContent = '▶ Play'; if ($('status').textContent !== 'Done') $('status').textContent = 'Paused'; }
+      $('play').onclick = () => playing ? pause() : play(); $('restart').onclick = () => { pause(); reset(); };
+      $('speed').oninput = e => { $('speedOut').textContent = e.target.value; };
+      $('font').oninput = e => { document.documentElement.style.setProperty('--font-size', e.target.value + 'px'); $('fontOut').textContent = e.target.value; };
+      $('mirror').onclick = () => { mirrored = !mirrored; content.style.transform = `translateY(${y}px)${mirrored ? ' scaleX(-1)' : ''}`; $('mirror').classList.toggle('primary', mirrored); };
+      $('edit').onclick = () => { pause(); panel.classList.add('open'); editor.focus(); }; $('closeEditor').onclick = () => panel.classList.remove('open');
+      $('apply').onclick = () => { markdown = editor.value || defaults; localStorage.setItem('teleprompter-markdown', markdown); render(); panel.classList.remove('open'); };
+      $('clear').onclick = () => { editor.value = ''; editor.focus(); }; $('loadFile').onclick = () => $('fileInput').click();
+      $('fileInput').onchange = e => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => { editor.value = r.result; }; r.readAsText(f); e.target.value = ''; };
+      stage.addEventListener('click', e => { if (e.target.closest('#controls')) return; const now = Date.now(); if (now - lastTap < 280) { playing ? pause() : play(); } else { stage.classList.toggle('show-controls'); } lastTap = now; });
+      document.addEventListener('keydown', e => { if (e.code === 'Space' && !panel.classList.contains('open')) { e.preventDefault(); playing ? pause() : play(); } if (e.key === 'Escape') panel.classList.remove('open'); });
+      render();
+    })();
+  </script>
+</body>
+
+</html>
