@@ -49,8 +49,6 @@ $(function() {
        $(".search-content").toggleClass("is--hidden");
         //$(".search-content").toggleClass("is--visible");
        }
-    }
-     
   });
 
   // Search toggle
