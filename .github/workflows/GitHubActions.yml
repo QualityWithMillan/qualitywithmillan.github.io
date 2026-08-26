@@ -5,7 +5,9 @@ on:
     branches: [ "prod" ]
   pull_request:
     branches: [ "prod" ]
-
+  schedule:
+    - cron: '1 0 * * *' # Runs every day at 00:01 AM UTC
+    
 permissions:
   contents: read
   pages: write
