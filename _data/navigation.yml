@@ -13,7 +13,7 @@ main:
       - title: "Categories"
         url: /categories/
       - title: "Co-Authors"
-        url: /co-authors
+        url: /co-authors/
       - title: "Contact"
         url: /contact/
       - title: "Posts"
@@ -21,7 +21,7 @@ main:
       - title: "Prompter"
         url: /prompt/
       - title: "Support"
-        url: /support
+        url: /support/
       - title: "Tags"
         url: /tags/  
       - title: "Terms"

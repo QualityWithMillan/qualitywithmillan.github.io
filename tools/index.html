@@ -1,172 +1,384 @@
 ---
 layout: single
+author_profile: false
+title: "Tools & Utilities - Quality With Millan"
+description: "Explore interactive tools, utilities, plain text formatters, prompters, and simulators created for software testers and engineers."
+excerpt: "Interactive web tools, teleprompters, simulators, and QA utilities by Quality With Millan."
+keywords: "Quality With Millan Tools, Plain Text Formatter, Coin Flip Simulator, Mobile Teleprompter, QA Tools, AI Testing Utilities"
 search: true
-title: "Tools"
-permalink: "/tools"
+permalink: "/tools/"
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>Quality With Millan Tools</title>
-
-  <!-- Scripts -->
-  <script id="site-url" data-site-url="{{site.url}}"></script>
-  <script src="/assets/js/_main.js"></script>
-
-  <!-- Styles -->
-  <style>
-    .container {
-      display: grid;
-      grid-gap: 50px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-      grid-template-rows: repeat(2, 200px);
+<!-- JSON-LD Structured Data for Tools Collection -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://qualitywithmillan.github.io/tools/#page",
+      "url": "https://qualitywithmillan.github.io/tools",
+      "name": "Tools & Utilities - Quality With Millan",
+      "description": "Interactive web tools, teleprompters, simulators, and utilities for software testers, speakers, and engineering leaders.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Millan Kaul",
+        "url": "https://qualitywithmillan.github.io"
+      }
     }
+  ]
+}
+</script>
 
-    /* 
-https://cssgradient.io/gradient-backgrounds/
- */
+<div class="tools-page-wrapper">
 
-    .title {
-      padding: 50px 0;
-      text-align: center;
-    }
-
-
-    .box1 {
-      background-color: #FA8BFF;
-      background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-    .box2 {
-      background-color: #eb85ff;
-      background-image: linear-gradient(45deg, #eb85ff 0%, #FFFB7D 100%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-
-    .box3 {
-      background-color: #A9C9FF;
-      background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-    .box4 {
-      background-color: #FAD961;
-      background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-    .box5 {
-      background-color: #ebebeb;
-      background-image: linear-gradient(225deg, #ebebeb 0%, #e1dbe7 50%, #fafdff 100%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-    .box6 {
-      background-color: #3777ab;
-      background-image: linear-gradient(225deg, #ebebeb 0%, #e1dbe7 50%, #fafdff 100%);
-      border-radius: 25px;
-      border: 2px solid #23D5AC;
-    }
-
-    /*      coming soon box */
-    .box-x {
-      background-color: #ebebeb;
-      background-image: linear-gradient(225deg, #ebebeb 0%, #e1dbe7 50%, #fafdff 100%);
-      border-radius: 25px;
-      border: 2px solid #CECABE;
-    }
-
-
-
-    .shine {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shine:nth-child(1) {
-      background: cornflowerblue;
-    }
-
-    /*---
-  shine animation
----*/
-
-    .shine:after {
-      content: "";
-      position: absolute;
-      top: -110%;
-      left: -210%;
-      width: 200%;
-      height: 200%;
-      opacity: 0;
-      transform: rotate(30deg);
-
-      background: rgba(255, 255, 255, 0.13);
-      background: linear-gradient(to right,
-          rgba(255, 255, 255, 0.13) 0%,
-          rgba(255, 255, 255, 0.13) 77%,
-          rgba(255, 255, 255, 0.5) 92%,
-          rgba(255, 255, 255, 0.0) 100%);
-    }
-
-    /*---
-  hover trigger
----*/
-
-    .shine:hover:after {
-      opacity: 1;
-      top: -30%;
-      left: -30%;
-      transition-property: left, top, opacity;
-      transition-duration: 0.7s, 0.7s, 0.15s;
-      transition-timing-function: ease;
-    }
-
-    /*---
-  active state
----*/
-
-    .shine:active:after {
-      opacity: 1;
-    }
-
-    /*--------------------------------
-				END ICON SHINE
----------------------------------*/
-
-    /* 	    end of style */
-  </style>
-
-</head>
-
-<body>
-  <div class="container">
-    <div class="box1 shine" id="text-format">
-      <h1 class="title">Text Formatter</h1>
-    </div>
-    <div class="box2 shine" id="coin-flip">
-      <h1 class="title">Coin Flip 🪙</h1>
-    </div>
-    <div class="box4 shine" id="co-authors">
-      <h1 class="title">Co-Authors ✍️</h1>
-    </div>
-    <div class="box5 shine" id="mobile-teleprompter">
-      <h1 class="title">Teleprompter 📱</h1>
-    </div>
-    <div class="box-x shine">
-      <h1 class="title">Coming Soon...</h1>
-    </div>
+  <!-- Centered Tools Badge -->
+  <div class="tools-badge-wrapper">
+    <span class="tools-badge">
+      <i class="fas fa-toolbox" aria-hidden="true"></i> Interactive Utilities & Resources
+    </span>
   </div>
-</body>
 
-</html>
+  <!-- Tools Grid -->
+  <div class="tools-grid">
+
+    <!-- 1. Plain Text Formatter -->
+    <a href="/format" class="tool-card tool-card-formatter shine" aria-label="Launch Plain Text Formatter Tool">
+      <div class="tool-card-top">
+        <div class="tool-icon-circle">
+          <i class="fas fa-spell-check" aria-hidden="true"></i>
+        </div>
+        <span class="tool-badge-pill">Web Utility</span>
+      </div>
+      <div class="tool-card-content">
+        <h2 class="tool-card-title">Text Formatter</h2>
+        <p class="tool-card-desc">Format and convert plain text into bold, italic, monospace, and math unicode styles.</p>
+      </div>
+      <div class="tool-card-footer">
+        <span class="tool-action-text">Launch Tool</span>
+        <i class="fas fa-arrow-right tool-action-icon" aria-hidden="true"></i>
+      </div>
+    </a>
+
+    <!-- 2. Coin Flip 3D -->
+    <a href="/coin-flip" class="tool-card tool-card-coin shine" aria-label="Launch 3D Coin Flip Simulator">
+      <div class="tool-card-top">
+        <div class="tool-icon-circle">
+          <i class="fas fa-coins" aria-hidden="true"></i>
+        </div>
+        <span class="tool-badge-pill">3D Simulator</span>
+      </div>
+      <div class="tool-card-content">
+        <h2 class="tool-card-title">Coin Flip</h2>
+        <p class="tool-card-desc">Realistic 3D coin toss simulator for agile standups, random decision making, and fair picks.</p>
+      </div>
+      <div class="tool-card-footer">
+        <span class="tool-action-text">Flip a Coin</span>
+        <i class="fas fa-arrow-right tool-action-icon" aria-hidden="true"></i>
+      </div>
+    </a>
+
+    <!-- 3. Mobile Teleprompter -->
+    <a href="/prompt" class="tool-card tool-card-prompter shine" aria-label="Launch Mobile Teleprompter Tool">
+      <div class="tool-card-top">
+        <div class="tool-icon-circle">
+          <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+        </div>
+        <span class="tool-badge-pill">Speaker Tool</span>
+      </div>
+      <div class="tool-card-content">
+        <h2 class="tool-card-title">Teleprompter</h2>
+        <p class="tool-card-desc">Distraction-free fullscreen scrolling prompter optimized for video recording and tech talks.</p>
+      </div>
+      <div class="tool-card-footer">
+        <span class="tool-action-text">Start Prompter</span>
+        <i class="fas fa-arrow-right tool-action-icon" aria-hidden="true"></i>
+      </div>
+    </a>
+
+    <!-- 4. Coming Soon Placeholder -->
+    <div class="tool-card tool-card-coming-soon shine" aria-label="Upcoming AI and Quality Tools">
+      <div class="tool-card-top">
+        <div class="tool-icon-circle">
+          <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+        </div>
+        <span class="tool-badge-pill">In Development</span>
+      </div>
+      <div class="tool-card-content">
+        <h2 class="tool-card-title">Coming Soon...</h2>
+        <p class="tool-card-desc">Exciting new interactive AI benchmark generators, prompt evaluation tools, and testing utilities.</p>
+      </div>
+      <div class="tool-card-footer">
+        <span class="tool-action-text">Stay Tuned</span>
+        <i class="fas fa-clock tool-action-icon" aria-hidden="true"></i>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+  /* ==========================================================
+     Tools Index Page - Modern Party Shimmer Design System
+     ========================================================== */
+
+  .tools-page-wrapper {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* Centered Badge */
+  .tools-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .tools-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    font-size: 0.825rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 1.15rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+  }
+
+  /* Tools Grid */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 3.5rem;
+    width: 100%;
+  }
+
+  /* Tool Card Base */
+  .tool-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.65rem 1.5rem 1.35rem 1.5rem;
+    border-radius: 22px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-height: 220px;
+  }
+
+  .tool-card:hover {
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  /* Custom Gradient Colorways */
+  .tool-card-formatter {
+    background: linear-gradient(135deg, #fa8bff 0%, #2bd2ff 52%, #2bff88 90%);
+    border-color: rgba(43, 255, 136, 0.5);
+    box-shadow: 0 12px 28px -5px rgba(43, 210, 255, 0.35);
+  }
+  .tool-card-formatter:hover {
+    box-shadow: 0 20px 35px -5px rgba(43, 210, 255, 0.5);
+    border-color: #2bff88;
+  }
+
+  .tool-card-coin {
+    background: linear-gradient(135deg, #ff9900 0%, #ff5e62 100%);
+    border-color: rgba(255, 153, 0, 0.5);
+    box-shadow: 0 12px 28px -5px rgba(255, 94, 98, 0.35);
+  }
+  .tool-card-coin:hover {
+    box-shadow: 0 20px 35px -5px rgba(255, 94, 98, 0.5);
+    border-color: #ff9900;
+  }
+
+  .tool-card-prompter {
+    background: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #3b82f6 100%);
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 12px 28px -5px rgba(2, 132, 199, 0.35);
+  }
+  .tool-card-prompter:hover {
+    box-shadow: 0 20px 35px -5px rgba(2, 132, 199, 0.5);
+    border-color: #38bdf8;
+  }
+
+  .tool-card-coming-soon {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: #475569;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    cursor: default;
+  }
+  .tool-card-coming-soon:hover {
+    transform: none;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+  }
+
+  /* Card Top Row */
+  .tool-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.15rem;
+  }
+
+  .tool-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .tool-card:hover .tool-icon-circle {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .tool-badge-pill {
+    font-size: 0.725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Card Content */
+  .tool-card-content {
+    flex-grow: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .tool-card-title {
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 0 0.5rem 0 !important;
+    line-height: 1.25 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  }
+
+  .tool-card-desc {
+    font-size: 0.885rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Card Footer */
+  .tool-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .tool-action-icon {
+    transition: transform 0.25s ease;
+  }
+
+  .tool-card:hover .tool-action-icon {
+    transform: translateX(4px);
+  }
+
+  /* ==========================================================
+     High-End Party Shine Light Sweep Animation
+     ========================================================== */
+
+  .shine {
+    position: relative;
+  }
+
+  .shine::after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.15) 60%,
+      rgba(255, 255, 255, 0.6) 90%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    transition-property: left, top, opacity;
+    transition-duration: 0.75s, 0.75s, 0.2s;
+    transition-timing-function: ease;
+  }
+
+  .shine:hover::after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+  }
+
+  /* ==========================================================
+     Responsive & Mobile Optimizations
+     ========================================================== */
+
+  @media (max-width: 640px) {
+    .tools-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .tool-card {
+      padding: 1.35rem 1.25rem;
+      min-height: auto;
+    }
+
+    .tool-card-title {
+      font-size: 1.25rem !important;
+    }
+
+    .tool-card-desc {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* Dark Mode Adjustments */
+  @media (prefers-color-scheme: dark) {
+    .tools-badge {
+      background: #0f2942;
+      border-color: #0369a1;
+      color: #38bdf8;
+    }
+  }
+</style>
