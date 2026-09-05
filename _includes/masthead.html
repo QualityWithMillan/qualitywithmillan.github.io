@@ -13,9 +13,24 @@
         </a>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
+            {%- if link.children -%}
+              <li class="masthead__menu-item masthead__dropdown">
+                <a href="{{ link.url | default: '#' | relative_url }}" class="masthead__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"{% if link.description %} title="{{ link.description }}"{% endif %}>
+                  {{ link.title }} <i class="fas fa-chevron-down nav-caret"></i>
+                </a>
+                <ul class="masthead__dropdown-menu">
+                  {%- for child in link.children -%}
+                    <li class="masthead__dropdown-item">
+                      <a href="{{ child.url | relative_url }}"{% if child.description %} title="{{ child.description }}"{% endif %}>{{ child.title }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- else -%}
+              <li class="masthead__menu-item">
+                <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              </li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
@@ -33,3 +48,180 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* ==========================================================
+     Masthead Navigation Dropdown Menu Styling ("More" Dropdown)
+     ========================================================== */
+
+  .greedy-nav .visible-links {
+    overflow: visible !important;
+  }
+
+  .masthead__dropdown {
+    position: relative;
+  }
+
+  .masthead__dropdown-trigger {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .masthead__dropdown-trigger .nav-caret {
+    font-size: 0.7rem;
+    transition: transform 0.25s ease;
+    opacity: 0.75;
+    margin-left: 0.15rem;
+  }
+
+  .masthead__dropdown:hover .masthead__dropdown-trigger .nav-caret,
+  .masthead__dropdown.is-open .masthead__dropdown-trigger .nav-caret {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  .masthead__dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 165px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.18), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+    padding: 0.45rem 0;
+    margin: 0.4rem 0 0 0;
+    list-style: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px) scale(0.96);
+    transform-origin: top right;
+    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+  }
+
+  .masthead__dropdown:hover .masthead__dropdown-menu,
+  .masthead__dropdown:focus-within .masthead__dropdown-menu,
+  .masthead__dropdown.is-open .masthead__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .masthead__dropdown-menu .masthead__dropdown-item {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .masthead__dropdown-menu .masthead__dropdown-item a {
+    display: block !important;
+    padding: 0.6rem 1.25rem !important;
+    margin: 0 !important;
+    color: #334155 !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    border-radius: 0 !important;
+    text-align: left !important;
+  }
+
+  .masthead__dropdown-menu .masthead__dropdown-item a:before {
+    display: none !important;
+  }
+
+  .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+    background: #f1f5f9 !important;
+    color: #0284c7 !important;
+    padding-left: 1.45rem !important;
+  }
+
+  /* Dark Theme Support */
+  @media (prefers-color-scheme: dark) {
+    .masthead__dropdown-menu {
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
+    }
+
+    .masthead__dropdown-menu .masthead__dropdown-item a {
+      color: #cbd5e1 !important;
+    }
+
+    .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+      background: #0f172a !important;
+      color: #38bdf8 !important;
+    }
+  }
+
+  /* Mobile Greedy-Nav Hidden Links list */
+  .greedy-nav .hidden-links .masthead__dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 1.25rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: block;
+  }
+</style>
+
+<script>
+  (function () {
+    function initDropdowns() {
+      const dropdowns = document.querySelectorAll(".masthead__dropdown");
+      dropdowns.forEach(function (dd) {
+        const trigger = dd.querySelector(".masthead__dropdown-trigger");
+        if (trigger) {
+          trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            const isOpen = dd.classList.contains("is-open");
+            dropdowns.forEach(function (d) { d.classList.remove("is-open"); });
+            if (!isOpen) {
+              dd.classList.add("is-open");
+              trigger.setAttribute("aria-expanded", "true");
+            } else {
+              trigger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".masthead__dropdown")) {
+          dropdowns.forEach(function (dd) {
+            dd.classList.remove("is-open");
+            const tr = dd.querySelector(".masthead__dropdown-trigger");
+            if (tr) tr.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          dropdowns.forEach(function (dd) {
+            dd.classList.remove("is-open");
+            const tr = dd.querySelector(".masthead__dropdown-trigger");
+            if (tr) tr.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initDropdowns);
+    } else {
+      initDropdowns();
+    }
+  })();
+</script>
+

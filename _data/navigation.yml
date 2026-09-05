@@ -1,20 +1,30 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  # - title: "Posts"
-  #   url: /posts/
-  # - title: "Categories"
-  #   url: /categories/
-  # - title: "Tags"
-  #   url: /tags/
-  # - title: "Prompter"
-  #   url: /prompt/
-  - title: "Tools"   
-    url: /tools/
-  - title: "Support"   
-    url: /support
-  - title: "Terms"
-    url: /terms/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Contact"
+    url: /contact/
+  - title: "Books"
+    url: /books/
+  - title: "Events"
+    url: /events/
+  - title: "More"
+    children:
+      - title: "About"
+        url: /about/
+      - title: "Categories"
+        url: /categories/
+      - title: "Co-Authors"
+        url: /co-authors
+      - title: "Contact"
+        url: /contact/
+      - title: "Posts"
+        url: /posts/
+      - title: "Prompter"
+        url: /prompt/
+      - title: "Support"
+        url: /support
+      - title: "Tags"
+        url: /tags/  
+      - title: "Terms"
+        url: /terms/
+      - title: "Tools"
+        url: /tools/
