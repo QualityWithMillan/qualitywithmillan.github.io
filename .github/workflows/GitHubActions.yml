@@ -36,7 +36,7 @@ jobs:
         run: bundle exec jekyll build
       - name: Replace form action URL
         run: |
-          sed -i 's|CONTACT_G_FORM_URL|${{ secrets.FORM_ACTION_URL }}|g' _site/contact.html
+          find _site -name "*.html" -exec sed -i 's|CONTACT_G_FORM_URL|${{ secrets.FORM_ACTION_URL }}|g' {} + || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
