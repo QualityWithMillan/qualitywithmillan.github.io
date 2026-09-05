@@ -1,0 +1,1110 @@
+<!-- ==========================================================
+     Global Contact Modal (Behind-the-scenes Google Form Mapping)
+     ========================================================== -->
+
+<div id="globalContactModal" class="contact-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-labelledby="contactModalTitle">
+  <div class="contact-modal-backdrop" id="contactModalBackdrop"></div>
+
+  <div class="contact-modal-dialog">
+    <!-- Close Button -->
+    <button type="button" class="contact-modal-close" id="closeContactModalBtn" aria-label="Close Contact Modal">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Modal Header (Hidden on Success screen) -->
+    <div class="contact-modal-header" id="contactModalHeader">
+      <div class="contact-header-badge">
+        <i class="fas fa-paper-plane send-icon-white"></i>
+      </div>
+      <h2 id="contactModalTitle" class="contact-modal-title">Get in Touch with Millan</h2>
+      <p class="contact-modal-subtitle">
+        Keynote speaking, workshops, AI evaluation advisory, podcast sessions, or book inquiries — send a message
+        directly to Millan Kaul.
+      </p>
+    </div>
+
+    <!-- Hidden iframe for zero-redirect Google Form submission -->
+    <iframe name="gform_hidden_iframe" id="gform_hidden_iframe" style="display:none;" tabindex="-1"></iframe>
+
+    <!-- Form Container -->
+    <div class="contact-form-wrapper" id="contactFormWrapper">
+      <form id="millanContactForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSegRlV9yfdsciTOAFAhe5RWVb-3wFv4tO2Ruh_NWdk0arnySg/formResponse"
+        method="POST" target="gform_hidden_iframe">
+
+        <!-- Google Form System Fields -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
+        <!-- Hidden Google Form Date Sub-Fields (Type 9 Date Question) -->
+        <input type="hidden" id="entryDateYear" name="entry.1099866187_year">
+        <input type="hidden" id="entryDateMonth" name="entry.1099866187_month">
+        <input type="hidden" id="entryDateDay" name="entry.1099866187_day">
+
+        <div class="contact-form-grid">
+          <!-- Your Name -->
+          <div class="form-group">
+            <label for="contactName" class="form-label">Your Name <span class="required-star">*</span></label>
+            <input type="text" id="contactName" name="entry.2005620554" class="form-input" placeholder="Jane Doe"
+              required autocomplete="name">
+          </div>
+
+          <!-- Your Email -->
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Your Email <span class="required-star">*</span></label>
+            <input type="email" id="contactEmail" name="entry.1045781291" class="form-input"
+              placeholder="name@company.com" required autocomplete="email"
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <div class="field-error-msg" id="emailErrorMsg" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i> Not a valid email address
+            </div>
+          </div>
+
+          <!-- Phone Number (Optional) -->
+          <div class="form-group">
+            <label for="contactPhone" class="form-label">Phone Number <span
+                class="optional-tag">(optional)</span></label>
+            <input type="tel" id="contactPhone" name="entry.1166974658" class="form-input" placeholder="+1 555 000 0000"
+              autocomplete="tel" pattern="[\+]?[0-9\s]*" inputmode="tel">
+            <div class="field-error-msg" id="phoneErrorMsg" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i> Only numbers, spaces, and '+' are allowed
+            </div>
+          </div>
+
+          <!-- Event Date (DD, MM YYYY) -->
+          <div class="form-group">
+            <label for="contactDate" class="form-label">Target / Event Date <span class="optional-tag">(optional)
+                dd/mm/yyy</span></label>
+            <input type="date" id="contactDate" class="form-input">
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group form-group-full">
+            <label for="contactSubject" class="form-label">Subject <span class="required-star">*</span></label>
+            <input type="text" id="contactSubject" name="entry.1833797512" class="form-input"
+              placeholder="Keynote Speaking / AI Eval Workshop / Book Inquiry" required>
+          </div>
+
+          <!-- Your Message -->
+          <div class="form-group form-group-full">
+            <label for="contactMessage" class="form-label">Your Message <span class="required-star">*</span></label>
+            <textarea id="contactMessage" name="entry.839337160" class="form-input form-textarea" rows="4"
+              placeholder="Hi Millan I want to invite you..." required></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Action -->
+        <div class="contact-form-footer">
+          <p class="form-privacy-note">
+            <i class="fas fa-shield-alt"></i> Your details are private and sent directly to Millan Kaul.
+          </p>
+          <button type="submit" id="contactSubmitBtn" class="btn-contact-submit">
+            <span class="btn-text"> <i class="fas fa-paper-plane send-icon-white"> </i> Send Message</span>
+            <span class="btn-loading" style="display: none;"><i class="fas fa-circle-notch fa-spin"></i>
+              Sending...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success State Screen (Shown exclusively after submit) -->
+    <div class="contact-success-wrapper" id="contactSuccessWrapper" style="display: none;">
+      <div class="success-anim-container">
+        <!-- Glowing Green Sparks -->
+        <span class="sparkle sp-1"></span>
+        <span class="sparkle sp-2"></span>
+        <span class="sparkle sp-3"></span>
+        <span class="sparkle sp-4"></span>
+        <span class="sparkle sp-5"></span>
+        <span class="sparkle sp-6"></span>
+
+        <!-- Animated SVG Checkmark -->
+        <svg class="success-svg" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="successGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#34d399" />
+              <stop offset="50%" stop-color="#10b981" />
+              <stop offset="100%" stop-color="#059669" />
+            </linearGradient>
+            <filter id="greenGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#10b981" flood-opacity="0.45" />
+            </filter>
+          </defs>
+          <circle class="svg-ring" cx="36" cy="36" r="33" stroke="url(#successGreenGrad)" stroke-width="2.5"
+            stroke-linecap="round" />
+          <circle class="svg-circle" cx="36" cy="36" r="29" fill="url(#successGreenGrad)"
+            filter="url(#greenGlowFilter)" />
+          <path class="svg-tick" d="M23 36.5 L31.5 45 L49 27" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <h3 class="success-title">Message Sent Successfully!</h3>
+      <p class="success-message">
+        Thank you for reaching out. Millan has received your message and will get back to you shortly.
+      </p>
+      <div class="success-actions">
+        <button type="button" class="btn-success-close" id="successCloseBtn">
+          Close
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* ==========================================================
+     Global Contact Modal Styling
+     ========================================================== */
+
+  .contact-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+
+  .contact-modal-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .contact-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+  }
+
+  .contact-modal-dialog {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 680px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.25rem;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45),
+      0 0 0 1px rgba(2, 132, 199, 0.12);
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .contact-modal-dialog.is-success {
+    max-width: 490px;
+    padding: 2.5rem 1.75rem;
+  }
+
+  .contact-modal-overlay.is-active .contact-modal-dialog {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Close Button */
+  .contact-modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    z-index: 5;
+  }
+
+  .contact-modal-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+    transform: rotate(90deg);
+  }
+
+  /* Header Badge & Solid White Icon */
+  .contact-modal-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .contact-header-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    box-shadow: 0 8px 18px rgba(2, 132, 199, 0.35);
+    margin-bottom: 0.85rem;
+  }
+
+  /* Guarantee 100% Solid Crisp White Icons in Badge & Submit Button */
+  .contact-header-badge i,
+  .contact-header-badge svg,
+  .contact-header-badge svg path,
+  .btn-contact-submit i,
+  .btn-contact-submit svg,
+  .btn-contact-submit svg path,
+  .send-icon-white {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+  }
+
+  .contact-modal-title {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.4rem 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .contact-modal-subtitle {
+    font-size: 0.925rem;
+    line-height: 1.55;
+    color: #64748b;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  /* Form Layout */
+  .contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.15rem;
+  }
+
+  .form-group-full {
+    grid-column: 1 / -1;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.4rem;
+  }
+
+  .required-star {
+    color: #ef4444;
+    font-weight: 700;
+  }
+
+  .optional-tag {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #94a3b8;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.925rem;
+    color: #0f172a;
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .form-input:focus {
+    background: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+  }
+
+  .form-input.input-has-error {
+    border-color: #ef4444 !important;
+    background: #fef2f2 !important;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
+  }
+
+  .field-error-msg {
+    font-size: 0.775rem;
+    color: #ef4444;
+    font-weight: 600;
+    margin-top: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Form Footer */
+  .contact-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .form-privacy-note {
+    font-size: 0.775rem;
+    color: #64748b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .form-privacy-note i {
+    color: #10b981;
+  }
+
+  .btn-contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.7rem 1.6rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .btn-contact-submit:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  }
+
+  .btn-contact-submit:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+
+  /* ==========================================================
+     Success Screen & Animated Checkmark with Green Sparks
+     ========================================================== */
+
+  .contact-success-wrapper {
+    text-align: center;
+    padding: 1.75rem 0.5rem 0.5rem 0.5rem;
+    animation: successFadeIn 0.4s ease backwards;
+  }
+
+  @keyframes successFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .success-anim-container {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .success-svg {
+    width: 78px;
+    height: 78px;
+    overflow: visible;
+  }
+
+  .svg-ring {
+    stroke-dasharray: 210;
+    stroke-dashoffset: 210;
+    animation: ringDraw 0.65s cubic-bezier(0.65, 0, 0.45, 1) forwards, ringPulse 2.6s ease-in-out infinite 0.65s;
+    transform-origin: center;
+  }
+
+  @keyframes ringDraw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes ringPulse {
+
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+
+    50% {
+      transform: scale(1.05);
+      opacity: 0.35;
+    }
+  }
+
+  .svg-circle {
+    transform-origin: center;
+    transform: scale(0);
+    animation: circlePop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.12s forwards, greenGlowPulse 2.6s ease-in-out infinite 0.65s;
+  }
+
+  @keyframes circlePop {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    70% {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes greenGlowPulse {
+
+    0%,
+    100% {
+      filter: drop-shadow(0 6px 14px rgba(16, 185, 129, 0.45));
+    }
+
+    50% {
+      filter: drop-shadow(0 10px 24px rgba(16, 185, 129, 0.8));
+    }
+  }
+
+  .svg-tick {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: tickDraw 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.38s forwards;
+  }
+
+  @keyframes tickDraw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Animated Sparks Particles */
+  .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 10px #10b981, 0 0 16px #34d399;
+    opacity: 0;
+  }
+
+  .sp-1 {
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sparkFly1 2.2s ease-out infinite 0.5s;
+  }
+
+  .sp-2 {
+    top: 15%;
+    right: 0px;
+    animation: sparkFly2 2.4s ease-out infinite 0.7s;
+  }
+
+  .sp-3 {
+    bottom: 15%;
+    right: 0px;
+    animation: sparkFly3 2.3s ease-out infinite 0.85s;
+  }
+
+  .sp-4 {
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sparkFly4 2.5s ease-out infinite 0.6s;
+  }
+
+  .sp-5 {
+    bottom: 15%;
+    left: 0px;
+    animation: sparkFly5 2.2s ease-out infinite 0.75s;
+  }
+
+  .sp-6 {
+    top: 15%;
+    left: 0px;
+    animation: sparkFly6 2.6s ease-out infinite 0.95s;
+  }
+
+  @keyframes sparkFly1 {
+    0% {
+      transform: translate(-50%, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -18px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -26px) scale(0);
+    }
+  }
+
+  @keyframes sparkFly2 {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(16px, -14px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(24px, -20px) scale(0);
+    }
+  }
+
+  @keyframes sparkFly3 {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(16px, 14px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(24px, 20px) scale(0);
+    }
+  }
+
+  @keyframes sparkFly4 {
+    0% {
+      transform: translate(-50%, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(-50%, 18px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, 26px) scale(0);
+    }
+  }
+
+  @keyframes sparkFly5 {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(-16px, 14px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-24px, 20px) scale(0);
+    }
+  }
+
+  @keyframes sparkFly6 {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      transform: translate(-16px, -14px) scale(1.3);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-24px, -20px) scale(0);
+    }
+  }
+
+  .success-title {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.5rem 0 !important;
+  }
+
+  .success-message {
+    font-size: 0.985rem;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 400px;
+    margin: 0 auto 1.75rem auto;
+  }
+
+  .success-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-success-close {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.75rem 2.25rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    transition: all 0.25s ease;
+  }
+
+  .btn-success-close:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  }
+
+  /* Dark Theme */
+  @media (prefers-color-scheme: dark) {
+    .contact-modal-dialog {
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    .contact-modal-close {
+      background: #0f172a;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+
+    .contact-modal-close:hover {
+      background: #334155;
+      color: #f8fafc;
+    }
+
+    .contact-modal-title {
+      color: #f8fafc !important;
+    }
+
+    .contact-modal-subtitle {
+      color: #94a3b8;
+    }
+
+    .form-label {
+      color: #cbd5e1;
+    }
+
+    .form-input {
+      background: #0f172a;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+
+    .form-input:focus {
+      background: #0b1120;
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+    }
+
+    .contact-form-footer {
+      border-top-color: #334155;
+    }
+
+    .form-privacy-note {
+      color: #94a3b8;
+    }
+
+    .success-title {
+      color: #f8fafc !important;
+    }
+
+    .success-message {
+      color: #cbd5e1;
+    }
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 640px) {
+    .contact-modal-overlay {
+      padding: 1rem;
+    }
+
+    .contact-modal-dialog {
+      padding: 1.5rem 1.15rem;
+      border-radius: 20px;
+    }
+
+    .contact-modal-header {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-modal-title {
+      font-size: 1.25rem !important;
+    }
+
+    .contact-form-grid {
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    .contact-form-footer {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      gap: 0.85rem;
+    }
+
+    .btn-contact-submit,
+    .btn-success-close {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    // Universal Global Contact Modal Manager
+    let isSubmitting = false;
+
+    function initContactModal() {
+      const modal = document.getElementById("globalContactModal");
+      if (!modal) return;
+
+      // Ensure modal is a direct child of <body> to guarantee top-level viewport z-index & backdrop
+      if (modal.parentElement && modal.parentElement !== document.body) {
+        document.body.appendChild(modal);
+      }
+
+      const backdrop = document.getElementById("contactModalBackdrop");
+      const closeBtn = document.getElementById("closeContactModalBtn");
+      const successCloseBtn = document.getElementById("successCloseBtn");
+      const form = document.getElementById("millanContactForm");
+      const formWrapper = document.getElementById("contactFormWrapper");
+      const successWrapper = document.getElementById("contactSuccessWrapper");
+      const modalHeader = document.getElementById("contactModalHeader");
+      const modalDialog = modal.querySelector(".contact-modal-dialog");
+      const submitBtn = document.getElementById("contactSubmitBtn");
+      const iframe = document.getElementById("gform_hidden_iframe");
+      const subjectInput = document.getElementById("contactSubject");
+      const messageInput = document.getElementById("contactMessage");
+      const dateInput = document.getElementById("contactDate");
+      const entryYear = document.getElementById("entryDateYear");
+      const entryMonth = document.getElementById("entryDateMonth");
+      const entryDay = document.getElementById("entryDateDay");
+
+      const nameInput = document.getElementById("contactName");
+      const emailInput = document.getElementById("contactEmail");
+      const emailError = document.getElementById("emailErrorMsg");
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      const phoneInput = document.getElementById("contactPhone");
+      const phoneError = document.getElementById("phoneErrorMsg");
+      const phoneRegex = /^[\+]?[0-9\s]*$/;
+
+      function validateEmail() {
+        if (!emailInput) return true;
+        const val = emailInput.value.trim();
+        if (!val || !emailRegex.test(val)) {
+          emailInput.classList.add("input-has-error");
+          if (emailError) emailError.style.display = "flex";
+          return false;
+        }
+        emailInput.classList.remove("input-has-error");
+        if (emailError) emailError.style.display = "none";
+        return true;
+      }
+
+      function validatePhone() {
+        if (!phoneInput) return true;
+        const val = phoneInput.value.trim();
+        if (val === "") {
+          phoneInput.classList.remove("input-has-error");
+          if (phoneError) phoneError.style.display = "none";
+          return true;
+        }
+        if (!phoneRegex.test(val)) {
+          phoneInput.classList.add("input-has-error");
+          if (phoneError) phoneError.style.display = "flex";
+          return false;
+        }
+        phoneInput.classList.remove("input-has-error");
+        if (phoneError) phoneError.style.display = "none";
+        return true;
+      }
+
+      if (emailInput) {
+        emailInput.addEventListener("input", function () {
+          if (emailInput.classList.contains("input-has-error")) {
+            validateEmail();
+          }
+        });
+        emailInput.addEventListener("blur", function () {
+          if (emailInput.value.trim()) {
+            validateEmail();
+          }
+        });
+      }
+
+      if (phoneInput) {
+        // Real-time input filter: only allow numbers, +, and spaces
+        phoneInput.addEventListener("input", function () {
+          const sanitized = phoneInput.value.replace(/[^0-9+ ]/g, "");
+          if (phoneInput.value !== sanitized) {
+            phoneInput.value = sanitized;
+          }
+          if (phoneInput.classList.contains("input-has-error")) {
+            validatePhone();
+          }
+        });
+        phoneInput.addEventListener("blur", function () {
+          validatePhone();
+        });
+      }
+
+      function resetModalView() {
+        if (form) form.reset();
+        if (emailInput) emailInput.classList.remove("input-has-error");
+        if (emailError) emailError.style.display = "none";
+        if (phoneInput) phoneInput.classList.remove("input-has-error");
+        if (phoneError) phoneError.style.display = "none";
+        if (modalHeader) modalHeader.style.display = "block";
+        if (formWrapper) formWrapper.style.display = "block";
+        if (successWrapper) successWrapper.style.display = "none";
+        if (modalDialog) modalDialog.classList.remove("is-success");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.querySelector(".btn-text").style.display = "inline-flex";
+          submitBtn.querySelector(".btn-loading").style.display = "none";
+        }
+      }
+
+      // Open Modal Function
+      window.openContactModal = function (options) {
+        options = options || {};
+        resetModalView();
+        if (options.subject && subjectInput) {
+          subjectInput.value = options.subject;
+        }
+        if (options.message && messageInput) {
+          messageInput.value = options.message;
+        }
+        modal.classList.add("is-active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        // Focus first input
+        const firstInput = modal.querySelector("input:not([type=hidden])");
+        if (firstInput) {
+          setTimeout(function () { firstInput.focus(); }, 120);
+        }
+      };
+
+      // Close Modal Function
+      window.closeContactModal = function () {
+        modal.classList.remove("is-active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        setTimeout(resetModalView, 350);
+      };
+
+      // Event Listeners for Closing
+      if (backdrop) backdrop.addEventListener("click", window.closeContactModal);
+      if (closeBtn) closeBtn.addEventListener("click", window.closeContactModal);
+      if (successCloseBtn) successCloseBtn.addEventListener("click", window.closeContactModal);
+
+      // Close on ESC key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal.classList.contains("is-active")) {
+          window.closeContactModal();
+        }
+      });
+
+      // Handle Form Submission with Date Splitting and Email/Phone Validation for Google Forms
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          // Strictly validate Email before sending to Google Forms
+          if (!validateEmail()) {
+            e.preventDefault();
+            if (emailInput) emailInput.focus();
+            return false;
+          }
+
+          // Validate Phone if provided
+          if (!validatePhone()) {
+            e.preventDefault();
+            if (phoneInput) phoneInput.focus();
+            return false;
+          }
+
+          // Clean whitespace from inputs
+          if (nameInput) nameInput.value = nameInput.value.trim();
+          if (emailInput) emailInput.value = emailInput.value.trim();
+          if (phoneInput) phoneInput.value = phoneInput.value.trim();
+          if (subjectInput) subjectInput.value = subjectInput.value.trim();
+          if (messageInput) messageInput.value = messageInput.value.trim();
+
+          isSubmitting = true;
+
+          // Process Date Field if filled (YYYY-MM-DD) into Google Form Year, Month, Day subfields
+          if (dateInput && dateInput.value && entryYear && entryMonth && entryDay) {
+            const dateParts = dateInput.value.split("-");
+            if (dateParts.length === 3) {
+              entryYear.value = dateParts[0];
+              entryMonth.value = String(parseInt(dateParts[1], 10)); // Formats 09 -> 9
+              entryDay.value = String(parseInt(dateParts[2], 10));   // Formats 04 -> 4
+              entryYear.disabled = false;
+              entryMonth.disabled = false;
+              entryDay.disabled = false;
+            }
+          } else {
+            // Disable subfields if no date is provided so empty values aren't submitted
+            if (entryYear) entryYear.disabled = true;
+            if (entryMonth) entryMonth.disabled = true;
+            if (entryDay) entryDay.disabled = true;
+          }
+
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.querySelector(".btn-text").style.display = "none";
+            submitBtn.querySelector(".btn-loading").style.display = "inline-flex";
+          }
+
+          // Fallback timer in case iframe load doesn't fire
+          setTimeout(function () {
+            if (isSubmitting) {
+              showSuccessState();
+            }
+          }, 1200);
+        });
+      }
+
+      if (iframe) {
+        iframe.addEventListener("load", function () {
+          if (isSubmitting) {
+            showSuccessState();
+          }
+        });
+      }
+
+      function showSuccessState() {
+        isSubmitting = false;
+        if (modalHeader) modalHeader.style.display = "none";
+        if (formWrapper) formWrapper.style.display = "none";
+        if (successWrapper) successWrapper.style.display = "block";
+        if (modalDialog) modalDialog.classList.add("is-success");
+      }
+
+      // Universal click listener across the entire document for buttons/links
+      document.addEventListener("click", function (e) {
+        // Direct modal trigger class or hash link
+        const trigger = e.target.closest(".open-contact-modal, .btn-contact-modal, .contact-modal-trigger, [data-open-contact='true'], a[href='#contact'], a[href='#contact-modal']");
+
+        if (trigger) {
+          e.preventDefault();
+          const subject = trigger.getAttribute("data-subject") || "";
+          const message = trigger.getAttribute("data-message") || "";
+          window.openContactModal({ subject: subject, message: message });
+          return;
+        }
+
+        // Top nav Contact button or buttons with text 'Contact' / 'Hear Millan Speak'
+        const navOrBtn = e.target.closest("a, button");
+        if (navOrBtn) {
+          const href = navOrBtn.getAttribute("href") || "";
+          const text = (navOrBtn.innerText || "").trim().toLowerCase();
+
+          // Intercept top nav Contact link
+          if (href === "/contact/" || href === "/contact" || href.endsWith("/contact/") || href.endsWith("/contact")) {
+            e.preventDefault();
+            window.openContactModal();
+            return;
+          }
+
+          if (text === "contact" || text.includes("contact millan") || text.includes("hear millan speak")) {
+            if (!href || href.startsWith("#") || href.includes("events")) {
+              e.preventDefault();
+              const subject = navOrBtn.getAttribute("data-subject") || (text.includes("speak") ? "Keynote / Speaking Inquiry" : "General Inquiry");
+              const message = navOrBtn.getAttribute("data-message") || "";
+              window.openContactModal({ subject: subject, message: message });
+            }
+          }
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initContactModal);
+    } else {
+      initContactModal();
+    }
+  })();
+</script>

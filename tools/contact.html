@@ -1,164 +1,281 @@
 ---
+layout: single
+author_profile: false
+title: "Contact Millan Kaul"
+description: "Get in touch with Millan Kaul for keynote speaking, AI evaluation workshops, quality engineering advisory,
+or book inquiries."
+search: true
 permalink: "/contact"
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Millan using Quality With Millan">
-    <title>Contact Us - Quality With Millan</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #9BEFE1;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        label {
-            font-size: 16px;
-            color: #333;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .to-top-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-
-        .fusion-top-top-link {
-            display: inline-block;
-            padding: 10px 15px;
-            background: #007bff;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .fusion-top-top-link:hover {
-            background: #0056b3;
-        }
-
-        .screen-reader-text {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-    </style>
-
-</head>
-
-<body>
-    <div class="container">
-        <h1>Contact Millan Ⓜ️</h1>
-        <form id="contact-form" method="POST" action="CONTACT_G_FORM_URL">
-            <div role="heading" aria-level="3">
-                <span><b>Your Name</b></span>
-                <span aria-label="Required question" style="color: red;"> *</span>
-                <input type="text" name="entry.455181830" placeholder="your name" required aria-required="true">
-            </div>
-            <div role="heading" aria-level="3">
-                <span><b>Your Email</b></span>
-                <span aria-label="Required question" style="color: red;"> *</span>
-                <input type="email" name="entry.1401701613" placeholder="email@email.com" required aria-required="true">
-            </div>
-            <div role="heading" aria-level="3">
-                <span><b>Subject</b></span>
-                <span aria-label="Required question" style="color: red;"> *</span>
-                <textarea name="entry.1628429662" placeholder="Speaking, conference, Coffee " rows="3"
-                    style="resize: vertical; width: 100%;" required aria-required="true"></textarea>
-            </div>
-            <div role="heading" aria-level="3">
-                <span><b>Your Message</b></span>
-                <span aria-label="Required question" style="color: red;"> *</span>
-                <textarea name="entry.752115188" placeholder="Tell me the reason you are contacting me today ?" rows="5"
-                    style="resize: none; width: 100%; overflow: hidden;"
-                    oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'" required
-                    aria-required="true"></textarea>
-            </div>
-            <div role="heading" aria-level="3">
-                <span><b>Your Social profile</b></span>
-                <input type="text" name="entry.1959618784" placeholder="www.linkedin.com/in/your-profile" required
-                    pattern="https?://.*|www\..*" style="width: 100%;">
-            </div>
-            <div role="heading" aria-level="3">
-                <span><b>Event Date</b></span>
-                <span aria-label="Required question" style="color: red;"> *</span>
-                <input type="date" id="event-date-new" required>
-            </div>
-            <input type="hidden" name="entry.1380334691_day" id="event-day">
-            <input type="hidden" name="entry.1380334691_month" id="event-month">
-            <input type="hidden" name="entry.1380334691_year" id="event-year">
-            <button type="submit"> Submit</button>
-            <script>                    
-                document.getElementById('event-date-new').addEventListener('change', function () {
-                    const date = new Date(this.value);
-                    const day = date.getDate();
-                    const month = date.getMonth() + 1; // Months are zero-based
-                    const year = date.getFullYear();
-
-                    document.getElementById('event-day').value = day;
-                    document.getElementById('event-month').value = month;
-                    document.getElementById('event-year').value = year;
-                    // Submit the form
-                    this.submit();
-                });
-            </script>
-        </form>
+<div class="contact-page-container">
+  <div class="contact-hero-card">
+    <div class="contact-badge">
+      <i class="fas fa-paper-plane"></i> Direct Contact
     </div>
-</body>
+    <h1 class="contact-page-title">Get in Touch with Millan</h1>
+    <p class="contact-page-lead">
+      Whether you are organizing a conference, planning an AI testing workshop, seeking quality engineering advisory, or
+      reaching out about <em>The AI Eval Mindset</em>, send a note below.
+    </p>
 
-</html>
+    <div class="contact-action-box">
+      <button type="button" class="btn-open-modal-primary open-contact-modal"
+        data-subject="Speaking & Advisory Inquiry">
+        <i class="fas fa-envelope-open-text"></i> Open Contact Form
+      </button>
+      <a href="/events" class="btn-link-events">
+        <i class="fas fa-microphone"></i> View Speaking Events
+      </a>
+      <a href="/books" class="btn-link-books">
+        <i class="fas fa-book"></i> View Published Books
+      </a>
+    </div>
+
+    <!-- Direct Contact Topics Grid -->
+    <div class="contact-topics-grid">
+      <div class="topic-box">
+        <i class="fas fa-microphone-alt"></i>
+        <h3>Keynote / Speaking / AI Consultant</p>
+          <button type="button" class="btn-topic-trigger open-contact-modal" data-subject="Keynote Speaking Inquiry">
+            Inquire for Keynote →
+          </button>
+      </div>
+
+      <div class="topic-box">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Workshops & Training</h3>
+        <p>Hands-on engineering workshops on probabilistic testing, AI guardrails, and real-world eval pipelines.</p>
+        <button type="button" class="btn-topic-trigger open-contact-modal" data-subject="Workshop & Training Inquiry">
+          Request Workshop →
+        </button>
+      </div>
+
+      <div class="topic-box">
+        <i class="fas fa-book"></i>
+        <h3>Book & Media Inquiries</h3>
+        <p>Interviews, podcasts, book clubs, and bulk copy inquiries for <em>The AI Eval Mindset</em>.</p>
+        <button type="button" class="btn-topic-trigger open-contact-modal"
+          data-subject="Book & Media Inquiry: The AI Eval Mindset">
+          Media / Book Note →
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contact-page-container {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .contact-hero-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+  }
+
+  .contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-page-title {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.75rem 0 !important;
+  }
+
+  .contact-page-lead {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #475569;
+    max-width: 750px;
+    margin-bottom: 2rem;
+  }
+
+  .contact-action-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn-open-modal-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.6rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+    transition: all 0.25s ease;
+  }
+
+  .btn-open-modal-primary:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(2, 132, 199, 0.45);
+  }
+
+  .btn-link-events,
+  .btn-link-books {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #ffffff;
+    color: #334155 !important;
+    border: 1px solid #cbd5e1;
+    font-weight: 600;
+    font-size: 0.925rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+
+  .btn-link-events:hover,
+  .btn-link-books:hover {
+    background: #f0f9ff;
+    border-color: #0284c7;
+    color: #0284c7 !important;
+    transform: translateY(-1px);
+  }
+
+  .contact-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 2.5rem;
+  }
+
+  .topic-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .topic-box i {
+    font-size: 1.5rem;
+    color: #0284c7;
+    margin-bottom: 0.85rem;
+  }
+
+  .topic-box h3 {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.5rem 0 !important;
+  }
+
+  .topic-box p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #475569;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-topic-trigger {
+    background: #f1f5f9;
+    color: #0284c7;
+    border: 1px solid #e2e8f0;
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+  }
+
+  .btn-topic-trigger:hover {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-1px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .contact-hero-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-color: #334155;
+    }
+
+    .contact-page-title {
+      color: #f8fafc !important;
+    }
+
+    .contact-page-lead {
+      color: #cbd5e1;
+    }
+
+    .btn-link-events,
+    .btn-link-books {
+      background: #1e293b;
+      border-color: #475569;
+      color: #cbd5e1 !important;
+    }
+
+    .btn-link-events:hover,
+    .btn-link-books:hover {
+      background: #0f2942;
+      border-color: #38bdf8;
+      color: #38bdf8 !important;
+    }
+
+    .contact-topics-grid {
+      border-top-color: #334155;
+    }
+
+    .topic-box {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    .topic-box h3 {
+      color: #f8fafc !important;
+    }
+
+    .topic-box p {
+      color: #cbd5e1;
+    }
+
+    .btn-topic-trigger {
+      background: #0f2942;
+      border-color: #0284c7;
+      color: #38bdf8;
+    }
+
+    .btn-topic-trigger:hover {
+      background: #0284c7;
+      color: #ffffff;
+    }
+  }
+</style>
