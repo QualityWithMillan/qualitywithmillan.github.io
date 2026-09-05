@@ -1,164 +1,1391 @@
 ---
 layout: single
 author_profile: false
-title: "List of Co-Autors page"
+title: "Co-Authors & Contributors - Quality With Millan"
+description: "Meet the co-authors, engineering collaborators, and technical contributors who have co-written articles, research, and publications with Millan Kaul on Quality With Millan."
+excerpt: "Meet the talented co-authors and technical contributors who have collaborated with Millan Kaul on software testing, AI evaluation, and quality engineering."
+keywords: "Millan Kaul, Co-Authors, Quality With Millan, Software Testing Contributors, AI in Testing Writers, Engineering Collaboration, Test Automation Leaders, QA Community"
 search: true
 permalink: "/co-authors"
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <style>
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      /* Add a gap of 20px between flex items */
+<!-- JSON-LD Structured Data for Co-Authors & Community Collaborators -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://qualitywithmillan.github.io/co-authors/#page",
+      "url": "https://qualitywithmillan.github.io/co-authors",
+      "name": "Co-Authors & Contributors - Quality With Millan",
+      "description": "Meet the co-authors and technical contributors who have collaborated with Millan Kaul on software testing, AI evaluation, and quality engineering research.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Millan Kaul",
+        "url": "https://qualitywithmillan.github.io"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Featured Co-Authors & Technical Contributors",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Person",
+            "name": "Paul Maxwell-Walters",
+            "jobTitle": "Test Lead & Meetup Chair",
+            "sameAs": "https://www.linkedin.com/in/paulwaltersuk/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Person",
+            "name": "Alejandro Sanchez Giraldo",
+            "jobTitle": "Product Owner - Quality Engineering",
+            "sameAs": "https://www.linkedin.com/in/alejandrosanchezgiraldo"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Person",
+            "name": "Karthik Hariharan",
+            "jobTitle": "Tech Entrepreneur & Sales Leader",
+            "sameAs": "https://in.linkedin.com/in/0karthik0"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Person",
+            "name": "Jing Deng",
+            "jobTitle": "Software Engineer & Quality Contributor",
+            "sameAs": "https://www.linkedin.com/in/jing-deng-357554206/"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Person",
+            "name": "Dennis Nyawira",
+            "jobTitle": "QA Engineer & SDLC Quality Champion",
+            "sameAs": "https://www.linkedin.com/in/gituto"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Person",
+            "name": "Neelam Pal",
+            "jobTitle": "Test Automation Architect",
+            "sameAs": "https://www.linkedin.com/in/palneelam"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Person",
+            "name": "Gavin Cheung",
+            "jobTitle": "Senior Test Manager (AI & FinTech)",
+            "sameAs": "https://www.linkedin.com/in/gavincheung1"
+          }
+        }
+      ]
     }
-
-    .flex-item {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      margin: 10px;
-      /* background-color: #ff000000; */
-      transition: background-color 0.3s ease;
-    }
-
-    /* CSS styles for circular image */
-    .flex-item img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      filter: grayscale(100%);
-      /* Make the image circular */
-    }
-
-    .flex-item .default-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .flex-item:hover {
-      /* background-color: #ededed; */
-    }
-
-    .flex-item img:hover{
-      /* display: block; */
-      filter: grayscale(0%);
-    }
-
-    /* Add text at the bottom center */
-    .flex-item::before {
-      content: attr(data-text);
-      /* Use the data-text attribute value as the content */
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 8px;
-      text-align: center;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.7);
-      font-size: 14px;
-      font-weight: bold;
-      z-index: 1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 50%;
-      /* Make the text container circular with smooth edges */
-    }
-
-    /* CSS styles for hiding placeholder text on hover */
-    .flex-item:hover::before {
-      content: "";
-      /* Set content to an empty string on hover */
-    }
-
-    .flex-item .text-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 8px;
-      text-align: center;
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.7);
-      /* color: #fff;
-      background-color: rgba(0, 0, 0, 0.7); */
-      font-size: 14px;
-      font-weight: bold;
-      z-index: 1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .flex-item .text-container {
-      opacity: 1;
-    }
-  </style>
-
-</head>
-
-<body>
-  <div class="container">
-    <div class="flex-container">
-      <div class="flex-item" data-placeholder-text="Alejandro"
-        onclick="navigateToLink('https://www.linkedin.com/in/alejandrosanchezgiraldo')">
-        <img src="/assets/images/co-author/alejandro-sanchez-giraldo.jpeg" alt="alejandro">
-        <div class="text-container">Alejandro <span class="link-icon">&#8599;</span></div>
-      </div>
-      <div class="flex-item" data-placeholder-text="Karthik"
-        onclick="navigateToLink('https://in.linkedin.com/in/0karthik0')">
-        <img src="/assets/images/co-author/karthik-hariharan.jpg" alt="karthik">
-        <div class="text-container">Karthik <span class="link-icon">&#8599;</span></div>
-      </div>
-      <div class="flex-item" data-placeholder-text="Paul"
-        onclick="navigateToLink('https://www.linkedin.com/in/paulwaltersuk')">
-        <img src="/assets/images/co-author/paul-maxwell-walters.png" alt="paul">
-        <div class="text-container">Paul <span class="link-icon">&#8599;</span></div>
-      </div>
-      <div class="flex-item" data-placeholder-text="Jing"
-        onclick="navigateToLink('https://www.linkedin.com/in/jing-deng-357554206')">
-        <img src="/assets/images/co-author/jing-deng.jpg" alt="jing">
-        <div class="text-container">Jing <span class="link-icon">&#8599;</span></div>
-      </div>
-      <div class="flex-item" data-placeholder-text="Dennis"
-        onclick="navigateToLink('https://www.linkedin.com/in/gituto')">
-        <img src="/assets/images/co-author/Dennis_Nyawiara.jpeg" alt="Dennis">
-        <div class="text-container">Dennis <span class="link-icon">&#8599;</span></div>
-      </div>
-      <div class="flex-item" data-placeholder-text="Neelam"
-        onclick="navigateToLink('https://www.linkedin.com/in/palneelam')">
-        <img src="/assets/images/co-author/neelam-pal.jpeg" alt="Neelam">
-        <div class="text-container">Neelam <span class="link-icon">&#8599;</span></div>
-      </div>
-        <div class="flex-item" data-placeholder-text="Gavin"
-        onclick="navigateToLink('https://www.linkedin.com/in/gavincheung1')">
-        <img src="/assets/images/co-author/gavin-cheung.png" alt="Gavin">
-        <div class="text-container">Gavin <span class="link-icon">&#8599;</span></div>
-      </div>
-    </div>
-
-</body>
-
-<script>
-  function navigateToLink(linkUrl) {
-    window.open(linkUrl, '_blank');
-  }
+  ]
+}
 </script>
 
-</html>
+<div class="coauthors-page-wrapper">
+
+  <!-- Centered Community Badge -->
+  <div class="authors-badge-wrapper">
+    <span class="authors-badge">
+      <i class="fas fa-users" aria-hidden="true"></i> Community Contributions
+    </span>
+  </div>
+
+  <!-- Filter & Search Controls -->
+  <div class="authors-filter-wrapper">
+    <div class="search-input-box">
+      <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="coauthorSearchInput" class="search-field"
+        placeholder="Search co-authors by name, role, country, or topic..." aria-label="Search co-authors">
+      <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear search" style="display: none;">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="authors-filter-pills" id="authorsFilterPills">
+      <button type="button" class="author-filter-btn active" data-filter="all">
+        <i class="fas fa-layer-group" aria-hidden="true"></i> All <span class="filter-count">7</span>
+      </button>
+      <button type="button" class="author-filter-btn" data-filter="australia">
+        🇦🇺 Australia <span class="filter-count">4</span>
+      </button>
+      <button type="button" class="author-filter-btn" data-filter="india">
+        🇮🇳 India <span class="filter-count">2</span>
+      </button>
+      <button type="button" class="author-filter-btn" data-filter="kenya">
+        🇰🇪 Kenya <span class="filter-count">1</span>
+      </button>
+      <button type="button" class="author-filter-btn filter-btn-leadership" data-filter="leadership">
+        <i class="fas fa-award" aria-hidden="true"></i> Leadership
+      </button>
+      <button type="button" class="author-filter-btn filter-btn-automation" data-filter="automation">
+        <i class="fas fa-robot" aria-hidden="true"></i> Test Automation & AI
+      </button>
+    </div>
+  </div>
+
+  <!-- Co-Authors Grid -->
+  <div class="coauthors-grid" id="coauthorsGrid">
+
+    <!-- 1. Paul Maxwell-Walters -->
+    <article class="author-card" data-category="australia leadership automation" data-name="paul maxwell-walters" data-location="sydney australia" style="--index: 0;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/paul-maxwell-walters.png" alt="Paul Maxwell-Walters - Software Tester & Test Lead"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sydney, Australia 🇦🇺</span>
+          <h2 class="author-name">Paul Maxwell-Walters</h2>
+          <span class="role-badge"><i class="fas fa-user-tie" aria-hidden="true"></i> Test Lead & Meetup Chair</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          British-Australian software tester and test lead with 12+ years of experience across fintech, media, and energy.
+          Acting chair and committee member of the Sydney Testers Meetup Group.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/co-author/paul/plus-ca-change-in-test-automation.html" class="article-link">
+            Plus Ça Change in Test Automation <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/paulwaltersuk/" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Paul Maxwell-Walters on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Paul
+        </a>
+        <div class="author-secondary-links">
+          <a href="https://github.com/PaulWaltersDev" target="_blank" rel="noopener noreferrer"
+            class="icon-link-btn" aria-label="Paul Maxwell-Walters GitHub profile (opens in a new tab)">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/TestingRants" target="_blank" rel="noopener noreferrer"
+            class="icon-link-btn" aria-label="Paul Maxwell-Walters Twitter / X profile (opens in a new tab)">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Alejandro Sanchez Giraldo -->
+    <article class="author-card" data-category="australia leadership" data-name="alejandro sanchez giraldo" data-location="sydney australia" style="--index: 1;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/alejandro-sanchez-giraldo.jpeg" alt="Alejandro Sanchez Giraldo - Product Owner for Quality"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sydney, Australia 🇦🇺</span>
+          <h2 class="author-name">Alejandro Sanchez Giraldo</h2>
+          <span class="role-badge"><i class="fas fa-check-double" aria-hidden="true"></i> Product Owner · Quality</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          Product Owner for Quality collaborating with engineering teams to build capabilities and uplift organizational standards.
+          Passionate about quality culture and community enablement.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Articles:</span>
+          <a href="/post/two-timeless-concepts.html" class="article-link">
+            Two Timeless Concepts <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="/post/the-paradigm-of-quality-embedded.html" class="article-link">
+            The Paradigm of Quality Series <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/alejandrosanchezgiraldo" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Alejandro Sanchez Giraldo on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Alejandro
+        </a>
+        <div class="author-secondary-links">
+          <a href="https://github.com/ale-sanchez-g" target="_blank" rel="noopener noreferrer"
+            class="icon-link-btn" aria-label="Alejandro Sanchez Giraldo GitHub profile (opens in a new tab)">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:alejandrosanchezau@yahoo.com.au" class="icon-link-btn" aria-label="Email Alejandro Sanchez Giraldo">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Karthik Hariharan -->
+    <article class="author-card" data-category="india leadership automation" data-name="karthik hariharan" data-location="india" style="--index: 2;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/karthik-hariharan.jpg" alt="Karthik Hariharan - Entrepreneur & Sales Leader"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> India 🇮🇳</span>
+          <h2 class="author-name">Karthik Hariharan</h2>
+          <span class="role-badge"><i class="fas fa-chart-line" aria-hidden="true"></i> Tech Entrepreneur & Leader</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          Entrepreneur and commercial leader passionate about delivering outstanding digital experiences, automated visual
+          testing workflows, and engineering partnerships worldwide.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/co-author/Karthik/evolution-of-reliability-tester-and-ai-testing.html" class="article-link">
+            Evolution of Reliability Tester & AI Testing <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://in.linkedin.com/in/0karthik0" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Karthik Hariharan on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Karthik
+        </a>
+        <div class="author-secondary-links">
+          <a href="https://twitter.com/_peregrine_" target="_blank" rel="noopener noreferrer"
+            class="icon-link-btn" aria-label="Karthik Hariharan Twitter / X profile (opens in a new tab)">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:karthik.hariharan@applitools.com" class="icon-link-btn" aria-label="Email Karthik Hariharan">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Jing Deng -->
+    <article class="author-card" data-category="australia automation" data-name="jing deng" data-location="australia" style="--index: 3;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/jing-deng.jpg" alt="Jing Deng - Software Engineer & Quality Contributor"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Australia 🇦🇺</span>
+          <h2 class="author-name">Jing Deng</h2>
+          <span class="role-badge"><i class="fas fa-code" aria-hidden="true"></i> Software Engineer & QA</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          Software engineer and quality contributor focusing on robust test frameworks, engineering automation, and modern
+          full-stack software reliability workflows.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/2023/starting-my-corporate-journey-by-jing.html" class="article-link">
+            Starting My Corporate Journey: Working as an Intern <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/jing-deng-357554206/" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Jing Deng on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Jing
+        </a>
+        <div class="author-secondary-links">
+          <a href="https://github.com/jing968" target="_blank" rel="noopener noreferrer"
+            class="icon-link-btn" aria-label="Jing Deng GitHub profile (opens in a new tab)">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Dennis Nyawira -->
+    <article class="author-card" data-category="kenya automation leadership" data-name="dennis nyawira" data-location="kenya" style="--index: 4;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/Dennis_Nyawiara.jpeg" alt="Dennis Nyawira - QA Engineer"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Kenya 🇰🇪</span>
+          <h2 class="author-name">Dennis Nyawira</h2>
+          <span class="role-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> SDLC Quality Champion</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          QA Engineer who passionately champions quality across the entire Software Development Life Cycle (SDLC), ensuring
+          excellence in both engineering process and product execution.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/qa-in-the-age-of-hyper-driven-development.html" class="article-link">
+            Navigating the Tempest: QA in Hyper-Driven Development <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/gituto" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Dennis Nyawira on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Dennis
+        </a>
+      </div>
+    </article>
+
+    <!-- 6. Neelam Pal -->
+    <article class="author-card" data-category="india automation" data-name="neelam pal" data-location="india" style="--index: 5;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/neelam-pal.jpeg" alt="Neelam Pal - Test Automation Architect"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> India 🇮🇳</span>
+          <h2 class="author-name">Neelam Pal</h2>
+          <span class="role-badge"><i class="fas fa-cogs" aria-hidden="true"></i> Test Automation Architect</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          Software Test Automation architect with 17+ years of experience. Passionate about exploring test automation tools,
+          architecting scalable frameworks, and coaching engineers in automation.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/web-driver-saga.html" class="article-link">
+            WebDriver Saga: Test Automation Architecture <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/palneelam" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Neelam Pal on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Neelam
+        </a>
+      </div>
+    </article>
+
+    <!-- 7. Gavin Cheung -->
+    <article class="author-card" data-category="australia leadership automation" data-name="gavin cheung" data-location="australia" style="--index: 6;">
+      <div class="author-card-header">
+        <div class="author-avatar-box">
+          <img src="/assets/images/co-author/gavin-cheung.png" alt="Gavin Cheung - Senior Test Manager"
+            class="author-avatar-img" loading="lazy">
+        </div>
+        <div class="author-meta-box">
+          <span class="location-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Australia 🇦🇺</span>
+          <h2 class="author-name">Gavin Cheung</h2>
+          <span class="role-badge"><i class="fas fa-brain" aria-hidden="true"></i> Snr Test Manager (AI & FinTech)</span>
+        </div>
+      </div>
+      <div class="author-card-body">
+        <p class="author-bio">
+          Senior Test Manager with 15+ years of experience across AI, Retail Energy, Telecom, Financial Services & Healthcare,
+          specializing in large-scale quality transformations and test strategy.
+        </p>
+        <div class="author-articles-box">
+          <span class="articles-label"><i class="fas fa-newspaper" aria-hidden="true"></i> Co-Authored Article:</span>
+          <a href="/post/ai/the-hidden-cost-of-quality-debt.html" class="article-link">
+            The Hidden Cost of Quality Debt: What Leadership Doesn't See <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="author-card-footer">
+        <a href="https://www.linkedin.com/in/gavincheung1" target="_blank" rel="noopener noreferrer"
+          class="btn-social-linkedin" aria-label="Connect with Gavin Cheung on LinkedIn (opens in a new tab)">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i> Connect with Gavin
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Empty State if search yields no result -->
+  <div class="authors-empty-state" id="authorsEmptyState" style="display: none;">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <h3>No co-authors found</h3>
+    <p>Try searching with a different name, location, or reset your filters.</p>
+    <button type="button" class="btn-reset-filters" id="resetFiltersBtn">Reset Filters</button>
+  </div>
+
+  <!-- Collaboration CTA Banner -->
+  <section class="authors-collab-card">
+    <div class="collab-content">
+      <span class="collab-badge"><i class="fas fa-feather-alt" aria-hidden="true"></i> Community Platform</span>
+      <h2 class="collab-title">Have an Engineering Story or AI Testing Insight to Share?</h2>
+      <p class="collab-desc">
+        Quality With Millan is an open platform built to empower the quality engineering and AI evaluation community.
+        If you have practical frameworks, automation case studies, or testing lessons to share, let's collaborate and co-author an article together!
+      </p>
+      <div class="collab-cta-actions">
+        <button type="button" class="btn-collab-primary open-contact-modal"
+          data-subject="Co-Authoring / Technical Article Proposal"
+          data-message="Hi Millan, I would love to propose a co-authored article on Quality With Millan regarding...">
+          <i class="fas fa-pen-nib" aria-hidden="true"></i> Propose a Co-Authored Article
+        </button>
+        <a href="/books" class="btn-collab-secondary">
+          <i class="fas fa-book" aria-hidden="true"></i> Explore Books
+        </a>
+        <a href="/events" class="btn-collab-secondary">
+          <i class="fas fa-microphone-alt" aria-hidden="true"></i> Speaking Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Footer Topics -->
+  <footer class="authors-seo-footer">
+    <h3 class="authors-topics-title"><i class="fas fa-bullhorn" aria-hidden="true"></i> Community & Publication Topics</h3>
+    <div class="seo-tags-list">
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> QualityEngineering</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> SoftwareTesting</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> CoAuthors</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> AIEval</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> TestAutomation</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> EngineeringLeadership</span>
+      <span class="seo-tag"><i class="fas fa-hashtag" aria-hidden="true"></i> CommunityCollaboration</span>
+    </div>
+  </footer>
+
+</div>
+
+<style>
+  /* ==========================================================
+     Co-Authors Page Modern Design System
+     ========================================================== */
+
+  .coauthors-page-wrapper {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* Centered Community Badge */
+  .authors-badge-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .authors-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    font-size: 0.825rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 1.15rem;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+  }
+
+  /* Search & Filter Controls */
+  .authors-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-input-box {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 9999px;
+    padding: 0 0.85rem 0 1.15rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    box-sizing: border-box !important;
+    height: 48px;
+    transition: all 0.2s ease;
+  }
+
+  .search-input-box:focus-within {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+  }
+
+  .search-icon-svg {
+    width: 18px;
+    height: 18px;
+    color: #94a3b8;
+    flex-shrink: 0;
+    margin-right: 0.65rem;
+    display: block;
+  }
+
+  .search-field {
+    flex: 1;
+    width: 100%;
+    height: 100% !important;
+    line-height: normal !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  .clear-search-btn {
+    background: #e2e8f0;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .clear-search-btn:hover {
+    background: #cbd5e1;
+    color: #0f172a;
+  }
+
+  .authors-filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .author-filter-btn {
+    appearance: none;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #475569;
+    padding: 0.38rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+  }
+
+  .author-filter-btn .filter-count {
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 9999px;
+    margin-left: 0.2rem;
+    transition: all 0.2s ease;
+  }
+
+  .author-filter-btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+  }
+
+  .author-filter-btn:hover .filter-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  .author-filter-btn.active {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  }
+
+  .author-filter-btn.active .filter-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  .filter-btn-leadership:hover {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+  }
+
+  .filter-btn-leadership.active {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-color: #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+  }
+
+  .filter-btn-automation:hover {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  }
+
+  .filter-btn-automation.active {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-color: #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+  }
+
+  /* Co-Authors Grid */
+  .coauthors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 3.5rem;
+    width: 100%;
+  }
+
+  /* Author Card */
+  .author-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: authorCardEntrance 0.5s ease backwards;
+    animation-delay: calc(var(--index, 0) * 50ms);
+  }
+
+  @keyframes authorCardEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .author-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 20px 32px -8px rgba(2, 132, 199, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+  }
+
+  .author-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .author-avatar-box {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+  }
+
+  .author-avatar-img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #0284c7, 0 4px 12px rgba(2, 132, 199, 0.25);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .author-card:hover .author-avatar-img {
+    transform: scale(1.06);
+  }
+
+  .author-meta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .location-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .author-name {
+    font-size: 1.18rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+    transition: color 0.2s ease;
+  }
+
+  .author-card:hover .author-name {
+    color: #0284c7 !important;
+  }
+
+  .role-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0284c7;
+    background: #f0f9ff;
+    border: 1px solid #e0f2fe;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+  }
+
+  .author-card-body {
+    margin-bottom: 1.35rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .author-bio {
+    font-size: 0.885rem;
+    line-height: 1.55;
+    color: #475569;
+    margin: 0 0 1rem 0;
+  }
+
+  /* Co-Authored Article Sub-box */
+  .author-articles-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .articles-label {
+    font-size: 0.725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .articles-label i {
+    color: #0284c7;
+  }
+
+  .article-link {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #0284c7 !important;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+    line-height: 1.35;
+  }
+
+  .article-link:hover {
+    color: #0369a1 !important;
+    transform: translateX(2px);
+  }
+
+  .article-link i {
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+  }
+
+  .article-link:hover i {
+    transform: translateX(3px);
+  }
+
+  /* Card Footer Actions */
+  .author-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .btn-social-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    font-size: 0.825rem;
+    font-weight: 700;
+    padding: 0.48rem 0.95rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
+    transition: all 0.2s ease;
+  }
+
+  .btn-social-linkedin:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(2, 132, 199, 0.35);
+  }
+
+  .author-secondary-links {
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .icon-link-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+
+  .icon-link-btn:hover {
+    background: #0284c7;
+    color: #ffffff !important;
+    border-color: #0284c7;
+    transform: translateY(-2px);
+  }
+
+  /* Empty State */
+  .authors-empty-state {
+    text-align: center;
+    padding: 3.5rem 1rem;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    margin-bottom: 3.5rem;
+  }
+
+  .authors-empty-state i {
+    font-size: 2.5rem;
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+  }
+
+  .authors-empty-state h3 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.5rem 0 !important;
+  }
+
+  .authors-empty-state p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn-reset-filters {
+    background: #0284c7;
+    color: #ffffff;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-reset-filters:hover {
+    background: #0369a1;
+  }
+
+  /* Collaboration CTA Card */
+  .authors-collab-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 1px solid #334155;
+    border-radius: 24px;
+    padding: 2.75rem 2rem;
+    color: #ffffff;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .authors-collab-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, rgba(2, 132, 199, 0) 70%);
+    pointer-events: none;
+  }
+
+  .collab-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-size: 0.775rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 0.85rem;
+  }
+
+  .collab-title {
+    font-size: 1.75rem !important;
+    font-weight: 800 !important;
+    color: #f8fafc !important;
+    margin: 0 0 0.75rem 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .collab-desc {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #cbd5e1;
+    max-width: 720px;
+    margin-bottom: 2rem;
+  }
+
+  .collab-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .btn-collab-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.75rem 1.6rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    transition: all 0.25s ease;
+  }
+
+  .btn-collab-primary:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+  }
+
+  .btn-collab-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+
+  .btn-collab-secondary:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: #38bdf8;
+    color: #38bdf8 !important;
+    transform: translateY(-1px);
+  }
+
+  /* SEO Footer Tags */
+  .authors-seo-footer {
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .authors-topics-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .authors-topics-title i {
+    color: #0284c7;
+  }
+
+  .seo-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .seo-tag {
+    font-size: 0.8rem;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+
+  .seo-tag i {
+    color: #0284c7;
+    font-size: 0.75rem;
+  }
+
+  .seo-tag:hover {
+    background: #e0f2fe;
+    border-color: #bae6fd;
+    color: #0369a1;
+  }
+
+  /* Dark Theme */
+  @media (prefers-color-scheme: dark) {
+    .authors-badge {
+      background: #0f2942;
+      border-color: #0369a1;
+      color: #38bdf8;
+    }
+
+    .search-input-box {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    .search-icon-svg {
+      color: #64748b;
+    }
+
+    .search-field {
+      color: #f8fafc !important;
+    }
+
+    .clear-search-btn {
+      background: #334155;
+      color: #cbd5e1;
+    }
+
+    .clear-search-btn:hover {
+      background: #475569;
+      color: #ffffff;
+    }
+
+    .author-filter-btn {
+      background: #1e293b;
+      border-color: #334155;
+      color: #cbd5e1;
+    }
+
+    .author-filter-btn .filter-count {
+      background: #334155;
+      color: #cbd5e1;
+    }
+
+    .author-filter-btn:hover {
+      background: #0f2942;
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    .author-card {
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4);
+    }
+
+    .author-card:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 20px 32px -8px rgba(0, 0, 0, 0.6);
+    }
+
+    .author-avatar-img {
+      border-color: #1e293b;
+      box-shadow: 0 0 0 2px #38bdf8, 0 4px 12px rgba(56, 189, 248, 0.25);
+    }
+
+    .author-name {
+      color: #f8fafc !important;
+    }
+
+    .role-badge {
+      background: #0f2942;
+      border-color: #0369a1;
+      color: #38bdf8;
+    }
+
+    .author-bio {
+      color: #cbd5e1;
+    }
+
+    .author-articles-box {
+      background: #0f172a;
+      border-color: #334155;
+    }
+
+    .articles-label {
+      color: #94a3b8;
+    }
+
+    .article-link {
+      color: #38bdf8 !important;
+    }
+
+    .article-link:hover {
+      color: #7dd3fc !important;
+    }
+
+    .author-card-footer {
+      border-top-color: #334155;
+    }
+
+    .icon-link-btn {
+      background: #0f172a;
+      border-color: #334155;
+      color: #cbd5e1 !important;
+    }
+
+    .icon-link-btn:hover {
+      background: #38bdf8;
+      color: #0f172a !important;
+      border-color: #38bdf8;
+    }
+
+    .authors-empty-state {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    .authors-empty-state h3 {
+      color: #f8fafc !important;
+    }
+
+    .authors-seo-footer {
+      border-top-color: #334155;
+    }
+
+    .authors-topics-title {
+      color: #f8fafc !important;
+    }
+
+    .seo-tag {
+      background: #1e293b;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .coauthors-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .author-card {
+      padding: 1.25rem;
+    }
+
+    .authors-collab-card {
+      padding: 1.75rem 1.25rem;
+      border-radius: 20px;
+    }
+
+    .collab-title {
+      font-size: 1.35rem !important;
+    }
+
+    .collab-cta-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-collab-primary,
+    .btn-collab-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    // Co-Authors Live Search and Filter Logic
+    function initCoauthorsFiltering() {
+      const searchInput = document.getElementById("coauthorSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+      const filterBtns = document.querySelectorAll(".author-filter-btn");
+      const cards = document.querySelectorAll(".author-card");
+      const emptyState = document.getElementById("authorsEmptyState");
+      const resetBtn = document.getElementById("resetFiltersBtn");
+
+      let currentFilter = "all";
+      let currentQuery = "";
+
+      function filterCards() {
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+          const category = card.getAttribute("data-category") || "";
+          const name = (card.getAttribute("data-name") || "").toLowerCase();
+          const location = (card.getAttribute("data-location") || "").toLowerCase();
+          const bio = (card.querySelector(".author-bio") ? card.querySelector(".author-bio").innerText : "").toLowerCase();
+          const role = (card.querySelector(".role-badge") ? card.querySelector(".role-badge").innerText : "").toLowerCase();
+          const articles = (card.querySelector(".author-articles-box") ? card.querySelector(".author-articles-box").innerText : "").toLowerCase();
+
+          const fullText = name + " " + location + " " + bio + " " + role + " " + articles;
+
+          const matchesFilter = (currentFilter === "all") || category.includes(currentFilter);
+          const matchesSearch = !currentQuery || fullText.includes(currentQuery);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = "flex";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        if (emptyState) {
+          emptyState.style.display = visibleCount === 0 ? "block" : "none";
+        }
+      }
+
+      // Filter Pill clicks
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          currentFilter = btn.getAttribute("data-filter") || "all";
+          filterCards();
+        });
+      });
+
+      // Search input handler
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          currentQuery = searchInput.value.trim().toLowerCase();
+          if (clearBtn) {
+            clearBtn.style.display = currentQuery.length > 0 ? "flex" : "none";
+          }
+          filterCards();
+        });
+      }
+
+      // Clear search button
+      if (clearBtn) {
+        clearBtn.addEventListener("click", function () {
+          if (searchInput) {
+            searchInput.value = "";
+            searchInput.focus();
+          }
+          currentQuery = "";
+          clearBtn.style.display = "none";
+          filterCards();
+        });
+      }
+
+      // Reset filters button
+      if (resetBtn) {
+        resetBtn.addEventListener("click", function () {
+          if (searchInput) searchInput.value = "";
+          currentQuery = "";
+          if (clearBtn) clearBtn.style.display = "none";
+          currentFilter = "all";
+          filterBtns.forEach(function (b) {
+            if (b.getAttribute("data-filter") === "all") {
+              b.classList.add("active");
+            } else {
+              b.classList.remove("active");
+            }
+          });
+          filterCards();
+        });
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initCoauthorsFiltering);
+    } else {
+      initCoauthorsFiltering();
+    }
+  })();
+</script>
