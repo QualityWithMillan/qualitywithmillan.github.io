@@ -1,362 +1,1331 @@
 ---
 layout: single
-author_profile: true
-title: "Events where Millan presented and spoke"
+author_profile: false
+title: "Speaking & Keynotes - Millan Kaul"
+description: "Keynotes and tech talks by Millan Kaul on AI in Testing, Eval AI, AI Guardrails, and Microservices
+Resilience."
+excerpt: "Keynotes and technical talks by Millan Kaul on AI in Testing, Eval AI, and Quality Engineering leadership."
+keywords: "Millan Kaul, Millan Kaul Speaker, Keynote Speaker, AI in Testing, Eval AI, LLM Evaluations, AI Guardrails,
+Confidence in AI, Autonomous Test Agents, Quality Engineering Leadership, Software Testing Conferences, Testingmind
+Keynote, PNSQC, CAST 2025"
 search: true
 permalink: "/events"
 ---
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>My Speaking Events</title>
-
-  <!-- Style for events -->
-  <!-- <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    .events-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-    }
-
-    .event-card {
-      background-color: #A9F1E4;
-      width: 300px;
-      margin: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-
-    .event-image {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      display: block;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .event-image.lazy-loaded {
-      opacity: 1;
-    }
-
-    .event-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .event-info {
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-  </style> -->
-  <!-- Style for events -->
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      /* background-color: #f4f4f4; */
-    }
-
-    /* Container for all event cards */
-    .events-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      /* Center horizontally */
-      align-items: flex-start;
-      gap: 30px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-      /* Center the container */
-    }
-
-    /* Individual event card */
-    .event-card {
-      background-color: #A9F1E4;
-      width: 350px;
-      margin: 15px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-      border-radius: 16px;
-      transition: transform 0.2s ease;
-      /* position: relative;  Required for z-index */
-    }
-
-    /* Ensure the anchor covers the entire card */
-    .event-card a {
-      display: block;
-      text-decoration: none;
-      /* No underline */
-      color: inherit;
-      /* Inherit the text color */
-    }
-
-    /* Event card hover effect */
-    .event-card:hover {
-      transform: scale(1.05);
-    }
-
-    /* Prevent image or content being obscured */
-    .event-card>* {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Image within each card */
-    .event-image {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      /* display: block;*/
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    /* Lazy-loaded images will fade in */
-    .event-image.lazy-loaded {
-      opacity: 1;
-    }
-
-    /* Title of the event */
-    .event-title {
-      font-size: 22px;
-      margin-bottom: 12px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    /* Info under the title (date, location, etc.) */
-    .event-info {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    /* Responsive adjustments for smaller screens */
-    @media (max-width: 1024px) {
-      .events-container {
-        padding: 20px;
-        gap: 20px;
-      }
-
-      .event-card {
-        width: 100%;
-        max-width: 450px;
-        margin: 10px auto;
+<!-- JSON-LD Structured Data for Speaking Engagements & Event Series -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://qualitywithmillan.github.io/#person",
+      "name": "Millan Kaul",
+      "jobTitle": "Quality Engineering Leader & Keynote Speaker",
+      "url": "https://qualitywithmillan.github.io",
+      "sameAs": [
+        "https://www.linkedin.com/in/millankaul",
+        "https://twitter.com/millankaul",
+        "https://github.com/millankaul"
+      ],
+      "knowsAbout": [
+        "AI in Testing",
+        "Eval AI",
+        "AI Guardrails",
+        "Confidence in AI",
+        "Autonomous Test Agents",
+        "Quality Engineering Leadership",
+        "Microservices Resilience",
+        "Chaos Engineering"
+      ]
+    },
+    {
+      "@type": "EventSeries",
+      "name": "Speaking Engagements and Keynotes by Millan Kaul",
+      "description": "Keynotes, tech talks, and conference sessions presented by Millan Kaul on Eval AI, AI Guardrails, Confidence in AI systems, and Quality Engineering.",
+      "url": "https://qualitywithmillan.github.io/events",
+      "performer": {
+        "@id": "https://qualitywithmillan.github.io/#person"
       }
     }
+  ]
+}
+</script>
 
-    @media (max-width: 768px) {
-      .event-title {
-        font-size: 20px;
-      }
+<div class="events-section">
+  <!-- SEO Hero & Topic Summary -->
+  <header class="events-header-block">
+    <p class="events-subtitle">
+      Keynotes, international conference sessions, and technical meetups by <strong>Millan Kaul</strong> covering AI in
+      Testing, Eval AI architectures, and Quality Engineering.
+    </p>
+  </header>
 
-      .event-info {
-        font-size: 14px;
-      }
-    }
+  <!-- Filter Controls -->
+  <div class="events-filter-bar">
+    <button class="filter-btn active" data-filter="all">
+      <i class="fas fa-layer-group"></i> All <span class="filter-count">10</span>
+    </button>
+    <button class="filter-btn" data-filter="2025">2025</button>
+    <button class="filter-btn" data-filter="2024">2024</button>
+    <button class="filter-btn" data-filter="2023">2023</button>
+    <button class="filter-btn filter-btn-keynote" data-filter="keynote">
+      <i class="fas fa-star"></i> Keynotes
+    </button>
+    <button class="filter-btn filter-btn-books" data-filter="books">
+      <i class="fas fa-book"></i> Books
+    </button>
+  </div>
 
-    @media (max-width: 480px) {
-      .events-container {
-        padding: 10px;
-      }
+  <!-- Events Grid -->
+  <div class="events-grid" id="eventsGrid">
 
-      .event-card {
-        width: 100%;
-        margin: 10px auto;
-        padding: 15px;
-      }
-
-      .event-title {
-        font-size: 18px;
-      }
-
-      .event-info {
-        font-size: 13px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="events-container">
-
-      <!-- Testingmind Keynotes Vancouver 5 -->
-    <div class="event-card">
-      <a href="https://www.testingmind.com/event/test-automation-summit-Vancouver/speakers/"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2025_October_TESTINGMIND_CANADA.png"
-          alt="Millan delivering Keynot at Testingminds's 2025 Cnada conference in Vancouver Canada">
+    <!-- Event 1: Testingmind Vancouver 2025 (Keynote) -->
+    <article class="event-card card-keynote" data-category="2025 keynote" style="--index: 0;">
+      <a href="https://www.testingmind.com/event/test-automation-summit-Vancouver/speakers/" target="_blank"
+        rel="noopener noreferrer" class="event-card-link"
+        aria-label="Keynote: AI is Not Your Test Tool. It's Your New Test Team — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-keynote"><i class="fas fa-star"></i> Keynote</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2025_October_TESTINGMIND_CANADA.png"
+            alt="Millan Kaul delivering Keynote at Testingmind's 2025 Canada conference on AI in Testing, Eval AI, and Autonomous QA in Vancouver Canada"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Keynote : AI is Not Your Test Tool. It's Your New Test Team</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>TESTINGMIND Test Automation Summit</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>October 2025</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Vancouver, Canada 🇨🇦</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Keynote Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Keynote : AI is Not Your Test Tool. It's Your New Test Team</div>
-      <div class="event-info">TESTINGMIND Test Automation Summit VANCOUVER | October 2025 | Vancouver Canada 🇨🇦</div>
-    </div>
+    </article>
 
-  <!-- Event 9 -->
-   <!-- PNSQC 43rd conference -->
-    <div class="event-card">
-      <a href="https://www.pnsqc.org/millan_kaul_2025.php"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2025_October_PNSQC_USA.jpg"
-          alt="Millan speaking at PNSQC's 43rd Software Quality Conference in 2025 - Portland, USA">
+    <!-- Event 2: PNSQC 2025 -->
+    <article class="event-card" data-category="2025 conference" style="--index: 1;">
+      <a href="https://pnsqc.org/archive/2025/paper-presenters/" target="_blank" rel="noopener noreferrer"
+        class="event-card-link"
+        aria-label="Transforming teams and CTOs through a Quality Engineering mindset — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-conference"><i class="fas fa-award"></i> Conference</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2025_October_PNSQC_USA.jpg"
+            alt="Millan Kaul speaking at PNSQC's 43rd Software Quality Conference in 2025 - Portland, USA"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Transforming teams and CTOs through a Quality Engineering mindset</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>PNSQC's 43rd Software Quality Conference</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>October 2025</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Portland, USA 🇺🇸</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Transforming teams and CTOs through a Quality Engineering mindset</div>
-      <div class="event-info">PNSQC's 43rd Software Quality Conference | October 2025 | Portland USA 🇺🇸</div>
-    </div>
+    </article>
 
-  <!-- Event 8 -->
-   <!-- CAST 2025  -->
-    <div class="event-card">
-      <a href="https://associationforsoftwaretesting.org/conference/cast-2025/speakers-of-testing-conference-cast-2025/"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2025_August_CAST_SLC_Utah_USA.jpg"
-          alt="Millan speaking at CAST 2025 conference - Salt Lake City, Utah USAs">
+    <!-- Event 3: CAST 2025 -->
+    <article class="event-card" data-category="2025 conference" style="--index: 2;">
+      <a href="https://associationforsoftwaretesting.org/conference/cast-2025/cast2025_schedule/cast-2025-software-testing-conference-in-salt-lake-city-utah-aug-2025/"
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="From Tactical to Trusted: 10 Moves that Define a Modern QA Leader — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-conference"><i class="fas fa-award"></i> Conference</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2025_August_CAST_SLC_Utah_USA.jpg"
+            alt="Millan Kaul speaking at CAST 2025 conference - Salt Lake City, Utah USA" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">From Tactical to Trusted: 10 Moves that Define a Modern QA Leader</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>Association for Software Testing CAST 2025</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>August 2025</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Salt Lake City, Utah 🇺🇸</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">From Tactical to Trusted: 10 Moves that Define a Modern QA Leader</div>
-      <div class="event-info">The Association for testing's CAST 2025 conference | August 2025 | Salt Lake City, Utah 🇺🇸</div>
-    </div>
+    </article>
 
-
-    <!-- Event 7 -->
-    <!-- https://www.linkedin.com/feed/update/urn:li:activity:7292240423064875008/
-    https://www.testingmind.com/event/test-automation-summit-seattle/speakers/ -->
-    <!-- https://www.testingmind.com/event/test-automation-summit-seattle/ -->
-    <div class="event-card">
-      <a href="https://www.linkedin.com/posts/millankaul_chaosengineering-microservices-resilience-activity-7292289444613697536-6u0x"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2025_Feburary_TESTINGMIND_Seattle.jpeg"
-          alt="Millan speaking at TESTINGMIND Coneference - Feb'25 meetup - Seattle USA">
+    <!-- Event 4: TESTINGMIND Seattle 2025 -->
+    <article class="event-card" data-category="2025 conference" style="--index: 3;">
+      <!-- <a href="https://www.linkedin.com/posts/millankaul_chaosengineering-microservices-resilience-activity-7292289444613697536-6u0x" -->
+      <a href="https://www.linkedin.com/posts/testingmind-consulting-pvt-ltd-_chaosengineering-microservices-resilience-activity-7292240423064875008-AU4G"
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="Testing microservices at scale using chaos engineering and resilience in a distributed world — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-summit"><i class="fas fa-bolt"></i> Summit</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2025_Feburary_TESTINGMIND_Seattle.jpeg"
+            alt="Millan Kaul speaking at TESTINGMIND Conference on Chaos Engineering and Resilience - Feb'25 meetup - Seattle USA"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Testing microservices at scale using chaos engineering and resilience in a distributed
+            world</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>TESTINGMIND Test Automation Summit</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>Feb 2025</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Seattle, US 🇺🇸</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Testing microservices at scale using chaos engineering and resilience in a distributed world</div>
-      <div class="event-info">TESTINGMIND Test Automation Summit / Conference | Feb 2025 | Seattle, US 🇺🇸 </div>
-    </div>
-    
-    <!-- Event 6 -->
-    <!-- https://reactor.microsoft.com/en-us/reactor/events/23196/ -->
-    <div class="event-card">
+    </article>
+
+    <!-- Event 5: Innovate QA Nov 2024 -->
+    <article class="event-card" data-category="2024 meetup" style="--index: 4;">
       <a href="https://www.linkedin.com/posts/innovateqa-events_performancetesting-qualityleadership-ai-activity-7262509550396715008-0mCn"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2024_November_QA_Seattle.jpg"
-          alt="Millan speaking at Innovate QA - Nov'24 meetup - Redmond USA">
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="Taking Quality Engineering leadership to the next level - PART 2 — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-meetup"><i class="fas fa-users"></i> Meetup</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2024_November_QA_Seattle.jpg"
+            alt="Millan Kaul speaking at Innovate QA on Quality Engineering Leadership - Nov'24 meetup - Redmond USA"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Taking Quality Engineering leadership to the next level - PART 2</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>Innovate QA Event</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>Nov 2024</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Microsoft HQ - Redmond, US 🇺🇸</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Taking Quality Engineering leadership to the next level - PART 2</div>
-      <div class="event-info">Innovate QA Event | Nov 2024 | Microsoft HQ - Redmond, US 🇺🇸 </div>
-    </div>
-    
-    
-    <!-- Event 5 -->
-    <div class="event-card">
+    </article>
+
+    <!-- Event 6: The Test Tribe Toronto Oct 2024 -->
+    <article class="event-card" data-category="2024 meetup" style="--index: 5;">
       <a href="https://www.linkedin.com/posts/millankaul_tttmeetup-testautomation-torontotech-activity-7259442324328349698-D8UB"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2024_October_TTT_Toronto.jpg"
-          alt="Millan speaking at The Test Tribe's inaugural meetup - Toronto Canada">
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="Mastering test automation leadership with proven tips for aspiring QA leaders — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-meetup"><i class="fas fa-users"></i> Meetup</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2024_October_TTT_Toronto.jpg"
+            alt="Millan Kaul speaking at The Test Tribe's inaugural meetup - Toronto Canada" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Mastering test automation leadership with proven tips for aspiring QA leaders</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>The Test Tribe's Inaugural Meetup</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>October 2024</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Toronto, Canada 🇨🇦</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Mastering test automation leadership with proven tips for aspiring QA leaders</div>
-      <div class="event-info">The Test Tribe's inaugural meetup | October 2024 | Toronto Canada 🇨🇦</div>
-    </div>
+    </article>
 
-    <!-- Event 4 -->
-    <!-- https://reactor.microsoft.com/en-us/reactor/events/23196/ -->
-    <div class="event-card">
+    <!-- Event 7: Innovate QA July 2024 -->
+    <article class="event-card" data-category="2024 meetup" style="--index: 6;">
       <a href="https://www.linkedin.com/posts/millankaul_meetup-qualitywithmillan-techmeetup-activity-7220193623097716736-Sg0J"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2024_July_microsoft_US.png"
-          alt="Millan Speaking at Microsoft Reactor HQ Redmond, Washington United States of America" />
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="Raising the bar with pragmatic testing of microservices — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-meetup"><i class="fas fa-users"></i> Meetup</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2024_July_microsoft_US.png"
+            alt="Millan Kaul Speaking at Microsoft Reactor HQ Redmond, Washington United States of America"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Raising the bar with pragmatic testing of microservices</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>Innovate QA Event</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>July 2024</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Microsoft HQ - Redmond, US 🇺🇸</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Raising the bar with pragmatic testing of microservices</div>
-      <div class="event-info">Innovate QA Event | July 2024 | Microsoft HQ - Redmond, US 🇺🇸 </div>
-    </div>
+    </article>
 
-
-    <!-- Event 3 -->
-    <div class="event-card">
+    <!-- Event 8: YVR Testing April 2024 -->
+    <article class="event-card" data-category="2024 meetup" style="--index: 7;">
       <a href="https://www.linkedin.com/posts/millankaul_yvrtesting-qualitywithmillan-activity-7186839923990134784-VK2m"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2024_April_YVRTesting_Vancouver_Canada.png"
-          alt="Millan speaking at YVR Testing meetup at Vancouver Canada" />
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="The power of Behavioral Testing in Microservices — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-meetup"><i class="fas fa-users"></i> Meetup</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2024_April_YVRTesting_Vancouver_Canada.png"
+            alt="Millan Kaul speaking at YVR Testing meetup at Vancouver Canada on Behavioral Testing in Microservices"
+            loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">The power of Behavioral Testing in Microservices</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>YVR Testing Meetup</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>April 2024</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Vancouver, Canada 🇨🇦</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">The power of Behavioral 𝗧𝗲𝘀𝘁𝗶𝗻𝗴 in Microservice</div>
-      <div class="event-info">YVR Testing meetup | April 2024 | Vancouver, Canada 🇨🇦</div>
-    </div>
+    </article>
 
-    <!-- Event 2 -->
-    <div class="event-card">
+    <!-- Event 9: Sydney Testers March 2023 -->
+    <article class="event-card" data-category="2023 meetup" style="--index: 8;">
       <a href="https://www.linkedin.com/events/doublebillfeaturingmillankaul-l7033057355953053696" target="_blank"
-        rel="noopener noreferrer"><img class="event-image lazy"
-          data-src="/assets/images/events/2023_March_Syendy_Testers.png"
-          alt="Millan speaking at Sydney Testers - Sydney Australia">
+        rel="noopener noreferrer" class="event-card-link"
+        aria-label="Using Exploratory Testing Plus Automation — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-meetup"><i class="fas fa-users"></i> Meetup</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2023_March_Syendy_Testers.png"
+            alt="Millan Kaul speaking at Sydney Testers - Sydney Australia" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">Using Exploratory Testing Plus Automation</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>Sydney Testers</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>March 2023</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Sydney, Australia 🇦🇺</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">Using Exploratory Testing Plus Automation</div>
-      <div class="event-info">Sydney Testers | March 2023 | Sydney Australia 🇦🇺</div>
+    </article>
 
-    </div>
-
-    <!-- Event 1 -->
-    <div class="event-card">
+    <!-- Event 10: Applitools Webinar Oct 2023 -->
+    <article class="event-card" data-category="2023 webinar" style="--index: 9;">
       <a href="https://www.linkedin.com/posts/millankaul_when-to-shift-left-move-to-centre-and-go-activity-6981023187853611008-lQJr"
-        target="_blank" rel="noopener noreferrer">
-        <img class="event-image lazy" data-src="/assets/images/events/2023_Oct_Applitools.jpg"
-          alt="Millan speaking at Sydney Testers - Sydney Australia">
+        target="_blank" rel="noopener noreferrer" class="event-card-link"
+        aria-label="When to Shift Left, Move to Centre, and Go Right in Testing — Presented by Millan Kaul">
+        <div class="event-image-wrapper">
+          <span class="event-badge badge-webinar"><i class="fas fa-laptop"></i> Webinar</span>
+          <img class="event-image lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3C/svg%3E"
+            data-src="/assets/images/events/2023_Oct_Applitools.jpg"
+            alt="Millan Kaul speaking at Applitools Webinar on Shift Left and Shift Right in Testing" loading="lazy">
+        </div>
+        <div class="event-body">
+          <h2 class="event-title">When to Shift Left, Move to Centre, and Go Right in Testing</h2>
+          <div class="event-meta-list">
+            <div class="event-meta-item">
+              <i class="fas fa-microphone-alt"></i>
+              <span>Webinar - Applitools</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="far fa-calendar-alt"></i>
+              <span>October 2023</span>
+            </div>
+            <div class="event-meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Sydney, Australia 🇦🇺</span>
+            </div>
+          </div>
+          <div class="event-card-footer">
+            <span class="cta-text">View Event Details</span>
+            <i class="fas fa-arrow-right cta-icon"></i>
+          </div>
+        </div>
       </a>
-      <div class="event-title">When to Shift Left, Move to Centre, and Go Right in Testing</div>
-      <div class="event-info">Webinar - Applitools | Oct 2023 | Sydney Australia 🇦🇺</div>
-
-    </div>
-
-    <!-- Vancouver Kablamo QE meetup  - https://www.linkedin.com/feed/update/urn:li:activity:7082199303972159488/ -->
-
-
-    <!-- Add more events here -->
+    </article>
 
   </div>
 
-  <script>
-    // Lazy load images
-    document.addEventListener("DOMContentLoaded", function () {
-      const lazyImages = document.querySelectorAll(".lazy");
+  <!-- Featured Book Cross-Promotion Banner -->
+  <aside class="featured-book-banner" aria-label="Featured Published Book by Millan Kaul">
+    <div class="book-banner-content">
+      <div class="book-banner-cover-wrapper">
+        <a href="https://us.amazon.com/dp/B0HHJ84359/" target="_blank" rel="noopener noreferrer"
+          aria-label="View The AI Eval Mindset on Amazon">
+          <img src="/assets/images/books/001_The_AI_Eval_Mindset.png"
+            alt="THE AI EVAL MINDSET by Millan Kaul — 30 Focused Lessons for Testing AI That Works in the Real World"
+            class="book-banner-cover" loading="lazy">
+        </a>
+      </div>
+      <div class="book-banner-details">
+        <div class="book-pill-tag"><i class="fas fa-bookmark"></i> Latest Book Publication</div>
+        <h3 class="book-banner-title">THE AI EVAL MINDSET</h3>
+        <p class="book-banner-subtitle">30 Focused Lessons for Testing AI That Works in the Real World</p>
+        <p class="book-banner-description">
+          The AI Eval Mindset gives AI engineers, quality engineers, and engineering leaders a practical framework for
+          evaluating AI systems end to end.
+        </p>
+        <div class="book-banner-actions">
+          <a href="https://us.amazon.com/dp/B0HHJ84359/" target="_blank" rel="noopener noreferrer"
+            class="btn-amazon-cta">
+            <i class="fab fa-amazon"></i> Buy on Amazon
+          </a>
+          <a href="/books" class="btn-book-details">
+            <i class="fas fa-book-reader"></i> Learn More & Chapters
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
 
+  <!-- SEO Topic Pills (Positioned cleanly at bottom of page) -->
+  <footer class="events-bottom-topics">
+    <h3 class="bottom-topics-title"><i class="fas fa-bullhorn"></i> Core Speaking & Research Topics</h3>
+    <div class="events-topic-tags" aria-label="Speaking Topics and Expertise">
+      <span class="topic-tag"><i class="fas fa-brain"></i> Eval AI & Benchmarking</span>
+      <span class="topic-tag"><i class="fas fa-shield-alt"></i> AI Guardrails & Trust</span>
+      <span class="topic-tag"><i class="fas fa-check-double"></i> Confidence in AI Testing</span>
+      <span class="topic-tag"><i class="fas fa-robot"></i> Autonomous QA Agents</span>
+      <span class="topic-tag"><i class="fas fa-network-wired"></i> Microservices & Chaos</span>
+    </div>
+  </footer>
+
+</div>
+
+<style>
+  /* ==========================================================
+     Events Page - Modern Scoped Styling
+     ========================================================== */
+
+  .events-section {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .events-header-block {
+    margin-bottom: 2rem;
+  }
+
+  .events-subtitle {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    max-width: 900px;
+  }
+
+  /* Filter Tabs */
+  .events-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .filter-btn {
+    appearance: none;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #475569;
+    padding: 0.38rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+  }
+
+  .filter-btn .filter-count {
+    background: #e2e8f0;
+    color: #475569;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 9999px;
+    margin-left: 0.2rem;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+  }
+
+  .filter-btn:hover .filter-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  }
+
+  .filter-btn.active .filter-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  /* Keynote Filter Button Accent */
+  .filter-btn-keynote:hover {
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+  }
+
+  .filter-btn-keynote.active {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-color: #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+  }
+
+  /* Books Filter Button Accent */
+  .filter-btn-books:hover {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+  }
+
+  .filter-btn-books.active {
+    background: linear-gradient(135deg, #ff9900 0%, #ea580c 100%);
+    border-color: #ea580c;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+  }
+
+  .featured-book-banner.highlight-pulse {
+    animation: bookBannerGlow 1.8s ease-in-out;
+  }
+
+  @keyframes bookBannerGlow {
+
+    0%,
+    100% {
+      box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+      border-color: #e2e8f0;
+    }
+
+    50% {
+      box-shadow: 0 0 35px rgba(255, 153, 0, 0.5);
+      border-color: #ff9900;
+    }
+  }
+
+  /* Responsive Grid Layout */
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  /* Event Card */
+  .event-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s ease,
+      opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: eventCardEntrance 0.5s ease backwards;
+    animation-delay: calc(var(--index, 0) * 50ms);
+  }
+
+  @keyframes eventCardEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Standard Card Hover */
+  .event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 32px -8px rgba(2, 132, 199, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.08);
+    border-color: #38bdf8;
+  }
+
+  /* Keynote Card Special Golden Yellow Glow on Hover */
+  .event-card.card-keynote:hover,
+  .event-card[data-category*="keynote"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px -6px rgba(245, 158, 11, 0.35), 0 8px 18px -4px rgba(217, 119, 6, 0.2);
+    border-color: #f59e0b;
+  }
+
+  .event-card.card-keynote:hover .event-title,
+  .event-card[data-category*="keynote"]:hover .event-title {
+    color: #d97706 !important;
+  }
+
+  .event-card.card-keynote:hover .event-card-footer,
+  .event-card[data-category*="keynote"]:hover .event-card-footer {
+    color: #d97706;
+  }
+
+  .event-card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Image Wrapper */
+  .event-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: linear-gradient(110deg, #f1f5f9 8%, #e2e8f0 18%, #f1f5f9 33%);
+    background-size: 200% 100%;
+    animation: imageShimmer 1.5s linear infinite;
+  }
+
+  @keyframes imageShimmer {
+    to {
+      background-position-x: -200%;
+    }
+  }
+
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .event-image.lazy-loaded {
+    opacity: 1;
+  }
+
+  .event-card:hover .event-image {
+    transform: scale(1.05);
+  }
+
+  /* Badges - Positioned Top Right */
+  .event-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    left: auto;
+    z-index: 2;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 9999px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .badge-keynote {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95));
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .badge-conference {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(2, 132, 199, 0.95));
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .badge-summit {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.95), rgba(109, 40, 217, 0.95));
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .badge-meetup {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(5, 150, 105, 0.95));
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .badge-webinar {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.95), rgba(219, 39, 119, 0.95));
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  /* Card Content */
+  .event-body {
+    padding: 1.25rem 1.25rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    background: #ffffff;
+  }
+
+  .event-title {
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #0f172a !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    transition: color 0.2s ease;
+  }
+
+  .event-card:hover .event-title {
+    color: #0284c7 !important;
+  }
+
+  /* Metadata List */
+  .event-meta-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .event-meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #475569;
+  }
+
+  .event-meta-item i {
+    color: #0284c7;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+  }
+
+  /* Keynote icon accent in meta list */
+  .card-keynote .event-meta-item i {
+    color: #d97706;
+  }
+
+  /* Footer / CTA */
+  .event-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.85rem;
+    border-top: 1px solid #f1f5f9;
+    margin-top: auto;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0284c7;
+  }
+
+  .card-keynote .event-card-footer {
+    color: #d97706;
+  }
+
+  .cta-icon {
+    transition: transform 0.25s ease;
+  }
+
+  .event-card:hover .cta-icon {
+    transform: translateX(4px);
+  }
+
+  /* ==========================================================
+     Featured Book Banner Cross-Promotion
+     ========================================================== */
+
+  .featured-book-banner {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .featured-book-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9900, #f59e0b, #0284c7);
+  }
+
+  .book-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .book-banner-cover-wrapper {
+    flex-shrink: 0;
+    width: 180px;
+  }
+
+  .book-banner-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.25), 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    display: block;
+  }
+
+  .book-banner-cover:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .book-banner-details {
+    flex: 1;
+  }
+
+  .book-pill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    margin-bottom: 0.6rem;
+  }
+
+  .book-banner-title {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.4rem 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .book-banner-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0284c7;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .book-banner-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 1.25rem;
+    max-width: 750px;
+  }
+
+  .book-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .btn-amazon-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ff9900 0%, #f59e0b 100%);
+    color: #111827 !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    transition: all 0.25s ease;
+  }
+
+  .btn-amazon-cta:hover {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.4);
+  }
+
+  .btn-book-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #ffffff;
+    color: #0284c7 !important;
+    border: 1px solid #cbd5e1;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+
+  .btn-book-details:hover {
+    background: #f0f9ff;
+    border-color: #0284c7;
+    transform: translateY(-1px);
+  }
+
+  /* ==========================================================
+     Bottom SEO Topic Tags Section
+     ========================================================== */
+
+  .events-bottom-topics {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bottom-topics-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bottom-topics-title i {
+    color: #0284c7;
+  }
+
+  .events-topic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .topic-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #334155;
+    transition: all 0.2s ease;
+  }
+
+  .topic-tag i {
+    color: #0284c7;
+    font-size: 0.8rem;
+  }
+
+  .topic-tag:hover {
+    background: #e0f2fe;
+    border-color: #bae6fd;
+    color: #0369a1;
+  }
+
+  /* Dark Theme Harmonization */
+  @media (prefers-color-scheme: dark) {
+    .events-subtitle {
+      color: #94a3b8;
+    }
+
+    .events-section .event-card {
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.35);
+    }
+
+    .events-section .event-card:hover {
+      box-shadow: 0 20px 32px -8px rgba(2, 132, 199, 0.25), 0 8px 16px -4px rgba(0, 0, 0, 0.4);
+      border-color: #38bdf8;
+    }
+
+    .events-section .event-card.card-keynote:hover,
+    .events-section .event-card[data-category*="keynote"]:hover {
+      box-shadow: 0 20px 35px -6px rgba(245, 158, 11, 0.45), 0 8px 18px -4px rgba(217, 119, 6, 0.3);
+      border-color: #fbbf24;
+    }
+
+    .events-section .event-card.card-keynote:hover .event-title,
+    .events-section .event-card[data-category*="keynote"]:hover .event-title {
+      color: #fbbf24 !important;
+    }
+
+    .events-section .event-card.card-keynote:hover .event-card-footer,
+    .events-section .event-card[data-category*="keynote"]:hover .event-card-footer {
+      color: #fbbf24;
+    }
+
+    .events-section .event-body {
+      background: #1e293b;
+    }
+
+    .events-section .event-title {
+      color: #f8fafc !important;
+    }
+
+    .events-section .event-card:hover .event-title {
+      color: #38bdf8 !important;
+    }
+
+    .events-section .event-meta-item {
+      color: #cbd5e1;
+    }
+
+    .events-section .event-card-footer {
+      border-top-color: #334155;
+      color: #38bdf8;
+    }
+
+    .events-section .filter-btn {
+      background-color: #1e293b;
+      border-color: #334155;
+      color: #cbd5e1;
+    }
+
+    .events-section .filter-btn .filter-count {
+      background: #334155;
+      color: #cbd5e1;
+    }
+
+    .events-section .event-image-wrapper {
+      background: linear-gradient(110deg, #1e293b 8%, #334155 18%, #1e293b 33%);
+      background-size: 200% 100%;
+    }
+
+    .featured-book-banner {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-color: #334155;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .book-banner-title {
+      color: #f8fafc !important;
+    }
+
+    .book-banner-subtitle {
+      color: #38bdf8;
+    }
+
+    .book-banner-description {
+      color: #cbd5e1;
+    }
+
+    .book-pill-tag {
+      background: #451a03;
+      color: #fdba74;
+      border-color: #7c2d12;
+    }
+
+    .btn-book-details {
+      background: #1e293b;
+      border-color: #475569;
+      color: #38bdf8 !important;
+    }
+
+    .btn-book-details:hover {
+      background: #0f2942;
+      border-color: #38bdf8;
+    }
+
+    .events-bottom-topics {
+      border-top-color: #334155;
+    }
+
+    .bottom-topics-title {
+      color: #e2e8f0 !important;
+    }
+
+    .topic-tag {
+      background: #1e293b;
+      border-color: #334155;
+      color: #cbd5e1;
+    }
+
+    .topic-tag:hover {
+      background: #0f2942;
+      border-color: #0284c7;
+      color: #38bdf8;
+    }
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 768px) {
+    .events-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .events-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .filter-btn {
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+    }
+
+    .event-body {
+      padding: 1.1rem;
+    }
+
+    .event-title {
+      font-size: 1.05rem !important;
+    }
+
+    .book-banner-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .book-banner-cover-wrapper {
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    .book-banner-actions {
+      justify-content: center;
+    }
+
+    .events-topic-tags {
+      gap: 0.35rem;
+    }
+
+    .topic-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // 1. High-performance Progressive Image Lazy Loading
+    const lazyImages = document.querySelectorAll(".event-image.lazy");
+
+    if ("IntersectionObserver" in window) {
       const imageObserver = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             const img = entry.target;
             img.src = img.dataset.src;
-            img.classList.add('lazy-loaded');
-            imageObserver.unobserve(img);
+            img.onload = function () {
+              img.classList.add("lazy-loaded");
+            };
+            observer.unobserve(img);
           }
         });
+      }, {
+        rootMargin: "100px 0px"
       });
 
       lazyImages.forEach(function (image) {
         imageObserver.observe(image);
       });
-    });
-  </script>
-</body>
+    } else {
+      // Fallback for older browsers
+      lazyImages.forEach(function (img) {
+        img.src = img.dataset.src;
+        img.classList.add("lazy-loaded");
+      });
+    }
 
-</html>
+    // 2. Interactive Category/Year/Books Filtering
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".event-card");
+    const bookBanner = document.querySelector(".featured-book-banner");
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter");
+
+        // Toggle active button state
+        filterButtons.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+        this.classList.add("active");
+
+        if (filter === "books") {
+          // Hide cards and scroll to book banner
+          cards.forEach(function (card) {
+            card.style.display = "none";
+          });
+          if (bookBanner) {
+            bookBanner.scrollIntoView({ behavior: "smooth", block: "center" });
+            bookBanner.classList.add("highlight-pulse");
+            setTimeout(function () {
+              bookBanner.classList.remove("highlight-pulse");
+            }, 1800);
+          }
+          return;
+        }
+
+        // Filter cards with smooth entrance
+        let visibleIndex = 0;
+        cards.forEach(function (card) {
+          const categories = card.getAttribute("data-category") || "";
+          const isMatch = filter === "all" || categories.includes(filter);
+
+          if (isMatch) {
+            card.style.display = "flex";
+            card.style.setProperty("--index", visibleIndex);
+            card.style.animation = "none";
+            // Trigger reflow to restart animation smoothly
+            void card.offsetWidth;
+            card.style.animation = "eventCardEntrance 0.4s ease backwards";
+            card.style.animationDelay = (visibleIndex * 40) + "ms";
+            visibleIndex++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
