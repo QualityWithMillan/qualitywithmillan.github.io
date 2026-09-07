@@ -1,13 +1,15 @@
 //logic to handle button click, output display and copy button
 
-let copyButton = document.getElementById("copy-button");
-if (copyButton) {
-  copyButton.addEventListener("click", copyToClipboard);
-}
+if (typeof document !== 'undefined') {
+  let copyButton = document.getElementById("copy-button");
+  if (copyButton) {
+    copyButton.addEventListener("click", copyToClipboard);
+  }
 
-let clearButton = document.getElementById("clear-button");
-if (clearButton) {
-  clearButton.addEventListener("click", clearInputText);
+  let clearButton = document.getElementById("clear-button");
+  if (clearButton) {
+    clearButton.addEventListener("click", clearInputText);
+  }
 }
 
 function clearInputText() {
@@ -66,19 +68,19 @@ function applyFormat(format) {
       outputText = toUnicodeVariant(inputText, 'i');
       break;
     case "strikethrough":
-      outputText = toUnicodeVariant(inputText, 'i', 'strike');
+      outputText = toUnicodeVariant(inputText, 'plain', 'strike');
       break;
     case "underline":
-      outputText = toUnicodeVariant(inputText, '', 'underline');
+      outputText = toUnicodeVariant(inputText, 'plain', 'underline');
       break;
     case "bold-strikethrough":
-      outputText = toUnicodeVariant(inputText, 'b', 'strike');
+      outputText = toUnicodeVariant(inputText, 'bs', 'strike');
       break;
     case "bold-italic":
-      outputText = toUnicodeVariant(inputText, 'bi');
+      outputText = toUnicodeVariant(inputText, 'bis');
       break;
     case "italic-strikethrough":
-      outputText = toUnicodeVariant(inputText, 'i', 'strike');
+      outputText = toUnicodeVariant(inputText, 'is', 'strike');
       break;
     case "bold-italic-strikethrough":
       outputText = toUnicodeVariant(inputText, 'bis', 'strike');
@@ -95,23 +97,25 @@ function applyFormat(format) {
   }
 }
 
-let boldButton = document.getElementById("bold-button");
-if (boldButton) boldButton.addEventListener("click", () => applyFormat("bold"));
+if (typeof document !== 'undefined') {
+  let boldButton = document.getElementById("bold-button");
+  if (boldButton) boldButton.addEventListener("click", () => applyFormat("bold"));
 
-let italicButton = document.getElementById("italic-button");
-if (italicButton) italicButton.addEventListener("click", () => applyFormat("italic"));
+  let italicButton = document.getElementById("italic-button");
+  if (italicButton) italicButton.addEventListener("click", () => applyFormat("italic"));
 
-let strikethroughButton = document.getElementById("strikethrough-button");
-if (strikethroughButton) strikethroughButton.addEventListener("click", () => applyFormat("strikethrough"));
+  let strikethroughButton = document.getElementById("strikethrough-button");
+  if (strikethroughButton) strikethroughButton.addEventListener("click", () => applyFormat("strikethrough"));
 
-let underlineButton = document.getElementById("underline-button");
-if (underlineButton) underlineButton.addEventListener("click", () => applyFormat("underline"));
+  let underlineButton = document.getElementById("underline-button");
+  if (underlineButton) underlineButton.addEventListener("click", () => applyFormat("underline"));
 
-let boldItalicButton = document.getElementById("bold-italic-button");
-if (boldItalicButton) boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
+  let boldItalicButton = document.getElementById("bold-italic-button");
+  if (boldItalicButton) boldItalicButton.addEventListener("click", () => applyFormat("bold-italic"));
 
-let monospaceButton = document.getElementById("monospace-button");
-if (monospaceButton) monospaceButton.addEventListener("click", () => applyFormat("monospace"));
+  let monospaceButton = document.getElementById("monospace-button");
+  if (monospaceButton) monospaceButton.addEventListener("click", () => applyFormat("monospace"));
+}
 
 
 
@@ -251,9 +255,10 @@ function toUnicodeVariant(str, variant, flags) {
 	const numbers = '0123456789'
 
 	const getType = function(variant) {
+		if (!variant || variant === 'plain' || variant === 'none') return null
 		if (variantOffsets[variant]) return variantOffsets[variant]
 		if (offsets[variant]) return variant
-		return 'm' //monospace as default
+		return null
 	}
 	const getFlag = function(flag, flags) {
 		if (!flags) return false

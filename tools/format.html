@@ -174,6 +174,39 @@ permalink: "/format/"
     transform: translateY(1px);
   }
 
+  /* Dark mode support */
+  [data-theme="dark"] .format-card,
+  body.dark-mode .format-card {
+    background: #1e242b;
+    border-color: #2d3748;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  [data-theme="dark"] .format-wrapper textarea,
+  body.dark-mode .format-wrapper textarea {
+    background: #151a21;
+    border-color: #2d3748;
+    color: #f1f5f9;
+  }
+
+  [data-theme="dark"] .format-wrapper textarea[readonly],
+  body.dark-mode .format-wrapper textarea[readonly] {
+    background: #1a202c;
+  }
+
+  [data-theme="dark"] .format-btn,
+  body.dark-mode .format-btn {
+    background: #1e242b;
+    border-color: #2d3748;
+    color: #f1f5f9;
+  }
+
+  [data-theme="dark"] .format-btn:hover,
+  body.dark-mode .format-btn:hover {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
   @media (max-width: 480px) {
     .format-card {
       padding: 16px;
