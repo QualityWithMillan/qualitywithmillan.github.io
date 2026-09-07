@@ -1,0 +1,119 @@
+{% comment %}
+  Reusable Product / Book Spotlight Card Component
+  Usage:
+    {% include product-spotlight-card.html
+       title="Your Title"
+       link="https://..."
+       link_text="Shop now ›"
+       image="/path/to/image.png"
+       image_alt="Alt text"
+       author="by Author"
+       price="$9.99 Kindle"
+       format="Also available in Paperback & Hardcover"
+       rating=""
+       rating_count=""
+       badge="Companion Book"
+       hook="Contextual lead-in text before the card"
+       description="Short summary if any"
+    %}
+  All arguments are optional and default to 'THE AI EVAL MINDSET'.
+{% endcomment %}
+
+{% assign psc_title = include.title | default: "THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World" %}
+{% assign psc_link = include.link | default: "https://us.amazon.com/dp/B0HHJ84359/" %}
+{% assign psc_link_text = include.link_text | default: "Shop on Amazon ›" %}
+{% assign psc_image = include.image %}
+{% if include.image == nil and include.title == nil %}
+  {% assign psc_image = "/assets/images/books/001_The_AI_Eval_Mindset.png" %}
+{% endif %}
+{% assign psc_image_alt = include.image_alt | default: psc_title %}
+{% assign psc_author = include.author %}
+{% if include.author == nil and include.title == nil %}
+  {% assign psc_author = "by Millan Kaul" %}
+{% endif %}
+{% assign psc_price = include.price %}
+{% if include.price == nil and include.title == nil %}
+  {% assign psc_price = "$9.99 Kindle" %}
+{% endif %}
+{% assign psc_format = include.format %}
+{% if include.format == nil and include.title == nil %}
+  {% assign psc_format = "Also available in Paperback & Hardcover" %}
+{% endif %}
+{% assign psc_rating = include.rating %}
+{% assign psc_rating_count = include.rating_count %}
+{% assign psc_badge = include.badge %}
+{% assign psc_hook = include.hook %}
+{% assign psc_desc = include.description %}
+
+{% if psc_hook and psc_hook != "" %}
+<div class="product-card-hook">{{ psc_hook }}</div>
+{% endif %}
+
+<div class="product-spotlight-card" role="region" aria-label="{{ psc_title }}">
+  {% if psc_image and psc_image != "" %}
+  <div class="psc-image-col">
+    <a href="{{ psc_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ psc_title }}">
+      <img src="{{ psc_image }}" alt="{{ psc_image_alt }}" class="psc-thumbnail" loading="lazy">
+    </a>
+  </div>
+  {% endif %}
+
+  <div class="psc-content-col">
+    {% if psc_badge and psc_badge != "" %}
+    <div class="psc-badge">{{ psc_badge }}</div>
+    {% endif %}
+
+    <div class="psc-title">
+      <a href="{{ psc_link }}" target="_blank" rel="noopener noreferrer">{{ psc_title }}</a>
+    </div>
+
+    {% if psc_author and psc_author != "" %}
+    <div class="psc-author">{{ psc_author }}</div>
+    {% endif %}
+
+    {% if psc_desc and psc_desc != "" %}
+    <div class="psc-description">{{ psc_desc }}</div>
+    {% endif %}
+
+    {% if (psc_rating and psc_rating != "") or (psc_price and psc_price != "") or (psc_format and psc_format != "") %}
+    <div class="psc-meta-row">
+      {% if psc_rating and psc_rating != "" %}
+      <div class="psc-rating">
+        <span class="psc-stars" aria-label="{{ psc_rating }} out of 5 stars">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <i class="fas fa-star" aria-hidden="true"></i>
+        </span>
+        {% if psc_rating_count and psc_rating_count != "" %}
+        <span class="psc-rating-count">{{ psc_rating_count }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if psc_rating and psc_rating != "" and psc_price and psc_price != "" %}
+      <span class="psc-divider">|</span>
+      {% endif %}
+
+      {% if psc_price and psc_price != "" %}
+      <span class="psc-price">{{ psc_price }}</span>
+      {% endif %}
+
+      {% if psc_price and psc_price != "" and psc_format and psc_format != "" %}
+      <span class="psc-divider">|</span>
+      {% endif %}
+
+      {% if psc_format and psc_format != "" %}
+      <span class="psc-format">{{ psc_format }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="psc-action">
+      <a href="{{ psc_link }}" class="psc-cta-link" target="_blank" rel="noopener noreferrer">
+        {{ psc_link_text }}
+      </a>
+    </div>
+  </div>
+</div>
