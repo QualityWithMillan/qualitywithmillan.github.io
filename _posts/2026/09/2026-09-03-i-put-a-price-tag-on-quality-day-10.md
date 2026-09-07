@@ -30,6 +30,10 @@ seo:
     - "llm expenses"
     - "llm evaluation"
     - "quality engineering"
+    - "the ai eval mindset"
+    - "the ai eval mindset book"
+    - "millan kaul book"
+    - "ai testing book"
   author: "Millan Kaul"
   published_time: "2026-09-03"
   modified_time: "2026-09-03"
@@ -82,6 +86,18 @@ I ran the same small dataset through two model options and estimated the cost pe
 ### What surprised me:
 I had a strong opinion about quality, but no opinion about whether that quality was worth paying for.
 
+{% include product-spotlight-card.html 
+   hook="📖 <em>This is a lesson from the 30-day AI testing framework in:</em>"
+   title="THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World"
+   link="https://us.amazon.com/dp/B0HHJ84359/"
+   link_text="Shop on Amazon ›"
+   image="/assets/images/books/001_The_AI_Eval_Mindset.png"
+   image_alt="THE AI EVAL MINDSET Book by Millan Kaul"
+   author="by Millan Kaul"
+   price="$9.99 Kindle"
+   format="Also available in Paperback & Hardcover"
+%}
+
 ### My QA takeaway:
 1. An eval score without cost context is incomplete.
 2. The best AI answer is not always the best business decision.
@@ -89,3 +105,5 @@ I had a strong opinion about quality, but no opinion about whether that quality 
 Would you pay 10x more for a 5% quality lift?
 
 #AIEvals #AIProduct #LLMOps
+
+{% include book-cta-footer.html %}

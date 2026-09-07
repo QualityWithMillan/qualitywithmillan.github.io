@@ -30,6 +30,10 @@ seo:
     - "testing ai models"
     - "llm-as-a-judge"
     - "ai quality assurance"
+    - "the ai eval mindset"
+    - "the ai eval mindset book"
+    - "millan kaul book"
+    - "ai testing book"
   author: "Millan Kaul"
   published_time: "2026-08-25"
   modified_time: "2026-08-25"
@@ -82,6 +86,18 @@ I picked one output requirement: the response must include a clear next step. I 
 ### What surprised me:
 The simplest rule found failures faster than my “does this feel good?” review.
 
+{% include product-spotlight-card.html 
+   hook="📖 <em>This is a lesson from the 30-day AI testing framework in:</em>"
+   title="THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World"
+   link="https://us.amazon.com/dp/B0HHJ84359/"
+   link_text="Shop on Amazon ›"
+   image="/assets/images/books/001_The_AI_Eval_Mindset.png"
+   image_alt="THE AI EVAL MINDSET Book by Millan Kaul"
+   author="by Millan Kaul"
+   price="$9.99 Kindle"
+   format="Also available in Paperback & Hardcover"
+%}
+
 ### My QA takeaway:
 1. Start with what must never break. Fancy metrics can come later.
 2. Start with one rule your AI must never break.
@@ -90,3 +106,5 @@ What is one non-negotiable rule for your AI feature?
 
 
 #AIEvals #SoftwareTesting #AIEngineering
+
+{% include book-cta-footer.html %}

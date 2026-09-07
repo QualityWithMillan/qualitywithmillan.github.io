@@ -30,6 +30,10 @@ seo:
     - "eval dataset"
     - "software qa"
     - "test automation"
+    - "the ai eval mindset"
+    - "the ai eval mindset book"
+    - "millan kaul book"
+    - "ai testing book"
   author: "Millan Kaul"
   published_time: "2026-09-08"
   modified_time: "2026-09-08"
@@ -82,6 +86,18 @@ I took a real failure example, wrote down the expected behavior, and added it to
 ### What surprised me:
 The bug stopped being frustrating the moment it became reusable test data.
 
+{% include product-spotlight-card.html 
+   hook="📖 <em>This is a lesson from the 30-day AI testing framework in:</em>"
+   title="THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World"
+   link="https://us.amazon.com/dp/B0HHJ84359/"
+   link_text="Shop on Amazon ›"
+   image="/assets/images/books/001_The_AI_Eval_Mindset.png"
+   image_alt="THE AI EVAL MINDSET Book by Millan Kaul"
+   author="by Millan Kaul"
+   price="$9.99 Kindle"
+   format="Also available in Paperback & Hardcover"
+%}
+
 ### My QA takeaway:
 1. Every AI defect is a gift to your regression suite—if you capture it.
 2. Don’t just fix AI bugs. Turn them into regression tests.
@@ -89,3 +105,5 @@ The bug stopped being frustrating the moment it became reusable test data.
 What recent AI failure should become your next eval?
 
 #AIEvals #RegressionTesting #AIEngineering
+
+{% include book-cta-footer.html %}

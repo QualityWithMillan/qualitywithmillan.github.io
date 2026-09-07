@@ -28,6 +28,10 @@ seo:
     - "llm response variability"
     - "prompt testing"
     - "ai response consistency"
+    - "the ai eval mindset"
+    - "the ai eval mindset book"
+    - "millan kaul book"
+    - "ai testing book"
     - "llm evals"
     - "quality engineering"
     - "ai quality"
@@ -85,9 +89,23 @@ I took one simple prompt and ran it 10 times with the same model settings. Then 
 ### What surprised me:
 The answers all sounded confident, but a few slightly different.
 
+{% include product-spotlight-card.html 
+   hook="📖 <em>This is a lesson from the 30-day AI testing framework in:</em>"
+   title="THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World"
+   link="https://us.amazon.com/dp/B0HHJ84359/"
+   link_text="Shop on Amazon ›"
+   image="/assets/images/books/001_The_AI_Eval_Mindset.png"
+   image_alt="THE AI EVAL MINDSET Book by Millan Kaul"
+   author="by Millan Kaul"
+   price="$9.99 Kindle"
+   format="Also available in Paperback & Hardcover"
+%}
+
 ### My QA takeaway:
 𝐼𝑓 𝑦𝑜𝑢𝑟 𝐴𝐼 𝑓𝑒𝑎𝑡𝑢𝑟𝑒 𝑜𝑛𝑙𝑦 𝑔𝑒𝑡𝑠 𝑡𝑒𝑠𝑡𝑒𝑑 𝑜𝑛𝑐𝑒, 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑡𝑒𝑠𝑡𝑖𝑛𝑔 𝑎 𝑙𝑢𝑐𝑘𝑦 𝑑𝑟𝑎𝑤, 𝑛𝑜𝑡 𝑏𝑒ℎ𝑎𝑣𝑖𝑜𝑟.
 
-𝗦𝗮𝗺𝗲 𝗽𝗿𝗼𝗺𝗽𝘁 ≠ 𝘀𝗮𝗺𝗲 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗯𝗲𝗵𝗮𝘃𝗶𝗼𝗿.
+𝗦𝗮𝗺𝗲 𝗽𝗿𝗼𝗺𝗽𝘁 ≠ 𝘀𝗮𝗺𝗲 𝗽𝗿𝗼𝗱𝘂𝗰𝘁 𝗯𝗲𝗵𝗮𝘃𝗶𝗼𝗿
 
 What’s one AI output you assumed would be consistent?
+
+{% include book-cta-footer.html %}

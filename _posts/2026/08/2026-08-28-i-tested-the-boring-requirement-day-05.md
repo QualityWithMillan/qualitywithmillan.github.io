@@ -30,6 +30,10 @@ seo:
     - "llm evaluations"
     - "ai quality criteria"
     - "prompt engineering"
+    - "the ai eval mindset"
+    - "the ai eval mindset book"
+    - "millan kaul book"
+    - "ai testing book"
   author: "Millan Kaul"
   published_time: "2026-08-28"
   modified_time: "2026-08-28"
@@ -82,10 +86,24 @@ I checked whether every response returned the required JSON field. I ignored whe
 ### What surprised me:
 Several responses were useful to a human but unusable by the application.
 
-###  My QA takeaway:
+{% include product-spotlight-card.html 
+   hook="📖 <em>This is a lesson from the 30-day AI testing framework in:</em>"
+   title="THE AI EVAL MINDSET: 30 Focused Lessons for Testing AI That Works in the Real World"
+   link="https://us.amazon.com/dp/B0HHJ84359/"
+   link_text="Shop on Amazon ›"
+   image="/assets/images/books/001_The_AI_Eval_Mindset.png"
+   image_alt="THE AI EVAL MINDSET Book by Millan Kaul"
+   author="by Millan Kaul"
+   price="$9.99 Kindle"
+   format="Also available in Paperback & Hardcover"
+%}
+
+### My QA takeaway:
 1. For AI systems, product quality includes format, schema, and integration—not just smart words.
 2. A beautiful AI answer can still break production.
 
 What “boring” requirement has caused your team the most pain?
 
 #AIEvals #APITesting #AIEngineering
+
+{% include book-cta-footer.html %}
