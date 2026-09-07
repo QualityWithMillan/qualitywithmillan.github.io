@@ -18,6 +18,7 @@ tags:
   - evals
   - llm-as-a-judge
   - llm-evals
+ai_share: true
 excerpt: "I tested two models today. One answer was only slightly better and much more expensive."
 seo:
   title: "I Put a Price Tag on Quality - Day 10"

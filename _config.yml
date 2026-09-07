@@ -320,6 +320,7 @@ defaults:
       read_time: true
       comments: # true
       share: true
+      ai_share: true
       related: true
       show_date: true
       add_script: true

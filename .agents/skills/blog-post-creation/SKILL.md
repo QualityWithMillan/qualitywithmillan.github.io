@@ -22,3 +22,7 @@ When drafting, reviewing, or publishing blog posts in `_posts/`:
 
 3. **End-of-Article CTA**:
    - Place `{% include book-cta-footer.html %}` at the very bottom of the post content (before post meta and taxonomy).
+
+4. **AI Summarize & Social Share**:
+   - The "Summarize with AI" (ChatGPT, Perplexity, Claude, Grok, Gemini) and "Copy for LLM" tool are automatically rendered on all blog posts via `_includes/social-share.html`.
+
