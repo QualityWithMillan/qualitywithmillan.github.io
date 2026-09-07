@@ -6,6 +6,82 @@ search: false
 
 {{ content }}
 
+<div class="taxonomy__summary-header">
+  <div class="taxonomy__stat-card">
+    <div class="taxonomy__stat-icon">
+      <i class="fas fa-fw fa-newspaper" aria-hidden="true"></i>
+    </div>
+    <div class="taxonomy__stat-info">
+      <span class="taxonomy__stat-number">{{ site.posts.size }}</span>
+      <span class="taxonomy__stat-label">Total Articles</span>
+    </div>
+  </div>
+  <div class="taxonomy__stat-card">
+    <div class="taxonomy__stat-icon">
+      <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i>
+    </div>
+    <div class="taxonomy__stat-info">
+      <span class="taxonomy__stat-number">{{ site.categories.size }}</span>
+      <span class="taxonomy__stat-label">Categories</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .taxonomy__summary-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 1.5em 0 2em;
+  }
+  .taxonomy__stat-card {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .taxonomy__stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+  .taxonomy__stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+  }
+  .taxonomy__stat-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .taxonomy__stat-number {
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+  }
+  .taxonomy__stat-label {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 3px;
+  }
+</style>
+
 {% assign categories_max = 0 %}
 {% for category in site.categories %}
   {% if category[1].size > categories_max %}
