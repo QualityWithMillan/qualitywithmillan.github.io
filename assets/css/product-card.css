@@ -318,3 +318,18 @@
     justify-content: center;
   }
 }
+
+/* --- Social Share Button: Twitter / X Brand Color --- */
+.btn--twitter {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.btn--twitter:visited {
+  color: #ffffff !important;
+}
+
+.btn--twitter:hover {
+  background-color: #272c30 !important;
+  color: #ffffff !important;
+}
