@@ -1,202 +1,554 @@
 ---
 layout: single
 author_profile: false
-title: "Tool: Coin Flip Animation - Head or Tail"
+title: "Tool: Coin Flip - Heads or Tails Simulator"
 search: true
 permalink: "/coin-flip/"
 ---
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Coin Flip Animation</title>
-    <!-- Start of style -->
-    <style>
-        /* Reset default margin and padding for the body element */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
-        }
+<style>
+  .coin-wrapper {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 650px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+  }
 
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
+  .coin-card {
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e8ed;
+    padding: 28px 24px;
+    width: 100%;
+    text-align: center;
+  }
 
-        .coin-container {
-            position: relative;
-            width: 50%;
-            height: 50%;
-            padding: 2px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            user-select: none;
-        }
+  /* Dark mode support */
+  [data-theme="dark"] .coin-card,
+  body.dark-mode .coin-card {
+    background: #1e242b;
+    border-color: #2d3748;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
 
-        .coin-img {
-            width: 100%;
-            height: 100%;
-            transition: transform 1s ease;
-            /* Set a smooth transition for the rotation */
-        }
+  .coin-header-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin-top: -8px;
+    margin-bottom: 24px;
+  }
 
-        .coin-flip {
-            /* Add a keyframes animation for the spinning effect */
-            animation: spin 2s cubic-bezier(0.3, 0.6, 0.8, 1) forwards;
-        }
+  [data-theme="dark"] .coin-header-subtitle,
+  body.dark-mode .coin-header-subtitle {
+    color: #94a3b8;
+  }
 
-        /* Define the keyframes animation for the spinning effect */
-        @keyframes spin {
-            0% {
-                transform: rotateY(0);
-            }
+  /* 3D Coin Stage */
+  .coin-stage {
+    perspective: 1000px;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 20px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
 
-            25% {
-                transform: rotateY(360deg);
-            }
+  .coin-entity {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
 
-            50% {
-                transform: rotateY(720deg);
-            }
+  .coin-stage:hover .coin-entity:not(.flipping) {
+    transform: scale(1.04);
+  }
 
-            75% {
-                transform: rotateY(1080deg);
-            }
+  .coin-stage:active .coin-entity:not(.flipping) {
+    transform: scale(0.96);
+  }
 
-            100% {
-                transform: rotateY(1440deg);
-            }
-        }
+  .coin-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
 
-        h2 {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+  .coin-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    display: block;
+    border-radius: 50%;
+  }
 
-        /* Add styles for the result and timestamp */
-        .result {
-            margin-top: 2px;
-            font-size: 20px;
-            font-weight: bold;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+  .coin-face.back {
+    transform: rotateY(180deg);
+  }
 
-        .timestamp {
-            margin-top: 3px;
-            font-size: 14px;
-            color: #888;
-            justify-content: center;
-            text-align: center;
-        }
+  /* Keyframe 3D flipping animations */
+  @keyframes flipToHeads {
+    0% {
+      transform: translateY(0) rotateY(0) scale(1);
+    }
+    30% {
+      transform: translateY(-70px) rotateY(720deg) scale(1.12);
+    }
+    60% {
+      transform: translateY(-40px) rotateY(1440deg) scale(1.06);
+    }
+    85% {
+      transform: translateY(5px) rotateY(1800deg) scale(0.98);
+    }
+    100% {
+      transform: translateY(0) rotateY(2160deg) scale(1);
+    }
+  }
 
-        /* CSS media queries to adjust the layout and styles based on the screen size. */
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .flex-container {
-                flex-direction: column;
-            }
+  @keyframes flipToTails {
+    0% {
+      transform: translateY(0) rotateY(0) scale(1);
+    }
+    30% {
+      transform: translateY(-70px) rotateY(720deg) scale(1.12);
+    }
+    60% {
+      transform: translateY(-40px) rotateY(1440deg) scale(1.06);
+    }
+    85% {
+      transform: translateY(5px) rotateY(1980deg) scale(0.98);
+    }
+    100% {
+      transform: translateY(0) rotateY(2340deg) scale(1);
+    }
+  }
 
-            .coin-container {
-                margin-top: 20px;
-            }
+  .coin-entity.flipping-heads {
+    animation: flipToHeads 1.3s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+  }
 
-            .result {
-                font-size: 16px;
-                margin-top: 10px;
-            }
+  .coin-entity.flipping-tails {
+    animation: flipToTails 1.3s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
+  }
 
-            .timestamp {
-                font-size: 12px;
-            }
-        }
+  /* Result Badge */
+  .result-banner {
+    min-height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
-        /* Tablet styles */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            /* Add specific styles for tablet devices */
-        }
-    </style>
-</head>
+  .result-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease;
+  }
 
-<body>
-    <div class="container">
-        <h2>Head or Tail !</h2>
-        <div class="flex-container">
-            <div class="coin-container" onclick="flipCoin()">
-                <!-- default image -->
-                <img class="coin-img" id="coin-image" src="/assets/images/tools/head.png" alt="Coin Image">
-                <hr>
-            </div>
+  [data-theme="dark"] .result-text,
+  body.dark-mode .result-text {
+    color: #f1f5f9;
+  }
+
+  .result-text.pop {
+    animation: popResult 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  @keyframes popResult {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .timestamp-text {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+  }
+
+  /* Action Buttons */
+  .action-controls {
+    margin-bottom: 24px;
+  }
+
+  .flip-btn {
+    width: 100%;
+    max-width: 320px;
+    height: 48px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #3b82f6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .flip-btn:hover:not(:disabled) {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  }
+
+  .flip-btn:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  .flip-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .hint-text {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 8px;
+  }
+
+  /* Stats Container */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 16px;
+  }
+
+  [data-theme="dark"] .stats-grid,
+  body.dark-mode .stats-grid {
+    background: #151a21;
+    border-color: #2d3748;
+  }
+
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  [data-theme="dark"] .stat-val,
+  body.dark-mode .stat-val {
+    color: #f8fafc;
+  }
+
+  .stat-lbl {
+    font-size: 12px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  [data-theme="dark"] .stat-lbl,
+  body.dark-mode .stat-lbl {
+    color: #94a3b8;
+  }
+
+  .stat-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+
+  /* History Bar */
+  .history-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 13px;
+  }
+
+  [data-theme="dark"] .history-section,
+  body.dark-mode .history-section {
+    border-color: #2d3748;
+  }
+
+  .history-pills {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 0;
+    max-width: 70%;
+  }
+
+  .history-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .history-badge.h {
+    background: rgba(59, 130, 246, 0.15);
+    color: #2563eb;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  .history-badge.t {
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.3);
+  }
+
+  .reset-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .reset-btn:hover {
+    background: rgba(128, 128, 128, 0.15);
+    color: #ef4444;
+  }
+
+  @media (max-width: 480px) {
+    .coin-card {
+      padding: 20px 16px;
+    }
+    .coin-stage {
+      width: 150px;
+      height: 150px;
+    }
+    .result-text {
+      font-size: 20px;
+    }
+    .stat-val {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<div class="coin-wrapper">
+  <div class="coin-card" role="region" aria-label="Coin Flip Simulator">
+    <p class="coin-header-subtitle">Click the coin or button below to flip</p>
+
+    <!-- 3D Coin Stage -->
+    <div class="coin-stage" id="coin-stage" onclick="triggerFlip()" title="Click to flip!" role="button" tabindex="0" aria-label="Coin (Click to flip)">
+      <div class="coin-entity" id="coin-entity">
+        <div class="coin-face front">
+          <img src="/assets/images/tools/head.png" alt="Coin Heads Side" id="coin-head-img">
         </div>
-        <div class="result" id="result"></div>
-        <div class="timestamp" id="timestamp"></div>
+        <div class="coin-face back">
+          <img src="/assets/images/tools/tail.png" alt="Coin Tails Side" id="coin-tail-img">
+        </div>
+      </div>
     </div>
-    <script>
-        function flipCoin() {
-            const coin = document.querySelector('.coin-container');
-            const result = document.getElementById('result');
-            const timestamp = document.getElementById('timestamp');
 
-            // Randomly determine the result (Head or Tail)
-            const coinResult = Math.random() < 0.5 ? 'Head' : 'Tail';
+    <!-- Result Banner -->
+    <div class="result-banner" aria-live="polite">
+      <div class="result-text" id="result-text">Ready to Flip!</div>
+      <div class="timestamp-text" id="timestamp-text">Click coin or press Space</div>
+    </div>
 
-            coin.classList.add('coin-flip');
+    <!-- Controls -->
+    <div class="action-controls">
+      <button type="button" id="flip-button" class="flip-btn" onclick="triggerFlip()">
+        <span>🪙</span> <span>Flip Coin</span>
+      </button>
+      <div class="hint-text">Shortcut: Press <strong>Space</strong> or <strong>Enter</strong> to flip</div>
+    </div>
 
-            // Show the first side of the coin (slow)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/head.png';
-            }, 800);
+    <!-- Statistics Section -->
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-val" id="heads-count">0</div>
+        <div class="stat-lbl">Heads</div>
+        <div class="stat-sub" id="heads-pct">0%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="tails-count">0</div>
+        <div class="stat-lbl">Tails</div>
+        <div class="stat-sub" id="tails-pct">0%</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="total-count">0</div>
+        <div class="stat-lbl">Total Flips</div>
+        <div class="stat-sub" id="streak-label">—</div>
+      </div>
+    </div>
 
-            // Show the second side of the coin after a brief delay (fast)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/tail.png';
-            }, 1000);
+    <!-- Recent History & Reset -->
+    <div class="history-section">
+      <div class="history-pills" id="history-pills" title="Recent Flips (Last 10)">
+        <span style="color: #94a3b8; font-size: 12px;">No flips yet</span>
+      </div>
+      <button type="button" class="reset-btn" onclick="resetStats()" title="Reset all counts">🔄 Reset Stats</button>
+    </div>
+  </div>
+</div>
 
-            // Show the first side of the coin (fast)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/head.png';
-            }, 1200);
+<script>
+  (function() {
+    let isFlipping = false;
+    let headsCount = 0;
+    let tailsCount = 0;
+    let currentSide = 'heads'; // 'heads' or 'tails'
+    let history = [];
 
-            // Show the second side of the coin after a brief delay (medium)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/tail.png';
-            }, 1500);
+    // Optional audio synthesis for flip tick
+    function playFlipSound() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(440, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.08);
+      } catch (e) {}
+    }
 
-            // Show the first side of the coin (medium)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/head.png';
-            }, 1800);
+    window.triggerFlip = function() {
+      if (isFlipping) return;
+      isFlipping = true;
 
-            // Show the second side of the coin after a brief delay (slow)
-            setTimeout(() => {
-                document.getElementById('coin-image').src = '/assets/images/tools/tail.png';
-            }, 500);
+      const coin = document.getElementById('coin-entity');
+      const flipBtn = document.getElementById('flip-button');
+      const resultText = document.getElementById('result-text');
+      const timestampText = document.getElementById('timestamp-text');
 
+      flipBtn.disabled = true;
+      resultText.classList.remove('pop');
+      resultText.textContent = 'Flipping...';
+      timestampText.textContent = 'Spinning in the air...';
 
-            // Update the result and timestamp after the flip animation completes
-            setTimeout(() => {
-                coin.classList.remove('coin-flip');
-                result.textContent = coinResult;
-                timestamp.textContent = new Date().toLocaleString();
-                // Update the coin image based on the result
-                document.getElementById('coin-image').src = coinResult === 'Head' ? '/assets/images/tools/head.png' : '/assets/images/tools/tail.png';
-            }, 2000); // Adjust the delay to match the duration of the flip animation (2s in this case)
+      playFlipSound();
+
+      // Clear existing animation classes
+      coin.className = 'coin-entity';
+      void coin.offsetWidth; // Force reflow
+
+      // Determine outcome: 50/50
+      const isHeads = Math.random() < 0.5;
+      const outcome = isHeads ? 'heads' : 'tails';
+
+      // Apply appropriate 3D animation
+      if (outcome === 'heads') {
+        coin.classList.add('flipping-heads');
+      } else {
+        coin.classList.add('flipping-tails');
+      }
+
+      setTimeout(() => {
+        isFlipping = false;
+        flipBtn.disabled = false;
+        currentSide = outcome;
+
+        // Update stats
+        if (outcome === 'heads') {
+          headsCount++;
+          resultText.innerHTML = '🎉 It\'s <strong style="color: #2563eb;">Heads!</strong>';
+        } else {
+          tailsCount++;
+          resultText.innerHTML = '🎉 It\'s <strong style="color: #ea580c;">Tails!</strong>';
         }
-    </script>
-</body>
 
-</html>
+        resultText.classList.add('pop');
+        const now = new Date();
+        timestampText.textContent = 'Flipped at ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+        // Update History
+        history.unshift(outcome === 'heads' ? 'H' : 'T');
+        if (history.length > 10) history.pop();
+
+        updateStatsDisplay();
+      }, 1300);
+    };
+
+    function updateStatsDisplay() {
+      const total = headsCount + tailsCount;
+      document.getElementById('heads-count').textContent = headsCount;
+      document.getElementById('tails-count').textContent = tailsCount;
+      document.getElementById('total-count').textContent = total;
+
+      const headsPct = total > 0 ? Math.round((headsCount / total) * 100) : 0;
+      const tailsPct = total > 0 ? Math.round((tailsCount / total) * 100) : 0;
+
+      document.getElementById('heads-pct').textContent = headsPct + '%';
+      document.getElementById('tails-pct').textContent = tailsPct + '%';
+
+      // History streak
+      const historyPills = document.getElementById('history-pills');
+      if (history.length === 0) {
+        historyPills.innerHTML = '<span style="color: #94a3b8; font-size: 12px;">No flips yet</span>';
+      } else {
+        historyPills.innerHTML = history.map(item => `
+          <span class="history-badge ${item.toLowerCase()}" title="${item === 'H' ? 'Heads' : 'Tails'}">${item}</span>
+        `).join('');
+      }
+    }
+
+    window.resetStats = function() {
+      headsCount = 0;
+      tailsCount = 0;
+      history = [];
+      updateStatsDisplay();
+      document.getElementById('result-text').textContent = 'Ready to Flip!';
+      document.getElementById('timestamp-text').textContent = 'Counts have been reset';
+    };
+
+    // Keyboard controls (Space or Enter)
+    document.addEventListener('keydown', function(e) {
+      if ((e.code === 'Space' || e.key === ' ' || e.key === 'Enter') && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        const coinStage = document.getElementById('coin-stage');
+        if (coinStage) {
+          e.preventDefault();
+          triggerFlip();
+        }
+      }
+    });
+  })();
+</script>
