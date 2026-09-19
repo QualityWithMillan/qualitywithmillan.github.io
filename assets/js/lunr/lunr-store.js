@@ -17,7 +17,9 @@ var store = [
       {
         "title": {{ doc.title | jsonify }},
         "excerpt":
-          {%- if site.search_full_content == true -%}
+          {%- if doc.excerpt -%}
+            {{ doc.excerpt | strip_html | strip_newlines | jsonify }},
+          {%- elsif site.search_full_content == true -%}
             {{ doc.content | newline_to_br |
               replace:"<br />", " " |
               replace:"</p>", " " |
@@ -27,7 +29,7 @@ var store = [
               replace:"</h4>", " " |
               replace:"</h5>", " " |
               replace:"</h6>", " "|
-            strip_html | strip_newlines | jsonify }},
+              strip_html | strip_newlines | jsonify }},
           {%- else -%}
             {{ doc.content | newline_to_br |
               replace:"<br />", " " |
@@ -38,7 +40,7 @@ var store = [
               replace:"</h4>", " " |
               replace:"</h5>", " " |
               replace:"</h6>", " "|
-            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
+              strip_html | strip_newlines | truncatewords: 50 | jsonify }},
           {%- endif -%}
         "categories": {{ doc.categories | jsonify }},
         "tags": {{ doc.tags | jsonify }},
@@ -52,10 +54,19 @@ var store = [
     {%- if forloop.last -%}
       {%- assign l = true -%}
     {%- endif -%}
+    {%- if doc.header.teaser -%}
+      {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
+    {%- else -%}
+      {%- assign teaser = site.teaser -%}
+    {%- endif -%}
   {
     "title": {{ doc.title | jsonify }},
     "excerpt":
-        {%- if site.search_full_content == true -%}
+        {%- if doc.excerpt -%}
+          {{ doc.excerpt | strip_html | strip_newlines | jsonify }},
+        {%- elsif doc.description -%}
+          {{ doc.description | strip_html | strip_newlines | jsonify }},
+        {%- elsif site.search_full_content == true -%}
           {{ doc.content | newline_to_br |
             replace:"<br />", " " |
             replace:"</p>", " " |
@@ -65,7 +76,7 @@ var store = [
             replace:"</h4>", " " |
             replace:"</h5>", " " |
             replace:"</h6>", " "|
-          strip_html | strip_newlines | jsonify }},
+            strip_html | strip_newlines | jsonify }},
         {%- else -%}
           {{ doc.content | newline_to_br |
             replace:"<br />", " " |
@@ -76,9 +87,12 @@ var store = [
             replace:"</h4>", " " |
             replace:"</h5>", " " |
             replace:"</h6>", " "|
-          strip_html | strip_newlines | truncatewords: 50 | jsonify }},
+            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
         {%- endif -%}
-      "url": {{ doc.url | absolute_url | jsonify }}
+      "categories": {{ doc.categories | jsonify }},
+      "tags": {{ doc.tags | default: doc.keywords | jsonify }},
+      "url": {{ doc.url | relative_url | jsonify }},
+      "teaser": {{ teaser | relative_url | jsonify }}
   }{%- unless forloop.last and l -%},{%- endunless -%}
   {%- endfor -%}
 {%- endif -%}]

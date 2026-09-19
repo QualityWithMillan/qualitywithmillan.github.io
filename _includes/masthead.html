@@ -77,13 +77,14 @@
     margin-left: 0.15rem;
   }
 
-  .masthead__dropdown:hover .masthead__dropdown-trigger .nav-caret,
-  .masthead__dropdown.is-open .masthead__dropdown-trigger .nav-caret {
+  /* Desktop Visible Links Dropdown Styling */
+  .greedy-nav .visible-links .masthead__dropdown:hover .masthead__dropdown-trigger .nav-caret,
+  .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-trigger .nav-caret {
     transform: rotate(180deg);
     opacity: 1;
   }
 
-  .masthead__dropdown-menu {
+  .greedy-nav .visible-links .masthead__dropdown-menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -105,22 +106,22 @@
     z-index: 1000;
   }
 
-  .masthead__dropdown:hover .masthead__dropdown-menu,
-  .masthead__dropdown:focus-within .masthead__dropdown-menu,
-  .masthead__dropdown.is-open .masthead__dropdown-menu {
+  .greedy-nav .visible-links .masthead__dropdown:hover .masthead__dropdown-menu,
+  .greedy-nav .visible-links .masthead__dropdown:focus-within .masthead__dropdown-menu,
+  .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0) scale(1);
   }
 
-  .masthead__dropdown-menu .masthead__dropdown-item {
+  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item {
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
     list-style: none !important;
   }
 
-  .masthead__dropdown-menu .masthead__dropdown-item a {
+  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
     display: block !important;
     padding: 0.6rem 1.25rem !important;
     margin: 0 !important;
@@ -133,95 +134,186 @@
     text-align: left !important;
   }
 
-  .masthead__dropdown-menu .masthead__dropdown-item a:before {
+  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:before {
     display: none !important;
   }
 
-  .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
     background: #f1f5f9 !important;
     color: #0284c7 !important;
     padding-left: 1.45rem !important;
   }
 
   /* Dark Theme Support */
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
+  }
+
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
+    color: #cbd5e1 !important;
+  }
+
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+    background: #0f172a !important;
+    color: #38bdf8 !important;
+  }
+
   @media (prefers-color-scheme: dark) {
-    .masthead__dropdown-menu {
+    .greedy-nav .visible-links .masthead__dropdown-menu {
       background: #1e293b;
       border-color: #334155;
       box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
     }
 
-    .masthead__dropdown-menu .masthead__dropdown-item a {
+    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
       color: #cbd5e1 !important;
     }
 
-    .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
       background: #0f172a !important;
       color: #38bdf8 !important;
     }
   }
 
-  /* Mobile Greedy-Nav Hidden Links list */
+  /* ==========================================================
+     Mobile Hidden Links Accordion ("More" in Mobile Menu)
+     ========================================================== */
+  .greedy-nav .hidden-links .masthead__dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown-trigger {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-trigger,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-trigger {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Default starting state: EXPANDED (caret rotated 180deg up) */
+  .greedy-nav .hidden-links .masthead__dropdown .masthead__dropdown-trigger .nav-caret {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+    transform: rotate(180deg);
+  }
+
   .greedy-nav .hidden-links .masthead__dropdown-menu {
     position: static;
     box-shadow: none;
     border: none;
     background: transparent;
-    padding-left: 1.25rem;
+    padding: 0;
+    margin: 0;
+    list-style: none !important;
+    display: block;
     opacity: 1;
     visibility: visible;
     transform: none;
-    display: block;
+    transition: all 0.2s ease;
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item {
+    display: block !important;
+    list-style: none !important;
+    margin: 0 !important;
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a {
+    display: block !important;
+    padding: 9px 20px 9px 34px !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Collapsed state in Mobile Menu */
+  .greedy-nav .hidden-links .masthead__dropdown.is-collapsed .masthead__dropdown-trigger .nav-caret {
+    transform: rotate(0deg);
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown.is-collapsed .masthead__dropdown-menu {
+    display: none !important;
   }
 </style>
 
 <script>
   (function () {
-    function initDropdowns() {
-      const dropdowns = document.querySelectorAll(".masthead__dropdown");
-      dropdowns.forEach(function (dd) {
-        const trigger = dd.querySelector(".masthead__dropdown-trigger");
-        if (trigger) {
-          trigger.addEventListener("click", function (e) {
-            e.preventDefault();
-            const isOpen = dd.classList.contains("is-open");
-            dropdowns.forEach(function (d) { d.classList.remove("is-open"); });
-            if (!isOpen) {
-              dd.classList.add("is-open");
-              trigger.setAttribute("aria-expanded", "true");
-            } else {
-              trigger.setAttribute("aria-expanded", "false");
-            }
-          });
-        }
-      });
+    // Delegated click handler on document to ensure dynamically moved greedy-nav links always function
+    document.addEventListener("click", function (e) {
+      const trigger = e.target.closest(".masthead__dropdown-trigger");
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        const dd = trigger.closest(".masthead__dropdown");
+        if (!dd) return;
 
-      document.addEventListener("click", function (e) {
-        if (!e.target.closest(".masthead__dropdown")) {
-          dropdowns.forEach(function (dd) {
-            dd.classList.remove("is-open");
-            const tr = dd.querySelector(".masthead__dropdown-trigger");
+        const isHiddenLinks = dd.closest(".hidden-links") !== null;
+
+        if (isHiddenLinks) {
+          // Mobile view: Default starting state is expanded. Toggle 'is-collapsed'.
+          const isCollapsed = dd.classList.toggle("is-collapsed");
+          trigger.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+        } else {
+          // Desktop view: Toggle 'is-open'
+          const isOpen = dd.classList.contains("is-open");
+          document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (d) {
+            d.classList.remove("is-open");
+            const tr = d.querySelector(".masthead__dropdown-trigger");
             if (tr) tr.setAttribute("aria-expanded", "false");
           });
-        }
-      });
 
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          dropdowns.forEach(function (dd) {
-            dd.classList.remove("is-open");
-            const tr = dd.querySelector(".masthead__dropdown-trigger");
-            if (tr) tr.setAttribute("aria-expanded", "false");
-          });
+          if (!isOpen) {
+            dd.classList.add("is-open");
+            trigger.setAttribute("aria-expanded", "true");
+          }
         }
-      });
-    }
+        return;
+      }
 
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initDropdowns);
-    } else {
-      initDropdowns();
-    }
+      // Close desktop visible-links dropdown when clicking outside
+      if (!e.target.closest(".visible-links .masthead__dropdown")) {
+        document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (dd) {
+          dd.classList.remove("is-open");
+          const tr = dd.querySelector(".masthead__dropdown-trigger");
+          if (tr) tr.setAttribute("aria-expanded", "false");
+        });
+      }
+    });
+
+    // Close desktop visible-links dropdown on Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (dd) {
+          dd.classList.remove("is-open");
+          const tr = dd.querySelector(".masthead__dropdown-trigger");
+          if (tr) tr.setAttribute("aria-expanded", "false");
+        });
+      }
+    });
   })();
 </script>
+
 

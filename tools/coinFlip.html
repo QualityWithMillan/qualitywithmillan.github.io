@@ -48,14 +48,20 @@ permalink: "/coin-flip/"
   }
 
   /* 3D Coin Stage */
+  .coin-stage-container {
+    position: relative;
+    width: 190px;
+    margin: 0 auto 24px;
+  }
+
   .coin-stage {
     perspective: 1000px;
     width: 190px;
     height: 190px;
-    margin: 0 auto 20px;
     position: relative;
     cursor: pointer;
     user-select: none;
+    z-index: 2;
   }
 
   .coin-entity {
@@ -67,11 +73,11 @@ permalink: "/coin-flip/"
     border-radius: 50%;
   }
 
-  .coin-stage:hover .coin-entity:not(.flipping) {
+  .coin-stage:hover .coin-entity:not(.flipping-heads):not(.flipping-tails) {
     transform: scale(1.04);
   }
 
-  .coin-stage:active .coin-entity:not(.flipping) {
+  .coin-stage:active .coin-entity:not(.flipping-heads):not(.flipping-tails) {
     transform: scale(0.96);
   }
 
@@ -100,6 +106,77 @@ permalink: "/coin-flip/"
 
   .coin-face.back {
     transform: rotateY(180deg);
+  }
+
+  /* Ground Resting Line & Shadow */
+  .coin-ground-line {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 2px;
+    background: radial-gradient(ellipse at center, rgba(148, 163, 184, 0.5) 0%, rgba(148, 163, 184, 0) 75%);
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  [data-theme="dark"] .coin-ground-line,
+  body.dark-mode .coin-ground-line {
+    background: radial-gradient(ellipse at center, rgba(148, 163, 184, 0.35) 0%, rgba(148, 163, 184, 0) 75%);
+  }
+
+  .coin-ground-shadow {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 12px;
+    background: radial-gradient(ellipse at center, rgba(30, 41, 59, 0.3) 0%, rgba(30, 41, 59, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.35;
+    filter: blur(1.5px);
+    z-index: 1;
+  }
+
+  [data-theme="dark"] .coin-ground-shadow,
+  body.dark-mode .coin-ground-shadow {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 70%);
+  }
+
+  @keyframes shadowFlip {
+    0% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.35;
+      filter: blur(1.5px);
+    }
+    30% {
+      transform: translateX(-50%) scale(0.42);
+      opacity: 0.12;
+      filter: blur(4px);
+    }
+    60% {
+      transform: translateX(-50%) scale(0.68);
+      opacity: 0.22;
+      filter: blur(3px);
+    }
+    85% {
+      transform: translateX(-50%) scale(1.1);
+      opacity: 0.45;
+      filter: blur(1px);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.35;
+      filter: blur(1.5px);
+    }
+  }
+
+  .coin-stage-container.flipping .coin-ground-shadow {
+    animation: shadowFlip 1.3s cubic-bezier(0.22, 0.8, 0.36, 1) forwards;
   }
 
   /* Keyframe 3D flipping animations */
@@ -305,6 +382,7 @@ permalink: "/coin-flip/"
     overflow-x: auto;
     padding: 4px 0;
     max-width: 70%;
+    align-items: center;
   }
 
   .history-badge {
@@ -331,6 +409,21 @@ permalink: "/coin-flip/"
     border: 1px solid rgba(234, 88, 12, 0.3);
   }
 
+  .history-badge.placeholder {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1.5px dashed #cbd5e1;
+    font-weight: normal;
+    box-sizing: border-box;
+  }
+
+  [data-theme="dark"] .history-badge.placeholder,
+  body.dark-mode .history-badge.placeholder {
+    background: rgba(148, 163, 184, 0.08);
+    border-color: #475569;
+    color: #64748b;
+  }
+
   .reset-btn {
     background: none;
     border: none;
@@ -351,9 +444,18 @@ permalink: "/coin-flip/"
     .coin-card {
       padding: 20px 16px;
     }
+    .coin-stage-container {
+      width: 150px;
+    }
     .coin-stage {
       width: 150px;
       height: 150px;
+    }
+    .coin-ground-line {
+      width: 110px;
+    }
+    .coin-ground-shadow {
+      width: 100px;
     }
     .result-text {
       font-size: 20px;
@@ -366,18 +468,22 @@ permalink: "/coin-flip/"
 
 <div class="coin-wrapper">
   <div class="coin-card" role="region" aria-label="Coin Flip Simulator">
-    <p class="coin-header-subtitle">Click the coin or button below to flip</p>
+    <p class="coin-header-subtitle" id="coin-subtitle">Click the coin or button below to flip</p>
 
-    <!-- 3D Coin Stage -->
-    <div class="coin-stage" id="coin-stage" onclick="triggerFlip()" title="Click to flip!" role="button" tabindex="0" aria-label="Coin (Click to flip)">
-      <div class="coin-entity" id="coin-entity">
-        <div class="coin-face front">
-          <img src="/assets/images/tools/head.png" alt="Coin Heads Side" id="coin-head-img">
-        </div>
-        <div class="coin-face back">
-          <img src="/assets/images/tools/tail.png" alt="Coin Tails Side" id="coin-tail-img">
+    <!-- 3D Coin Stage with Ground Line & Shadow -->
+    <div class="coin-stage-container" id="coin-stage-container">
+      <div class="coin-stage" id="coin-stage" onclick="triggerFlip()" title="Click to flip!" role="button" tabindex="0" aria-label="Coin (Click to flip)">
+        <div class="coin-entity" id="coin-entity">
+          <div class="coin-face front">
+            <img src="/assets/images/tools/head.png" alt="Coin Heads Side" id="coin-head-img">
+          </div>
+          <div class="coin-face back">
+            <img src="/assets/images/tools/tail.png" alt="Coin Tails Side" id="coin-tail-img">
+          </div>
         </div>
       </div>
+      <div class="coin-ground-line"></div>
+      <div class="coin-ground-shadow" id="coin-ground-shadow"></div>
     </div>
 
     <!-- Result Banner -->
@@ -416,7 +522,7 @@ permalink: "/coin-flip/"
     <!-- Recent History & Reset -->
     <div class="history-section">
       <div class="history-pills" id="history-pills" title="Recent Flips (Last 10)">
-        <span style="color: #94a3b8; font-size: 12px;">No flips yet</span>
+        <span class="history-badge placeholder" title="Next flip will appear here" aria-label="Next flip placeholder"></span>
       </div>
       <button type="button" class="reset-btn" onclick="resetStats()" title="Reset all counts">🔄 Reset Stats</button>
     </div>
@@ -430,6 +536,14 @@ permalink: "/coin-flip/"
     let tailsCount = 0;
     let currentSide = 'heads'; // 'heads' or 'tails'
     let history = [];
+
+    // Hide subtitle if previously flipped across browser sessions/tabs
+    const subtitle = document.getElementById('coin-subtitle');
+    try {
+      if (localStorage.getItem('qwm_coin_flipped') === 'true' && subtitle) {
+        subtitle.style.display = 'none';
+      }
+    } catch (e) {}
 
     // Optional audio synthesis for flip tick
     function playFlipSound() {
@@ -455,6 +569,19 @@ permalink: "/coin-flip/"
       if (isFlipping) return;
       isFlipping = true;
 
+      // Remove hint subtitle on first flip and persist across sessions
+      if (subtitle && subtitle.style.display !== 'none') {
+        subtitle.style.transition = 'opacity 0.3s ease, margin 0.3s ease, height 0.3s ease';
+        subtitle.style.opacity = '0';
+        setTimeout(() => {
+          subtitle.style.display = 'none';
+        }, 300);
+      }
+      try {
+        localStorage.setItem('qwm_coin_flipped', 'true');
+      } catch (e) {}
+
+      const stageContainer = document.getElementById('coin-stage-container');
       const coin = document.getElementById('coin-entity');
       const flipBtn = document.getElementById('flip-button');
       const resultText = document.getElementById('result-text');
@@ -466,6 +593,11 @@ permalink: "/coin-flip/"
       timestampText.textContent = 'Spinning in the air...';
 
       playFlipSound();
+
+      // Trigger ground shadow animation
+      stageContainer.classList.remove('flipping');
+      void stageContainer.offsetWidth; // Force reflow
+      stageContainer.classList.add('flipping');
 
       // Clear existing animation classes
       coin.className = 'coin-entity';
@@ -484,6 +616,7 @@ permalink: "/coin-flip/"
 
       setTimeout(() => {
         isFlipping = false;
+        stageContainer.classList.remove('flipping');
         flipBtn.disabled = false;
         currentSide = outcome;
 
@@ -500,9 +633,9 @@ permalink: "/coin-flip/"
         const now = new Date();
         timestampText.textContent = 'Flipped at ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
-        // Update History
-        history.unshift(outcome === 'heads' ? 'H' : 'T');
-        if (history.length > 10) history.pop();
+        // Update History (grow to right, limit to last 10)
+        history.push(outcome === 'heads' ? 'H' : 'T');
+        if (history.length > 10) history.shift();
 
         updateStatsDisplay();
       }, 1300);
@@ -520,14 +653,17 @@ permalink: "/coin-flip/"
       document.getElementById('heads-pct').textContent = headsPct + '%';
       document.getElementById('tails-pct').textContent = tailsPct + '%';
 
-      // History streak
+      // History streak with persistent right-hand placeholder slot
       const historyPills = document.getElementById('history-pills');
+      const placeholderHtml = '<span class="history-badge placeholder" title="Next flip will appear here" aria-label="Next flip placeholder"></span>';
+      
       if (history.length === 0) {
-        historyPills.innerHTML = '<span style="color: #94a3b8; font-size: 12px;">No flips yet</span>';
+        historyPills.innerHTML = placeholderHtml;
       } else {
-        historyPills.innerHTML = history.map(item => `
+        const pillsHtml = history.map(item => `
           <span class="history-badge ${item.toLowerCase()}" title="${item === 'H' ? 'Heads' : 'Tails'}">${item}</span>
         `).join('');
+        historyPills.innerHTML = pillsHtml + placeholderHtml;
       }
     }
 

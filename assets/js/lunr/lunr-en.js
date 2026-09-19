@@ -10,6 +10,7 @@ var idx = lunr(function () {
   this.ref('id')
 
   this.pipeline.remove(lunr.trimmer)
+  this.pipeline.remove(lunr.stopWordFilter)
 
   for (var item in store) {
     this.add({

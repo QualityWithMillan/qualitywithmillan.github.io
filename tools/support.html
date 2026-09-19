@@ -1,117 +1,156 @@
 ---
 layout: single
 author_profile: false
-title: "Support Our Blog"
+title: "Support Us"
 search: true
 permalink: "/support/"
 ---
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<style>
+  .support-container {
+    max-width: 780px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    line-height: 1.6;
+  }
 
-<head>
-  <meta charset="utf-8">
-  <title>Support #QualityWithMillan</title>
-  <!-- Start of style -->
-  <style>
-    /* Add your custom CSS styles here */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  [data-theme="dark"] .support-container,
+  body.dark-mode .support-container {
+    color: #cbd5e1;
+  }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+  .support-notice {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-left: 4px solid #10b981;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
 
-    .notice {
-      background-color: lightgreen;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
+  .support-notice p {
+    margin: 0;
+    font-size: 0.98rem;
+    color: #065f46;
+  }
 
-    .notice h4 {
-      color: red;
-      text-shadow: black;
-    }
+  [data-theme="dark"] .support-notice p,
+  body.dark-mode .support-notice p {
+    color: #6ee7b7;
+  }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+  .support-notice a {
+    color: #0284c7;
+    text-decoration: underline;
+    font-weight: 600;
+  }
 
-    p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+  .support-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-bottom: 24px;
+  }
 
-    /* a,
-    a:visited {
-      color: #f2ebeb;
-    } */
+  [data-theme="dark"] .support-card,
+  body.dark-mode .support-card {
+    background: #1e242b;
+    border-color: #2d3748;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
 
-    .donate-button {
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+  .support-card p {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
 
-    .donate-button-1 {
-      display: inline-block;
-      background-color: darkgreen;
-      color: black;
-    }
+  .support-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    .donate-button-2 {
-      display: inline-block;
-      background-color: #070707;
-      color: red;
-    }
+  .support-list li {
+    padding-left: 28px;
+    position: relative;
+    font-size: 0.98rem;
+  }
 
-    .donate-button-3 {
-      display: inline-block;
-      background-color: palevioletred;
-      color: black;
-    }
+  .support-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0284c7;
+    font-weight: bold;
+  }
 
-    .donate-button:hover {
-      background-color: #ffc700;
-    }
-  </style>
-</head>
+  /* Standard Brand Button matching Analytics Consent */
+  .support-btn {
+    appearance: none;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.65rem 1.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 1.25;
+    user-select: none;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28);
+    margin: 12px 0 20px 0;
+  }
 
-<body>
-  <div class="container">
-    <div class="notice">
-      <p>
-        Starting 1st Jan 2025, I pledge to donate <strong>80% of your tips to charity.</strong> ❤️.
-        Read more on this <a style="color: blue;" href="/post/2024-wrap-up-blog.html">2024 wrap-up blog post</a>.
-      </p>
-    </div>
-    <!-- 
-    <h1>Support Our Blog</h1> -->
+  .support-btn:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.38);
+    transform: translateY(-2px);
+    color: #ffffff !important;
+  }
+
+  .support-btn:active {
+    transform: translateY(1px);
+  }
+</style>
+
+<div class="support-container">
+  <div class="support-notice">
+    <p>
+      Starting 1st Jan 2025, I pledge to donate <strong>80% of your tips to charity</strong> ❤️.
+      Read more on this <a href="/post/2024-wrap-up-blog.html">2024 wrap-up blog post</a>.
+    </p>
+  </div>
+
+  <div class="support-card">
     <p>If you enjoy our content and would like to support our work, you can contribute in the following ways:</p>
-    <ul>
-      <li><strong>Funding:</strong> You can make a financial contribution to help us cover hosting costs and create more
-        valuable content.</li>
-      <li><strong>Support:</strong> Share our blog posts on social media, leave comments, and engage with our community.
-      </li>
+    
+    <ul class="support-list">
+      <li><strong>Funding:</strong> You can make a financial contribution to help us cover hosting costs and create more valuable content.</li>
+      <li><strong>Community & Advocacy:</strong> Share our blog posts on social media, leave comments, and engage with our community.</li>
     </ul>
+
     <p>Thank you for supporting our blog!</p>
 
-    <a class="donate-button donate-button-1" href="http://paypal.me/connectMillan" target="_blank"
-      style="color: white;">Start here!</a>
+    <a class="support-btn" href="https://paypal.me/connectMillan" target="_blank" rel="noopener noreferrer">
+      <span>☕</span> <span>Support Us</span>
+    </a>
 
-    <p>Your support helps us keep the blog running and allows us to continue providing valuable content. Every little
-      bit helps, and we appreciate your generosity!</p>
-
+    <p style="font-size: 0.92rem; opacity: 0.85; margin-top: 16px;">
+      Your support helps us keep the blog running and allows us to continue providing valuable content. Every little bit helps, and we appreciate your generosity!
+    </p>
   </div>
-</body>
-
-</html>
+</div>

@@ -1,14 +1,20 @@
 ---
 permalink: /about/
 title: "About #QualityWithMillan"
+description: "About QualityWithMillan, Millan Kaul, and the mission behind this software quality, AI testing, and leadership platform."
+excerpt: "Learn more about QualityWithMillan and Millan Kaul - software engineering, AI in testing, quality, and leadership insights."
+tags:
+  - About
+  - Millan Kaul
+  - QualityWithMillan
+search: true
 read_time: true
 share: true
 show_date: false
 header:
-  teaser:/assets/image/QualityWithMillan.png
+  teaser: /assets/image/QualityWithMillan.png
 authors:
-- Millan Kaul
-  
+  - Millan Kaul
 ---
 <hr>
 
@@ -25,5 +31,6 @@ Thank you for visiting my blog and for taking the time to learn a little bit abo
 
 
 Cheers 🙌
-[{{site.author.name}}](https://qualitywithmillan.github.io/)
+
+[{{site.author.name}}]({{ site.social.links[1] }})
 

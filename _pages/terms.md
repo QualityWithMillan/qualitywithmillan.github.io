@@ -1,8 +1,23 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-last_modified_at: 2023-01-01T12:42:38-04:00
+description: "Terms of service, privacy policy, cookie disclosures, and usage guidelines for QualityWithMillan."
+excerpt: "Terms of service and privacy policy for visitors of QualityWithMillan."
+last_modified_at: 2026-09-19T10:00:00-07:00
 toc: true
+author_profile: false
+search: true
+read_time: true
+share: false
+show_date: false
+header:
+  teaser: /assets/image/QualityWithMillan.png
+tags:
+  - Terms
+  - Privacy
+  - Privacy Policy
+  - Policy
+  - QualityWithMillan
 ---
 
 ## Privacy Policy
