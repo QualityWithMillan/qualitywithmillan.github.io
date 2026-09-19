@@ -1,4 +1,7 @@
 <div class="search-content__inner-wrap">
+  <button type="button" class="search-modal-close-btn" aria-label="Close search" title="Close (Esc)">
+    <i class="fas fa-times"></i>
+  </button>
   {%- assign search_provider = site.search_provider | default: "lunr" -%}
   {%- case search_provider -%}
   {%- when "lunr" -%}
@@ -9,14 +12,12 @@
     <div class="search-input-wrapper">
       <i class="fas fa-search search-input-icon"></i>
       <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Search posts, tags, topics...' }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-      <button type="button" class="search-close-btn" aria-label="Close search" title="Close (Esc)">
+      <button type="button" class="search-clear-btn" aria-label="Clear search input" title="Clear text">
         <i class="fas fa-times"></i>
       </button>
     </div>
   </form>
-  <div class="search-command-hints" aria-hidden="true">
-    <span class="search-hint-item"><kbd>↑</kbd><kbd>↓</kbd> <span>to navigate</span></span>
-    <span class="search-hint-item"><kbd>↵</kbd> <span>to select</span></span>
+  <div class="search-command-hints">
     <span class="search-hint-item"><kbd>esc</kbd> <span>to close</span></span>
   </div>
   <div id="results" class="results"></div>
@@ -28,12 +29,12 @@
     <div class="search-input-wrapper">
       <i class="fas fa-search search-input-icon"></i>
       <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Search posts, tags, topics...' }}" />
-      <button type="button" class="search-close-btn" aria-label="Close search" title="Close (Esc)">
+      <button type="button" class="search-clear-btn" aria-label="Clear search input" title="Clear text">
         <i class="fas fa-times"></i>
       </button>
     </div>
   </form>
-  <div class="search-command-hints" aria-hidden="true">
+  <div class="search-command-hints">
     <span class="search-hint-item"><kbd>esc</kbd> <span>to close</span></span>
   </div>
   <div id="results" class="results">
@@ -46,6 +47,80 @@
 </div>
 
 <style>
+  .search-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    background-color: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    overflow-y: auto;
+    padding: 2.5rem 1rem 2rem;
+    box-sizing: border-box;
+  }
+
+  .search-content.is--visible {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .search-content__inner-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(226, 232, 240, 0.9);
+    padding: 2.4rem 1.5rem 1.5rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* Top-Right Modal Close Button (Blue cross with rounded light-grey circle) */
+  .search-modal-close-btn {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    z-index: 20;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .search-modal-close-btn:hover,
+  .search-modal-close-btn:focus {
+    background: #e0f2fe;
+    color: #0284c7;
+    border-color: #bae6fd;
+    transform: scale(1.08);
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.18);
+    outline: none;
+  }
+
+  .search-content__form {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
   .search-input-wrapper {
     position: relative;
     display: flex;
@@ -55,37 +130,71 @@
 
   .search-input-icon {
     position: absolute;
-    left: 1rem;
-    font-size: 1.15rem;
+    left: 0.95rem;
+    font-size: 1.05rem;
     color: #94a3b8;
     pointer-events: none;
   }
 
+  /* Inside-Input Text Box Clear "X" Button (Icon only, no background box, properly inset) */
+  .search-clear-btn {
+    position: absolute;
+    right: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, transform 0.15s ease;
+    outline: none !important;
+  }
+
+  .search-clear-btn:hover,
+  .search-clear-btn:focus {
+    color: #334155;
+    background: transparent !important;
+    transform: translateY(-50%) scale(1.12);
+  }
+
   .search-content__form input.search-input {
-    padding-left: 2.8rem !important;
-    border-radius: 12px;
-    border: 2px solid #e2e8f0;
+    width: 100%;
+    height: 46px;
+    padding: 0.5rem 2.6rem 0.5rem 2.6rem !important;
+    border-radius: 10px;
+    border: 1.5px solid #cbd5e1;
     transition: all 0.2s ease;
-    font-size: 1.15rem;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+    background: #f8fafc;
+    color: #0f172a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    outline: none;
   }
 
   .search-content__form input.search-input:focus {
+    background: #ffffff;
     border-color: #0284c7;
-    box-shadow: 0 6px 24px rgba(2, 132, 199, 0.15);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
   }
 
   .search-command-hints {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1.25rem;
-    padding: 0.6rem 0.5rem 0.8rem;
-    font-size: 0.8rem;
+    gap: 0.75rem;
+    padding: 0.4rem 0.25rem 0.6rem;
+    font-size: 0.78rem;
     color: #64748b;
     border-bottom: 1px solid #e2e8f0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .search-hint-item {
@@ -98,8 +207,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.15rem 0.4rem;
-    font-size: 0.72rem;
+    padding: 0.12rem 0.35rem;
+    font-size: 0.7rem;
     font-weight: 600;
     font-family: inherit;
     background: #f1f5f9;
@@ -111,34 +220,82 @@
     line-height: 1;
   }
 
+  /* Results area */
+  .search-content #results {
+    max-height: 58vh;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+    padding-right: 0.25rem;
+  }
+
   @media (prefers-color-scheme: dark) {
+    .search-content__inner-wrap {
+      background: #0f172a;
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(51, 65, 85, 0.8);
+    }
+
+    .search-modal-close-btn {
+      background: #1e293b;
+      border-color: #334155;
+      color: #38bdf8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-modal-close-btn:hover,
+    .search-modal-close-btn:focus {
+      background: #0c4a6e;
+      color: #7dd3fc;
+      border-color: #0284c7;
+    }
+
     .search-content__form input.search-input {
       background: #1e293b;
       border-color: #334155;
       color: #f8fafc;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .search-content__form input.search-input:focus {
+      background: #0f172a;
       border-color: #38bdf8;
-      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.2);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+    }
+
+    .search-input-icon {
+      color: #38bdf8;
+    }
+
+    .search-clear-btn {
+      color: #64748b;
+    }
+
+    .search-clear-btn:hover,
+    .search-clear-btn:focus {
+      color: #cbd5e1;
     }
 
     .search-command-hints {
       color: #94a3b8;
-      border-bottom-color: #334155;
+      border-bottom-color: #1e293b;
     }
 
     .search-hint-item kbd {
-      background: #0f172a;
-      border-color: #475569;
+      background: #1e293b;
+      border-color: #334155;
       color: #cbd5e1;
     }
   }
 
   @media (max-width: 640px) {
+    .search-content {
+      padding: 1rem 0.5rem;
+    }
+
+    .search-content__inner-wrap {
+      padding: 2.25rem 1rem 1rem;
+      border-radius: 12px;
+    }
+
     .search-command-hints {
-      gap: 0.75rem;
       font-size: 0.75rem;
     }
   }

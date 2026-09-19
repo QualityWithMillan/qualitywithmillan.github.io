@@ -34,7 +34,7 @@
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
-        <button class="search__toggle search-btn-global" type="button" aria-label="{{ site.data.ui-text[site.locale].search_label | default: 'Search posts and topics' }}" title="Search (⌘K / Ctrl+K)">
+        <button class="search-btn-global" id="site-search-toggle" type="button" aria-label="{{ site.data.ui-text[site.locale].search_label | default: 'Search posts and topics' }}" title="Search (⌘K / Ctrl+K)">
           <i class="fas fa-search search-btn-icon"></i>
           <span class="search-btn-text">Search</span>
           <span class="search-key-badge-container">
@@ -331,11 +331,14 @@
 
     window.closeSearchOverlay = function () {
       const searchContent = document.querySelector(".search-content");
-      if (!searchContent) return;
-      searchContent.classList.remove("is--visible");
+      if (searchContent) searchContent.classList.remove("is--visible");
+      const initialContent = document.querySelector(".initial-content");
+      if (initialContent) initialContent.classList.remove("is--hidden");
       document.body.style.overflow = "";
-      const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
-      if (input) input.blur();
+      if (searchContent) {
+        const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+        if (input) input.blur();
+      }
     };
 
     window.toggleSearchOverlay = function () {
@@ -351,7 +354,7 @@
     // Delegated click handler on document
     document.addEventListener("click", function (e) {
       // Search toggle button
-      const searchBtn = e.target.closest(".search-btn-global, .search__toggle");
+      const searchBtn = e.target.closest(".search-btn-global, #site-search-toggle");
       if (searchBtn) {
         e.preventDefault();
         e.stopPropagation();
@@ -359,8 +362,31 @@
         return;
       }
 
-      // Search close button
-      const closeBtn = e.target.closest(".search-close-btn");
+      // Search text box clear "X" button
+      const clearBtn = e.target.closest(".search-clear-btn");
+      if (clearBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const searchContent = document.querySelector(".search-content");
+        if (searchContent) {
+          const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+          if (input) {
+            input.value = "";
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+            input.dispatchEvent(new Event("keyup", { bubbles: true }));
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+            input.focus();
+          }
+          const results = searchContent.querySelector("#results");
+          if (results) {
+            results.innerHTML = "";
+          }
+        }
+        return;
+      }
+
+      // Search close / cancel button (top-right blue cross, cancel button, or legacy close)
+      const closeBtn = e.target.closest(".search-modal-close-btn, .search-close-btn, .search-cancel-btn");
       if (closeBtn) {
         e.preventDefault();
         e.stopPropagation();

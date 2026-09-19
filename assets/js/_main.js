@@ -79,7 +79,17 @@ $(function() {
     toggleSearchModal();
   });
 
-  $(document).on("click", ".search-close-btn", function(e) {
+  $(document).on("click", ".search-clear-btn", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
+    if ($input.length) {
+      $input.val("").trigger("input").trigger("keyup").trigger("change").focus();
+    }
+    $("#results").empty();
+  });
+
+  $(document).on("click", ".search-modal-close-btn, .search-close-btn, .search-cancel-btn", function(e) {
     e.preventDefault();
     e.stopPropagation();
     closeSearchModal();
