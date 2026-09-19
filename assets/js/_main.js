@@ -34,31 +34,79 @@ $(function() {
   });
 
    
-  // Close search screen with Esc key
-  $(document).keyup(function(e) {
-     console.log("e.keyCode >> " +e.keyCode);
-    if (e.keyCode === 27) {
-       console.log( "key 27");
-      if ($(".initial-content").hasClass("is--hidden")) {
-        $(".search-content").toggleClass("is--visible");
-        $(".initial-content").toggleClass("is--hidden");
-      }
+  // OS-aware keyboard shortcut detection (⌘K on Mac, Ctrl+K on Windows/Linux)
+  var isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform || navigator.userAgent);
+  var shortcutText = isMac ? "⌘K" : "Ctrl K";
+  var shortcutHtml = isMac ? '<abbr title="Command">⌘</abbr>K' : 'Ctrl K';
+
+  var updateSearchKeyBadges = function() {
+    $(".search-key-badge").each(function() {
+      $(this).html(shortcutHtml);
+    });
+    $(".search-btn-global").attr("title", "Search (" + shortcutText + ")");
+  };
+  updateSearchKeyBadges();
+
+  // Search open / close functions
+  var openSearchModal = function() {
+    $(".search-content").addClass("is--visible");
+    $(".initial-content").addClass("is--hidden");
+    setTimeout(function() {
+      var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
+      $input.focus().select();
+    }, 50);
+  };
+
+  var closeSearchModal = function() {
+    if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
+      $(".search-content").removeClass("is--visible");
+      $(".initial-content").removeClass("is--hidden");
+      var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
+      $input.blur();
     }
-    if (e.keyCode !== "/" || e.ctrlKey || e.metaKey){
-       console.log( "key 191");
-       $(".search-content").toggleClass("is--hidden");
-        //$(".search-content").toggleClass("is--visible");
-       }
+  };
+
+  var toggleSearchModal = function() {
+    if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
+      closeSearchModal();
+    } else {
+      openSearchModal();
+    }
+  };
+
+  // Search button click handler
+  $(document).on("click", ".search__toggle, .search-btn-global", function(e) {
+    e.preventDefault();
+    toggleSearchModal();
   });
 
-  // Search toggle
-  $(".search__toggle").on("click", function() {
-    $(".search-content").toggleClass("is--visible");
-    $(".initial-content").toggleClass("is--hidden");
-    // set focus on input
-    setTimeout(function() {
-      $(".search-content").find("input").focus();
-    }, 400);
+  // Global Keyboard Shortcuts (⌘K / Ctrl+K, /, Escape)
+  $(document).on("keydown", function(e) {
+    // ⌘K (Mac) or Ctrl+K (Windows/Linux)
+    if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K" || e.keyCode === 75)) {
+      e.preventDefault();
+      toggleSearchModal();
+      return;
+    }
+
+    // Escape closes the search screen
+    if (e.key === "Escape" || e.keyCode === 27) {
+      if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
+        e.preventDefault();
+        closeSearchModal();
+        return;
+      }
+    }
+
+    // "/" key opens search when not actively typing in an input/textarea/editable field
+    if ((e.key === "/" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      var activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+      var isContentEditable = document.activeElement && document.activeElement.isContentEditable;
+      if (activeTag !== "input" && activeTag !== "textarea" && activeTag !== "select" && !isContentEditable) {
+        e.preventDefault();
+        openSearchModal();
+      }
+    }
   });
 
   // Smooth scrolling

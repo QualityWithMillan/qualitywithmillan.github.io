@@ -433,14 +433,69 @@
       }
     });
 
-    // Close desktop visible-links dropdown on Escape key
+    // Detect OS for search shortcut badge (⌘K on Mac, Ctrl+K on Windows/Linux)
+    const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform || navigator.userAgent);
+    const shortcutText = isMac ? "⌘K" : "Ctrl K";
+    const shortcutHtml = isMac ? '<abbr title="Command">⌘</abbr>K' : 'Ctrl K';
+
+    document.querySelectorAll(".search-key-badge").forEach(function (badge) {
+      badge.innerHTML = shortcutHtml;
+    });
+    document.querySelectorAll(".search-btn-global").forEach(function (btn) {
+      btn.setAttribute("title", "Search (" + shortcutText + ")");
+    });
+
+    function toggleSearchOverlay() {
+      const searchContent = document.querySelector(".search-content");
+      const initialContent = document.querySelector(".initial-content");
+      if (!searchContent || !initialContent) return;
+
+      const isVisible = searchContent.classList.toggle("is--visible");
+      initialContent.classList.toggle("is--hidden");
+
+      if (isVisible) {
+        setTimeout(function () {
+          const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+          if (input) {
+            input.focus();
+            input.select();
+          }
+        }, 50);
+      }
+    }
+
+    // Global Keydown Handler for Search (⌘K / Ctrl+K, /, Escape)
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") {
-        document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (dd) {
-          dd.classList.remove("is-open");
-          const tr = dd.querySelector(".masthead__dropdown-trigger");
-          if (tr) tr.setAttribute("aria-expanded", "false");
-        });
+      // ⌘K (Mac) or Ctrl+K (Windows/Linux)
+      if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K" || e.keyCode === 75)) {
+        e.preventDefault();
+        toggleSearchOverlay();
+        return;
+      }
+
+      // Escape key to close search if open
+      if (e.key === "Escape" || e.keyCode === 27) {
+        const searchContent = document.querySelector(".search-content");
+        const initialContent = document.querySelector(".initial-content");
+        if (searchContent && searchContent.classList.contains("is--visible")) {
+          searchContent.classList.remove("is--visible");
+          if (initialContent) initialContent.classList.remove("is--hidden");
+          const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+          if (input) input.blur();
+        }
+      }
+
+      // '/' key to open search when not typing in an input/textarea
+      if ((e.key === "/" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+        const isEditable = document.activeElement && document.activeElement.isContentEditable;
+        if (tag !== "input" && tag !== "textarea" && tag !== "select" && !isEditable) {
+          e.preventDefault();
+          const searchContent = document.querySelector(".search-content");
+          if (searchContent && !searchContent.classList.contains("is--visible")) {
+            toggleSearchOverlay();
+          }
+        }
       }
     });
   })();

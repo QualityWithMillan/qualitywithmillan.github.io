@@ -6,16 +6,30 @@
     <label class="sr-only" for="search">
       {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your search term...' }}
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    <div class="search-input-wrapper">
+      <i class="fas fa-search search-input-icon"></i>
+      <input type="search" id="search" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Search posts, tags, topics...' }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </div>
   </form>
+  <div class="search-command-hints" aria-hidden="true">
+    <span class="search-hint-item"><kbd>↑</kbd><kbd>↓</kbd> <span>to navigate</span></span>
+    <span class="search-hint-item"><kbd>↵</kbd> <span>to select</span></span>
+    <span class="search-hint-item"><kbd>esc</kbd> <span>to close</span></span>
+  </div>
   <div id="results" class="results"></div>
   {%- when "google" -%}
   <form onsubmit="return googleCustomSearchExecute();" id="cse-search-box-form-id" role="search">
     <label class="sr-only" for="cse-search-input-box-id">
       {{ site.data.ui-text[site.locale].search_label_text | default: 'Enter your search term...' }}
     </label>
-    <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Enter your search term...' }}" />
+    <div class="search-input-wrapper">
+      <i class="fas fa-search search-input-icon"></i>
+      <input type="search" id="cse-search-input-box-id" class="search-input" tabindex="-1" placeholder="{{ site.data.ui-text[site.locale].search_placeholder_text | default: 'Search posts, tags, topics...' }}" />
+    </div>
   </form>
+  <div class="search-command-hints" aria-hidden="true">
+    <span class="search-hint-item"><kbd>esc</kbd> <span>to close</span></span>
+  </div>
   <div id="results" class="results">
     <gcse:searchresults-only></gcse:searchresults-only>
   </div>
@@ -24,3 +38,102 @@
   <div class="search-hits"></div>
   {%- endcase -%}
 </div>
+
+<style>
+  .search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-input-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.15rem;
+    color: #94a3b8;
+    pointer-events: none;
+  }
+
+  .search-content__form input.search-input {
+    padding-left: 2.8rem !important;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.2s ease;
+    font-size: 1.15rem;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .search-content__form input.search-input:focus {
+    border-color: #0284c7;
+    box-shadow: 0 6px 24px rgba(2, 132, 199, 0.15);
+  }
+
+  .search-command-hints {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: 0.6rem 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1rem;
+  }
+
+  .search-hint-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .search-hint-item kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: inherit;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    min-width: 18px;
+    line-height: 1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .search-content__form input.search-input {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-content__form input.search-input:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.2);
+    }
+
+    .search-command-hints {
+      color: #94a3b8;
+      border-bottom-color: #334155;
+    }
+
+    .search-hint-item kbd {
+      background: #0f172a;
+      border-color: #475569;
+      color: #cbd5e1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .search-command-hints {
+      gap: 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
+</style>
