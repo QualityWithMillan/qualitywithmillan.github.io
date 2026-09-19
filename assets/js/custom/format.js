@@ -291,3 +291,53 @@ if (typeof module === 'object' && module && typeof module.exports === 'object') 
 	module.exports = toUnicodeVariant
 }
 
+/* ==========================================================================
+   Global Search Shortcuts (⌘K / Ctrl+K, /, Esc) - Universal Handler
+   ========================================================================== */
+(function() {
+  if (typeof window === 'undefined') return;
+
+  var isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform || navigator.userAgent);
+  var shortcutText = isMac ? "⌘K" : "Ctrl K";
+
+  function updateSearchUI() {
+    var badges = document.querySelectorAll(".search-key-badge");
+    for (var i = 0; i < badges.length; i++) {
+      badges[i].textContent = shortcutText;
+    }
+    var btns = document.querySelectorAll(".search-btn-global");
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].setAttribute("title", "Search (" + shortcutText + ")");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateSearchUI);
+  } else {
+    updateSearchUI();
+  }
+
+  window.addEventListener("keydown", function(e) {
+    var isK = e.key === "k" || e.key === "K" || e.code === "KeyK" || e.keyCode === 75;
+    if ((e.metaKey || e.ctrlKey) && isK) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof window.toggleSearchOverlay === 'function') {
+        window.toggleSearchOverlay();
+      } else {
+        var sc = document.querySelector(".search-content");
+        if (sc) {
+          sc.classList.toggle("is--visible");
+          if (sc.classList.contains("is--visible")) {
+            setTimeout(function() {
+              var inp = sc.querySelector("input[type='search'], input#search, .search-input");
+              if (inp) inp.focus();
+            }, 50);
+          }
+        }
+      }
+    }
+  }, true);
+})();
+
+

@@ -38,7 +38,7 @@
           <i class="fas fa-search search-btn-icon"></i>
           <span class="search-btn-text">Search</span>
           <span class="search-key-badge-container">
-            <kbd class="search-key-badge"><abbr title="Command">⌘</abbr>K</kbd>
+            <kbd class="search-key-badge">⌘K</kbd>
           </span>
         </button>
         {% endif %}
@@ -128,10 +128,13 @@
     line-height: 1.1;
     min-width: 20px;
     text-align: center;
+    text-decoration: none !important;
+    border-bottom: 1px solid #cbd5e1 !important;
   }
 
   .search-key-badge abbr {
     text-decoration: none !important;
+    border-bottom: none !important;
   }
 
   .search-btn-global:hover .search-key-badge {
@@ -165,7 +168,7 @@
     .search-key-badge {
       background: #0f172a;
       color: #94a3b8;
-      border-color: #475569;
+      border-color: #475569 !important;
     }
   }
 
@@ -183,200 +186,102 @@
   /* ==========================================================
      Masthead Navigation Dropdown Menu Styling ("More" Dropdown)
      ========================================================== */
-
-  .greedy-nav .visible-links {
-    overflow: visible !important;
-  }
-
-  .masthead__dropdown {
+  .masthead__menu-item.masthead__dropdown {
     position: relative;
   }
 
   .masthead__dropdown-trigger {
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     gap: 0.35rem;
     cursor: pointer;
     user-select: none;
   }
 
-  .masthead__dropdown-trigger .nav-caret {
+  .nav-caret {
     font-size: 0.7rem;
-    transition: transform 0.25s ease;
-    opacity: 0.75;
-    margin-left: 0.15rem;
+    transition: transform 0.2s ease-in-out;
   }
 
-  /* Desktop Visible Links Dropdown Styling */
-  .greedy-nav .visible-links .masthead__dropdown:hover .masthead__dropdown-trigger .nav-caret,
-  .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-trigger .nav-caret {
-    transform: rotate(180deg);
-    opacity: 1;
-  }
-
+  /* Desktop Menu Styles */
   .greedy-nav .visible-links .masthead__dropdown-menu {
     position: absolute;
     top: 100%;
-    right: 0;
-    min-width: 165px;
+    left: 0;
+    min-width: 200px;
     background: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.18), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
-    padding: 0.45rem 0;
-    margin: 0.4rem 0 0 0;
-    list-style: none !important;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 0 0;
+    list-style: none;
+    z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(8px) scale(0.96);
-    transform-origin: top right;
-    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-      visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1000;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   }
 
+  .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-menu,
   .greedy-nav .visible-links .masthead__dropdown:hover .masthead__dropdown-menu,
-  .greedy-nav .visible-links .masthead__dropdown:focus-within .masthead__dropdown-menu,
-  .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-menu {
+  .greedy-nav .visible-links .masthead__dropdown:focus-within .masthead__dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
-  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item {
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-  }
-
-  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
-    display: block !important;
-    padding: 0.6rem 1.25rem !important;
-    margin: 0 !important;
-    color: #334155 !important;
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    transition: all 0.15s ease !important;
-    border-radius: 0 !important;
-    text-align: left !important;
-  }
-
-  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:before {
-    display: none !important;
-  }
-
-  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
-    background: #f1f5f9 !important;
-    color: #0284c7 !important;
-    padding-left: 1.45rem !important;
-  }
-
-  /* Dark Theme Support */
-  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu,
-  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu {
-    background: #1e293b;
-    border-color: #334155;
-    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
-  }
-
-  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a,
-  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
-    color: #cbd5e1 !important;
-  }
-
-  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover,
-  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
-    background: #0f172a !important;
-    color: #38bdf8 !important;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .greedy-nav .visible-links .masthead__dropdown-menu {
-      background: #1e293b;
-      border-color: #334155;
-      box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
-    }
-
-    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
-      color: #cbd5e1 !important;
-    }
-
-    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
-      background: #0f172a !important;
-      color: #38bdf8 !important;
-    }
-  }
-
-  /* ==========================================================
-     Mobile Hidden Links Accordion ("More" in Mobile Menu)
-     ========================================================== */
-  .greedy-nav .hidden-links .masthead__dropdown {
-    position: static;
-    width: 100%;
-  }
-
-  .greedy-nav .hidden-links .masthead__dropdown-trigger {
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.04);
-  }
-
-  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-trigger,
-  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-trigger {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  /* Default starting state: EXPANDED (caret rotated 180deg up) */
-  .greedy-nav .hidden-links .masthead__dropdown .masthead__dropdown-trigger .nav-caret {
-    font-size: 0.75rem;
-    transition: transform 0.25s ease;
+  .greedy-nav .visible-links .masthead__dropdown.is-open .nav-caret,
+  .greedy-nav .visible-links .masthead__dropdown:hover .nav-caret {
     transform: rotate(180deg);
   }
 
+  .greedy-nav .visible-links .masthead__dropdown-item {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .greedy-nav .visible-links .masthead__dropdown-item a {
+    display: block;
+    padding: 0.55rem 1.15rem;
+    color: #334155 !important;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .greedy-nav .visible-links .masthead__dropdown-item a:hover {
+    background-color: #f1f5f9;
+    color: #0284c7 !important;
+  }
+
+  /* Mobile Hidden Links Menu Styles */
   .greedy-nav .hidden-links .masthead__dropdown-menu {
     position: static;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    list-style: none !important;
     display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: all 0.2s ease;
+    background: #f8fafc;
+    border-left: 2px solid #0284c7;
+    margin: 0.35rem 0 0.5rem 1rem;
+    padding: 0.25rem 0;
+    list-style: none;
+    box-shadow: none;
+    border-radius: 0 4px 4px 0;
   }
 
-  .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item {
-    display: block !important;
-    list-style: none !important;
-    margin: 0 !important;
+  .greedy-nav .hidden-links .masthead__dropdown-item a {
+    display: block;
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    color: #475569 !important;
   }
 
-  .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a {
-    display: block !important;
-    padding: 9px 20px 9px 34px !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    text-decoration: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a,
-  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-menu .masthead__dropdown-item a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  .greedy-nav .hidden-links .masthead__dropdown-item a:hover {
+    color: #0284c7 !important;
+    background: transparent;
   }
 
   /* Collapsed state in Mobile Menu */
@@ -391,8 +296,86 @@
 
 <script>
   (function () {
-    // Delegated click handler on document to ensure dynamically moved greedy-nav links always function
+    // Detect OS for search shortcut badge (⌘K on Mac, Ctrl+K on Windows/Linux)
+    const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform || navigator.userAgent);
+    const shortcutText = isMac ? "⌘K" : "Ctrl K";
+
+    function updateBadges() {
+      document.querySelectorAll(".search-key-badge").forEach(function (badge) {
+        badge.textContent = shortcutText;
+      });
+      document.querySelectorAll(".search-btn-global").forEach(function (btn) {
+        btn.setAttribute("title", "Search (" + shortcutText + ")");
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", updateBadges);
+    } else {
+      updateBadges();
+    }
+
+    window.openSearchOverlay = function () {
+      const searchContent = document.querySelector(".search-content");
+      if (!searchContent) return;
+      searchContent.classList.add("is--visible");
+      document.body.style.overflow = "hidden";
+      setTimeout(function () {
+        const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+        if (input) {
+          input.focus();
+          input.select();
+        }
+      }, 50);
+    };
+
+    window.closeSearchOverlay = function () {
+      const searchContent = document.querySelector(".search-content");
+      if (!searchContent) return;
+      searchContent.classList.remove("is--visible");
+      document.body.style.overflow = "";
+      const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
+      if (input) input.blur();
+    };
+
+    window.toggleSearchOverlay = function () {
+      const searchContent = document.querySelector(".search-content");
+      if (!searchContent) return;
+      if (searchContent.classList.contains("is--visible")) {
+        window.closeSearchOverlay();
+      } else {
+        window.openSearchOverlay();
+      }
+    };
+
+    // Delegated click handler on document
     document.addEventListener("click", function (e) {
+      // Search toggle button
+      const searchBtn = e.target.closest(".search-btn-global, .search__toggle");
+      if (searchBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.toggleSearchOverlay();
+        return;
+      }
+
+      // Search close button
+      const closeBtn = e.target.closest(".search-close-btn");
+      if (closeBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.closeSearchOverlay();
+        return;
+      }
+
+      // Close when clicking search modal backdrop
+      const searchContent = document.querySelector(".search-content");
+      if (searchContent && searchContent.classList.contains("is--visible") && e.target === searchContent) {
+        window.closeSearchOverlay();
+        return;
+      }
+
+      // Dropdown triggers
       const trigger = e.target.closest(".masthead__dropdown-trigger");
       if (trigger) {
         e.preventDefault();
@@ -403,11 +386,9 @@
         const isHiddenLinks = dd.closest(".hidden-links") !== null;
 
         if (isHiddenLinks) {
-          // Mobile view: Default starting state is expanded. Toggle 'is-collapsed'.
           const isCollapsed = dd.classList.toggle("is-collapsed");
           trigger.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
         } else {
-          // Desktop view: Toggle 'is-open'
           const isOpen = dd.classList.contains("is-open");
           document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (d) {
             d.classList.remove("is-open");
@@ -433,72 +414,38 @@
       }
     });
 
-    // Detect OS for search shortcut badge (⌘K on Mac, Ctrl+K on Windows/Linux)
-    const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform || navigator.userAgent);
-    const shortcutText = isMac ? "⌘K" : "Ctrl K";
-    const shortcutHtml = isMac ? '<abbr title="Command">⌘</abbr>K' : 'Ctrl K';
-
-    document.querySelectorAll(".search-key-badge").forEach(function (badge) {
-      badge.innerHTML = shortcutHtml;
-    });
-    document.querySelectorAll(".search-btn-global").forEach(function (btn) {
-      btn.setAttribute("title", "Search (" + shortcutText + ")");
-    });
-
-    function toggleSearchOverlay() {
-      const searchContent = document.querySelector(".search-content");
-      const initialContent = document.querySelector(".initial-content");
-      if (!searchContent || !initialContent) return;
-
-      const isVisible = searchContent.classList.toggle("is--visible");
-      initialContent.classList.toggle("is--hidden");
-
-      if (isVisible) {
-        setTimeout(function () {
-          const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
-          if (input) {
-            input.focus();
-            input.select();
-          }
-        }, 50);
-      }
-    }
-
-    // Global Keydown Handler for Search (⌘K / Ctrl+K, /, Escape)
-    document.addEventListener("keydown", function (e) {
+    // Global Keydown Handler for Search (⌘K / Ctrl+K, /, Escape) - CAPTURE PHASE
+    window.addEventListener("keydown", function (e) {
       // ⌘K (Mac) or Ctrl+K (Windows/Linux)
-      if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K" || e.keyCode === 75)) {
+      var isK = e.key === "k" || e.key === "K" || e.code === "KeyK" || e.keyCode === 75;
+      if ((e.metaKey || e.ctrlKey) && isK) {
         e.preventDefault();
-        toggleSearchOverlay();
+        e.stopPropagation();
+        window.toggleSearchOverlay();
         return;
       }
 
       // Escape key to close search if open
-      if (e.key === "Escape" || e.keyCode === 27) {
+      if (e.key === "Escape" || e.code === "Escape" || e.keyCode === 27) {
         const searchContent = document.querySelector(".search-content");
-        const initialContent = document.querySelector(".initial-content");
         if (searchContent && searchContent.classList.contains("is--visible")) {
-          searchContent.classList.remove("is--visible");
-          if (initialContent) initialContent.classList.remove("is--hidden");
-          const input = searchContent.querySelector("input[type='search'], input#search, .search-input");
-          if (input) input.blur();
+          e.preventDefault();
+          e.stopPropagation();
+          window.closeSearchOverlay();
+          return;
         }
       }
 
       // '/' key to open search when not typing in an input/textarea
-      if ((e.key === "/" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      if ((e.key === "/" || e.code === "Slash" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
         const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
         const isEditable = document.activeElement && document.activeElement.isContentEditable;
         if (tag !== "input" && tag !== "textarea" && tag !== "select" && !isEditable) {
           e.preventDefault();
-          const searchContent = document.querySelector(".search-content");
-          if (searchContent && !searchContent.classList.contains("is--visible")) {
-            toggleSearchOverlay();
-          }
+          e.stopPropagation();
+          window.openSearchOverlay();
         }
       }
-    });
+    }, true);
   })();
 </script>
-
-

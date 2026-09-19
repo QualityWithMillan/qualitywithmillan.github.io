@@ -50,7 +50,7 @@ $(function() {
   // Search open / close functions
   var openSearchModal = function() {
     $(".search-content").addClass("is--visible");
-    $(".initial-content").addClass("is--hidden");
+    $("body").css("overflow", "hidden");
     setTimeout(function() {
       var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
       $input.focus().select();
@@ -58,16 +58,14 @@ $(function() {
   };
 
   var closeSearchModal = function() {
-    if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
-      $(".search-content").removeClass("is--visible");
-      $(".initial-content").removeClass("is--hidden");
-      var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
-      $input.blur();
-    }
+    $(".search-content").removeClass("is--visible");
+    $("body").css("overflow", "");
+    var $input = $(".search-content").find("input[type='search'], input#search, .search-input").first();
+    $input.blur();
   };
 
   var toggleSearchModal = function() {
-    if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
+    if ($(".search-content").hasClass("is--visible")) {
       closeSearchModal();
     } else {
       openSearchModal();
@@ -77,37 +75,51 @@ $(function() {
   // Search button click handler
   $(document).on("click", ".search__toggle, .search-btn-global", function(e) {
     e.preventDefault();
+    e.stopPropagation();
     toggleSearchModal();
   });
 
+  $(document).on("click", ".search-close-btn", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    closeSearchModal();
+  });
+
+  $(document).on("click", ".search-content", function(e) {
+    if ($(e.target).hasClass("search-content")) {
+      closeSearchModal();
+    }
+  });
+
   // Global Keyboard Shortcuts (⌘K / Ctrl+K, /, Escape)
-  $(document).on("keydown", function(e) {
-    // ⌘K (Mac) or Ctrl+K (Windows/Linux)
-    if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K" || e.keyCode === 75)) {
+  window.addEventListener("keydown", function(e) {
+    var isK = e.key === "k" || e.key === "K" || e.code === "KeyK" || e.keyCode === 75;
+    if ((e.metaKey || e.ctrlKey) && isK) {
       e.preventDefault();
+      e.stopPropagation();
       toggleSearchModal();
       return;
     }
 
-    // Escape closes the search screen
-    if (e.key === "Escape" || e.keyCode === 27) {
-      if ($(".search-content").hasClass("is--visible") || $(".initial-content").hasClass("is--hidden")) {
+    if (e.key === "Escape" || e.code === "Escape" || e.keyCode === 27) {
+      if ($(".search-content").hasClass("is--visible")) {
         e.preventDefault();
+        e.stopPropagation();
         closeSearchModal();
         return;
       }
     }
 
-    // "/" key opens search when not actively typing in an input/textarea/editable field
-    if ((e.key === "/" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    if ((e.key === "/" || e.code === "Slash" || e.keyCode === 191) && !e.ctrlKey && !e.metaKey && !e.altKey) {
       var activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
       var isContentEditable = document.activeElement && document.activeElement.isContentEditable;
       if (activeTag !== "input" && activeTag !== "textarea" && activeTag !== "select" && !isContentEditable) {
         e.preventDefault();
+        e.stopPropagation();
         openSearchModal();
       }
     }
-  });
+  }, true);
 
   // Smooth scrolling
   var scroll = new SmoothScroll('a[href*="#"]', {
