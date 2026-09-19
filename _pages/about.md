@@ -16,7 +16,7 @@ Welcome to **#QualityWithMillan** (to be read as: hashtag quality with millan)! 
 
 I started this blog back in 2021 to share my bitesize learnings, thoughts, and insights on software engineering, testing, quality, growth, and more. You can read my very [first blog post](/welcome.html) to see where it all began!
 
-In addition to sharing articles, I also host a few handy [tools](/tools/) that I frequently use in my daily work, which you can use for free! This space is also built to support and empower the community, providing a platform for fellow [co-authors](/co-authors) to share their stories and insights.
+In addition to sharing articles, I also host a few handy [tools](/tools/) that I frequently use in my daily work, which you can use for free! This space is also built to support and empower the community, providing a platform for fellow [co-authors](/co-authors/) to share their stories and insights.
 
 I also welcome you to join me and share your stories or knowledge with the community; you can contribute as an author or co-author of a post on a topic of your choice. It's super simple—just follow the instructions on [this page](https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/Co-Author-Instructions.md) or reach out to me.
 

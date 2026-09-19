@@ -9,7 +9,7 @@ testing, AI evaluation, and quality engineering."
 keywords: "Millan Kaul, Co-Authors, Quality With Millan, Software Testing Contributors, AI in Testing Writers,
 Engineering Collaboration, Test Automation Leaders, QA Community"
 search: true
-permalink: "/co-authors"
+permalink: "/co-authors/"
 ---
 
 <!-- JSON-LD Structured Data for Co-Authors & Community Collaborators -->
@@ -20,8 +20,8 @@ permalink: "/co-authors"
     {
       "@type": "AboutPage",
       "@id": "https://qualitywithmillan.github.io/co-authors/#page",
-      "url": "https://qualitywithmillan.github.io/co-authors",
-      "name": "Co-Authors from communit",
+      "url": "https://qualitywithmillan.github.io/co-authors/",
+      "name": "Co-Authors from community",
       "description": "Meet the co-authors and technical contributors who have collaborated with Millan Kaul on software testing, AI evaluation, and quality engineering research.",
       "publisher": {
         "@type": "Person",
@@ -117,22 +117,20 @@ permalink: "/co-authors"
       <i class="fas fa-users" aria-hidden="true"></i> Community & Engineering Collaborations
     </div>
     <p class="authors-subtitle">
-      Recognizing the talented software testing leaders, QA architects, and practitioners who have collaborated,
-      co-written technical articles, and shared real-world insights with <strong>Millan Kaul</strong> on Quality With
-      Millan.
+      A heartfelt thank you 🙏 to our incredible co-authors and contributors who have shared their real-world testing, AI evaluation, and quality engineering insights with the community on Quality With Millan.
     </p>
 
-    <!-- Quick Stats Bar -->
-    <div class="authors-stats-bar">
-      <div class="stat-pill">
-        <i class="fas fa-user-check" aria-hidden="true"></i> <strong>7</strong> Featured Co-Authors
-      </div>
-      <div class="stat-pill">
-        <i class="fas fa-globe-asia" aria-hidden="true"></i> <strong>Global</strong> (Australia · India · Kenya)
-      </div>
-      <div class="stat-pill">
-        <i class="fas fa-book-open" aria-hidden="true"></i> <strong>Quality & AI</strong> Practical Insights
-      </div>
+    <!-- Author Collaboration CTA Actions -->
+    <div class="authors-hero-cta-wrapper">
+      <button type="button" class="btn-hero-collab open-contact-modal"
+        data-subject="Co-Authoring / Technical Article Proposal"
+        data-message="Hi Millan, I would love to propose a co-authored article on Quality With Millan regarding...">
+        <i class="fas fa-pen-nib" aria-hidden="true"></i> Submit a Blog
+      </button>
+      <a href="https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/Co-Author-Instructions.md"
+        target="_blank" rel="noopener noreferrer" class="btn-hero-guide">
+        <i class="fas fa-book-reader" aria-hidden="true"></i> Author Guidelines
+      </a>
     </div>
   </header>
 
@@ -160,12 +158,6 @@ permalink: "/co-authors"
       </button>
       <button type="button" class="author-filter-btn" data-filter="kenya">
         🇰🇪 Kenya <span class="filter-count">1</span>
-      </button>
-      <button type="button" class="author-filter-btn filter-btn-leadership" data-filter="leadership">
-        <i class="fas fa-award" aria-hidden="true"></i> Leadership
-      </button>
-      <button type="button" class="author-filter-btn filter-btn-automation" data-filter="automation">
-        <i class="fas fa-robot" aria-hidden="true"></i> Test Automation & AI
       </button>
     </div>
   </div>
@@ -503,7 +495,7 @@ permalink: "/co-authors"
     <div class="book-banner-content">
       <div class="book-banner-cover-wrapper">
         <a href="https://us.amazon.com/dp/B0HHJ84359/" target="_blank" rel="noopener noreferrer"
-          aria-label="View The AI Eval Mindset on Amazon (opens in a new tab)">
+          aria-label="View THE AI EVAL MINDSET on Amazon (opens in a new tab)">
           <img src="/assets/images/books/001_The_AI_Eval_Mindset.png"
             alt="THE AI EVAL MINDSET by Millan Kaul — 30 Focused Lessons for Testing AI That Works in the Real World"
             class="book-banner-cover" loading="lazy">
@@ -514,12 +506,12 @@ permalink: "/co-authors"
         <h3 class="book-banner-title">THE AI EVAL MINDSET</h3>
         <p class="book-banner-subtitle">30 Focused Lessons for Testing AI That Works in the Real World</p>
         <p class="book-banner-description">
-          The AI Eval Mindset gives AI engineers, quality engineers, and engineering leaders a practical framework for
+          THE AI EVAL MINDSET gives AI engineers, quality engineers, and engineering leaders a practical framework for
           evaluating AI systems end to end. Available internationally in Paperback, Hardcover, and Kindle eBook formats.
         </p>
         <div class="book-banner-actions">
           <a href="https://us.amazon.com/dp/B0HHJ84359/" target="_blank" rel="noopener noreferrer"
-            class="btn-amazon-cta" aria-label="Order The AI Eval Mindset on Amazon (opens in a new tab)">
+            class="btn-amazon-cta" aria-label="Order THE AI EVAL MINDSET on Amazon (opens in a new tab)">
             <i class="fab fa-amazon" aria-hidden="true"></i> Buy on Amazon
           </a>
           <a href="/books" class="btn-book-details">
@@ -594,29 +586,59 @@ permalink: "/co-authors"
     margin: 0 auto 1.5rem auto;
   }
 
-  /* Stats Bar */
-  .authors-stats-bar {
+  /* Hero Block CTA Actions */
+  .authors-hero-cta-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
+    align-items: center;
+    gap: 0.65rem;
   }
 
-  .stat-pill {
+  .btn-hero-collab {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    color: #334155;
-    font-size: 0.825rem;
-    padding: 0.35rem 0.85rem;
+    gap: 0.45rem;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff !important;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 1.1rem;
     border-radius: 9999px;
-    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+    transition: all 0.2s ease-in-out;
+    text-decoration: none !important;
   }
 
-  .stat-pill i {
-    color: #0284c7;
+  .btn-hero-collab:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+  }
+
+  .btn-hero-guide {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #ffffff;
+    color: #334155 !important;
+    border: 1px solid #cbd5e1;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45rem 1.1rem;
+    border-radius: 9999px;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .btn-hero-guide:hover {
+    background: #f8fafc;
+    color: #0284c7 !important;
+    border-color: #0284c7;
+    transform: translateY(-1px);
   }
 
   /* Search & Filter Controls */
@@ -632,6 +654,8 @@ permalink: "/co-authors"
     width: 100%;
     max-width: 560px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
   }
 
   .search-icon {
@@ -641,13 +665,23 @@ permalink: "/co-authors"
     transform: translateY(-50%);
     color: #94a3b8;
     font-size: 0.95rem;
+    line-height: 1;
     pointer-events: none;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
   }
 
   .search-field {
     width: 100%;
-    padding: 0.75rem 2.75rem;
+    padding: 0.75rem 2.75rem 0.75rem 2.85rem;
     font-size: 0.95rem;
+    line-height: 1.5;
     color: #0f172a;
     background: #ffffff;
     border: 1.5px solid #cbd5e1;
@@ -656,6 +690,10 @@ permalink: "/co-authors"
     transition: all 0.2s ease;
     box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    margin: 0 !important;
+    display: block;
+    height: auto;
+    min-height: 46px;
   }
 
   .search-field:focus {
@@ -679,7 +717,11 @@ permalink: "/co-authors"
     justify-content: center;
     cursor: pointer;
     font-size: 0.75rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
     transition: all 0.2s ease;
+    z-index: 2;
   }
 
   .clear-search-btn:hover {
@@ -689,10 +731,19 @@ permalink: "/co-authors"
 
   .authors-filter-pills {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 0.45rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px 0.25rem;
+    max-width: 100%;
+  }
+
+  .authors-filter-pills::-webkit-scrollbar {
+    display: none;
   }
 
   .author-filter-btn {
@@ -700,27 +751,28 @@ permalink: "/co-authors"
     border: 1px solid #e2e8f0;
     background-color: #f8fafc;
     color: #475569;
-    padding: 0.38rem 0.85rem;
+    padding: 0.35rem 0.75rem;
     border-radius: 9999px;
-    font-size: 0.84rem;
+    font-size: 0.83rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.3rem;
     user-select: none;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .author-filter-btn .filter-count {
     background: #e2e8f0;
     color: #475569;
-    font-size: 0.75rem;
-    padding: 0.1rem 0.45rem;
+    font-size: 0.72rem;
+    padding: 0.08rem 0.4rem;
     border-radius: 9999px;
-    margin-left: 0.2rem;
+    margin-left: 0.15rem;
     transition: all 0.2s ease;
   }
 
@@ -747,32 +799,6 @@ permalink: "/co-authors"
   .author-filter-btn.active .filter-count {
     background: rgba(255, 255, 255, 0.25);
     color: #ffffff;
-  }
-
-  .filter-btn-leadership:hover {
-    background-color: #f59e0b;
-    border-color: #f59e0b;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
-  }
-
-  .filter-btn-leadership.active {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    border-color: #f59e0b;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
-  }
-
-  .filter-btn-automation:hover {
-    background-color: #10b981;
-    border-color: #10b981;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
-  }
-
-  .filter-btn-automation.active {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    border-color: #10b981;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
   }
 
   /* Co-Authors Grid */
@@ -1378,10 +1404,16 @@ permalink: "/co-authors"
       color: #cbd5e1;
     }
 
-    .stat-pill {
+    .btn-hero-guide {
       background: #0f172a;
       border-color: #334155;
-      color: #cbd5e1;
+      color: #cbd5e1 !important;
+    }
+
+    .btn-hero-guide:hover {
+      background: #1e293b;
+      border-color: #38bdf8;
+      color: #38bdf8 !important;
     }
 
     .search-field {
@@ -1539,6 +1571,38 @@ permalink: "/co-authors"
     .authors-hero-block {
       padding: 1.75rem 1rem 1.25rem 1rem;
       border-radius: 20px;
+    }
+
+    .authors-hero-cta-wrapper {
+      flex-direction: row;
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    .btn-hero-collab,
+    .btn-hero-guide {
+      flex: 1;
+      justify-content: center;
+      padding: 0.45rem 0.65rem;
+      font-size: 0.785rem;
+    }
+
+    .authors-filter-pills {
+      gap: 0.35rem;
+      justify-content: center;
+      padding: 2px 0.2rem;
+    }
+
+    .author-filter-btn {
+      padding: 0.3rem 0.55rem;
+      font-size: 0.775rem;
+      gap: 0.25rem;
+    }
+
+    .author-filter-btn .filter-count {
+      font-size: 0.685rem;
+      padding: 0.05rem 0.32rem;
+      margin-left: 0.1rem;
     }
 
     .coauthors-grid {

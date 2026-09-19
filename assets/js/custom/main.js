@@ -23,24 +23,27 @@ if (teleprompter) {
 }
 
 
+try {
+  sessionStorage.removeItem('404_redirect_attempts');
+} catch (e) {}
+
 function launchTextFormatter() {
-  // window.open("https://qualitywithmillan.github.io/format/")
-  window.open(siteUrl + '/format', '_blank');
+  window.open(siteUrl + '/format/', '_blank');
 }
 
 function launchcoinFlip() {
-  window.open(siteUrl + '/coin-flip', '_blank');
+  window.open(siteUrl + '/coin-flip/', '_blank');
 }
 
 function launchEvents() {
-  window.open(siteUrl + '/events', '_blank');
+  window.open(siteUrl + '/events/', '_blank');
 }
 
 function launchCoAuthors() {
-  window.open(siteUrl + '/co-authors', '_blank');
+  window.open(siteUrl + '/co-authors/', '_blank');
 }
 
 function launchTeleprompter() {
-  window.open(siteUrl + '/prompt', '_blank');
+  window.open(siteUrl + '/prompt/', '_blank');
 }
 

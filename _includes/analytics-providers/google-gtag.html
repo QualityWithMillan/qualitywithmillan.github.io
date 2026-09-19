@@ -1,9 +1,314 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
+<!-- Global site tag (gtag.js) - Google Analytics with Privacy Consent Management -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', '{{ site.analytics.google.tracking_id }}', { 'anonymize_ip': {{ site.analytics.google.anonymize_ip | default: false }}});
+  (function() {
+    var trackingId = '{{ site.analytics.google.tracking_id }}';
+    var consentKey = 'qwm_analytics_consent';
+    var storedConsent = null;
+    try {
+      storedConsent = localStorage.getItem(consentKey);
+    } catch (e) {}
+
+    // If user has explicitly rejected consent, disable GA tracking immediately
+    if (storedConsent === 'denied') {
+      window['ga-disable-' + trackingId] = true;
+    }
+
+    // Initialize Google Consent Mode v2
+    gtag('consent', 'default', {
+      'analytics_storage': storedConsent === 'denied' ? 'denied' : 'granted',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+
+    gtag('js', new Date());
+    gtag('config', trackingId, {
+      'anonymize_ip': {{ site.analytics.google.anonymize_ip | default: true }}
+    });
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google.tracking_id }}"></script>
+
+<!-- Responsive Analytics Storage Consent Popup Banner -->
+<div id="qwm-consent-banner" class="qwm-consent-banner" aria-live="polite" role="dialog" aria-modal="false" aria-label="Privacy and Analytics Consent" style="display: none;">
+  <div class="qwm-consent-container">
+    <div class="qwm-consent-header">
+      <div class="qwm-consent-title">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy & Analytics
+      </div>
+    </div>
+    <p class="qwm-consent-body">
+      We collect anonymous analytics to understand site usage and improve content. You can accept or decline below. Read our <a href="/terms/" class="qwm-consent-link">Privacy Policy</a>.
+    </p>
+    <div class="qwm-consent-actions">
+      <button type="button" id="qwmConsentDecline" class="qwm-consent-btn qwm-consent-btn-decline" aria-label="Decline analytics tracking">Decline</button>
+      <button type="button" id="qwmConsentAccept" class="qwm-consent-btn qwm-consent-btn-accept" aria-label="Accept anonymous analytics tracking">Accept</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ==========================================================
+     Privacy & Analytics Consent Banner Styling
+     ========================================================== */
+  .qwm-consent-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: 360px;
+    z-index: 999999;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .qwm-consent-banner.qwm-consent-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .qwm-consent-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.15rem 1.25rem;
+    box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.16), 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+    box-sizing: border-box;
+  }
+
+  .qwm-consent-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .qwm-consent-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    letter-spacing: -0.01em;
+  }
+
+  .qwm-consent-title i {
+    color: #0284c7;
+    font-size: 0.95rem;
+  }
+
+  .qwm-consent-body {
+    font-size: 0.815rem;
+    line-height: 1.5;
+    color: #475569;
+    margin: 0 0 1rem 0;
+  }
+
+  .qwm-consent-link {
+    color: #0284c7;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .qwm-consent-link:hover {
+    color: #0369a1;
+  }
+
+  .qwm-consent-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.65rem;
+  }
+
+  .qwm-consent-btn {
+    appearance: none;
+    border: none;
+    outline: none;
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 0.48rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.25;
+    user-select: none;
+  }
+
+  .qwm-consent-btn-accept {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+  }
+
+  .qwm-consent-btn-accept:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .qwm-consent-btn-decline {
+    background: #f8fafc;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+  }
+
+  .qwm-consent-btn-decline:hover {
+    background: #f1f5f9;
+    color: #334155;
+    border-color: #94a3b8;
+  }
+
+  /* Mobile Responsive Tweaks */
+  @media (max-width: 576px) {
+    .qwm-consent-banner {
+      bottom: 12px;
+      right: 12px;
+      left: 12px;
+      width: auto;
+      max-width: none;
+    }
+
+    .qwm-consent-container {
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+    }
+
+    .qwm-consent-body {
+      font-size: 0.785rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .qwm-consent-actions {
+      width: 100%;
+    }
+
+    .qwm-consent-btn {
+      flex: 1;
+      padding: 0.52rem 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    var trackingId = '{{ site.analytics.google.tracking_id }}';
+    var consentKey = 'qwm_analytics_consent';
+    var banner = document.getElementById('qwm-consent-banner');
+    var acceptBtn = document.getElementById('qwmConsentAccept');
+    var declineBtn = document.getElementById('qwmConsentDecline');
+
+    if (!banner) return;
+
+    function getStoredConsent() {
+      try {
+        return localStorage.getItem(consentKey);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function setStoredConsent(val) {
+      try {
+        localStorage.setItem(consentKey, val);
+      } catch (e) {}
+    }
+
+    function showBanner() {
+      banner.style.display = 'block';
+      setTimeout(function() {
+        banner.classList.add('qwm-consent-visible');
+      }, 50);
+    }
+
+    function hideBanner() {
+      banner.classList.remove('qwm-consent-visible');
+      setTimeout(function() {
+        banner.style.display = 'none';
+      }, 350);
+    }
+
+    function clearGACookies() {
+      try {
+        var domain = window.location.hostname;
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          var eqPos = cookie.indexOf('=');
+          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+          if (name === '_ga' || name.indexOf('_ga_') === 0 || name.indexOf('_gid') === 0 || name.indexOf('_gat') === 0) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain + ';';
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain.replace(/^www\./, '') + ';';
+          }
+        }
+      } catch (e) {}
+    }
+
+    function applyConsent(decision) {
+      if (decision === 'granted') {
+        window['ga-disable-' + trackingId] = false;
+        if (typeof gtag === 'function') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        }
+      } else if (decision === 'denied') {
+        window['ga-disable-' + trackingId] = true;
+        if (typeof gtag === 'function') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'denied'
+          });
+        }
+        clearGACookies();
+      }
+    }
+
+    function handleAccept() {
+      setStoredConsent('granted');
+      applyConsent('granted');
+      hideBanner();
+    }
+
+    function handleDecline() {
+      setStoredConsent('denied');
+      applyConsent('denied');
+      hideBanner();
+    }
+
+    if (acceptBtn) acceptBtn.addEventListener('click', handleAccept);
+    if (declineBtn) declineBtn.addEventListener('click', handleDecline);
+
+    // Multi-tab synchronization: Dismiss banner & sync state when user acts on any open tab
+    window.addEventListener('storage', function(event) {
+      if (event.key === consentKey) {
+        if (event.newValue === 'granted' || event.newValue === 'denied') {
+          applyConsent(event.newValue);
+          hideBanner();
+        }
+      }
+    });
+
+    // Check existing consent choice on initial page load
+    var current = getStoredConsent();
+    if (!current) {
+      // First visit: Display banner after slight entrance delay
+      setTimeout(showBanner, 600);
+    } else {
+      applyConsent(current);
+    }
+  })();
 </script>
