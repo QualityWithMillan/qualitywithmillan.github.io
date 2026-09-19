@@ -34,9 +34,12 @@
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+        <button class="search__toggle search-btn-global" type="button" aria-label="{{ site.data.ui-text[site.locale].search_label | default: 'Search posts and topics' }}" title="Search (⌘K / Ctrl+K)">
+          <i class="fas fa-search search-btn-icon"></i>
+          <span class="search-btn-text">Search</span>
+          <span class="search-key-badge-container">
+            <kbd class="search-key-badge"><abbr title="Command">⌘</abbr>K</kbd>
+          </span>
         </button>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
@@ -50,6 +53,133 @@
 </div>
 
 <style>
+  /* ==========================================================
+     Global Search Button (⌘K / Ctrl K) Styling
+     ========================================================== */
+
+  .search-btn-global {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.32rem 0.6rem 0.32rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #475569;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    height: 34px;
+    margin-left: 0.5rem;
+    text-decoration: none !important;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .search-btn-global:hover,
+  .search-btn-global:focus {
+    background-color: #ffffff;
+    border-color: #0284c7;
+    color: #0f172a;
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.15);
+    outline: none;
+  }
+
+  .search-btn-icon {
+    font-size: 0.8rem;
+    color: #64748b;
+    transition: color 0.2s ease;
+  }
+
+  .search-btn-global:hover .search-btn-icon {
+    color: #0284c7;
+  }
+
+  .search-btn-text {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .search-btn-global:hover .search-btn-text {
+    color: #1e293b;
+  }
+
+  .search-key-badge-container {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .search-key-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.12rem 0.35rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+    line-height: 1.1;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .search-key-badge abbr {
+    text-decoration: none !important;
+  }
+
+  .search-btn-global:hover .search-key-badge {
+    border-color: #94a3b8;
+    color: #1e293b;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .search-btn-global {
+      background-color: #1e293b;
+      border-color: #334155;
+      color: #94a3b8;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .search-btn-global:hover {
+      background-color: #0f172a;
+      border-color: #38bdf8;
+      color: #f8fafc;
+    }
+
+    .search-btn-global:hover .search-btn-icon {
+      color: #38bdf8;
+    }
+
+    .search-btn-global:hover .search-btn-text {
+      color: #f8fafc;
+    }
+
+    .search-key-badge {
+      background: #0f172a;
+      color: #94a3b8;
+      border-color: #475569;
+    }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    .search-btn-text {
+      display: none;
+    }
+    .search-btn-global {
+      padding: 0.32rem 0.45rem;
+      gap: 0.35rem;
+    }
+  }
+
   /* ==========================================================
      Masthead Navigation Dropdown Menu Styling ("More" Dropdown)
      ========================================================== */
