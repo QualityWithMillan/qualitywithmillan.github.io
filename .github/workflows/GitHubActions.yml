@@ -32,6 +32,11 @@ jobs:
         run: |
           gem install bundler
           bundle install
+      - name: Inject Git Commit Hash
+        run: |
+          mkdir -p _data
+          SHORT_SHA=$(git rev-parse --short HEAD 2>/dev/null || echo "${{ github.sha }}" | cut -c1-7)
+          echo "commit: \"$SHORT_SHA\"" > _data/git.yml
       - name: Build site
         run: bundle exec jekyll build
       - name: Replace form action URL
