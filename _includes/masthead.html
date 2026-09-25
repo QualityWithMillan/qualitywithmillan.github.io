@@ -186,41 +186,58 @@
   /* ==========================================================
      Masthead Navigation Dropdown Menu Styling ("More" Dropdown)
      ========================================================== */
+
+  .greedy-nav .visible-links {
+    overflow: visible !important;
+  }
+
   .masthead__menu-item.masthead__dropdown {
     position: relative;
   }
 
   .masthead__dropdown-trigger {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 0.35rem;
     cursor: pointer;
     user-select: none;
   }
 
-  .nav-caret {
+  .masthead__dropdown-trigger .nav-caret {
     font-size: 0.7rem;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.25s ease;
+    opacity: 0.75;
+    margin-left: 0.15rem;
   }
 
   /* Desktop Menu Styles */
+  .greedy-nav .visible-links .masthead__dropdown:hover .nav-caret,
+  .greedy-nav .visible-links .masthead__dropdown.is-open .nav-caret {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
   .greedy-nav .visible-links .masthead__dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
-    min-width: 200px;
+    right: 0;
+    left: auto;
+    min-width: 170px;
     background: #ffffff;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.18), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    margin: 0.5rem 0 0 0;
-    list-style: none;
-    z-index: 9999;
+    border-radius: 10px;
+    padding: 0.45rem 0;
+    margin: 0.4rem 0 0 0;
+    list-style: none !important;
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(8px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    transform: translateY(8px) scale(0.96);
+    transform-origin: top right;
+    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .greedy-nav .visible-links .masthead__dropdown.is-open .masthead__dropdown-menu,
@@ -228,60 +245,157 @@
   .greedy-nav .visible-links .masthead__dropdown:focus-within .masthead__dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
-  }
-
-  .greedy-nav .visible-links .masthead__dropdown.is-open .nav-caret,
-  .greedy-nav .visible-links .masthead__dropdown:hover .nav-caret {
-    transform: rotate(180deg);
+    transform: translateY(0) scale(1);
+    display: block;
   }
 
   .greedy-nav .visible-links .masthead__dropdown-item {
-    display: block;
+    display: block !important;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
   }
 
   .greedy-nav .visible-links .masthead__dropdown-item a {
-    display: block;
-    padding: 0.55rem 1.15rem;
+    display: block !important;
+    padding: 0.55rem 1.15rem !important;
+    margin: 0 !important;
     color: #334155 !important;
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 500;
-    transition: background-color 0.15s ease, color 0.15s ease;
-    white-space: nowrap;
+    text-decoration: none !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    border-radius: 0 !important;
+  }
+
+  .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:before {
+    display: none !important;
   }
 
   .greedy-nav .visible-links .masthead__dropdown-item a:hover {
-    background-color: #f1f5f9;
+    background-color: #f1f5f9 !important;
     color: #0284c7 !important;
+    padding-left: 1.35rem !important;
   }
 
-  /* Mobile Hidden Links Menu Styles */
+  /* Dark Theme Support for Desktop Dropdown */
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
+  }
+
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
+    color: #cbd5e1 !important;
+  }
+
+  [data-theme="dark"] .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover,
+  body.dark-mode .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+    background: #0f172a !important;
+    color: #38bdf8 !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .greedy-nav .visible-links .masthead__dropdown-menu {
+      background: #1e293b;
+      border-color: #334155;
+      box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.65);
+    }
+
+    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a {
+      color: #cbd5e1 !important;
+    }
+
+    .greedy-nav .visible-links .masthead__dropdown-menu .masthead__dropdown-item a:hover {
+      background: #0f172a !important;
+      color: #38bdf8 !important;
+    }
+  }
+
+  /* ==========================================================
+     Mobile Hidden Links Menu Styles ("More" in Mobile Menu)
+     ========================================================== */
+  .greedy-nav .hidden-links .masthead__dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown-trigger {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-trigger,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-trigger {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown .masthead__dropdown-trigger .nav-caret {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+    transform: rotate(180deg);
+  }
+
   .greedy-nav .hidden-links .masthead__dropdown-menu {
     position: static;
-    display: block;
+    box-shadow: none;
+    border: none;
     background: #f8fafc;
     border-left: 2px solid #0284c7;
     margin: 0.35rem 0 0.5rem 1rem;
     padding: 0.25rem 0;
-    list-style: none;
-    box-shadow: none;
+    list-style: none !important;
+    display: block;
     border-radius: 0 4px 4px 0;
   }
 
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-menu,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-menu {
+    background: #0f172a;
+    border-left-color: #38bdf8;
+  }
+
+  .greedy-nav .hidden-links .masthead__dropdown-item {
+    display: block !important;
+    list-style: none !important;
+    margin: 0 !important;
+  }
+
   .greedy-nav .hidden-links .masthead__dropdown-item a {
-    display: block;
-    padding: 0.45rem 1rem;
-    font-size: 0.85rem;
+    display: block !important;
+    padding: 0.45rem 1rem !important;
+    font-size: 0.85rem !important;
     color: #475569 !important;
+    text-decoration: none !important;
   }
 
   .greedy-nav .hidden-links .masthead__dropdown-item a:hover {
     color: #0284c7 !important;
-    background: transparent;
+    background: transparent !important;
+  }
+
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-item a,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-item a {
+    color: #cbd5e1 !important;
+  }
+
+  [data-theme="dark"] .greedy-nav .hidden-links .masthead__dropdown-item a:hover,
+  body.dark-mode .greedy-nav .hidden-links .masthead__dropdown-item a:hover {
+    color: #38bdf8 !important;
   }
 
   /* Collapsed state in Mobile Menu */
@@ -451,7 +565,7 @@
         return;
       }
 
-      // Escape key to close search if open
+      // Escape key to close search if open, or close desktop dropdown
       if (e.key === "Escape" || e.code === "Escape" || e.keyCode === 27) {
         const searchContent = document.querySelector(".search-content");
         if (searchContent && searchContent.classList.contains("is--visible")) {
@@ -460,6 +574,11 @@
           window.closeSearchOverlay();
           return;
         }
+        document.querySelectorAll(".visible-links .masthead__dropdown").forEach(function (dd) {
+          dd.classList.remove("is-open");
+          const tr = dd.querySelector(".masthead__dropdown-trigger");
+          if (tr) tr.setAttribute("aria-expanded", "false");
+        });
       }
 
       // '/' key to open search when not typing in an input/textarea
