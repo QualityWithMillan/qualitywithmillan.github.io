@@ -1,4 +1,4 @@
-FROM ruby:3.2.0
+FROM ruby:3.2
 
 # Install required dependencies for Jekyll (build-essential and libffi-dev are pre-installed in base ruby image) and clean up apt cache
 RUN apt-get update && apt-get install -y nodejs && rm -rf /var/lib/apt/lists/*
@@ -15,8 +15,9 @@ COPY Gemfile Gemfile.lock* ./
 # Install dependencies in parallel as root to avoid permission/write errors
 RUN bundle config set jobs $(nproc) && bundle install
 
-# Grant ownership of the working directory to dockeruser (gems are already world-readable)
-RUN chown -R dockeruser:dockeruser /srv/jekyll
+# Grant ownership of the bundle and working directory to dockeruser and allow git safe.directory
+RUN git config --system --add safe.directory "*" && \
+    chown -R dockeruser:dockeruser /usr/local/bundle /srv/jekyll
 
 # Switch to non-root user for runtime safety
 USER dockeruser
