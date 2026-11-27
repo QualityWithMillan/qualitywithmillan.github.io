@@ -41,12 +41,23 @@
         <input type="hidden" id="entryDateMonth" name="entry.1099866187_month">
         <input type="hidden" id="entryDateDay" name="entry.1099866187_day">
 
+        <!-- #conatct control -->
+        <!-- Anti-Spam Decoy Honeypot Field (Hidden from real users, attractive to automated bots) -->
+        <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; height: 0; width: 0; overflow: hidden;" aria-hidden="true">
+          <label for="companyWebsiteUrl">Company Website (do not fill)</label>
+          <input type="text" id="companyWebsiteUrl" name="company_website_url" tabindex="-1" autocomplete="off">
+        </div>
+
         <div class="contact-form-grid">
           <!-- Your Name -->
           <div class="form-group">
             <label for="contactName" class="form-label">Your Name <span class="required-star">*</span></label>
             <input type="text" id="contactName" name="entry.2005620554" class="form-input" placeholder="Jane Doe"
               required autocomplete="name">
+            <!-- #conatct control -->
+            <div class="field-error-msg" id="nameErrorMsg" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i> Links and URLs are not permitted
+            </div>
           </div>
 
           <!-- Your Email -->
@@ -83,6 +94,10 @@
             <label for="contactSubject" class="form-label">Subject <span class="required-star">*</span></label>
             <input type="text" id="contactSubject" name="entry.1833797512" class="form-input"
               placeholder="Keynote Speaking / AI Eval Workshop / Book Inquiry" required>
+            <!-- #conatct control -->
+            <div class="field-error-msg" id="subjectErrorMsg" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i> Links and URLs are not permitted
+            </div>
           </div>
 
           <!-- Your Message -->
@@ -90,6 +105,10 @@
             <label for="contactMessage" class="form-label">Your Message <span class="required-star">*</span></label>
             <textarea id="contactMessage" name="entry.839337160" class="form-input form-textarea" rows="4"
               placeholder="Hi Millan I want to invite you..." required></textarea>
+            <!-- #conatct control -->
+            <div class="field-error-msg" id="messageErrorMsg" style="display: none;">
+              <i class="fas fa-exclamation-circle"></i> Links and URLs are not permitted
+            </div>
           </div>
         </div>
 
@@ -861,6 +880,8 @@
       const entryDay = document.getElementById("entryDateDay");
 
       const nameInput = document.getElementById("contactName");
+      // #conatct control
+      const nameError = document.getElementById("nameErrorMsg");
       const emailInput = document.getElementById("contactEmail");
       const emailError = document.getElementById("emailErrorMsg");
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -868,6 +889,40 @@
       const phoneInput = document.getElementById("contactPhone");
       const phoneError = document.getElementById("phoneErrorMsg");
       const phoneRegex = /^[\+]?[0-9\s]*$/;
+
+      // #conatct control
+      const subjectError = document.getElementById("subjectErrorMsg");
+      const messageError = document.getElementById("messageErrorMsg");
+      const honeypotInput = document.getElementById("companyWebsiteUrl");
+
+      // #conatct control
+      // Strict URL & link detection pattern (protocols, www., domain extensions, obfuscations like dot com/[.], Markdown/HTML)
+      const strictLinkRegex = /(https?:\/\/|www\.|\b[a-zA-Z0-9-]+(?:\s*\[\.\]\s*|\s*dot\s*|\.)(?:com|net|org|io|co|xyz|info|biz|ru|cn|tk|me|app|dev|link|click|online|site|store|top|vip)\b|<a\s|\[.*\]\(.*\))/i;
+
+      // #conatct control
+      // Anti-Spam human interaction and timing tracking
+      let modalOpenedAt = 0;
+      let hasTyped = false;
+
+      // #conatct control
+      function checkContainsUrl(text) {
+        if (!text) return false;
+        return strictLinkRegex.test(text);
+      }
+
+      // #conatct control
+      function validateFieldNoUrl(inputEl, errorEl) {
+        if (!inputEl) return true;
+        const val = inputEl.value;
+        if (checkContainsUrl(val)) {
+          inputEl.classList.add("input-has-error");
+          if (errorEl) errorEl.style.display = "flex";
+          return false;
+        }
+        inputEl.classList.remove("input-has-error");
+        if (errorEl) errorEl.style.display = "none";
+        return true;
+      }
 
       function validateEmail() {
         if (!emailInput) return true;
@@ -898,6 +953,48 @@
         phoneInput.classList.remove("input-has-error");
         if (phoneError) phoneError.style.display = "none";
         return true;
+      }
+
+      // #conatct control
+      // Record real user keystroke / interaction
+      function markHumanTyped() {
+        hasTyped = true;
+      }
+
+      // #conatct control
+      if (form) {
+        form.addEventListener("keydown", markHumanTyped);
+        form.addEventListener("pointerdown", markHumanTyped);
+      }
+
+      // #conatct control
+      if (nameInput) {
+        nameInput.addEventListener("input", function () {
+          validateFieldNoUrl(nameInput, nameError);
+        });
+        nameInput.addEventListener("blur", function () {
+          validateFieldNoUrl(nameInput, nameError);
+        });
+      }
+
+      // #conatct control
+      if (subjectInput) {
+        subjectInput.addEventListener("input", function () {
+          validateFieldNoUrl(subjectInput, subjectError);
+        });
+        subjectInput.addEventListener("blur", function () {
+          validateFieldNoUrl(subjectInput, subjectError);
+        });
+      }
+
+      // #conatct control
+      if (messageInput) {
+        messageInput.addEventListener("input", function () {
+          validateFieldNoUrl(messageInput, messageError);
+        });
+        messageInput.addEventListener("blur", function () {
+          validateFieldNoUrl(messageInput, messageError);
+        });
       }
 
       if (emailInput) {
@@ -931,10 +1028,20 @@
 
       function resetModalView() {
         if (form) form.reset();
+        // #conatct control
+        hasTyped = false;
+        modalOpenedAt = Date.now();
+        if (nameInput) nameInput.classList.remove("input-has-error");
+        if (nameError) nameError.style.display = "none";
         if (emailInput) emailInput.classList.remove("input-has-error");
         if (emailError) emailError.style.display = "none";
         if (phoneInput) phoneInput.classList.remove("input-has-error");
         if (phoneError) phoneError.style.display = "none";
+        // #conatct control
+        if (subjectInput) subjectInput.classList.remove("input-has-error");
+        if (subjectError) subjectError.style.display = "none";
+        if (messageInput) messageInput.classList.remove("input-has-error");
+        if (messageError) messageError.style.display = "none";
         if (modalHeader) modalHeader.style.display = "block";
         if (formWrapper) formWrapper.style.display = "block";
         if (successWrapper) successWrapper.style.display = "none";
@@ -950,6 +1057,9 @@
       window.openContactModal = function (options) {
         options = options || {};
         resetModalView();
+        // #conatct control
+        modalOpenedAt = Date.now();
+        hasTyped = false;
         if (options.subject && subjectInput) {
           subjectInput.value = options.subject;
         }
@@ -990,10 +1100,64 @@
       // Handle Form Submission with Date Splitting and Email/Phone Validation for Google Forms
       if (form) {
         form.addEventListener("submit", function (e) {
+          // #conatct control
+          // 1. Silent Honeypot Trap
+          // If the hidden decoy field is filled, silently fake success without posting to Google Forms
+          if (honeypotInput && honeypotInput.value.trim() !== "") {
+            e.preventDefault();
+            showSuccessState();
+            return false;
+          }
+
+          // #conatct control
+          // 2. Human Interaction & Minimum Time Gate (anti-headless / rapid automated submission)
+          const timeSpentMs = Date.now() - modalOpenedAt;
+          if (!hasTyped || timeSpentMs < 3000) {
+            // Silently abort automated / instantaneous submissions without hitting Google Forms
+            e.preventDefault();
+            showSuccessState();
+            return false;
+          }
+
+          // #conatct control
+          // 3. Strict Zero-URL & Anti-Link Validation across all user text fields
+          const isNameValid = validateFieldNoUrl(nameInput, nameError);
+          const isSubjectValid = validateFieldNoUrl(subjectInput, subjectError);
+          const isMessageValid = validateFieldNoUrl(messageInput, messageError);
+
+          if (!isNameValid) {
+            e.preventDefault();
+            if (nameInput) nameInput.focus();
+            return false;
+          }
+          if (!isSubjectValid) {
+            e.preventDefault();
+            if (subjectInput) subjectInput.focus();
+            return false;
+          }
+          if (!isMessageValid) {
+            e.preventDefault();
+            if (messageInput) messageInput.focus();
+            return false;
+          }
+
           // Strictly validate Email before sending to Google Forms
           if (!validateEmail()) {
             e.preventDefault();
             if (emailInput) emailInput.focus();
+            return false;
+          }
+
+          // #conatct control
+          // Also check email address local-part for URLs / sneaky links
+          if (emailInput && checkContainsUrl(emailInput.value)) {
+            e.preventDefault();
+            if (emailError) {
+              emailError.textContent = "Links and URLs are not permitted";
+              emailError.style.display = "flex";
+            }
+            emailInput.classList.add("input-has-error");
+            emailInput.focus();
             return false;
           }
 

@@ -133,9 +133,12 @@ permalink: "/books/"
             class="btn-amazon-primary">
             <i class="fab fa-amazon"></i> Buy on Amazon
           </a>
+          <!-- #conatct control -->
+          {% if site.data.feature_flags.enable_contact_form != false and site.data.feature_flags.enable_contact_form != "false" %}
           <button type="button" class="btn-speaking-secondary open-contact-modal" data-subject="" data-message="">
             <i class="fas fa-microphone-alt"></i> Hear Millan Speak
           </button>
+          {% endif %}
         </div>
 
         <p class="book-series-note">

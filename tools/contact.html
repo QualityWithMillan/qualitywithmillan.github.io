@@ -9,6 +9,26 @@ permalink: "/contact/"
 ---
 
 <div class="contact-page-container">
+<!-- #conatct control -->
+{% if site.data.feature_flags.enable_contact_form == false or site.data.feature_flags.enable_contact_form == "false" %}
+  <div class="contact-hero-card" style="text-align: center; padding: 3rem 1.5rem;">
+    <div class="contact-badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border-color: rgba(239, 68, 68, 0.2);">
+      <i class="fas fa-ban"></i> Temporarily Unavailable
+    </div>
+    <h1 class="contact-page-title">Contact Channel Paused</h1>
+    <p class="contact-page-lead" style="max-width: 600px; margin: 1rem auto 2rem auto;">
+      The direct contact form is temporarily offline for maintenance. In the meantime, feel free to explore upcoming events or connect with Millan via social channels.
+    </p>
+    <div class="contact-action-box" style="justify-content: center;">
+      <a href="/events" class="btn-link-events">
+        <i class="fas fa-microphone"></i> View Speaking Events
+      </a>
+      <a href="/books" class="btn-link-books">
+        <i class="fas fa-book"></i> View Published Books
+      </a>
+    </div>
+  </div>
+{% else %}
   <div class="contact-hero-card">
     <div class="contact-badge">
       <i class="fas fa-paper-plane"></i> Direct Contact
@@ -62,6 +82,7 @@ permalink: "/contact/"
       </div>
     </div>
   </div>
+{% endif %}
 </div>
 
 <style>
