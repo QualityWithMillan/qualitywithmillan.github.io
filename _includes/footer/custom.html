@@ -1,3 +1,6 @@
 <!-- start custom footer snippets -->
+<!-- #conatct control -->
+{% if site.data.feature_flags.enable_contact_form != false and site.data.feature_flags.enable_contact_form != "false" %}
 {% include contact-modal.html %}
+{% endif %}
 <!-- end custom footer snippets -->

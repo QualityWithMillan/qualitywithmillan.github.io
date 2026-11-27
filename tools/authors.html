@@ -122,11 +122,14 @@ permalink: "/co-authors/"
 
     <!-- Author Collaboration CTA Actions -->
     <div class="authors-hero-cta-wrapper">
+      <!-- #conatct control -->
+      {% if site.data.feature_flags.enable_contact_form != false and site.data.feature_flags.enable_contact_form != "false" %}
       <button type="button" class="btn-hero-collab open-contact-modal"
         data-subject="Co-Authoring / Technical Article Proposal"
         data-message="Hi Millan, I would love to propose a co-authored article on Quality With Millan regarding...">
         <i class="fas fa-pen-nib" aria-hidden="true"></i> Submit a Blog
       </button>
+      {% endif %}
       <a href="https://github.com/QualityWithMillan/qualitywithmillan.github.io/blob/prod/Co-Author-Instructions.md"
         target="_blank" rel="noopener noreferrer" class="btn-hero-guide">
         <i class="fas fa-book-reader" aria-hidden="true"></i> Author Guidelines
@@ -475,11 +478,14 @@ permalink: "/co-authors/"
         co-author an article together!
       </p>
       <div class="collab-cta-actions">
+        <!-- #conatct control -->
+        {% if site.data.feature_flags.enable_contact_form != false and site.data.feature_flags.enable_contact_form != "false" %}
         <button type="button" class="btn-collab-primary open-contact-modal"
           data-subject="Co-Authoring / Technical Article Proposal"
           data-message="Hi Millan, I would love to propose a co-authored article on Quality With Millan regarding...">
           <i class="fas fa-pen-nib" aria-hidden="true"></i> Propose a Co-Authored Article
         </button>
+        {% endif %}
         <a href="/books" class="btn-collab-secondary">
           <i class="fas fa-book" aria-hidden="true"></i> Explore Books
         </a>

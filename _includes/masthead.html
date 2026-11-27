@@ -13,6 +13,12 @@
         </a>
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
+            <!-- #conatct control -->
+            {%- if link.url == "/contact/" or link.url == "/contact" -%}
+              {%- if site.data.feature_flags.enable_contact_form == false or site.data.feature_flags.enable_contact_form == "false" -%}
+                {%- continue -%}
+              {%- endif -%}
+            {%- endif -%}
             {%- if link.children -%}
               <li class="masthead__menu-item masthead__dropdown">
                 <a href="{{ link.url | default: '#' | relative_url }}" class="masthead__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"{% if link.description %} title="{{ link.description }}"{% endif %}>

@@ -32,7 +32,18 @@ jobs:
         run: |
           gem install bundler
           bundle install
+      # #conatct control
+      - name: Configure feature flags
+        env:
+          ENABLE_CONTACT_FORM: ${{ vars.ENABLE_CONTACT_FORM || 'true' }}
+        run: |
+          mkdir -p _data
+          echo "enable_contact_form: ${ENABLE_CONTACT_FORM}" > _data/feature_flags.yml
+          echo "Resolved ENABLE_CONTACT_FORM = ${ENABLE_CONTACT_FORM}"
+      # #conatct control
       - name: Build site
+        env:
+          ENABLE_CONTACT_FORM: ${{ vars.ENABLE_CONTACT_FORM || 'true' }}
         run: bundle exec jekyll build
       - name: Replace placeholders
         run: |
